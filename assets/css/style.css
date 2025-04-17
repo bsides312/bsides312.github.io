@@ -725,3 +725,79 @@ h1, h2, h3, h4, h5, h6 {
     padding: 4px;
   }
 }
+
+/* Make footer logo responsive and not too large */
+.footer-info img {
+  max-width: 100px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.footer-info p {
+  margin: 0;
+  font-size: 13px;
+}
+
+/* Responsive logo centering on mobile */
+@media (max-width: 576px) {
+  .footer-info img {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Footer graffiti background responsiveness */
+.footer-top {
+  position: relative;
+  background-image: url(assets/img/graffiti.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% auto; /* 50% of container width */
+  min-height: 80px;   /* Reduced from 200px */
+  z-index: 1;
+  padding: 0;         /* Remove extra padding */
+}
+
+.footer-top::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5); /* Adjust opacity as needed */
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Ensure content is above the overlay */
+.footer-top > .container {
+  position: relative;
+  z-index: 3;
+}
+
+/* Mobile adjustments for graffiti */
+@media (max-width: 767.98px) {
+  .footer-top {
+    background-size: 60% auto; /* Slightly smaller for mobile */
+    background-position: center top;
+    min-height: 60px;          /* Smaller min-height for mobile */
+    padding-top: 10px;
+  }
+}
+
+/* Make footer text extend across the entire footer and be left-justified */
+.footer-top .footer-info {
+  width: 100%;
+  max-width: 100%;
+  text-align: left;
+  margin: 0;
+  padding: 0 16px;
+}
+
+@media (max-width: 576px) {
+  .footer-top .footer-info {
+    padding: 0 8px;
+  }
+}
