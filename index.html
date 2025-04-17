@@ -100,7 +100,6 @@
           <li><a class="nav-link scrollto" href="#supporters">Sponsors</a></li>
           <li class="dropdown"><a class="nav-link scrollto" href="#"><span>Participate</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <!-- Removed Get Tickets from here -->
               <li><a class="nav-link scrollto" href="#volunteer">Volunteer</a></li>
               <li><a class="nav-link scrollto" href="#cfp">Call for Presentations</a></li>
               <li class="dropdown"><a class="nav-link scrollto" href="#support"><span>Support Us</span> <i class="bi bi-chevron-right"></i></a>
@@ -144,7 +143,7 @@
       <h1 class="mb-4 pb-0">BSides312<br><span>Community</span> Conference</h1>
       <p class="mb-4 pb-0">June 1st, 2025  Irish American Heritage Center, Chicago Illinois</p>
      <!-- <a href="https://www.youtube.com/watch?v=9uVBJXVIBmw" class="glightbox play-btn mb-4"></a> -->
-      <a href="#buy-tickets" class="about-btn scrollto">Click here to get access, and get hacking!</a>
+      <a href="#buy-tickets" class="about-btn scrollto">CLICK TO HACK!</a>
     </div>
   </section><!-- End Hero Section -->
 
@@ -182,30 +181,57 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-header">
-          <h2>Get your Access Badge!</h2>
-          <p>We've planned an exciting day of brilliant hacker talks and hands-on hacks for you!<br>Click below to register for access:</p>
+          <h2>REGISTER HERE</h2>
+          <p>We've planned an exciting day of brilliant hacker talks and hands-on hacks for you!<br>Click below to register for access, then join us on Discord for real-time updates:</p>
         </div>
-
-        <div class="row">
-
-          <div class="col-md-4">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-8 text-center">
+            <div class="d-flex justify-content-center gap-3 flex-wrap">
+              <a
+                href="#"
+                onclick="createSimpleTixEmbed(this, '32b0e8b6-6732-4e4b-b44e-d0973d487f94', '206866', '#security-bsides312-2','BSides312'); return false;"
+                data-url="https://embed.prod.simpletix.com/"
+                data-enabledigitalwallets="true"
+                data-origin="11"
+                class="btn btn-info btn-lg rounded-pill"
+                style="background-color: #2686b7; border-color: #2686b7; font-family: 'Poppins', sans-serif; border-radius: 2rem;"
+              >
+                Secure A Seat
+              </a>
+              <a
+                href="https://tinyurl.com/bsides312"
+                target="_blank"
+                rel="noopener"
+                class="btn btn-info btn-lg rounded-pill"
+                style="background-color: #2686b7; border-color: #2686b7; font-family: 'Poppins', sans-serif; border-radius: 2rem;"
+              >
+                Join Discord
+              </a>
+            </div>
+            <link href="https://embed.prod.simpletix.com/assets/widget/widget.min.css?t=2024.05.08" rel="stylesheet">
+            <script src="https://embed.prod.simpletix.com/assets/widget/widget.min.js?t=2025.02.19" type="text/javascript"></script>
           </div>
-          <div class="col-md-4">
+        </div>
+        <!-- Discord Modal -->
+        <div class="modal fade" id="discordModal" tabindex="-1" aria-labelledby="discordModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="discordModalLabel">Join the BSides312 Discord</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body text-center">
+                <p>Click below to join our Discord community!</p>
+                <a href="https://tinyurl.com/bsides312" target="_blank" rel="noopener">
+                  <button type="button" class="btn btn-info btn-lg rounded-pill"
+                    style="background-color: #2686b7; border-color: #2686b7; font-family: 'Poppins', sans-serif; border-radius: 2rem;">
+                    Open Discord Invite
+                  </button>
+                </a>
+              </div>
+            </div>
           </div>
-          <div class="col-md-4">
-          </div>
-          <div class="text-center">
-      <div>
-              <a onclick="createSimpleTixEmbed(this, '32b0e8b6-6732-4e4b-b44e-d0973d487f94', '206866', '#security-bsides312-2','BSides312'); return false;" data-url="https://embed.prod.simpletix.com/" data-enabledigitalwallets="true" style="background-color: #2686b7 !important;font-family: 'Poppins', sans-serif !important;"
-            data-origin="11">		
-              <button type="button" class="btn btn-info btn-lg" data-bs-toggle="modal">Secure A Seat</button>	
-          </a>
-              <link href="https://embed.prod.simpletix.com/assets/widget/widget.min.css?t=2024.05.08" rel="stylesheet">
-              <script src="https://embed.prod.simpletix.com/assets/widget/widget.min.js?t=2025.02.19" type="text/javascript"></script>
-      </div>
-      
-          </div>
-        </div> <!-- row -->
+        </div>
       </div>
     </section><!-- End Buy Ticket Section -->
 
@@ -225,15 +251,13 @@
           <div class="section-header">
             <img src="assets/img/supporters/platinum3.png" style="display: block; place-self: center;">
           </div>
-          <div class="col-lg-4 col-md-4 col-xs-6"></div>
-          <div class="col-lg-4 col-md-4 col-xs-6">
+          <div class="col-12 col-md-4 offset-md-4">
             <div class="supporter-logo">
               <a href="https://www.cisco.com/">
                 <img src="assets/img/supporters/cisco.png" class="img-fluid" alt="">
               </a>
             </div>
           </div>
-          <div class="col-lg-4 col-md-4 col-xs-6"></div>
         </div>
 
         <!-- Gold Sponsors -->
@@ -350,38 +374,6 @@
   
    <!-- ======= Participate Section ======= -->
 
-    <!-- ======= DROP-DOWN Buy Ticket Section ======= -->
-    <section id="buy-tickets" class="section-with-bg">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-header">
-          <h2>Get Tickets</h2>
-          <p>We are planning an exciting day of brilliant speakers for you.<br>BSides312 is a Chicago community event for the community by the community.</p>
-        </div>
-
-        <div class="row">
-
-          <div class="col-md-4">
-          </div>
-          <div class="col-md-4">
-          </div>
-          <div class="col-md-4">
-          </div>
-           <div class="text-center">
-			<div>
-			        <a onclick="createSimpleTixEmbed(this, '32b0e8b6-6732-4e4b-b44e-d0973d487f94', '206866', '#security-bsides312-2','BSides312'); return false;" data-url="https://embed.prod.simpletix.com/" data-enabledigitalwallets="true" style="background-color: #2686b7 !important;font-family: 'Poppins', sans-serif !important;"
-						data-origin="11">		
-							<button type="button" class="btn btn-info btn-lg" data-bs-toggle="modal">Get Tickets</button>	
-					</a>
-			        <link href="https://embed.prod.simpletix.com/assets/widget/widget.min.css?t=2024.05.08" rel="stylesheet">
-			        <script src="https://embed.prod.simpletix.com/assets/widget/widget.min.js?t=2025.02.19" type="text/javascript"></script>
-			</div>
-			
-           </div>
-        </div> <!-- row -->
-      </div>
-    </section><!-- End Buy Ticket Section -->
-
  <!-- ======= DROP-DOWN Activities Section ======= -->
     <section id="fun">
       <div class="container" data-aos="fade-up">
@@ -420,26 +412,20 @@
 
     <!-- ======= DROP-DOWN Volunteer Section ======= -->
     <section id="volunteer" class="section-bg">
-
       <div class="container" data-aos="fade-up">
-
         <div class="section-header">
           <h2>Volunteer With Us</h2>
           <p>We’re so excited for BSides312! If you want to help, you’re in the right place!</p>
         </div>
-
-        <div class="row volunteer-info">
-
-          <div class="col-md-4">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-8 text-center mb-4">
+            <a href="#" target="_new">
+              <button type="button" class="btn btn-info btn-lg rounded-pill"
+                style="background-color: #2686b7; border-color: #2686b7; font-family: 'Poppins', sans-serif; border-radius: 2rem;">
+                Fully staffed for 2025, but catch us next year!
+              </button>
+            </a>
           </div>
-          <div class="col-md-4">
-
-          </div>
-          <div class="col-md-4">
-          </div>
-           <div class="text-center mb-4">
-              <a href="#" target="_new"><button type="button" class="btn btn-info btn-lg" data-bs-toggle="modal" target="new">Fully staffed for 2025, but catch us next year!</button></a>
-           </div>
         </div>
       </div>
     </section><!-- End Volunteer Section -->
@@ -462,10 +448,17 @@
           <div class="col-md-4">
             <p>Notifications have been sent! Make sure you reply to confirm if you were accepted, or to get your discount code if you were declined!</p>
           </div>
-           <div class="text-center">
-              <a href="https://thecatapi.com/api/images/get?format=src&type=gif"><button type="button" class="btn btn-info btn-lg" data-bs-toggle="modal" target="new">CLOSED</button></a>
-           </div>
-        </div> <!-- row -->
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-8 text-center">
+            <a href="https://thecatapi.com/api/images/get?format=src&type=gif" target="new">
+              <button type="button" class="btn btn-info btn-lg rounded-pill"
+                style="background-color: #2686b7; border-color: #2686b7; font-family: 'Poppins', sans-serif; border-radius: 2rem;">
+                CLOSED
+              </button>
+            </a>
+          </div>
+        </div>
       </div>
     </section><!-- End CFP Section -->
 
@@ -519,7 +512,10 @@
                 </ul>
                 <hr>
                 <div class="text-center">
-                <a href="https://paypal.me/bsides312/500" target="_parent"><button type="button" class="btn" data-bs-toggle="modal">Donate Now</button></a>
+                  <a href="https://paypal.me/bsides312/500" target="_parent" class="btn btn-info btn-lg rounded-pill"
+                     style="background-color: #2686b7; border-color: #2686b7; font-family: 'Poppins', sans-serif; border-radius: 2rem;">
+                    Donate Now
+                  </a>
                 </div>
               </div>
             </div>
@@ -538,7 +534,10 @@
                 </ul>
                 <hr>
                 <div class="text-center">
-                <a href="https://paypal.me/bsides312/1000" target="_parent"><button type="button" class="btn" data-bs-toggle="modal">Donate Now</button></a>
+                  <a href="https://paypal.me/bsides312/1000" target="_parent" class="btn btn-info btn-lg rounded-pill"
+                     style="background-color: #2686b7; border-color: #2686b7; font-family: 'Poppins', sans-serif; border-radius: 2rem;">
+                    Donate Now
+                  </a>
                 </div>
               </div>
             </div>
@@ -560,7 +559,10 @@
                 </ul>
                 <hr>
                 <div class="text-center">
-                <a href="https://paypal.me/bsides312/2000" target="_parent"><button type="button" class="btn" data-bs-toggle="modal">Donate Now</button></a>
+                  <a href="https://paypal.me/bsides312/2000" target="_parent" class="btn btn-info btn-lg rounded-pill"
+                     style="background-color: #2686b7; border-color: #2686b7; font-family: 'Poppins', sans-serif; border-radius: 2rem;">
+                    Donate Now
+                  </a>
                 </div>
               </div>
             </div>
@@ -583,7 +585,10 @@
                 </ul>
                 <hr>
                 <div class="text-center">
-                <a href="https://paypal.me/bsides312/3000" target="_parent"><button type="button" class="btn" data-bs-toggle="modal">Donate Now</button></a>
+                  <a href="https://paypal.me/bsides312/3000" target="_parent" class="btn btn-info btn-lg rounded-pill"
+                     style="background-color: #2686b7; border-color: #2686b7; font-family: 'Poppins', sans-serif; border-radius: 2rem;">
+                    Donate Now
+                  </a>
                 </div>
               </div>
             </div>
@@ -603,7 +608,10 @@
                 </ul>
                 <hr>
                 <div class="text-center">
-                <a href="https://paypal.me/bsides312/5000" target="_parent"><button type="button" class="btn" data-bs-toggle="modal">Donate Now</button></a>
+                  <a href="https://paypal.me/bsides312/5000" target="_parent" class="btn btn-info btn-lg rounded-pill"
+                     style="background-color: #2686b7; border-color: #2686b7; font-family: 'Poppins', sans-serif; border-radius: 2rem;">
+                    Donate Now
+                  </a>
                 </div>
               </div>
             </div>
@@ -623,7 +631,10 @@
                 </ul>
                 <hr>
                 <div class="text-center">
-                <a href="https://paypal.me/bsides312/10000" target="_parent"><button type="button" class="btn" data-bs-toggle="modal">Donate Now</button></a>
+                  <a href="https://paypal.me/bsides312/10000" target="_parent" class="btn btn-info btn-lg rounded-pill"
+                     style="background-color: #2686b7; border-color: #2686b7; font-family: 'Poppins', sans-serif; border-radius: 2rem;">
+                    Donate Now
+                  </a>
                 </div>
               </div>
             </div>
@@ -646,14 +657,17 @@
           <p>You don't need to be a corporation to believe in us.</p>
         </div>
            <div class="text-center">
-              <iframe
-				src="https://www.paypal.com/giving/campaigns?campaign_id=5YHA5H9F2CQXS"
-				title="BSides312 2025 Fundraiser"
-				frameborder="0"
-				width=382
-				height=550
-				scrolling="no"
-			  ></iframe>
+              <div style="max-width:382px; margin:auto;">
+                <iframe
+                  src="https://www.paypal.com/giving/campaigns?campaign_id=5YHA5H9F2CQXS"
+                  title="BSides312 2025 Fundraiser"
+                  frameborder="0"
+                  width="100%"
+                  height="550"
+                  scrolling="no"
+                  style="max-width:100%;"
+                ></iframe>
+              </div>
               <!-- <a href="https://www.paypal.com/donate/?hosted_button_id=GV5ZXR757Z4J4" target="_new"><button type="button" class="btn btn-info btn-lg" data-bs-toggle="modal" target="new">Believe</button></a> -->
            </div>
           <div class="col-md-4">
@@ -728,7 +742,9 @@
         </div>
        <div class="row g-3 g-md-4">
           <div class="col-lg-6 venue-map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5933.254410369004!2d-87.74695362426661!3d41.965341759947904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fcc304c398cdd%3A0x9d21ad4341cdff52!2sIrish%20American%20Heritage%20Center!5e0!3m2!1sen!2sus!4v1740245334888!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="ratio ratio-4x3">
+              <iframe src="https://www.google.com/maps/embed?pb=..." allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
           </div>
 
           <div class="col-lg-6 venue-info">
