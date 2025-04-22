@@ -240,3 +240,22 @@
    }); 
    
 })()
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Initialize gallery images error handling
+  const galleryImages = document.querySelectorAll('.venue-gallery img');
+  galleryImages.forEach(img => {
+    img.onerror = function() {
+      this.onerror = null;
+      this.src = 'assets/img/fallback.jpg';
+    };
+  });
+
+  // Initialize GLightbox with options
+  const lightbox = GLightbox({
+    selector: '.glightbox',
+    touchNavigation: true,
+    loop: true,
+    autoplayVideos: true
+  });
+});

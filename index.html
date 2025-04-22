@@ -2,32 +2,36 @@
 <html lang="en">
 
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-GWM8T01C61"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-GWM8T01C61');
-</script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GWM8T01C61"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-GWM8T01C61');
+  </script>
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="referrer" content="never">
   <meta name="referrer" content="no-referrer">
 
-  <title>BSides312 Event - Home</title>
+  <title>BSides312 – Chicago’s Biggest Little Non-Profit Non-Profit Hacking & Information Security Conference</title>
   <link rel="canonical" href="https://bsides312.org/" />
-  <meta name="description" content="BSides312 Home page">
-  <meta name="keywords" content="BSides security">
+  <meta name="description" content="BSides312 is Chicago’s Biggest Little Non-Profit  hacking and information security conference. Join security professionals, hackers, and enthusiasts from across the country for talks, workshops, and networking, all the day after THOTCON!">
+  <meta name="keywords" content="BSides312, BSides Chicago, Chicago security conference, hacking conference, infosec, cybersecurity, security event, hacker conference, BSides 312, BSides Chi">
 
   <!-- Open Graph Image for Preview Share Sheets -->
   <meta property="og:image" content="https://bsides312.org/images/og-image.jpg"/>
-  <meta property="og:title" content="BSides312: A Community Security Conference in Chicago"/>
-  <meta property="og:description" content="BSides312 seeks to be a collaborative space for the community, by the community. We are not made of members but instead made of participants whose unique contributions are valued equally. Some may bring specialization in hardware, a focus in organizational skills, or even bringing friends along to fuel and expand the conversation."/>  
+  <meta property="og:title" content="BSides312 - Chicago's Other Hacking Conference - the Day after THOTCON!">
+  <meta property="og:description" content="BSides312 is Chicago’s Biggest Little Non-Profit hacking & information security conference. We're the only Chicago conference entirely run by members of the local community, but attended by folks from around the world!">
+  <meta property="og:url" content="https://bsides312.org/">
   <meta property="og:image:width" content="1455"/>
   <meta property="og:image:height" content="825"/>
+
+  <meta name="twitter:title" content="BSides312, the Day after THOTCON!">
+  <meta name="twitter:description" content="BSides312 is Chicago’s Biggest Little Non-Profit hacking & information security conference. We're the only Chicago conference entirely run by members of the local community, but attended by folks from around the world!">
+  <meta name="twitter:image" content="https://bsides312.org/images/og-image.jpg">
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
@@ -36,21 +40,45 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
 
-  <!-- W3School javascript -->
- <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
--->
+  <!-- Preload critical CSS and JS -->
+  <link rel="preload" href="assets/vendor/bootstrap/css/bootstrap.min.css" as="style">
+  <link rel="preload" href="assets/css/style.css" as="style">
+  <link rel="preload" href="assets/vendor/glightbox/js/glightbox.min.js" as="script">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- Structured Data for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": "BSides312",
+    "alternateName": "BSides Chicago",
+    "startDate": "2025-06-01",
+    "location": {
+      "@type": "Place",
+      "name": "Irish American Heritage Center",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "4626 N Knox Avenue",
+        "addressLocality": "Chicago",
+        "addressRegion": "IL",
+        "postalCode": "60630",
+        "addressCountry": "US"
+      }
+    },
+    "description": "BSides312 is Chicago’s Biggest Little Non-Profit hacking & information security conference. We're the only Chicago conference entirely run by members of the local community, but attended by folks from around the world!",
+    "url": "https://bsides312.org/"
+  }
+  </script>
 </head>
 
 <body>
@@ -68,35 +96,35 @@
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#buy-tickets">Get Tickets</a></li>
           <li><a class="nav-link scrollto" href="#supporters">Sponsors</a></li>
           <li class="dropdown"><a class="nav-link scrollto" href="#"><span>Participate</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a class="nav-link scrollto" href="#buy-tickets">Get Tickets</a></li>
-              <!--<li><a class="nav-link scrollto" href="#parking">Find Parking</a></li>-->
               <li><a class="nav-link scrollto" href="#volunteer">Volunteer</a></li>
               <li><a class="nav-link scrollto" href="#cfp">Call for Presentations</a></li>
-          <li class="dropdown"><a class="nav-link scrollto" href="#support"><span>Support Us</span> <i class="bi bi-chevron-right"></i></a>
-              <ul>
-                <li><a class="nav-link scrollto" href="#support">Corporate Sponsorship</a></li>
-                <li><a class="nav-link scrollto" href="#personal">Personal Donors</a></li>
-              </ul>
-
+              <li class="dropdown"><a class="nav-link scrollto" href="#support"><span>Support Us</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a class="nav-link scrollto" href="#support">Corporate Sponsorship</a></li>
+                  <li><a class="nav-link scrollto" href="#personal">Personal Donors</a></li>
+                </ul>
+              </li>
             </ul>
-        </li>
+          </li>
           <li class="dropdown"><a href=""><span>Event</span> <i class="bi bi-chevron-down"></i></a>
-          <ul>
-            <li><a class="nav-link scrollto" href="#schedule">Schedule</a></li>
-            <li><a class="nav-link scrollto" href="#speakers">Speakers</a></li>
-            <li><a class="nav-link scrollto" href="#fun">Activities</a></li>
-            <li><a class="nav-link scrollto" href="#venue">Venue</a></li>
-            <li><a class="nav-link scrollto" href="#coc">Code of Conduct</a></li>
-          </ul>
-        </li>
+            <ul>
+              <li><a class="nav-link scrollto" href="#schedule">Schedule</a></li>
+              <li><a class="nav-link scrollto" href="#speakers">Speakers</a></li>
+              <li><a class="nav-link scrollto" href="#fun">Activities</a></li>
+              <li><a class="nav-link scrollto" href="#venue">Venue</a></li>
+              <li><a class="nav-link scrollto" href="#parking">Find Parking</a></li>
+              <li><a class="nav-link scrollto" href="#coc">Code of Conduct</a></li>
+            </ul>
+          </li>
           
           <li class="dropdown"><a class="nav-link scrollto" href="#"><span>About</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a class="nav-link scrollto" href="#about">About BSides312</a></li>
-              <li><a class="nav-link scrollto" href="#board">Our Board</a></li>
+              <li><a class="nav-link scrollto" href="board-details.html">Our Board</a></li>
               <li><a class="nav-link scrollto" href="#faq">FAQ</a></li>
               <li><a class="nav-link scrollto" href="#privacy">Privacy Policy</a></li>
             </ul>
@@ -112,10 +140,10 @@
   <!-- ======= Hero Section ======= -->
   <section id="hero">
     <div class="hero-container" data-aos="zoom-in" data-aos-delay="100">
-      <h1 class="mb-4 pb-0">BSides312<br><span>Community</span> Conference</h1>
+      <h1 class="mb-4 pb-0">BSides312<br><span>Non-Profit Community</span> Conference</h1>
       <p class="mb-4 pb-0">June 1st, 2025  Irish American Heritage Center, Chicago Illinois</p>
      <!-- <a href="https://www.youtube.com/watch?v=9uVBJXVIBmw" class="glightbox play-btn mb-4"></a> -->
-      <a href="#about" class="about-btn scrollto">About BSides312</a>
+      <a href="#buy-tickets" class="about-btn scrollto">CLICK TO HACK!</a>
     </div>
   </section><!-- End Hero Section -->
 
@@ -129,8 +157,7 @@
         <div class="row">
           <div class="col-lg-6">
             <h2>About BSides312</h2>
-            <p>BSides312 seeks to be a collaborative space for the community, by the community.  We are not made of members but instead made of participants whose unique contributions are valued equally.  Some may bring specialization in hardware, a focus in organizational skills, or even bringing friends along to fuel and expand the conversation.</p>
-
+            <p>BSides312 is a Non-Profit 1-Day conference which seeks to be a collaborative space for the hacking and information security communities, and is operated by longtime devaout Chicago community members. Some may bring specialization in hardware, a focus in organizational skills, or even bringing friends along to fuel and expand the conversation.</p>
             <p>If you and your organization are as passionate about the security community as we are and would like to sponsor our event, please reach out questions [@] bsides312.org. To show our thanks, sponsors will be welcome to chat about themselves and their organization, fostering connections with the BSides312 community.</p>
           </div>
           <div class="col-lg-3">
@@ -148,6 +175,64 @@
       </div>
     </section><!-- End About Section -->
 
+    <!-- ======= DROP-DOWN Buy Ticket Section ======= -->
+    <section id="buy-tickets" class="section-with-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>REGISTER HERE</h2>
+          <p>We've planned an exciting day of brilliant hacker talks and hands-on hacks for you!<br>Click below to register for access, then join us on Discord for real-time updates:</p>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-8 text-center">
+            <div class="d-flex justify-content-center gap-3 flex-wrap">
+              <a
+                href="#"
+                onclick="createSimpleTixEmbed(this, '32b0e8b6-6732-4e4b-b44e-d0973d487f94', '206866', '#security-bsides312-2','BSides312'); return false;"
+                data-url="https://embed.prod.simpletix.com/"
+                data-enabledigitalwallets="true"
+                data-origin="11"
+                class="btn btn-info btn-lg rounded-pill"
+                style="background-color: #2686b7; border-color: #2686b7; font-family: 'Poppins', sans-serif; border-radius: 2rem;"
+              >
+                Secure A Seat
+              </a>
+              <a
+                href="https://tinyurl.com/bsides312"
+                target="_blank"
+                rel="noopener"
+                class="btn btn-info btn-lg rounded-pill"
+                style="background-color: #2686b7; border-color: #2686b7; font-family: 'Poppins', sans-serif; border-radius: 2rem;"
+              >
+                Join Discord
+              </a>
+            </div>
+            <link href="https://embed.prod.simpletix.com/assets/widget/widget.min.css?t=2024.05.08" rel="stylesheet">
+            <script src="https://embed.prod.simpletix.com/assets/widget/widget.min.js?t=2025.02.19" type="text/javascript"></script>
+          </div>
+        </div>
+        <!-- Discord Modal -->
+        <div class="modal fade" id="discordModal" tabindex="-1" aria-labelledby="discordModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="discordModalLabel">Join the BSides312 Discord</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body text-center">
+                <p>Click below to join our Discord community!</p>
+                <a href="https://tinyurl.com/bsides312" target="_blank" rel="noopener">
+                  <button type="button" class="btn btn-info btn-lg rounded-pill"
+                    style="background-color: #2686b7; border-color: #2686b7; font-family: 'Poppins', sans-serif; border-radius: 2rem;">
+                    Open Discord Invite
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- End Buy Ticket Section -->
 
    <!-- ======= Supporters Section ======= -->
     <section id="supporters" class="section-with-bg">
@@ -156,348 +241,137 @@
         <div class="section-header">
           <h2>Sponsors</h2>
         </div>
-        <div class="alert alert-warning container-fluid" style="text-align: center; font-weight: bold;" role="alert">
+        <div class="alert alert-warning container-fluid text-center fw-bold" role="alert">
           Sponsorship packages for 2025 are now available! Click <a href="#support">here</a> to learn about our corporate sponsorship options and individual donor opportunities.  
         </div>
-        <!-- Diamond, Platinum, Gold, Silver, Bronze, Basic -->
-        <!--
-        <div class="row no-gutters supporters-wrap clearfix" data-aos="zoom-in" data-aos-delay="100">
-        <div class="section-header">
-          <h3>Diamond Sponsors</h3>
-        </div>
 
-           <div class="col-lg-3 col-md-4 col-xs-6">
-           </div>
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <div class="supporter-logo">
-                 <a href="https://www.binalyze.com/">
-                    <img src="assets/img/supporters/1.png" class="img-fluid" alt="">
-                 </a>
-            </div>
-          </div>
-
-
-           <div class="col-lg-3 col-md-4 col-xs-6">
-              <div class="supporter-logo">
-                 <a href="https://stellarcyber.ai/">
-                    <img src="assets/img/supporters/11.png" class="img-fluid" alt="">
-                 </a>
-              </div>
-           </div>
-           <div class="col-lg-3 col-md-4 col-xs-6">
-           </div>
-        </div>
-        
-        <div class="row no-gutters supporters-wrap clearfix" data-aos="zoom-in" data-aos-delay="100">
-        <div class="section-header">
-          <h3>Platinum Sponsors</h3>
-        </div>
-
-           <div class="col-lg-3 col-md-4 col-xs-6">
-           </div>
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <div class="supporter-logo">
-                 <a href="https://www.binalyze.com/">
-                    <img src="assets/img/supporters/1.png" class="img-fluid" alt="">
-                 </a>
-            </div>
-          </div>
-
-
-           <div class="col-lg-3 col-md-4 col-xs-6">
-              <div class="supporter-logo">
-                 <a href="https://stellarcyber.ai/">
-                    <img src="assets/img/supporters/11.png" class="img-fluid" alt="">
-                 </a>
-              </div>
-           </div>
-           <div class="col-lg-3 col-md-4 col-xs-6">
-           </div>
-        </div>
-
-        <div class="row no-gutters supporters-wrap clearfix" data-aos="zoom-in" data-aos-delay="100">
-        <div class="section-header">
-          <h3>Gold Sponsor</h3>
-        </div>
-           <div class="col-lg-4 col-md-4 col-xs-6">
-           </div>
-          <div class="col-lg-4 col-md-4 col-xs-6">
-            <div class="supporter-logo">
-                 <a href="https://www.trustwave.com/en-us/">
-              <img src="assets/img/supporters/4.png" class="img-fluid" alt="">
-                 </a>
-            </div>
-          </div>
-           <div class="col-lg-4 col-md-4 col-xs-6">
-           </div>
-        </div>
-
-        <div class="row no-gutters supporters-wrap clearfix" data-aos="zoom-in" data-aos-delay="100">
-        <div class="section-header">
-          <h3>Silver Sponsors</h3>
-        </div>
-           <div class="col-lg-3 col-md-4 col-xs-6">
-           </div>
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <div class="supporter-logo">
-                 <a href="https://www.rapid7.com/">
-                    <img src="assets/img/supporters/5.png" class="img-fluid" alt="">
-                 </a>
-            </div>
-          </div>
-   
-           <div class="col-lg-3 col-md-4 col-xs-6">
-              <div class="supporter-logo">
-                 <a href="https://www.cobalt.io/">
-                    <img src="assets/img/supporters/2.png" class="img-fluid" alt="">
-                 </a>
-              </div>
-           </div>
-           <div class="col-lg-3 col-md-4 col-xs-6">
-           </div>
-        </div>
-
-        <div class="row no-gutters supporters-wrap clearfix" data-aos="zoom-in" data-aos-delay="100">
-        <div class="section-header">
-          <h3>Bronze Sponsors</h3>
-        </div>
-           <div class="col-lg-3 col-md-4 col-xs-6">
-           </div>
-           <div class="col-lg-3 col-md-4 col-xs-6">
-              <div class="supporter-logo">
-                 <a href="https://www.grrcon.com/">
-                    <img src="assets/img/supporters/6.png" class="img-fluid" alt="">
-                 </a>
-              </div>
-           </div>
-
-           <div class="col-lg-3 col-md-4 col-xs-6">
-              <div class="supporter-logo">
-                 <a href="https://tcm-sec.com/">
-                    <img src="assets/img/supporters/10.png" class="img-fluid" alt="">
-                 </a>
-              </div>
-           </div>
-           <div class="col-lg-3 col-md-4 col-xs-6">
-           </div>
-        </div>
-
-        <div class="row no-gutters supporters-wrap clearfix" data-aos="zoom-in" data-aos-delay="100">
-        <div class="section-header">
-          <h3>Basic Sponsors</h3>
-        </div>
-           <div class="col-lg-3 col-md-4 col-xs-6">
-           </div>
-           <div class="col-lg-3 col-md-4 col-xs-6">
-              <div class="supporter-logo">
-                 <a href="https://www.grrcon.com/">
-                    <img src="assets/img/supporters/6.png" class="img-fluid" alt="">
-                 </a>
-              </div>
-           </div>
-
-           <div class="col-lg-3 col-md-4 col-xs-6">
-              <div class="supporter-logo">
-                 <a href="https://tcm-sec.com/">
-                    <img src="assets/img/supporters/10.png" class="img-fluid" alt="">
-                 </a>
-              </div>
-           </div>
-           <div class="col-lg-3 col-md-4 col-xs-6">
-           </div>
-        </div>
-        -->
-
-        <div class="row no-gutters supporters-wrap clearfix" data-aos="zoom-in" data-aos-delay="100">
+        <!-- Platinum Sponsors -->
+        <div class="row no-gutters supporters-wrap clearfix gy-4 gx-4 mb-5" data-aos="zoom-in" data-aos-delay="100">
           <div class="section-header">
-            <h3>Platinum Sponsors</h3>
+            <img src="assets/img/supporters/platinum3.png" style="display: block; place-self: center;">
           </div>
-             <div class="col-lg-4 col-md-4 col-xs-6">
-             </div>
-            <div class="col-lg-4 col-md-4 col-xs-6">
-              <div class="supporter-logo">
-                   <a href="https://www.cisco.com/">
+          <div class="col-12 col-md-4 offset-md-4">
+            <div class="supporter-logo">
+              <a href="https://www.cisco.com/">
                 <img src="assets/img/supporters/cisco.png" class="img-fluid" alt="">
-                   </a>
-              </div>
+              </a>
             </div>
-             <div class="col-lg-4 col-md-4 col-xs-6">
-             </div>
           </div>
+        </div>
 
-        <div class="row no-gutters supporters-wrap clearfix" data-aos="zoom-in" data-aos-delay="100">
+        <!-- Gold Sponsors -->
+        <div class="row no-gutters supporters-wrap clearfix gy-4 gx-4 mb-5" data-aos="zoom-in" data-aos-delay="100">
           <div class="section-header">
-            <h3>Gold Sponsors</h3>
+            <img src="assets/img/supporters/gold3.png" style="display: block; place-self: center;">
           </div>
-             <div class="col-lg-3 col-md-4 col-xs-6">
-             </div>
-            <div class="col-lg-3 col-md-4 col-xs-6">
-              <div class="supporter-logo">
-                   <a href="https://www.kodemsecurity.com/">
+          <div class="col-lg-3 col-md-4 col-xs-6"></div>
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="supporter-logo">
+              <a href="https://www.kodemsecurity.com/">
                 <img src="assets/img/supporters/kodem.png" class="img-fluid" alt="">
-                   </a>
-              </div>
+              </a>
             </div>
-            <div class="col-lg-3 col-md-4 col-xs-6">
-              <div class="supporter-logo">
-                   <a href="https://stellarcyber.ai/">
-                <img src="assets/img/supporters/stellarcyber.png" class="img-fluid" alt="">
-                   </a>
-              </div>
-            </div>
-             <div class="col-lg-4 col-md-4 col-xs-6">
-             </div>
-          </div>
-
-        <div class="row no-gutters supporters-wrap clearfix" data-aos="zoom-in" data-aos-delay="100">
-          <div class="section-header">
-            <h3>Silver Sponsors</h3>
-          </div>
-          <div class="col-lg-3 col-md-4 col-xs-6">
-          </div>
-          <div class="col-lg-3 col-md-4 col-xs-6">
-             <div class="supporter-logo">
-                <a href="https://www.blackhillsinfosec.com/">
-                   <img src="assets/img/supporters/bhis.png" class="img-fluid" alt="">
-                </a>
-             </div>
           </div>
           <div class="col-lg-3 col-md-4 col-xs-6">
             <div class="supporter-logo">
-               <a href="https://www.justhacking.com/">
-                  <img src="assets/img/supporters/jht.png" class="img-fluid" alt="">
-               </a>
+              <a href="https://stellarcyber.ai/">
+                <img src="assets/img/supporters/stellarcyber.png" class="img-fluid" alt="">
+              </a>
             </div>
-         </div>
-
-        <div class="row no-gutters supporters-wrap clearfix" data-aos="zoom-in" data-aos-delay="100">
-          <div class="section-header">
-            <h3>Founding Sponsors</h3>
           </div>
-          <div class="col-lg-3 col-md-4 col-xs-6">
-          </div>
-          <div class="col-lg-3 col-md-4 col-xs-6">
-             <div class="supporter-logo">
-                <a href="https://www.binalyze.com/">
-                   <img src="assets/img/supporters/1.png" class="img-fluid" alt="">
-                </a>
-             </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4 col-xs-6">
-             <div class="supporter-logo">
-                <a href="https://www.cobalt.io/">
-                   <img src="assets/img/supporters/2.png" class="img-fluid" alt="">
-                </a>
-             </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-xs-6">
-          </div>
-       </div>
-
-        <div class="row no-gutters supporters-wrap clearfix" data-aos="zoom-in" data-aos-delay="100">
-           <div class="section-header">
-              <h3>Community Sponsors</h3>
-           </div>
-           <div class="col-lg-3 col-md-4 col-xs-6">
-           </div>
-           <div class="col-lg-3 col-md-4 col-xs-6">
-              <div class="supporter-logo">
-                 <a href="https://www.hak4kidz.com/">
-                    <img src="assets/img/supporters/7.png" class="img-fluid" alt="Hak4Kidz NFP">
-                 </a>
-              </div>
-           </div>
-           <div class="col-lg-3 col-md-4 col-xs-6">
-              <div class="supporter-logo">
-                 <a href="https://buy.stripe.com/6oE2aqaXN88M6e46op" target="new">
-		    <img src="assets/img/supporters/8.png" class="img-fluid" alt="BSides MKE">
-                 </a>
-              </div>
-           </div>
-           <div class="col-lg-3 col-md-4 col-xs-6">
-           </div>
-           <div class="col-lg-3 col-md-4 col-xs-6">
-           </div>
-           <div class="col-lg-3 col-md-4 col-xs-6">
-              <div class="supporter-logo">
-                 <a href="https://GCSIChicago.org" target="new">
-		    <img src="assets/img/supporters/9.png" class="img-fluid" alt="GCSI">
-                 </a>
-              </div>
-           </div>
-           <div class="col-lg-3 col-md-4 col-xs-6">
-              <div class="supporter-logo">
-                 <a href="https://www.intelliguards.com" target="new">
-		    <img src="assets/img/supporters/12.png" class="img-fluid" alt="IntelliGuards">
-                 </a>
-           </div>
-           <div class="col-lg-3 col-md-4 col-xs-6">
-           </div>
+          <div class="col-lg-3 col-md-4 col-xs-6"></div>
         </div>
 
+        <!-- Silver Sponsors -->
+        <div class="row no-gutters supporters-wrap clearfix gy-4 gx-4 mb-5" data-aos="zoom-in" data-aos-delay="100">
+          <div class="section-header">
+            <img src="assets/img/supporters/silver3.png" style="display: block; place-self: center;">
+          </div>
+          <div class="col-lg-3 col-md-4 col-xs-6"></div>
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="supporter-logo">
+              <a href="https://www.blackhillsinfosec.com/">
+                <img src="assets/img/supporters/bhis.png" class="img-fluid" alt="">
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="supporter-logo">
+              <a href="https://www.justhacking.com/">
+                <img src="assets/img/supporters/jht.png" class="img-fluid" alt="">
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-xs-6"></div>
+        </div>
+
+        <!-- Founding Sponsors -->
+        <div class="row no-gutters supporters-wrap clearfix gy-4 gx-4 mb-5" data-aos="zoom-in" data-aos-delay="100">
+          <div class="section-header">
+            <img src="assets/img/supporters/founding3.png" style="display: block; place-self: center;">
+          </div>
+          <div class="col-lg-3 col-md-4 col-xs-6"></div>
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="supporter-logo">
+              <a href="https://www.binalyze.com/">
+                <img src="assets/img/supporters/1.png" class="img-fluid" alt="">
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="supporter-logo">
+              <a href="https://www.cobalt.io/">
+                <img src="assets/img/supporters/2.png" class="img-fluid" alt="">
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-xs-6"></div>
+        </div>
+
+        <!-- Community Sponsors -->
+        <div class="row no-gutters supporters-wrap clearfix gy-4 gx-4 mb-5" data-aos="zoom-in" data-aos-delay="100">
+          <div class="section-header">
+            <img src="assets/img/supporters/community3.png" style="display: block; place-self: center;">
+          </div>
+          <div class="col-lg-3 col-md-4 col-xs-6"></div>
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="supporter-logo">
+              <a href="https://www.hak4kidz.com/">
+                <img src="assets/img/supporters/7.png" class="img-fluid" alt="Hak4Kidz NFP">
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="supporter-logo">
+              <a href="https://buy.stripe.com/6oE2aqaXN88M6e46op" target="new">
+                <img src="assets/img/supporters/8.png" class="img-fluid" alt="BSides MKE">
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-xs-6"></div>
+          <div class="col-lg-3 col-md-4 col-xs-6"></div>
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="supporter-logo">
+              <a href="https://GCSIChicago.org" target="new">
+                <img src="assets/img/supporters/9.png" class="img-fluid" alt="GCSI">
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="supporter-logo">
+              <a href="https://www.intelliguards.com" target="new">
+                <img src="assets/img/supporters/12.png" class="img-fluid" alt="IntelliGuards">
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-xs-6"></div>
+        </div>
       </div>
 
     </section><!-- End Sponsors Section -->
 
   
    <!-- ======= Participate Section ======= -->
-
-    <!-- ======= DROP-DOWN Buy Ticket Section ======= -->
-    <section id="buy-tickets" class="section-with-bg">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-header">
-          <h2>Get Tickets</h2>
-          <p>We are planning an exciting day of brilliant speakers for you.<br>BSides312 is a Chicago community event for the community by the community.</p>
-        </div>
-
-        <div class="row">
-
-          <div class="col-md-4">
-          </div>
-          <div class="col-md-4">
-          </div>
-          <div class="col-md-4">
-          </div>
-           <div class="text-center">
-			<div>
-			        <a onclick="createSimpleTixEmbed(this, '32b0e8b6-6732-4e4b-b44e-d0973d487f94', '206866', '#security-bsides312-2','BSides312'); return false;" data-url="https://embed.prod.simpletix.com/" data-enabledigitalwallets="true" style="background-color: #2686b7 !important;font-family: 'Poppins', sans-serif !important;"
-						data-origin="11">							
-							<button type="button" class="btn btn-info btn-lg" data-bs-toggle="modal">Get Tickets</button>	
-					</a>
-			        <link href="https://embed.prod.simpletix.com/assets/widget/widget.min.css?t=2024.05.08" rel="stylesheet">
-			        <script src="https://embed.prod.simpletix.com/assets/widget/widget.min.js?t=2025.02.19" type="text/javascript"></script>
-			</div>
-			
-           </div>
-        </div> <!-- row -->
-      </div>
-    </section><!-- End Buy Ticket Section -->
-
-    <!-- ======= DROP-DOWN Parking Section ======= -->
-    <!--<section id="parking" class="section-bg">
-      <div class="container" data-aos="fade-up">
-        <div class="row">
-           <div class="section-header">
-             <h2>Find Parking</h2>
-             <p>Stand by while we update this section.</p>
-           </div>
-
-           <div class="col-md-4">
-           </div>
-           <div class="col-md-4">
-           </div>
-           <div class="col-md-4">
-           </div>
-           <div class="text-center">
-              <a href="https://www.eventbrite.com/e/security-bsides312-tickets-775873818477" target="_new"><button type="button" class="btn btn-info btn-lg" data-bs-toggle="modal" target="new">Get Parking</button></a>
-           </div>
-        </div>
-      </div>
-    </section>-->
-    <!-- End Parking Section -->
-    <br><br>
 
  <!-- ======= DROP-DOWN Activities Section ======= -->
     <section id="fun">
@@ -514,9 +388,9 @@
 		   <img src="assets/img/activities/hacker.jpg" alt="CTF" class="img-fluid">
 		</a>
               <div class="details">
-                <h3 id="ctf">CheeseLand Capture The Flag</h3>
+                <h3 id="ctf">Capture The Flag Hacking Competition</h3>
                 <p>The CheeseLand Capture the Flag (CTF) Event is an exciting event inspired by the oldest of online multiplayer RPGs (MUDs, or Multi-User-Dungeons). It aims to provide a competitive learning environment for information security and general computing skills. Designed by the famous EvilMog, you may recall versions of it from the old DerbyCon days and elsewhere.</p>
-                <p>We have crafted a range of tasks suitable for all skill levels. Regardless of your experience, with effort and dedication, you should be able to tackle all challenges. However, some may require significant time and perseverance. To this end, we embrace two approaches: pleay to learn (not play to win), and the famous <a href="https://www.offensive-security.com/offsec/what-it-means-to-try-harder/">Try Harder</a> methodology.</p>
+                <p>We have crafted a range of tasks suitable for all skill levels. Regardless of your experience, with effort and dedication, you should be able to tackle all challenges. However, some may require significant time and perseverance. To this end, we embrace two approaches: play to learn (not play to win), and the famous <a href="https://www.offensive-security.com/offsec/what-it-means-to-try-harder/">Try Harder</a> methodology.</p>
               </div>
             </div>
           </div>
@@ -527,7 +401,7 @@
 		</a>
               <div class="details">
                 <h3>Lock Picking Village (LPV)</h3>
-                <p>"The Open Organisation Of Lockpickers, or TOOOL, is an international group of lockpicking enthusiasts dedicated to advancing the general public knowledge about locks and lockpicking through teaching, research, and competition."
+                <p>FREE LOCKPICKING TRAINING! We guarantee you'll leave knowing how to pick locks!<br><br> The Open Organisation Of Lockpickers, or TOOOL, is an international group of lockpicking enthusiasts dedicated to advancing the general public knowledge about locks and lockpicking through teaching, research, and competition.
               </div>
             </div>
           </div>
@@ -537,26 +411,20 @@
 
     <!-- ======= DROP-DOWN Volunteer Section ======= -->
     <section id="volunteer" class="section-bg">
-
       <div class="container" data-aos="fade-up">
-
         <div class="section-header">
           <h2>Volunteer With Us</h2>
           <p>We’re so excited for BSides312! If you want to help, you’re in the right place!</p>
         </div>
-
-        <div class="row volunteer-info">
-
-          <div class="col-md-4">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-8 text-center mb-4">
+            <a href="#" target="_new">
+              <button type="button" class="btn btn-info btn-lg rounded-pill"
+                style="background-color: #2686b7; border-color: #2686b7; font-family: 'Poppins', sans-serif; border-radius: 2rem;">
+                Fully staffed for 2025, but catch us next year!
+              </button>
+            </a>
           </div>
-          <div class="col-md-4">
-
-          </div>
-          <div class="col-md-4">
-          </div>
-           <div class="text-center mb-4">
-              <a href="#" target="_new"><button type="button" class="btn btn-info btn-lg" data-bs-toggle="modal" target="new">Fully staffed for 2025, but catch us next year!</button></a>
-           </div>
         </div>
       </div>
     </section><!-- End Volunteer Section -->
@@ -568,7 +436,7 @@
         <div class="row">
         <div class="section-header">
           <h2>Call for Presentations</h2>
-          <p>We are looking for all experience levels of speakers.</p>
+          <p>CFP is closed and notices have been sent!<br><br>Make sure you reply and confirm if you were accepted!</p>
         </div>
           <div class="col-md-4">
             <p>Options for 25 minute and 50 minute speaking durations are available.</p>
@@ -577,12 +445,19 @@
             <p>CFP opens <strong>January 15th, 2025</strong> and closes <strong>March 14th, 2025</strong>.</p>
           </div>
           <div class="col-md-4">
-            <p>Notifications will be sent by <strong>March 31st</strong> at the latest.</p>
+            <p>Notifications have been sent! Make sure you reply to confirm if you were accepted, or to get your discount code if you were declined!</p>
           </div>
-           <div class="text-center">
-              <a href="https://thecatapi.com/api/images/get?format=src&type=gif"><button type="button" class="btn btn-info btn-lg" data-bs-toggle="modal" target="new">CLOSED</button></a>
-           </div>
-        </div> <!-- row -->
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-8 text-center">
+            <a href="https://thecatapi.com/api/images/get?format=src&type=gif" target="new">
+              <button type="button" class="btn btn-info btn-lg rounded-pill"
+                style="background-color: #2686b7; border-color: #2686b7; font-family: 'Poppins', sans-serif; border-radius: 2rem;">
+                CLOSED
+              </button>
+            </a>
+          </div>
+        </div>
       </div>
     </section><!-- End CFP Section -->
 
@@ -636,7 +511,10 @@
                 </ul>
                 <hr>
                 <div class="text-center">
-                <a href="https://paypal.me/bsides312/500" target="_parent"><button type="button" class="btn" data-bs-toggle="modal">Donate Now</button></a>
+                  <a href="https://paypal.me/bsides312/500" target="_parent" class="btn btn-info btn-lg rounded-pill"
+                     style="background-color: #2686b7; border-color: #2686b7; font-family: 'Poppins', sans-serif; border-radius: 2rem;">
+                    Donate Now
+                  </a>
                 </div>
               </div>
             </div>
@@ -655,7 +533,10 @@
                 </ul>
                 <hr>
                 <div class="text-center">
-                <a href="https://paypal.me/bsides312/1000" target="_parent"><button type="button" class="btn" data-bs-toggle="modal">Donate Now</button></a>
+                  <a href="https://paypal.me/bsides312/1000" target="_parent" class="btn btn-info btn-lg rounded-pill"
+                     style="background-color: #2686b7; border-color: #2686b7; font-family: 'Poppins', sans-serif; border-radius: 2rem;">
+                    Donate Now
+                  </a>
                 </div>
               </div>
             </div>
@@ -677,7 +558,10 @@
                 </ul>
                 <hr>
                 <div class="text-center">
-                <a href="https://paypal.me/bsides312/2000" target="_parent"><button type="button" class="btn" data-bs-toggle="modal">Donate Now</button></a>
+                  <a href="https://paypal.me/bsides312/2000" target="_parent" class="btn btn-info btn-lg rounded-pill"
+                     style="background-color: #2686b7; border-color: #2686b7; font-family: 'Poppins', sans-serif; border-radius: 2rem;">
+                    Donate Now
+                  </a>
                 </div>
               </div>
             </div>
@@ -695,12 +579,15 @@
                   <li><span class="fa-li"><i class="fa fa-check"></i></span>(2) Additional event passes</li>
                   <li><span class="fa-li"><i class="fa fa-check"></i></span>Mention in the media coverage</li>
                   <li><span class="fa-li"><i class="fa fa-check"></i></span>Logo on T-shirts</li>
-                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Banner placement with maximum visibilt</li>
+                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Banner placement with maximum visibilty</li>
                   <li><span class="fa-li"><i class="fa fa-check"></i></span>Event Booth</li>
                 </ul>
                 <hr>
                 <div class="text-center">
-                <a href="https://paypal.me/bsides312/3000" target="_parent"><button type="button" class="btn" data-bs-toggle="modal">Donate Now</button></a>
+                  <a href="https://paypal.me/bsides312/3000" target="_parent" class="btn btn-info btn-lg rounded-pill"
+                     style="background-color: #2686b7; border-color: #2686b7; font-family: 'Poppins', sans-serif; border-radius: 2rem;">
+                    Donate Now
+                  </a>
                 </div>
               </div>
             </div>
@@ -720,7 +607,10 @@
                 </ul>
                 <hr>
                 <div class="text-center">
-                <a href="https://paypal.me/bsides312/5000" target="_parent"><button type="button" class="btn" data-bs-toggle="modal">Donate Now</button></a>
+                  <a href="https://paypal.me/bsides312/5000" target="_parent" class="btn btn-info btn-lg rounded-pill"
+                     style="background-color: #2686b7; border-color: #2686b7; font-family: 'Poppins', sans-serif; border-radius: 2rem;">
+                    Donate Now
+                  </a>
                 </div>
               </div>
             </div>
@@ -740,7 +630,10 @@
                 </ul>
                 <hr>
                 <div class="text-center">
-                <a href="https://paypal.me/bsides312/10000" target="_parent"><button type="button" class="btn" data-bs-toggle="modal">Donate Now</button></a>
+                  <a href="https://paypal.me/bsides312/10000" target="_parent" class="btn btn-info btn-lg rounded-pill"
+                     style="background-color: #2686b7; border-color: #2686b7; font-family: 'Poppins', sans-serif; border-radius: 2rem;">
+                    Donate Now
+                  </a>
                 </div>
               </div>
             </div>
@@ -753,41 +646,6 @@
       </div>
     </section><!-- End Support Us Section -->
 
-    <!-- ======= DROP-DOWN Personal Donors Section ======= -->
-
-    <section id="personal" class="section-with-bg">
-       <div class="container" data-aos="fade-up">
-        <div class="row">
-        <div class="section-header">
-          <h2>Personal Donations</h2>
-          <p>You don't need to be a corporation to believe in us.</p>
-        </div>
-           <div class="text-center">
-              <iframe
-				src="https://www.paypal.com/giving/campaigns?campaign_id=5YHA5H9F2CQXS"
-				title="BSides312 2025 Fundraiser"
-				frameborder="0"
-				width=382
-				height=550
-				scrolling="no"
-			  ></iframe>
-              <!-- <a href="https://www.paypal.com/donate/?hosted_button_id=GV5ZXR757Z4J4" target="_new"><button type="button" class="btn btn-info btn-lg" data-bs-toggle="modal" target="new">Believe</button></a> -->
-           </div>
-          <div class="col-md-4">
-            <p></p>
-          </div>
-          <div class="col-md-4">
-            <p> Community members can choose to make a one-time, monthly, or yearly donation. As a 501(c)(3) charity apart of Hak4Kidz NFP (EIN 46-5659249), your donation is fully tax deductible.</p>
-          </div>
-          <div class="col-md-4">
-            <p></p>
-          </div>
-            <p></p>
-            <p></p>
-        </div> <!-- row -->
-      </div>
-    </section><!-- End Personal Donors Section -->
-
    <!-- ======= DROP-DOWN End Personal Donors Section ======= -->
 
 <!-- ======= DROP-DOWN Event Section ======= -->
@@ -797,7 +655,7 @@
       <div class="container" data-aos="fade-up">
         <div class="section-header">
           <h2>Event Schedule</h2>
-          <p>BSides312 2025 event schedule is under development</p>
+          <p>BSides312 2025 event schedule is waiting on speaker confirmations.</p>
         </div>
 
         <!-- <ul class="nav nav-tabs" role="tablist" data-aos="fade-up" data-aos-delay="100">
@@ -805,8 +663,6 @@
             <a class="nav-link active" href="#saturday" role="tab" data-bs-toggle="tab">Saturday</a>
           </li>
         </ul> -->
-
-        <h3 class="sub-heading">We are thrilled to present to you an amazing line up of industry leaders and practioners once we close the CFP.</h3>
 
         <div class="tab-content row justify-content-center" data-aos="fade-up" data-aos-delay="200">
 
@@ -825,11 +681,8 @@
         <div class="container" data-aos="fade-up">
             <div class="section-header">
                <h2>Event Speakers</h2>
-               <p>Speakers will be announced after the CFP has closed.</p>
+               <p>We have one of the best lineups Johnny has ever seen! Stay tuned!</p>
             </div>
-        
-
-
        <!-- Speakers Above -->
         </div>
       </div>
@@ -843,9 +696,17 @@
         <div class="section-header">
           <h2>Event Venue</h2>
         </div>
-       <div class="row g-0">
+       <div class="row g-3 g-md-4">
           <div class="col-lg-6 venue-map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5933.254410369004!2d-87.74695362426661!3d41.965341759947904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fcc304c398cdd%3A0x9d21ad4341cdff52!2sIrish%20American%20Heritage%20Center!5e0!3m2!1sen!2sus!4v1740245334888!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div style="position:relative;width:100%;padding-bottom:56.25%;height:0;overflow:hidden;">
+              <iframe
+                src="https://www.google.com/maps?q=Irish+American+Heritage+Center,+4626+N+Knox+Ave,+Chicago,+IL+60630&output=embed"
+                style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
           </div>
 
           <div class="col-lg-6 venue-info">
@@ -853,86 +714,77 @@
               <div class="col-11 col-lg-8 position-relative">
                 <h3>Irish American Heritage Center</h3>
 		<h3>4626 N Knox Avenue, Chicago, IL 60630</h3>
-                <p>This historic building is home to the Fifth Province Pub, The Mayfair Theatre, and unique meeting and event spaces perfect for gatherings of any size.</p>
+                <p>This historic building is home to the Fifth Province Pub, The Mayfair Theatre, and unique meeting and event spaces perfect for gatherings of any size. 
+                  <br><br> FREE PARKING is available in the North and South lots, with space for up to 300 cars.
+                </p>
               </div>
             </div>
           </div>
         </div>
-
       </div>
 
-      <!-- <div class="container-fluid venue-gallery-container" data-aos="fade-up" data-aos-delay="100">
-        <div class="row g-0">
-
-          <div class="col-lg-3 col-md-4">
+      <div class="container-xxl venue-gallery-container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row g-3 g-md-4">
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
             <div class="venue-gallery">
-              <a href="assets/img/venue-gallery/1.jpg" class="glightbox" data-gall="venue-gallery">
-                <img src="assets/img/venue-gallery/1.jpg" alt="" class="img-fluid">
+              <a href="assets/img/venue-gallery/1.jpg" 
+                 class="glightbox" 
+                 data-gall="venue-gallery"
+                 aria-label="View full size image">
+                <img src="assets/img/venue-gallery/1.jpg"
+                     class="img-fluid"
+                     loading="lazy"
+                     decoding="async">
               </a>
             </div>
           </div>
 
-          <div class="col-lg-3 col-md-4">
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
             <div class="venue-gallery">
-              <a href="assets/img/venue-gallery/2.jpg" class="glightbox" data-gall="venue-gallery">
-                <img src="assets/img/venue-gallery/2.jpg" alt="" class="img-fluid">
+              <a href="assets/img/venue-gallery/2.jpg" 
+                 class="glightbox" 
+                 data-gall="venue-gallery"
+                 aria-label="View full size image">
+                <img src="assets/img/venue-gallery/2.jpg"
+                     class="img-fluid" 
+                     loading="lazy"
+                     decoding="async">
               </a>
             </div>
           </div>
 
-          <div class="col-lg-3 col-md-4">
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
             <div class="venue-gallery">
-              <a href="assets/img/venue-gallery/3.jpg" class="glightbox" data-gall="venue-gallery">
-                <img src="assets/img/venue-gallery/3.jpg" alt="" class="img-fluid">
+              <a href="assets/img/venue-gallery/3.jpg" 
+                 class="glightbox" 
+                 data-gall="venue-gallery"
+                 aria-label="View full size image">
+                <img src="assets/img/venue-gallery/3.jpg"
+                     class="img-fluid" 
+                     loading="lazy"
+                     decoding="async">
               </a>
             </div>
           </div>
 
-          <div class="col-lg-3 col-md-4">
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
             <div class="venue-gallery">
-              <a href="assets/img/venue-gallery/4.jpg" class="glightbox" data-gall="venue-gallery">
-                <img src="assets/img/venue-gallery/4.jpg" alt="" class="img-fluid">
+              <a href="assets/img/venue-gallery/4.jpg" 
+                 class="glightbox" 
+                 data-gall="venue-gallery"
+                 aria-label="View full size image">
+                <img src="assets/img/venue-gallery/4.jpg"
+                     class="img-fluid" 
+                     loading="lazy"
+                     decoding="async">
               </a>
             </div>
           </div>
-<!--
-          <div class="col-lg-3 col-md-4">
-            <div class="venue-gallery">
-              <a href="assets/img/venue-gallery/5.jpg" class="glightbox" data-gall="venue-gallery">
-                <img src="assets/img/venue-gallery/5.jpg" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="venue-gallery">
-              <a href="assets/img/venue-gallery/6.jpg" class="glightbox" data-gall="venue-gallery">
-                <img src="assets/img/venue-gallery/6.jpg" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="venue-gallery">
-              <a href="assets/img/venue-gallery/7.jpg" class="glightbox" data-gall="venue-gallery">
-                <img src="assets/img/venue-gallery/7.jpg" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="venue-gallery">
-              <a href="assets/img/venue-gallery/8.jpg" class="glightbox" data-gall="venue-gallery">
-                <img src="assets/img/venue-gallery/8.jpg" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
--->
-        </div> -->
+        </div>
       </div>
 
     </section><!-- End Venue Section -->
-
+    <br>    
     <!-- ======= DROP-DOWN Code of Conduct Section ======= -->
     <section id="coc">
       <div class="container" data-aos="fade-up">
@@ -988,7 +840,7 @@
                 <div data-bs-toggle="collapse" class="collapsed question" href="#faq1.1">Two BSides in the same city? Is that allowed? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
                 <div id="faq1.1" class="collapse" data-bs-parent=".faq-list">
                   <p>
-                    Yes. In fact, Security BSides International approved Delhi and Los Angeles also have two Security BSides, as well as BSides312. Of course, the requirement is that each event coordinates with one another to space out events 5-6 months apart, don't poach sponsors or do anything that prevents the two events to coexist.
+                    Yes. In fact, Security BSides International approved Delhi and Los Angeles also have two Security BSides, as well as Chicago! Of course, the requirement is that each event coordinates with one another to space out events 5-6 months apart, don't poach sponsors or do anything that prevents the two events to coexist.
                   </p>
                 </div>
               </li>
@@ -1054,7 +906,9 @@
         </ul>
       </div>
 
-      <p class="text-center text-muted" style="font-style: italic; font-size: 80%;">Privacy policy lovingly borrowed from our friends at <a href="https://www.bsidesden.org/data-privacy">BSides Denver</a>.</p>
+      <p class="text-center" style="font-style: italic; font-size: 80%;">
+        Privacy policy lovingly borrowed from our friends at <a href="https://www.bsidesden.org/data-privacy">BSides Denver</a>.
+      </p>
     </div>
 
   </div>
@@ -1067,55 +921,57 @@
       <div class="container" data-aos="fade-up">
         <div class="section-header">
           <h2>BSides312 Board Members</h2>
-
+          <p>
+            <a href="board-details.html">Click here to read more about them!</a>
+          </p>
         </div>
-        <div class="row">
-          <div class="col-lg-4 col-md-6">
-            <div class="board" data-aos="fade-up" data-aos-delay="100">
-              <img src="assets/img/about/klowe.jpg" alt="Kourtney Lowe" class="img-fluid">
-              <div class="details">
-                <h3><a href="board-details.html#klowe">Kourtney Lowe</a></h3>
-                <p>Chief Executive Officer</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="board" data-aos="fade-up" data-aos-delay="100">
-              <img src="assets/img/about/heal.jpg" alt="Dave Schwartzberg" class="img-fluid">
-              <div class="details">
-                <h3><a href="board-details.html#heal">Dave Schwartzberg</a></h3>
-                <p>Chief Financial Officer</p>
-              </div>
-            </div>
-          </div>
-		  <div class="col-lg-4 col-md-6">
-            <div class="board" data-aos="fade-up" data-aos-delay="100">
-              <img src="assets/img/about/jxmas2.jpg" alt="Johnny Xmas" class="img-fluid">
-              <div class="details">
-                <h3><a href="board-details.html#xmas">Johnny Xmas</a></h3>
-                <p>Chief Marketing Officer</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="board" data-aos="fade-up" data-aos-delay="100">
-              <img src="assets/img/about/rwagner.jpg" alt="Robert Wagner" class="img-fluid">
-              <div class="details">
-                <h3><a href="board-details.html#wags">Robert Wagner</a></h3>
-                <p>Director</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="board" data-aos="fade-up" data-aos-delay="100">
-              <img src="assets/img/about/mkavka2.jpg" alt="Mike Kavka" class="img-fluid">
-              <div class="details">
-                <h3><a href="board-details.html#mkavka">Mike Kavka</a></h3>
-                <p>Director</p>
-              </div>
-            </div>
-          </div>
-          
+        <div class="row justify-content-center">
+  <div class="col-lg-4 col-md-6">
+    <div class="board text-center" data-aos="fade-up" data-aos-delay="100">
+      <img src="assets/img/about/klowe.jpg" alt="Kourtney Lowe" class="img-fluid mx-auto d-block">
+      <div class="details">
+        <h3><a href="board-details.html#klowe">Kourtney Lowe</a></h3>
+        <p>Chief Executive Officer</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4 col-md-6">
+    <div class="board text-center" data-aos="fade-up" data-aos-delay="100">
+      <img src="assets/img/about/heal.jpg" alt="Dave Schwartzberg" class="img-fluid mx-auto d-block">
+      <div class="details">
+        <h3><a href="board-details.html#heal">Dave Schwartzberg</a></h3>
+        <p>Chief Financial Officer</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4 col-md-6">
+    <div class="board text-center" data-aos="fade-up" data-aos-delay="100">
+      <img src="assets/img/about/jxmas2.jpg" alt="Johnny Xmas" class="img-fluid mx-auto d-block">
+      <div class="details">
+        <h3><a href="board-details.html#xmas">Johnny Xmas</a></h3>
+        <p>Chief Marketing Officer</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4 col-md-6">
+    <div class="board text-center" data-aos="fade-up" data-aos-delay="100">
+      <img src="assets/img/about/rwagner.jpg" alt="Robert Wagner" class="img-fluid mx-auto d-block">
+      <div class="details">
+        <h3><a href="board-details.html#wags">Robert Wagner</a></h3>
+        <p>Director</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4 col-md-6">
+    <div class="board text-center" data-aos="fade-up" data-aos-delay="100">
+      <img src="assets/img/about/mkavka2.jpg" alt="Mike Kavka" class="img-fluid mx-auto d-block">
+      <div class="details">
+        <h3><a href="board-details.html#mkavka">Mike Kavka</a></h3>
+        <p>Director</p>
+      </div>
+    </div>
+  </div>
+</div>
 
        <!-- Board Above -->
         </div>
@@ -1123,80 +979,39 @@
 
     </section><!-- End Board Section -->
 
-
-    <!-- ======= Contact Section ======= -->
-    <section id="contact" class="section-bg">
-
+    <!-- ======= Contact Us Section ======= -->
+    <section id="contact" class="section-with-bg">
       <div class="container" data-aos="fade-up">
-
         <div class="section-header">
           <h2>Contact Us</h2>
-          <p>We'd love to hear from you. Let us know what you need.</p>
+          <p>Have questions or want to get in touch? Reach out to us below!</p>
         </div>
-
-        <div class="row contact-info">
-
-          <div class="col-md-4">
-            <div class="contact-address">
-              <i class="bi bi-geo-alt"></i>
-              <h3>Location</h3>
-              <address>Irish American Heritage Center<br/>
-				4626 N Knox Ave.<br/>
-				Chicago, IL 60630<br/></address>
+        <div class="row justify-content-center">
+          <div class="col-lg-6 col-md-8">
+            <div class="contact-info mb-4">
+              <p>
+                <strong>Phone:</strong> (760) BAker-3-9969<br>
+                <strong>Email:</strong> questions [@] bsides312.org<br>
+              </p>
+            </div>
+            <div class="social-links text-center mb-3">
+              <a href="https://infosec.exchange/@bsides312" class="mastodon" target="_blank" rel="noopener"><i class="bi bi-mastodon"></i></a>
+              <a href="https://bsky.app/profile/bsides312.org" class="bluesky" target="_blank" rel="noopener"><i class="bi bi-bluesky"></i></a>
+              <a href="https://twitter.com/bsides312" class="twitter" target="_blank" rel="noopener"><i class="bi bi-twitter"></i></a>
+              <a href="https://www.facebook.com/BSides312" class="facebook" target="_blank" rel="noopener"><i class="bi bi-facebook"></i></a>
+              <a href="https://www.instagram.com/bsides312" class="instagram" target="_blank" rel="noopener"><i class="bi bi-instagram"></i></a>
             </div>
           </div>
-
-          <div class="col-md-4">
-            <div class="contact-phone">
-              <i class="bi bi-phone"></i>
-              <h3>Phone Number</h3>
-              <p>+1 (760) BAker-3-9969</p>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="contact-email">
-              <i class="bi bi-envelope"></i>
-              <h3>Email</h3>
-              <p>questions[ @ ] bsides312.org</p>
-            </div>
-          </div>
-
         </div>
-
-        <!-- <div class="form">
-          <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-            <div class="row">
-              <div class="form-group col-md-6">
-                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
-              </div>
-              <div class="form-group col-md-6 mt-3 mt-md-0">
-                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
-              </div>
-            </div>
-            <div class="form-group mt-3">
-              <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
-            </div>
-            <div class="form-group mt-3">
-              <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
-            </div>
-            <div class="my-3">
-              <div class="loading">Loading</div>
-              <div class="error-message"></div>
-              <div class="sent-message">Your message has been sent. Thank you!</div>
-            </div>
-            <div class="text-center"><button type="submit">Send Message</button></div>
-          </form>
-        </div> -->
-
       </div>
-    </section><!-- End Contact Section -->
+    </section>
+    <!-- End Contact Us Section -->
 
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
   <footer id="footer">
-    <div class="footer-top">
+    <div class="footer-top" style="background-image: url(assets/img/graffiti.png);background-repeat: no-repeat;background-position-x: right;background-size: contain;">
       <div class="container">
         <div class="row">
 
@@ -1205,40 +1020,9 @@
             <p>Each BSides is a community-driven framework for building events for and by information security community members.  The goal is to expand the spectrum of conversation beyond the traditional confines of space and time.  It creates opportunities for individuals to both present and participate in an intimate atmosphere that encourages collaboration. It is an intense event with discussions, demos, and interaction from participants. It is where conversations for the next-big-thing are happening.</p>
           </div>
 
-          <div class="col-lg-4 col-md-4 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#about">About us</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#coc">Code of Conduct</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-4 col-md-6 footer-contact">
-            <h4>Contact Us</h4>
-            <p>
-              Chicago, IL<br>
-              United States <br>
-              <strong>Phone:</strong> (760) BAker-3-9969<br>
-              <strong>Email:</strong> questions [@] bsides312.org<br>
-            </p>
-
-            <div class="social-links">
-              <a href="https://infosec.exchange/@bsides312" class="mastodon" target="new"><i class="bi bi-mastodon"></i></a>
-              <a href="https://bsky.app/profile/bsides312.org" class="bluesky" target="new"><i class="bi bi-bluesky"></i></a>
-              <a href="https://twitter.com/bsides312" class="twitter" target="new"><i class="bi bi-twitter"></i></a>
-              <a href="https://www.facebook.com/BSides312" class="facebook" target="new"><i class="bi bi-facebook"></i></a>
-              <a href="https://www.instagram.com/bsides312" class="instagram" target="new"><i class="bi bi-instagram"></i></a>
-              <!-- <a href="#" class="google-plus" target="new"><i class="bi bi-instagram"></i></a>
-              <a href="#" class="linkedin"><i class="bi bi-linkedin" target="new"></i></a> -->
-            </div>
-
-          </div>
-
         </div>
       </div>
     </div>
-
     <div class="container">
       <div class="copyright">
         &copy; Copyright <strong>BSides312</strong> 2025. All Rights Reserved
@@ -1251,7 +1035,7 @@
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
