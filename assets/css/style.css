@@ -660,6 +660,26 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+/* Ensure venue gallery images are always in one row */
+.venue-gallery-container .row {
+  display: flex;
+  flex-wrap: nowrap; /* Prevent wrapping */
+  overflow-x: auto; /* Allow horizontal scrolling if needed */
+  gap: 1rem; /* Add spacing between images */
+}
+
+.venue-gallery-container .col-lg-3,
+.venue-gallery-container .col-md-4 {
+  flex: 0 0 auto; /* Prevent columns from shrinking or growing */
+  width: calc(100% / 5); /* Adjust width for 5 images */
+}
+
+.venue-gallery img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
 /*--------------------------------------------------------------
 # Board Image
 --------------------------------------------------------------*/
