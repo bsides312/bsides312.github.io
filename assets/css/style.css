@@ -971,3 +971,13 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1rem;
   line-height: 1.5;
 }
+
+.btn-primary-action {
+  background-color: #2686b7;
+  border-color: #2686b7;
+  font-family: 'Poppins', sans-serif;
+  border-radius: 2rem;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+}
