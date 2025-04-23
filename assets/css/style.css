@@ -112,16 +112,23 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 30px;
   position: relative;
   padding-bottom: 20px;
+  text-align: center;
 }
 .section-header::before {
   content: "";
-  position: absolute;
   display: block;
-  width: 60px;
-  height: 5px;
+  width: 50px;
+  height: 4px;
   background: var(--primary-color);
-  bottom: 0;
-  left: calc(50% - 25px);
+  margin: 0 auto 10px auto;
+}
+.section-header:not(:last-of-type)::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 4px;
+  background: var(--primary-color);
+  margin: 10px auto 0 auto;
 }
 .section-header h2 {
   font-size: 36px;
@@ -636,6 +643,7 @@ h1, h2, h3, h4, h5, h6 {
 --------------------------------------------------------------*/
 .venue-gallery-container {
   padding: 2rem 0;
+  text-align: center;
 }
 .venue-gallery {
   overflow: hidden;
@@ -645,12 +653,18 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 1rem;
 }
 .venue-gallery img {
-  aspect-ratio: 3/2;
-  object-fit: cover;
   width: 100%;
   height: auto;
+  object-fit: cover;
   transition: transform 0.3s ease;
 }
+
+@media (max-width: 992px) {
+  .venue-gallery img {
+    width: 100% !important; /* Reset to full width for smaller screens */
+  }
+}
+
 .venue-gallery a:hover img {
   transform: scale(1.05);
 }
@@ -666,6 +680,7 @@ h1, h2, h3, h4, h5, h6 {
   flex-wrap: nowrap; /* Prevent wrapping */
   overflow-x: auto; /* Allow horizontal scrolling if needed */
   gap: 1rem; /* Add spacing between images */
+  justify-content: center; /* Center the rows */
 }
 
 .venue-gallery-container .col-lg-3,
@@ -674,10 +689,33 @@ h1, h2, h3, h4, h5, h6 {
   width: calc(100% / 5); /* Adjust width for 5 images */
 }
 
+.venue-gallery-container .col-lg-4 {
+  max-width: 300px; /* Optional: Limit the width of each image */
+}
+
 .venue-gallery img {
   width: 100%;
   height: auto;
   object-fit: cover;
+}
+
+.row.g-3 {
+  gap: 1.5rem; /* Add spacing between rows and columns */
+}
+
+/* Center the Venue Gallery */
+#venue-gallery .row {
+  justify-content: center; /* Center the gallery items horizontally */
+}
+
+.venue-gallery-container {
+  text-align: center; /* Center the entire container */
+  margin: 0 auto; /* Ensure the container is centered */
+}
+
+.venue-gallery {
+  display: inline-block; /* Ensure each gallery item is treated as inline for centering */
+  margin: 0 auto; /* Center each gallery item */
 }
 
 /*--------------------------------------------------------------
@@ -711,7 +749,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #supporters .section-header img {
-  max-width: 75% !important;
+  max-width: 100% !important;
   height: auto !important;
   display: block;
   margin-left: auto;
@@ -726,13 +764,27 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #supporters .supporter-logo img {
-  max-width: 75% !important;
-  height: auto !important;
+  max-width: 100% !important; /* Allow images to scale up to their container size */
+  width: 250px; /* Increase the width for desktop */
+  height: auto !important; /* Maintain aspect ratio */
   background: #fff;
   border-radius: 8px;
   padding: 8px;
   display: block;
   margin: 0 auto;
+}
+
+@media (max-width: 992px) {
+  #supporters .supporter-logo img {
+    width: 200px; /* Slightly smaller for tablets */
+  }
+}
+
+@media (max-width: 576px) {
+  #supporters .supporter-logo img {
+    width: 150px; /* Smaller size for mobile */
+    padding: 4px;
+  }
 }
 
 #supporters .row,
@@ -744,6 +796,15 @@ h1, h2, h3, h4, h5, h6 {
   #supporters .supporter-logo img {
     padding: 4px;
   }
+}
+
+/* Reduce spacing between sponsor header images and sponsor logos */
+.supporters-wrap .section-header {
+  margin-bottom: 10px; /* Reduce the bottom margin of the header */
+}
+
+.supporter-logo {
+  margin-top: 10px; /* Reduce the top margin of the sponsor logos */
 }
 
 /* Make footer logo responsive and not too large */
@@ -776,10 +837,10 @@ h1, h2, h3, h4, h5, h6 {
   background-image: url(assets/img/graffiti.png);
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: 50% auto; /* 50% of container width */
-  min-height: 80px;   /* Reduced from 200px */
+  background-size: auto; /* Adjusted to remove max-width */
+  min-height: 80px; /* Reduced from 200px */
   z-index: 1;
-  padding: 0;         /* Remove extra padding */
+  padding: 0; /* Remove extra padding */
 }
 
 .footer-top::before {
@@ -800,9 +861,9 @@ h1, h2, h3, h4, h5, h6 {
 /* Mobile adjustments for graffiti */
 @media (max-width: 767.98px) {
   .footer-top {
-    background-size: 60% auto; /* Slightly smaller for mobile */
+    background-size: auto; /* Adjusted to remove max-width */
     background-position: center top;
-    min-height: 60px;          /* Smaller min-height for mobile */
+    min-height: 60px; /* Smaller min-height for mobile */
     padding-top: 10px;
   }
 }
@@ -829,4 +890,84 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 12px; /* Rounded corners */
   object-fit: cover; /* Ensures the image fits nicely */
   max-height: 400px; /* Optional: Limit the height for consistency */
+}
+
+#Contribute .section-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+}
+
+.supporter-logo img {
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.section-header img {
+  height: auto;
+  margin: 0 auto;
+}
+
+.btn-info {
+  background-color: #2686b7;
+  border-color: #2686b7;
+  font-family: 'Poppins', sans-serif;
+  border-radius: 2rem;
+}
+
+#map {
+  width: 50% !important; /* Reduce the width to 50% */
+  height: auto !important; /* Maintain aspect ratio */
+  margin: 0 auto; /* Center the map */
+  display: block;
+}
+
+@media (max-width: 992px) {
+  #map {
+    width: 100% !important; /* Reset to full width for smaller screens */
+  }
+}
+
+/* Map Container */
+.map-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px; /* Shrink the map to a maximum width */
+  padding-bottom: 56.25%; /* Maintain 16:9 aspect ratio */
+  height: 0;
+  margin: 0 auto; /* Center the map */
+  overflow: hidden;
+}
+
+.map-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Venue Info */
+.venue-info {
+  text-align: center;
+  padding: 1rem;
+}
+
+.venue-info h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.venue-info h4 {
+  font-size: 1.2rem;
+  color: rgba(202, 206, 221, 0.8);
+}
+
+.venue-info p {
+  font-size: 1rem;
+  line-height: 1.5;
 }

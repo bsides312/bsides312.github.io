@@ -95,36 +95,38 @@
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto active" href="index.html">Home</a></li>
           <li><a class="nav-link scrollto" href="#buy-tickets">Get Tickets</a></li>
-          <li><a class="nav-link scrollto" href="#supporters">Sponsors</a></li>
-          <li class="dropdown"><a class="nav-link scrollto" href="#"><span>Participate</span> <i class="bi bi-chevron-down"></i></a>
+          <li class="dropdown">
+            <a class="nav-link scrollto" href="#supporters"><span>Sponsor Us</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a class="nav-link" href="support-us.html#support">How to Donate</a></li>
+              <li><a class="nav-link" href="https://bsides312.org/assets/docs/BSides312_2025_Sponsor_Prospectus.pdf" target="_blank">Prospectus</a></li>
+              <li><a class="nav-link" href="#supporters">Current Supporters</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a class="nav-link scrollto" href="#"><span>Contribute</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a class="nav-link scrollto" href="#volunteer">Volunteer</a></li>
               <li><a class="nav-link scrollto" href="#cfp">Call for Presentations</a></li>
-              <li class="dropdown"><a class="nav-link scrollto" href="#support"><span>Support Us</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a class="nav-link scrollto" href="#support">Corporate Sponsorship</a></li>
-                  <li><a class="nav-link scrollto" href="#personal">Personal Donors</a></li>
-                </ul>
               </li>
             </ul>
           </li>
-          <li class="dropdown"><a href=""><span>Event</span> <i class="bi bi-chevron-down"></i></a>
+          <li class="dropdown"><a href="#"><span>Event</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a class="nav-link scrollto" href="#schedule">Schedule</a></li>
-              <li><a class="nav-link scrollto" href="#speakers">Speakers</a></li>
-              <li><a class="nav-link scrollto" href="#fun">Activities</a></li>
-              <li><a class="nav-link scrollto" href="#venue">Venue</a></li>
-              <li><a class="nav-link scrollto" href="#parking">Find Parking</a></li>
-              <li><a class="nav-link scrollto" href="#coc">Code of Conduct</a></li>
+              <li><a class="nav-link scrollto" href="#keynote">Keynote Speaker</a></li>
+              <li><a class="nav-link scrollto" href="schedule.html#schedule">Schedule</a></li>
+              <li><a class="nav-link scrollto" href="speaker-bios.html#speakers">About our Speakers</a></li>
+              <li><a class="nav-link scrollto" href="#fun">Learn to Hack</a></li>
+              <li><a class="nav-link scrollto" href="#venue">Venue & Parking</a></li>
+              <li><a class="nav-link scrollto" href="coc.html#coc">Code of Conduct</a></li>
             </ul>
           </li>
           
           <li class="dropdown"><a class="nav-link scrollto" href="#"><span>About</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a class="nav-link scrollto" href="#about">About BSides312</a></li>
-              <li><a class="nav-link scrollto" href="board-details.html">Our Board</a></li>
+              <li><a class="nav-link scrollto" href="board-details.html#board-details">Our Board</a></li>
               <li><a class="nav-link scrollto" href="#faq">FAQ</a></li>
               <li><a class="nav-link scrollto" href="#privacy">Privacy Policy</a></li>
             </ul>
@@ -132,7 +134,6 @@
           </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
-
 
     </div>
   </header><!-- End Header -->
@@ -143,7 +144,7 @@
       <h1 class="mb-4 pb-0">BSides312<br><span>Non-Profit Community</span> Conference</h1>
       <p class="mb-4 pb-0">June 1st, 2025  Irish American Heritage Center, Chicago Illinois</p>
      <!-- <a href="https://www.youtube.com/watch?v=9uVBJXVIBmw" class="glightbox play-btn mb-4"></a> -->
-      <a href="#buy-tickets" class="about-btn scrollto">CLICK TO HACK!</a>
+      <a href="#buy-tickets" class="about-btn scrollto">CLICK TO GET HACKING!</a>
     </div>
   </section><!-- End Hero Section -->
 
@@ -179,206 +180,39 @@
     <!-- ======= DROP-DOWN Buy Ticket Section ======= -->
     <section id="buy-tickets" class="section-with-bg">
       <div class="container" data-aos="fade-up">
-
         <div class="section-header">
           <h2>REGISTER HERE</h2>
           <p>We've planned an exciting day of brilliant hacker talks and hands-on hacks for you!<br>Click below to register for access, then join us on Discord for real-time updates:</p>
-        </div>
-        <div class="row justify-content-center">
-          <div class="col-12 col-md-8 text-center">
-            <div class="d-flex justify-content-center gap-3 flex-wrap">
-              <a
-                href="#"
-                onclick="createSimpleTixEmbed(this, '32b0e8b6-6732-4e4b-b44e-d0973d487f94', '206866', '#security-bsides312-2','BSides312'); return false;"
-                data-url="https://embed.prod.simpletix.com/"
-                data-enabledigitalwallets="true"
-                data-origin="11"
-                class="btn btn-info btn-lg rounded-pill"
-                style="background-color: #2686b7; border-color: #2686b7; font-family: 'Poppins', sans-serif; border-radius: 2rem;"
-              >
-                Secure A Seat
-              </a>
-              <a
-                href="https://tinyurl.com/bsides312"
-                target="_blank"
-                rel="noopener"
-                class="btn btn-info btn-lg rounded-pill"
-                style="background-color: #2686b7; border-color: #2686b7; font-family: 'Poppins', sans-serif; border-radius: 2rem;"
-              >
-                Join Discord
-              </a>
-            </div>
-            <link href="https://embed.prod.simpletix.com/assets/widget/widget.min.css?t=2024.05.08" rel="stylesheet">
-            <script src="https://embed.prod.simpletix.com/assets/widget/widget.min.js?t=2025.02.19" type="text/javascript"></script>
-          </div>
-        </div>
-        <!-- Discord Modal -->
-        <div class="modal fade" id="discordModal" tabindex="-1" aria-labelledby="discordModalLabel" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="discordModalLabel">Join the BSides312 Discord</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body text-center">
-                <p>Click below to join our Discord community!</p>
-                <a href="https://tinyurl.com/bsides312" target="_blank" rel="noopener">
-                  <button type="button" class="btn btn-info btn-lg rounded-pill"
-                    style="background-color: #2686b7; border-color: #2686b7; font-family: 'Poppins', sans-serif; border-radius: 2rem;">
-                    Open Discord Invite
-                  </button>
-                </a>
-              </div>
-            </div>
+          <div class="d-flex justify-content-center gap-3 flex-wrap">
+            <a
+              href="#"
+              onclick="createSimpleTixEmbed(this, '32b0e8b6-6732-4e4b-b44e-d0973d487f94', '206866', '#security-bsides312-2','BSides312'); return false;"
+              data-url="https://embed.prod.simpletix.com/"
+              data-enabledigitalwallets="true"
+              data-origin="11"
+              class="btn btn-info btn-lg rounded-pill"
+              style="background-color: #2686b7; border-color: #2686b7; font-family: 'Poppins', sans-serif; border-radius: 2rem;">
+              Secure A Seat
+            </a>
+            <a
+              href="https://tinyurl.com/bsides312"
+              target="_blank"
+              rel="noopener"
+              class="btn btn-info btn-lg rounded-pill"
+              style="background-color: #2686b7; border-color: #2686b7; font-family: 'Poppins', sans-serif; border-radius: 2rem;">
+              Join Discord
+            </a>
           </div>
         </div>
       </div>
-    </section><!-- End Buy Ticket Section -->
+    </section>
+    <!-- End Buy Ticket Section -->
 
-   <!-- ======= Supporters Section ======= -->
-    <section id="supporters" class="section-with-bg">
-
-      <div class="container" data-aos="fade-up">
-        <div class="section-header">
-          <h2>Sponsors</h2>
-        </div>
-        <div class="alert alert-warning container-fluid text-center fw-bold" role="alert">
-          Sponsorship packages for 2025 are now available! Click <a href="#support">here</a> to learn about our corporate sponsorship options and individual donor opportunities.  
-        </div>
-
-        <!-- Platinum Sponsors -->
-        <div class="row no-gutters supporters-wrap clearfix gy-4 gx-4 mb-5" data-aos="zoom-in" data-aos-delay="100">
-          <div class="section-header">
-            <img src="assets/img/supporters/platinum3.png" style="display: block; place-self: center;">
-          </div>
-          <div class="col-12 col-md-4 offset-md-4">
-            <div class="supporter-logo">
-              <a href="https://www.cisco.com/">
-                <img src="assets/img/supporters/cisco.png" class="img-fluid" alt="">
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Gold Sponsors -->
-        <div class="row no-gutters supporters-wrap clearfix gy-4 gx-4 mb-5" data-aos="zoom-in" data-aos-delay="100">
-          <div class="section-header">
-            <img src="assets/img/supporters/gold3.png" style="display: block; place-self: center;">
-          </div>
-          <div class="col-lg-3 col-md-4 col-xs-6"></div>
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <div class="supporter-logo">
-              <a href="https://www.kodemsecurity.com/">
-                <img src="assets/img/supporters/kodem.png" class="img-fluid" alt="">
-              </a>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <div class="supporter-logo">
-              <a href="https://stellarcyber.ai/">
-                <img src="assets/img/supporters/stellarcyber.png" class="img-fluid" alt="">
-              </a>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-xs-6"></div>
-        </div>
-
-        <!-- Silver Sponsors -->
-        <div class="row no-gutters supporters-wrap clearfix gy-4 gx-4 mb-5" data-aos="zoom-in" data-aos-delay="100">
-          <div class="section-header">
-            <img src="assets/img/supporters/silver3.png" style="display: block; place-self: center;">
-          </div>
-          <div class="col-lg-3 col-md-4 col-xs-6"></div>
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <div class="supporter-logo">
-              <a href="https://www.blackhillsinfosec.com/">
-                <img src="assets/img/supporters/bhis.png" class="img-fluid" alt="">
-              </a>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <div class="supporter-logo">
-              <a href="https://www.justhacking.com/">
-                <img src="assets/img/supporters/jht.png" class="img-fluid" alt="">
-              </a>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-xs-6"></div>
-        </div>
-
-        <!-- Founding Sponsors -->
-        <div class="row no-gutters supporters-wrap clearfix gy-4 gx-4 mb-5" data-aos="zoom-in" data-aos-delay="100">
-          <div class="section-header">
-            <img src="assets/img/supporters/founding3.png" style="display: block; place-self: center;">
-          </div>
-          <div class="col-lg-3 col-md-4 col-xs-6"></div>
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <div class="supporter-logo">
-              <a href="https://www.binalyze.com/">
-                <img src="assets/img/supporters/1.png" class="img-fluid" alt="">
-              </a>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <div class="supporter-logo">
-              <a href="https://www.cobalt.io/">
-                <img src="assets/img/supporters/2.png" class="img-fluid" alt="">
-              </a>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-xs-6"></div>
-        </div>
-
-        <!-- Community Sponsors -->
-        <div class="row no-gutters supporters-wrap clearfix gy-4 gx-4 mb-5" data-aos="zoom-in" data-aos-delay="100">
-          <div class="section-header">
-            <img src="assets/img/supporters/community3.png" style="display: block; place-self: center;">
-          </div>
-          <div class="col-lg-3 col-md-4 col-xs-6"></div>
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <div class="supporter-logo">
-              <a href="https://www.hak4kidz.com/">
-                <img src="assets/img/supporters/7.png" class="img-fluid" alt="Hak4Kidz NFP">
-              </a>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <div class="supporter-logo">
-              <a href="https://buy.stripe.com/6oE2aqaXN88M6e46op" target="new">
-                <img src="assets/img/supporters/8.png" class="img-fluid" alt="BSides MKE">
-              </a>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-xs-6"></div>
-          <div class="col-lg-3 col-md-4 col-xs-6"></div>
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <div class="supporter-logo">
-              <a href="https://GCSIChicago.org" target="new">
-                <img src="assets/img/supporters/9.png" class="img-fluid" alt="GCSI">
-              </a>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <div class="supporter-logo">
-              <a href="https://www.intelliguards.com" target="new">
-                <img src="assets/img/supporters/12.png" class="img-fluid" alt="IntelliGuards">
-              </a>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-xs-6"></div>
-        </div>
-      </div>
-
-    </section><!-- End Sponsors Section -->
-
-  
-   <!-- ======= Participate Section ======= -->
-
- <!-- ======= DROP-DOWN Activities Section ======= -->
+ <!-- ======= DROP-DOWN Learn to Hack Section ======= -->
     <section id="fun">
       <div class="container" data-aos="fade-up">
         <div class="section-header">
-          <h2>Event Activities</h2>
+          <h2>Learn to Hack</h2>
           <p>Capture The Flag event for the day. All levels welcome to play. Prizes for 1st thru 3rd place.</p>
           <p>Lock sport brought to us by <a href="https://www.toool.us/">TOOOL Chicago</a>!</p>
         </div>
@@ -408,7 +242,7 @@
           </div>
         </div>
       </div>
-    </section><!-- DROP-DOWN End Activities Section -->
+    </section><!-- DROP-DOWN End Learn to Hack Section -->
     
     <!-- ======= Keynote Speaker Section ======= -->
     <section id="keynote" class="section-with-bg">
@@ -436,285 +270,6 @@
         </div>
       </div>
     </section>
-    
-    <!-- ======= DROP-DOWN Volunteer Section ======= -->
-    <section id="volunteer" class="section-bg">
-      <div class="container" data-aos="fade-up">
-        <div class="section-header">
-          <h2>Volunteer With Us</h2>
-          <p>We’re so excited for BSides312! If you want to help, you’re in the right place!</p>
-        </div>
-        <div class="row justify-content-center">
-          <div class="col-12 col-md-8 text-center mb-4">
-            <a href="#" target="_new">
-              <button type="button" class="btn btn-info btn-lg rounded-pill"
-                style="background-color: #2686b7; border-color: #2686b7; font-family: 'Poppins', sans-serif; border-radius: 2rem;">
-                Fully staffed for 2025, but catch us next year!
-              </button>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section><!-- End Volunteer Section -->
-
-   <!-- ======= DROP-DOWN CFP Section ======= -->
-
-    <section id="cfp" class="section-with-bg">
-       <div class="container" data-aos="fade-up">
-        <div class="row">
-        <div class="section-header">
-          <h2>Call for Presentations</h2>
-          <p>CFP is closed and notices have been sent!<br><br>Make sure you reply and confirm if you were accepted!</p>
-        </div>
-          <div class="col-md-4">
-            <p>Options for 25 minute and 50 minute speaking durations are available.</p>
-          </div>
-          <div class="col-md-4">
-            <p>CFP opens <strong>January 15th, 2025</strong> and closes <strong>March 14th, 2025</strong>.</p>
-          </div>
-          <div class="col-md-4">
-            <p>Notifications have been sent! Make sure you reply to confirm if you were accepted, or to get your discount code if you were declined!</p>
-          </div>
-        </div>
-        <div class="row justify-content-center">
-          <div class="col-12 col-md-8 text-center">
-            <a href="https://thecatapi.com/api/images/get?format=src&type=gif" target="new">
-              <button type="button" class="btn btn-info btn-lg rounded-pill"
-                style="background-color: #2686b7; border-color: #2686b7; font-family: 'Poppins', sans-serif; border-radius: 2rem;">
-                CLOSED
-              </button>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section><!-- End CFP Section -->
-
-   <!-- ======= DROP-DOWN Support Us Section ======= -->
-     <!-- ======= DROP-DOWN Corporate Sponsorship Section ======= -->
-     <!-- Section for Sponsors to see the benefits -->
-     <section id="support" class="section-with-bg">
-       <div class="container" data-aos="fade-up">
-
-        <div class="section-header">
-          <h2>Believe In Us</h2>
-          <p>Corporate sponsorship and donation options at a glance.</p>
-          <p>To become a BSides312 corporate sponsor, please email sponsorship [@] bsides312.org or use a 'Donate Now' button below.</p>
-		  <p>You may also find this year's <a href="https://bsides312.org/assets/docs/BSides312_2025_Sponsor_Prospectus.pdf">sponsorship prospectus</a> information valuable in making an informed decision.</p>
-        </div>
-
-        <div class="row"> 
-        <div class="section-header">
-            <h3>Corporate Sponsorship Options</h3>
-        </div>
-          <!-- Community tier -->
-          <div class="col-xs-6 col-md-3" data-aos="fade-up" data-aos-delay="100">
-            <div class="card mb-5 mb-lg-0">
-              <div class="card-body">
-                <h5 class="card-title text-muted text-uppercase text-center">Community</h5>
-                <h6 class="card-price text-center">Cross Promotion Collaboration</h6>
-                <hr>
-                <ul class="fa-ul">
-                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Logo on this website</li>
-                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Social media mentions</li>
-                </ul>
-                <hr>
-                <div class="text-center">
-                <!-- <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#buy-ticket" data-ticket-type="standard-access">Buy Now</button> -->
-                </div>
-              </div>
-            </div>
-          </div> <!-- end Community tier -->
-          <!-- Basic tier -->
-          <div class="col-xs-6 col-md-3" data-aos="fade-up" data-aos-delay="100">
-            <div class="card mb-5 mb-lg-0">
-              <div class="card-body">
-                <h5 class="card-title text-muted text-uppercase text-center">Basic</h5>
-                <h6 class="card-price text-center">$500</h6>
-                <hr>
-                <ul class="fa-ul">
-                <h6 class="card-price text-center">Choose <strong>two</strong> of the following</h6>
-                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Logo on this <strong>website</strong> or <strong>venue</strong></li>
-                  <li><span class="fa-li"><i class="fa fa-check"></i></span>(2) Event pass</li>
-                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Social media mentions</li>
-                </ul>
-                <hr>
-                <div class="text-center">
-                  <a href="https://paypal.me/bsides312/500" target="_parent" class="btn btn-info btn-lg rounded-pill"
-                     style="background-color: #2686b7; border-color: #2686b7; font-family: 'Poppins', sans-serif; border-radius: 2rem;">
-                    Donate Now
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div> <!-- end Basic tier -->
-          <!-- Bronze tier -->
-          <div class="col-xs-6 col-md-3" data-aos="fade-up" data-aos-delay="100">
-            <div class="card mb-5 mb-lg-0">
-              <div class="card-body">
-                <h5 class="card-title text-muted text-uppercase text-center">Bronze</h5>
-                <h6 class="card-price text-center">$1000</h6>
-                <hr>
-                <ul class="fa-ul">
-                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Logo on this website</li>
-                  <li><span class="fa-li"><i class="fa fa-check"></i></span>(2) Event pass</li>
-                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Social media mentions</li>
-                </ul>
-                <hr>
-                <div class="text-center">
-                  <a href="https://paypal.me/bsides312/1000" target="_parent" class="btn btn-info btn-lg rounded-pill"
-                     style="background-color: #2686b7; border-color: #2686b7; font-family: 'Poppins', sans-serif; border-radius: 2rem;">
-                    Donate Now
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div> <!-- end Bronze tier -->
-          <!-- Silver tier -->
-          <div class="col-xs-6 col-md-3" data-aos="fade-up" data-aos-delay="200">
-            <div class="card mb-5 mb-lg-0">
-              <div class="card-body">
-                <h5 class="card-title text-muted text-uppercase text-center">Silver</h5>
-                <h6 class="card-price text-center">$2000</h6>
-                <hr>
-                <ul class="fa-ul">
-                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Bronze Level Plus</li>
-                  <li><span class="fa-li"><i class="fa fa-check"></i></span>(2) Additional event passes</li>
-                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Logo on signage around event</li>
-				  <li><span class="fa-li"><i class="fa fa-check"></i></span>Announcements during event</li>
-                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Logo on printed materials</li>
-
-                </ul>
-                <hr>
-                <div class="text-center">
-                  <a href="https://paypal.me/bsides312/2000" target="_parent" class="btn btn-info btn-lg rounded-pill"
-                     style="background-color: #2686b7; border-color: #2686b7; font-family: 'Poppins', sans-serif; border-radius: 2rem;">
-                    Donate Now
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>  <!-- end Silver tier -->
-       <div class="row">
-          <!-- Gold Tier -->
-          <div class="col-xs-6 col-md-3" data-aos="fade-up" data-aos-delay="300">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title text-muted text-uppercase text-center">Gold</h5>
-                <h6 class="card-price text-center">$3000</h6>
-                <hr>
-                <ul class="fa-ul">
-                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Silver Level Plus</li>
-                  <li><span class="fa-li"><i class="fa fa-check"></i></span>(2) Additional event passes</li>
-                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Mention in the media coverage</li>
-                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Logo on T-shirts</li>
-                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Banner placement with maximum visibilty</li>
-                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Event Booth</li>
-                </ul>
-                <hr>
-                <div class="text-center">
-                  <a href="https://paypal.me/bsides312/3000" target="_parent" class="btn btn-info btn-lg rounded-pill"
-                     style="background-color: #2686b7; border-color: #2686b7; font-family: 'Poppins', sans-serif; border-radius: 2rem;">
-                    Donate Now
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div> <!-- end Gold tier -->
-
-          <!-- Platinum Tier -->
-          <div class="col-xs-6 col-md-3" data-aos="fade-up" data-aos-delay="300">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title text-muted text-uppercase text-center">Platinum</h5>
-                <h6 class="card-price text-center">$5000</h6>
-                <hr>
-                <ul class="fa-ul">
-                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Gold Level Plus</li>
-                  <li><span class="fa-li"><i class="fa fa-check"></i></span>(4) Additional event passes</li>
-                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Bronze Level for 1 consecutive year</li>
-                </ul>
-                <hr>
-                <div class="text-center">
-                  <a href="https://paypal.me/bsides312/5000" target="_parent" class="btn btn-info btn-lg rounded-pill"
-                     style="background-color: #2686b7; border-color: #2686b7; font-family: 'Poppins', sans-serif; border-radius: 2rem;">
-                    Donate Now
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div> <!-- end Platinum tier -->
-		  
-          <!-- Diamond Tier -->
-          <div class="col-xs-6 col-md-3" data-aos="fade-up" data-aos-delay="300">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title text-muted text-uppercase text-center">Diamond</h5>
-                <h6 class="card-price text-center">$10000</h6>
-                <hr>
-                <ul class="fa-ul">
-                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Platinum Level Plus</li>
-                  <li><span class="fa-li"><i class="fa fa-check"></i></span>(10) Additional event passes</li>
-                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Gold Level for 1 consecutive year</li>
-                </ul>
-                <hr>
-                <div class="text-center">
-                  <a href="https://paypal.me/bsides312/10000" target="_parent" class="btn btn-info btn-lg rounded-pill"
-                     style="background-color: #2686b7; border-color: #2686b7; font-family: 'Poppins', sans-serif; border-radius: 2rem;">
-                    Donate Now
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div> <!-- end Diamond tier -->
-          </div> <!-- row -->
-          <p></p>
-          <p></p>
-          <p></p>
-        </div>
-      </div>
-    </section><!-- End Support Us Section -->
-
-   <!-- ======= DROP-DOWN End Personal Donors Section ======= -->
-
-<!-- ======= DROP-DOWN Event Section ======= -->
-
-    <!-- ======= DROP-DOWN Schedule Section ======= -->
-    <section id="schedule" class="section-with-bg">
-      <div class="container" data-aos="fade-up">
-        <div class="section-header">
-          <h2>Event Schedule</h2>
-          <p>BSides312 2025 event schedule is waiting on speaker confirmations.</p>
-        </div>
-
-        <!-- <ul class="nav nav-tabs" role="tablist" data-aos="fade-up" data-aos-delay="100">
-          <li class="nav-item">
-            <a class="nav-link active" href="#saturday" role="tab" data-bs-toggle="tab">Saturday</a>
-          </li>
-        </ul> -->
-
-        <div class="tab-content row justify-content-center" data-aos="fade-up" data-aos-delay="200">
-
-          <!-- Saturday Schedule -->
-         
-          <!-- End Schdule Day 1 -->
-
-        </div>
-
-      </div>
-
-    </section><!-- End Schedule Section -->
-
-    <!-- ======= Speakers Section ======= -->
-    <section id="speakers">
-        <div class="container" data-aos="fade-up">
-            <div class="section-header">
-               <h2>Event Speakers</h2>
-               <p>We have one of the best lineups Johnny has ever seen! Stay tuned!</p>
-            </div>
-       <!-- Speakers Above -->
-        </div>
-      </div>
-    </section><!-- End Speakers Section -->
 
     <!-- ======= Venue Section ======= -->
     <section id="venue">
@@ -722,109 +277,222 @@
         <div class="section-header">
           <h2>Event Venue</h2>
         </div>
-       <div class="row g-3 g-md-4">
-          <div class="col-lg-6 venue-map">
-            <div style="position:relative;width:100%;padding-bottom:56.25%;height:0;overflow:hidden;">
+        <div class="row justify-content-center">
+          <!-- Venue Info -->
+          <div class="col-lg-8">
+            <div class="venue-info text-center">
+              <h3>Irish American Heritage Center</h3>
+              <h4>4626 N Knox Avenue, Chicago, IL 60630</h4>
+              <p>
+                This historic building is home to the Fifth Province Pub, The Mayfair Theatre, and unique meeting and event spaces perfect for gatherings of any size.
+                <br><br>
+                FREE PARKING is available in the North and South lots, with space for up to 300 cars.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <!-- Map -->
+          <div class="col-lg-8">
+            <div class="map-container">
               <iframe
                 src="https://www.google.com/maps?q=Irish+American+Heritage+Center,+4626+N+Knox+Ave,+Chicago,+IL+60630&output=embed"
-                style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;"
                 allowfullscreen=""
                 loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade">
               </iframe>
             </div>
           </div>
-
-          <div class="col-lg-6 venue-info">
-            <div class="row justify-content-center">
-              <div class="col-11 col-lg-8 position-relative">
-                <h3>Irish American Heritage Center</h3>
-		<h3>4626 N Knox Avenue, Chicago, IL 60630</h3>
-                <p>This historic building is home to the Fifth Province Pub, The Mayfair Theatre, and unique meeting and event spaces perfect for gatherings of any size. 
-                  <br><br> FREE PARKING is available in the North and South lots, with space for up to 300 cars.
-                </p>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
-
-      <div class="container-fluid venue-gallery-container" data-aos="fade-up" data-aos-delay="100">
-  <div class="row g-0">
-
-    <div class="col-lg-3 col-md-4">
-      <div class="venue-gallery">
-        <a href="assets/img/venue-gallery/1.jpg" class="glightbox" data-gall="venue-gallery">
-          <img src="assets/img/venue-gallery/1.jpg" alt="" class="img-fluid">
-        </a>
-      </div>
-    </div>
-
-    <div class="col-lg-3 col-md-4">
-      <div class="venue-gallery">
-        <a href="assets/img/venue-gallery/2.jpg" class="glightbox" data-gall="venue-gallery">
-          <img src="assets/img/venue-gallery/2.jpg" alt="" class="img-fluid">
-        </a>
-      </div>
-    </div>
-
-    <div class="col-lg-3 col-md-4">
-      <div class="venue-gallery">
-        <a href="assets/img/venue-gallery/3.jpg" class="glightbox" data-gall="venue-gallery">
-          <img src="assets/img/venue-gallery/3.jpg" alt="" class="img-fluid">
-        </a>
-      </div>
-    </div>
-
-    <div class="col-lg-3 col-md-4">
-      <div class="venue-gallery">
-        <a href="assets/img/venue-gallery/4.jpg" class="glightbox" data-gall="venue-gallery">
-          <img src="assets/img/venue-gallery/4.jpg" alt="" class="img-fluid">
-        </a>
-      </div>
-    </div>
-
-    <!-- Add the 5th image -->
-    <div class="col-lg-3 col-md-4">
-      <div class="venue-gallery">
-        <a href="assets/img/venue-gallery/5.jpg" class="glightbox" data-gall="venue-gallery">
-          <img src="assets/img/venue-gallery/5.jpg" alt="" class="img-fluid">
-        </a>
-      </div>
-    </div>
-
-  </div>
-</div>
-
     </section><!-- End Venue Section -->
     <br>    
-    <!-- ======= DROP-DOWN Code of Conduct Section ======= -->
-    <section id="coc">
+
+    <!-- ======= Venue Gallery Section ======= -->
+    <section id="venue-gallery" class="section-with-bg">
       <div class="container" data-aos="fade-up">
         <div class="section-header">
-          <h2>Code of Conduct</h2>
+          <h2>Venue Gallery</h2>
         </div>
-        <div class="row">
-          <div class="col-md-12">
-            <div class="coc">
-              <p>All attendees, speakers, sponsors and volunteers at our conference are required to agree with the following code of conduct. Organizers will enforce this code throughout the event. We are expecting cooperation from all participants to help ensuring a safe environment for everybody.</p>
-              <p>The BSides312 series of events are open, inclusive forums for the sharing of ideas. BSides312 is dedicated to a harassment-free conference experience for everyone. BSides312 participants include speakers, vendors, makers, tinkerers, families, students, and everyone else wanting to experience BSides312 events and be part of the BSides312 community.</p>
-              <p>It is important for participants to step beyond prejudices, societal norms, and other perspectives that lead to disrespect for people and groups. Everyone is welcome at BSides312 events, regardless of race, class, gender, age, ethnicity, religion, political beliefs, disability, sexual orientation, personal appearance, education level, text editor choice, and other aspects of who we are.</p>
-              <p>In short: <strong>BSides312 is a space for tolerance and respect.</strong></p>
-              <p>BSides312 strongly values free speech and encourages talks that address hard topics. BSides312 also encourages all participants to be mindful of their words and actions and how they may affect others, including being open to feedback.</p>
-              <p>BSides312 has a zero-tolerance harassment policy. Harassment includes, but is not limited to: deliberate intimidation, stalking, following, deliberate misgendering, disruption of talks or other events, inappropriate physical contact, unwelcome sexual attention, or any other disruptive behavior in or around the BSides312 conference space.</p>
-              <p>Certain groups are held to a higher standard of behavior. Those groups include speakers, volunteers and vendors. These groups are expected to follow all BSides312 conference rules and Code of Conduct guidelines regardless of other roles in the community or personal friendships or connections. For example, volunteers are expected to behave professionally and fairly during their shifts and vendors are encouraged to promote their products or ideas based on their own merits, not on the appearance of their staff.</p>
-              <p>The conference staff reserves the right to take appropriate action at any time. This may include ejection from the conference without refund or not being allowed to attend future events.</p>
-              <p><i>If you are being harassed, notice that someone else is being harassed, or have related concerns, we encourage you to contact a member of conference staff immediately.</i></p>
-              <p>BSides312 would like to thank <a href="https://hope.net/" target="new">HOPE</a> for usage of their Code of Conduct.</p>
-              <p></p>
-              <p></p>
+        <div class="row g-3">
+          <!-- Image 1 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="venue-gallery">
+              <a href="assets/img/venue-gallery/1.jpg" class="glightbox" data-gall="venue-gallery">
+                <img src="assets/img/venue-gallery/1.jpg" alt="Venue Image 1" class="img-fluid">
+              </a>
+            </div>
+          </div>
+          <!-- Image 2 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="venue-gallery">
+              <a href="assets/img/venue-gallery/2.jpg" class="glightbox" data-gall="venue-gallery">
+                <img src="assets/img/venue-gallery/2.jpg" alt="Venue Image 2" class="img-fluid">
+              </a>
+            </div>
+          </div>
+          <!-- Image 3 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="venue-gallery">
+              <a href="assets/img/venue-gallery/3.jpg" class="glightbox" data-gall="venue-gallery">
+                <img src="assets/img/venue-gallery/3.jpg" alt="Venue Image 3" class="img-fluid">
+              </a>
+            </div>
+          </div>
+          <!-- Image 4 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="venue-gallery">
+              <a href="assets/img/venue-gallery/4.jpg" class="glightbox" data-gall="venue-gallery">
+                <img src="assets/img/venue-gallery/4.jpg" alt="Venue Image 4" class="img-fluid">
+              </a>
+            </div>
+          </div>
+          <!-- Image 5 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="venue-gallery">
+              <a href="assets/img/venue-gallery/5.jpg" class="glightbox" data-gall="venue-gallery">
+                <img src="assets/img/venue-gallery/5.jpg" alt="Venue Image 5" class="img-fluid">
+              </a>
             </div>
           </div>
         </div>
       </div>
-    </section><!-- End Code of Conduct Section -->
+    </section>
 
+  <!-- ======= Supporters Section ======= -->
+  <section id="supporters" class="section-with-bg">
+    <div class="container" data-aos="fade-up">
+      <div class="section-header">
+        <h2>Sponsors</h2>
+      </div>
+      <div class="alert alert-warning container-fluid text-center fw-bold" role="alert">
+        Sponsorship packages for 2025 are now available! Click <a href="support-us.html#support-us">here</a> to learn about our corporate sponsorship options and individual donor opportunities.  
+      </div>
+
+      <!-- Platinum Sponsors -->
+      <div class="row no-gutters supporters-wrap clearfix gy-4 gx-4 mb-5" data-aos="zoom-in" data-aos-delay="100">
+        <div class="section-header">
+          <img src="assets/img/supporters/platinum3.png" style="display: block; place-self: center;">
+        </div>
+        <div class="col-12 col-md-4 offset-md-4">
+          <div class="supporter-logo">
+            <a href="https://www.cisco.com/">
+              <img src="assets/img/supporters/cisco.png" class="img-fluid" alt="">
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Gold Sponsors -->
+      <div class="row no-gutters supporters-wrap clearfix gy-4 gx-4 mb-5" data-aos="zoom-in" data-aos-delay="100">
+        <div class="section-header">
+          <img src="assets/img/supporters/gold3.png" style="display: block; place-self: center;">
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6"></div>
+        <div class="col-lg-3 col-md-4 col-xs-6">
+          <div class="supporter-logo">
+            <a href="https://www.kodemsecurity.com/">
+              <img src="assets/img/supporters/kodem.png" class="img-fluid" alt="">
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6">
+          <div class="supporter-logo">
+            <a href="https://stellarcyber.ai/">
+              <img src="assets/img/supporters/stellarcyber.png" class="img-fluid" alt="">
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6"></div>
+      </div>
+
+      <!-- Silver Sponsors -->
+      <div class="row no-gutters supporters-wrap clearfix gy-4 gx-4 mb-5" data-aos="zoom-in" data-aos-delay="100">
+        <div class="section-header">
+          <img src="assets/img/supporters/silver3.png" style="display: block; place-self: center;">
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6"></div>
+        <div class="col-lg-3 col-md-4 col-xs-6">
+          <div class="supporter-logo">
+            <a href="https://www.blackhillsinfosec.com/">
+              <img src="assets/img/supporters/bhis.png" class="img-fluid" alt="">
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6">
+          <div class="supporter-logo">
+            <a href="https://www.justhacking.com/">
+              <img src="assets/img/supporters/jht.png" class="img-fluid" alt="">
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6"></div>
+      </div>
+
+      <!-- Founding Sponsors -->
+      <div class="row no-gutters supporters-wrap clearfix gy-4 gx-4 mb-5" data-aos="zoom-in" data-aos-delay="100">
+        <div class="section-header">
+          <img src="assets/img/supporters/founding3.png" style="display: block; place-self: center;">
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6"></div>
+        <div class="col-lg-3 col-md-4 col-xs-6">
+          <div class="supporter-logo">
+            <a href="https://www.binalyze.com/">
+              <img src="assets/img/supporters/1.png" class="img-fluid" alt="">
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6">
+          <div class="supporter-logo">
+            <a href="https://www.cobalt.io/">
+              <img src="assets/img/supporters/2.png" class="img-fluid" alt="">
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6"></div>
+      </div>
+
+      <!-- Community Sponsors -->
+      <div class="row no-gutters supporters-wrap clearfix gy-4 gx-4 mb-5" data-aos="zoom-in" data-aos-delay="100">
+        <div class="section-header">
+          <img src="assets/img/supporters/community3.png" style="display: block; place-self: center;">
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6"></div>
+        <div class="col-lg-3 col-md-4 col-xs-6">
+          <div class="supporter-logo">
+            <a href="https://www.hak4kidz.com/">
+              <img src="assets/img/supporters/7.png" class="img-fluid" alt="Hak4Kidz NFP">
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6">
+          <div class="supporter-logo">
+            <a href="https://buy.stripe.com/6oE2aqaXN88M6e46op" target="new">
+              <img src="assets/img/supporters/8.png" class="img-fluid" alt="BSides MKE">
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6"></div>
+        <div class="col-lg-3 col-md-4 col-xs-6"></div>
+        <div class="col-lg-3 col-md-4 col-xs-6">
+          <div class="supporter-logo">
+            <a href="https://GCSIChicago.org" target="new">
+              <img src="assets/img/supporters/9.png" class="img-fluid" alt="GCSI">
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6">
+          <div class="supporter-logo">
+            <a href="https://www.intelliguards.com" target="new">
+              <img src="assets/img/supporters/12.png" class="img-fluid" alt="IntelliGuards">
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6"></div>
+      </div>
+    </div>
+
+  </section><!-- End Sponsors Section -->   
 
     <!-- =======  F.A.Q Section ======= -->
     <section id="faq">
@@ -885,112 +553,34 @@
 
     </section><!-- End  F.A.Q Section -->
 
-<!-- =======  F.A.Q Section ======= -->
-<section id="privacy">
-
-  <div class="container" data-aos="fade-up">
-
-    <div class="section-header">
-      <h2>Privacy Policy</h2>
-    </div>
-
-    <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="100">
-      <div class="col-lg-9">
-        <h3>Overview</h3>
-        <ul>
-          <li>BSides312 respects your privacy. The details you provide when registering for the event are not disclosed to any third-parties except insofar as is required in order for us to fulfill our contractual obligation to you, to host and deliver the BSides312 event.</li>
-          <li>The personal details that you provide to BSides312 (which may include name and email) are only used to register you for the event, provide access to necessary platforms as required to deliver the event, and to keep you informed of the event logistics and announcements.</li>
-          <li>Your personal details are stored on specific cloud-based platforms that enable BSides312 to communicate with you and to deliver the conference event. Personal details are not disclosed for any other purpose unless required by law.</li>
-        </ul>
-
-        <h3>When do we contact you?</h3>
-        <span>​BSides312 may contact you:</span>
-        <ul>
-          <li>In relation to any of our services, events, activities or online content you have signed up to/registered for.</li>
-          <li>In relation to any correspondence we receive from you.</li>
-          <li>In relation to any contribution you have submitted to, or about, BSides312 and our services, events and activities, including online blog posts, tweets or other media.</li>
-          <li>To invite you to participate in an after-event survey about BSides312.</li>
-        </ul>
-        
-        <h3>Data Retention</h3>
-        <span>How long will the data be kept:</span>
-        <ul>
-          <li>We will hold your personal information on our systems for as long as it is necessary for the delivery of the current year’s event and after-event survey. We do not retain personal information from previous year’s events, nor do we ‘carry over’ personal information to subsequent years. After the after-event survey has been completed, we delete that year’s personal information.</li>
-        </ul>
-      </div>
-
-      <p class="text-center" style="font-style: italic; font-size: 80%;">
-        Privacy policy lovingly borrowed from our friends at <a href="https://www.bsidesden.org/data-privacy">BSides Denver</a>.
-      </p>
-    </div>
-
-  </div>
-
-</section><!-- End  Privacy Policy Section -->
-
-
-    <!-- ======= DROP-DOWN  Board Section ======= -->
-    <section id="board">
-      <div class="container" data-aos="fade-up">
-        <div class="section-header">
-          <h2>BSides312 Board Members</h2>
-          <p>
-            <a href="board-details.html">Click here to read more about them!</a>
-          </p>
-        </div>
-        <div class="row justify-content-center">
-  <div class="col-lg-4 col-md-6">
-    <div class="board text-center" data-aos="fade-up" data-aos-delay="100">
-      <img src="assets/img/about/klowe.jpg" alt="Kourtney Lowe" class="img-fluid mx-auto d-block">
-      <div class="details">
-        <h3><a href="board-details.html#klowe">Kourtney Lowe</a></h3>
-        <p>Chief Executive Officer</p>
+    <!-- ======= Contribute Section ======= -->
+   <section id="Contribute" class="section-with-bg">
+    <div class="container" data-aos="fade-up">
+      <div class="section-header">
+        <h2>Contribute</h2>
       </div>
     </div>
-  </div>
-  <div class="col-lg-4 col-md-6">
-    <div class="board text-center" data-aos="fade-up" data-aos-delay="100">
-      <img src="assets/img/about/heal.jpg" alt="Dave Schwartzberg" class="img-fluid mx-auto d-block">
-      <div class="details">
-        <h3><a href="board-details.html#heal">Dave Schwartzberg</a></h3>
-        <p>Chief Financial Officer</p>
-      </div>
-    </div>
-  </div>
-  <div class="col-lg-4 col-md-6">
-    <div class="board text-center" data-aos="fade-up" data-aos-delay="100">
-      <img src="assets/img/about/jxmas2.jpg" alt="Johnny Xmas" class="img-fluid mx-auto d-block">
-      <div class="details">
-        <h3><a href="board-details.html#xmas">Johnny Xmas</a></h3>
-        <p>Chief Marketing Officer</p>
-      </div>
-    </div>
-  </div>
-  <div class="col-lg-4 col-md-6">
-    <div class="board text-center" data-aos="fade-up" data-aos-delay="100">
-      <img src="assets/img/about/rwagner.jpg" alt="Robert Wagner" class="img-fluid mx-auto d-block">
-      <div class="details">
-        <h3><a href="board-details.html#wags">Robert Wagner</a></h3>
-        <p>Director</p>
-      </div>
-    </div>
-  </div>
-  <div class="col-lg-4 col-md-6">
-    <div class="board text-center" data-aos="fade-up" data-aos-delay="100">
-      <img src="assets/img/about/mkavka2.jpg" alt="Mike Kavka" class="img-fluid mx-auto d-block">
-      <div class="details">
-        <h3><a href="board-details.html#mkavka">Mike Kavka</a></h3>
-        <p>Director</p>
-      </div>
-    </div>
-  </div>
-</div>
+  </section>
 
-       <!-- Board Above -->
-        </div>
+  <section id="volunteer" class="section-bg">
+    <div class="container" data-aos="fade-up">
+      <div class="section-header">
+        <h2>Volunteer With Us</h2>
+        <p>We're fully staffed for 2025, but catch us next year!</p>
       </div>
+    </div>
+  </section>
 
-    </section><!-- End Board Section -->
+  <section id="cfp" class="section-with-bg">
+    <div class="container" data-aos="fade-up">
+      <div class="section-header">
+        <h2>Call for Presentations</h2>
+        <p>CFP is closed and notices have been sent!<br>Make sure you reply and confirm if you were accepted!</p>
+      </div>
+    </div>
+  </section>
+
+<!-- ======= DROP-DOWN Event Section ======= -->
 
     <!-- ======= Contact Us Section ======= -->
     <section id="contact" class="section-with-bg">
@@ -1019,7 +609,6 @@
       </div>
     </section>
     <!-- End Contact Us Section -->
-
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
@@ -1039,7 +628,7 @@
       <div class="copyright">
         &copy; Copyright <strong>BSides312</strong> 2025. All Rights Reserved
       </div>
-      <a rel="me" href="https://infosec.exchange/@bsides312"></a>      
+      <a rel="me" href="https://infosec.exchange/@bsides312">Follow us on Mastodon</a>      
     </div>
   </footer><!-- End  Footer -->
 
