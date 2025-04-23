@@ -821,3 +821,12 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0 8px;
   }
 }
+
+/* Keynote speaker image styling */
+.keynote-rectangle {
+  width: 100%; /* Ensures responsiveness */
+  height: auto;
+  border-radius: 12px; /* Rounded corners */
+  object-fit: cover; /* Ensures the image fits nicely */
+  max-height: 400px; /* Optional: Limit the height for consistency */
+}
