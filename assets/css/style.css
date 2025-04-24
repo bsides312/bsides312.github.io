@@ -1107,3 +1107,53 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
   color: #eee;
 }
+
+/* FAQ Section
+--------------------------------*/
+#faq {
+  padding: 60px 0;
+}
+
+#faq .faq-list {
+  padding: 0;
+  list-style: none;
+}
+
+#faq .faq-list li {
+  border-bottom: 1px solid #e9edf2;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+
+#faq .faq-list .question {
+  display: block;
+  position: relative;
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+  padding-left: 25px;
+  cursor: pointer;
+  color: #e0072f;
+  transition: 0.3s;
+}
+
+#faq .faq-list i {
+  font-size: 16px;
+  position: absolute;
+  left: 0;
+  top: -2px;
+}
+
+#faq .faq-list i.icon-show {
+  display: inline-block;
+}
+
+#faq .faq-list i.icon-close {
+  display: none;
+}
+
+#faq .faq-list p {
+  margin-bottom: 0;
+  padding: 10px 0 0 25px;
+}
