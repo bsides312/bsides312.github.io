@@ -16,21 +16,21 @@
   <meta name="referrer" content="never">
   <meta name="referrer" content="no-referrer">
 
-  <title>BSides312 – Chicago's Biggest Little Non-Profit Non-Profit Hacking & Information Security Conference</title>
-  <link rel="canonical" href="https://bsides312.org/" />
-  <meta name="description" content="BSides312 is Chicago's Biggest Little Non-Profit  hacking and information security conference. Join security professionals, hackers, and enthusiasts from across the country for talks, workshops, and networking, all the day after THOTCON!">
-  <meta name="keywords" content="BSides312, BSides Chicago, Chicago security conference, hacking conference, infosec, cybersecurity, security event, hacker conference, BSides 312, BSides Chi">
+  <title>BSides312 Schedule – Chicago's Biggest Little Non-Profit Non-Profit Hacking & Information Security Conference</title>
+  <link rel="canonical" href="https://bsides312.org/schedule.html" />
+  <meta name="description" content="BSides312 Conference Schedule - View the complete schedule for Chicago's Biggest Little Non-Profit hacking and information security conference, featuring talks across two tracks: Blue Line and Red Line.">
+  <meta name="keywords" content="BSides312 schedule, BSides Chicago schedule, cybersecurity conference schedule, hacking talks, infosec presentations, Chicago security event">
 
   <!-- Open Graph Image for Preview Share Sheets -->
   <meta property="og:image" content="https://bsides312.org/images/og-image.jpg"/>
-  <meta property="og:title" content="BSides312 - Chicago's Other Hacking Conference - the Day after THOTCON!">
-  <meta property="og:description" content="BSides312 is Chicago's Biggest Little Non-Profit hacking & information security conference. We're the only Chicago conference entirely run by members of the local community, but attended by folks from around the world!">
-  <meta property="og:url" content="https://bsides312.org/">
+  <meta property="og:title" content="BSides312 Schedule - Chicago's Other Hacking Conference">
+  <meta property="og:description" content="View the complete schedule for BSides312, Chicago's Biggest Little Non-Profit hacking & information security conference featuring talks across two tracks.">
+  <meta property="og:url" content="https://bsides312.org/schedule.html">
   <meta property="og:image:width" content="1455"/>
   <meta property="og:image:height" content="825"/>
 
-  <meta name="twitter:title" content="BSides312, the Day after THOTCON!">
-  <meta name="twitter:description" content="BSides312 is Chicago's Biggest Little Non-Profit hacking & information security conference. We're the only Chicago conference entirely run by members of the local community, but attended by folks from around the world!">
+  <meta name="twitter:title" content="BSides312 Schedule">
+  <meta name="twitter:description" content="View the complete schedule for BSides312, Chicago's Biggest Little Non-Profit hacking & information security conference featuring talks across two tracks.">
   <meta name="twitter:image" content="https://bsides312.org/images/og-image.jpg">
 
   <!-- Favicons -->
@@ -55,6 +55,162 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
+  <!-- Additional Schedule-specific CSS -->
+  <style>
+    .schedule-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      margin-bottom: 2rem;
+      color: var(--text-color);
+    }
+    
+    .schedule-table th {
+      background-color: rgba(6, 12, 34, 0.98);
+      padding: 15px;
+      text-align: center;
+      font-weight: 700;
+      color: #fff;
+      border-radius: 4px 4px 0 0;
+    }
+    
+    .schedule-table .track-blue {
+      background-color: rgba(38, 134, 183, 0.2);
+      border-left: 4px solid #2686b7;
+    }
+    
+    .schedule-table .track-red {
+      background-color: rgba(248, 34, 73, 0.2);
+      border-left: 4px solid var(--primary-color);
+    }
+    
+    .schedule-table .time-slot {
+      font-weight: bold;
+      text-align: center;
+      vertical-align: middle;
+      width: 150px;
+      background-color: rgba(6, 12, 34, 0.8);
+    }
+    
+    .schedule-table td {
+      padding: 15px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .schedule-table tr:last-child td {
+      border-bottom: none;
+    }
+    
+    .schedule-table .session {
+      padding: 15px;
+    }
+    
+    .schedule-table .session-title {
+      font-weight: 600;
+      margin-bottom: 5px;
+      color: #93bdfc;
+    }
+    
+    .schedule-table .speaker {
+      font-style: italic;
+      color: #eee;
+    }
+    
+    .schedule-table .closed {
+      text-align: center;
+      font-style: italic;
+      color: #9195a2;
+    }
+    
+    .schedule-table .special-event {
+      background-color: rgba(6, 12, 34, 0.6);
+      text-align: center;
+      font-weight: bold;
+    }
+    
+    /* Responsive styles */
+    @media (max-width: 767.98px) {
+      .schedule-container {
+        overflow-x: auto;
+      }
+      
+      .schedule-table .time-slot {
+        width: 100px;
+        font-size: 0.85rem;
+      }
+      
+      .schedule-table td, .schedule-table th {
+        padding: 10px;
+      }
+      
+      .schedule-table .session-title {
+        font-size: 0.95rem;
+      }
+      
+      .schedule-table .speaker {
+        font-size: 0.85rem;
+      }
+    }
+
+    /* Enhanced accessibility */
+    .schedule-table th[scope="col"] {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    
+    .schedule-nav {
+      margin-bottom: 2rem;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    
+    .schedule-nav .btn {
+      background-color: #2686b7;
+      border: none;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 4px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+    
+    .schedule-nav .btn:hover {
+      background-color: var(--primary-color);
+      transform: translateY(-2px);
+    }
+    
+    .schedule-legend {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+    }
+    
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .legend-color {
+      width: 20px;
+      height: 20px;
+      border-radius: 4px;
+    }
+    
+    .legend-blue {
+      background-color: #2686b7;
+    }
+    
+    .legend-red {
+      background-color: var(--primary-color);
+    }
+  </style>
+
   <!-- Structured Data for SEO -->
   <script type="application/ld+json">
   {
@@ -76,7 +232,7 @@
       }
     },
     "description": "BSides312 is Chicago's Biggest Little Non-Profit hacking & information security conference. We're the only Chicago conference entirely run by members of the local community, but attended by folks from around the world!",
-    "url": "https://bsides312.org/"
+    "url": "https://bsides312.org/schedule.html"
   }
   </script>
 </head>
@@ -95,7 +251,7 @@
   
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a class="nav-link scrollto active" href="index.html">Home</a></li>
+          <li><a class="nav-link scrollto" href="index.html">Home</a></li>
           <li><a class="nav-link scrollto" href="index.html#buy-tickets">Get Tickets</a></li>
           <li class="dropdown">
             <a class="nav-link scrollto" href="index.html#supporters"><span>Sponsor Us</span> <i class="bi bi-chevron-down"></i></a>
@@ -113,10 +269,10 @@
               </li>
             </ul>
           </li>
-          <li class="dropdown"><a href="#"><span>Event</span> <i class="bi bi-chevron-down"></i></a>
+          <li class="dropdown"><a href="#" class="active"><span>Event</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a class="nav-link scrollto" href="index.html#keynote">Keynote Speaker</a></li>
-              <li><a class="nav-link scrollto" href="schedule.html#schedule">Schedule</a></li>
+              <li><a class="nav-link scrollto active" href="schedule.html#schedule">Schedule</a></li>
               <li><a class="nav-link scrollto" href="speaker-bios.html#speakers">About our Speakers</a></li>
               <li><a class="nav-link scrollto" href="index.html#fun">Learn to Hack</a></li>
               <li><a class="nav-link scrollto" href="index.html#venue">Venue & Parking</a></li>
@@ -142,27 +298,177 @@
     <!-- ======= Hero Section ======= -->
     <section id="hero">
       <div class="hero-container" data-aos="zoom-in" data-aos-delay="100">
-        <h1 class="mb-4 pb-0">BSides312<br><span>Non-Profit Community</span> Conference</h1>
-        <p class="mb-4 pb-0">Schedule coming soon!</p>
+        <h1 class="mb-4 pb-0">BSides312<br><span>Event</span> Schedule</h1>
+        <p class="mb-4 pb-0">June 1st, 2025 | Irish American Heritage Center, Chicago Illinois</p>
+        <a href="#schedule" class="about-btn scrollto">VIEW SCHEDULE</a>
+      </div>
     </section><!-- End Hero Section -->
 
   <main id="main">
 
-    <!-- Section -->
-     <section id="schedule" class="section-with-bg">
+    <!-- Schedule Section -->
+    <section id="schedule" class="section-with-bg">
       <div class="container" data-aos="fade-up">
 
-       <div class="section-header">
-         <h2>Heading</h2>
-         <p>Subheading</p>
-         <p>text</p>
-       </div>
-       <div class="row"> 
-       <div class="section-header">
-           <h3>Subheading</h3>
-       </div>
-   
-   </section><!-- End Section -->
+        <div class="section-header">
+          <h2>Event Schedule</h2>
+          <p>Two Tracks - Blue Line & Red Line</p>
+        </div>
+
+        <!-- Full Schedule (Visible on larger screens, hidden on mobile) -->
+        <div id="full-schedule" class="d-none d-lg-block">
+
+          <div class="schedule-container">
+            <table class="schedule-table" aria-label="Full Day Schedule">
+              <thead>
+                <tr>
+                  <th scope="col">Time</th>
+                  <th scope="col">
+                    Blue Line Track
+                    (Main Auditorium)
+                  </th>
+                  <th scope="col">
+                    Red Line Track
+                    (Classroom 304)
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="time-slot">10:00 AM</td>
+                  <td colspan="2" class="special-event">Opening Ceremonies</td>
+                </tr>
+                <tr>
+                  <td class="time-slot">10:30 AM - 11:30 AM</td>
+                  <td colspan="2" class="special-event">Keynote - Steve Shelton</td>
+                </tr>
+                <tr>
+                  <td class="time-slot">11:30 AM - 12:00 PM</td>
+                  <td class="track-blue">
+                    <div class="session">
+                      <div class="session-title">Open Sesame</div>
+                      <div class="speaker">ギンジ🐾ターラノー (25 min)</div>
+                    </div>
+                  </td>
+                  <td class="track-red">
+                    <div class="session">
+                      <div class="closed">TBD</div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="time-slot">12:00 PM - 1:00 PM</td>
+                  <td colspan="2" class="special-event">Lunch</td>
+                </tr>
+                <tr>
+                  <td class="time-slot">1:00 PM - 1:30 PM</td>
+                  <td rowspan="2" class="track-blue">
+                    <div class="session">
+                      <div class="session-title">Misconfiguration-Driven Cloud Attacks: A Graph-Based Exploration</div>
+                      <div class="speaker">Filipi Pires</div>
+                    </div>
+                  </td>
+                  <td class="track-red">
+                    <div class="session">
+                      <div class="session-title">Unlocking macOS Internals: A Beginner's Guide to Apple's Open Source Code</div>
+                      <div class="speaker">Olivia Gallucci (25 min)</div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="time-slot">1:30 PM - 2:00 PM</td>
+                  <td class="track-red">
+                    <div class="session">
+                      <div class="session-title">Pentest Pains</div>
+                      <div class="speaker">Chris Traynor (25 min)</div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="time-slot">2:00 PM - 3:00 PM</td>
+                  <td class="track-blue">
+                    <div class="session">
+                      <div class="session-title">Trailblazing: Lessons from Oregon Trail for the Secure Software Supply Chain</div>
+                      <div class="speaker">Kadi McKean</div>
+                    </div>
+                  </td>
+                  <td class="track-red">
+                    <div class="session">
+                      <div class="session-title">Empowering Neurodivergent Individuals in Cybersecurity: Strategies for Inclusion and Success</div>
+                      <div class="speaker">Tamry Juntunen</div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="time-slot">3:00 PM - 4:00 PM</td>
+                  <td class="track-blue">
+                    <div class="session">
+                      <div class="session-title">Adversarial Intelligence: Redefining Application Security through the eyes of an attacker</div>
+                      <div class="speaker">Roy Talyosef</div>
+                    </div>
+                  </td>
+                  <td class="track-red">
+                    <div class="session">
+                      <div class="session-title">What to Tell Your Developers About NHI Security and Governance</div>
+                      <div class="speaker">Dwayne McDaniel</div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="time-slot">4:00 PM - 5:00 PM</td>
+                  <td class="track-blue">
+                    <div class="session">
+                      <div class="session-title">Can a Hacker Murder Your City</div>
+                      <div class="speaker">Patrick Laverty</div>
+                    </div>
+                  </td>
+                  <td class="track-red">
+                    <div class="session">
+                      <div class="session-title">Tips and Tricks To Creating your Your First Conference Talk</div>
+                      <div class="speaker">Whitney Phillips</div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="time-slot">5:00 PM - 6:00 PM</td>
+                  <td class="track-blue">
+                    <div class="session">
+                      <div class="session-title">Defending Beyond Defense</div>
+                      <div class="speaker">Dr. Catherine J. Ullman</div>
+                    </div>
+                  </td>
+                  <td class="track-red">
+                    <div class="session">
+                      <div class="session-title">Securing the Grid of Tomorrow</div>
+                      <div class="speaker">Danielle McGuire</div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="time-slot">6:00 PM</td>
+                  <td colspan="2" class="special-event">Closing Ceremonies</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Additional information and accessibility notes -->
+        <div class="mt-5">
+          <div class="row justify-content-center">
+            <div class="col-md-8">
+              <div class="alert alert-info" role="alert">
+                <h4 class="alert-heading">Schedule Information</h4>
+                <p>All sessions will take place at the Irish American Heritage Center. The Blue Line track is in the Main Auditorium, and the Red Line track is in Classroom 304.</p>
+                <p>Breaks with refreshments will be available between sessions in the main hallway.</p>
+                <p>For accessibility accommodations, please speak with a BSides312 staff member (identifiable by their staff t-shirts) or email <strong>accessibility@bsides312.org</strong>.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Schedule Section -->
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
