@@ -982,6 +982,27 @@ h1, h2, h3, h4, h5, h6 {
   padding: 10px 20px;
 }
 
+/* Custom Button Styling */
+.btn-custom {
+  background-color: #2686b7; /* Color from the second button */
+  border-color: #2686b7; /* Border color from the second button */
+  font-family: 'Poppins', sans-serif; /* Font family from the second button */
+  font-size: 1.25rem; /* Font size from the first button */
+  border-radius: 2rem; /* Border radius from the second button */
+  color: #fff; /* Ensure text is white for contrast */
+  padding: 10px 20px; /* Add padding for better spacing */
+  text-decoration: none; /* Remove underline */
+  display: inline-block; /* Ensure proper button alignment */
+  text-align: center;
+  transition: all 0.3s ease; /* Add hover effect */
+}
+
+.btn-custom:hover {
+  background-color: #1a5f85; /* Darker shade for hover effect */
+  border-color: #1a5f85;
+  color: #fff;
+}
+
 /* ======= Footer Styling ======= */
 #footer {
   background: #101522;
