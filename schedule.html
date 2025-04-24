@@ -209,6 +209,17 @@
     .legend-red {
       background-color: var(--primary-color);
     }
+
+    /* Style for links in the schedule table */
+    .schedule-table a {
+        color: inherit; /* Keep text the original color */
+        text-decoration: none; /* Remove underline by default */
+        transition: text-decoration 0.2s ease;
+    }
+    
+    .schedule-table a:hover {
+        text-decoration: underline; /* Add underline on hover */
+    }
   </style>
 
   <!-- Structured Data for SEO -->
@@ -307,10 +318,10 @@
   <main id="main">
 
     <!-- Schedule Section -->
-    <section id="schedule" class="section-with-bg">
+     <section id="schedule" class="section-with-bg">
       <div class="container" data-aos="fade-up">
 
-        <div class="section-header">
+       <div class="section-header">
           <h2>Event Schedule</h2>
           <p>Two Tracks - Blue Line & Red Line</p>
         </div>
@@ -340,14 +351,14 @@
                 </tr>
                 <tr>
                   <td class="time-slot">10:30 AM - 11:30 AM</td>
-                  <td colspan="2" class="special-event">Keynote - Steve Shelton</td>
+                  <td colspan="2" class="special-event">Keynote - <a href="speaker-bios.html#steve-shelton">Steve Shelton</a> (Main Auditorium)</td>
                 </tr>
                 <tr>
                   <td class="time-slot">11:30 AM - 12:00 PM</td>
                   <td class="track-blue">
                     <div class="session">
-                      <div class="session-title">Open Sesame</div>
-                      <div class="speaker">ギンジ🐾ターラノー (25 min)</div>
+                      <div class="session-title"><a href="speaker-bios.html#ginji-terrano">Open Sesame</a></div>
+                      <div class="speaker"><a href="speaker-bios.html#ginji-terrano">ギンジ🐾ターラノー</a> (25 min)</div>
                     </div>
                   </td>
                   <td class="track-red">
@@ -364,14 +375,14 @@
                   <td class="time-slot">1:00 PM - 1:30 PM</td>
                   <td rowspan="2" class="track-blue">
                     <div class="session">
-                      <div class="session-title">Misconfiguration-Driven Cloud Attacks: A Graph-Based Exploration</div>
-                      <div class="speaker">Filipi Pires</div>
+                      <div class="session-title"><a href="speaker-bios.html#filipi-pires">Misconfiguration-Driven Cloud Attacks: A Graph-Based Exploration</a></div>
+                      <div class="speaker"><a href="speaker-bios.html#filipi-pires">Filipi Pires</a></div>
                     </div>
                   </td>
                   <td class="track-red">
                     <div class="session">
-                      <div class="session-title">Unlocking macOS Internals: A Beginner's Guide to Apple's Open Source Code</div>
-                      <div class="speaker">Olivia Gallucci (25 min)</div>
+                      <div class="session-title"><a href="speaker-bios.html#olivia-gallucci">Unlocking macOS Internals: A Beginner's Guide to Apple's Open Source Code</a></div>
+                      <div class="speaker"><a href="speaker-bios.html#olivia-gallucci">Olivia Gallucci</a> (25 min)</div>
                     </div>
                   </td>
                 </tr>
@@ -379,8 +390,8 @@
                   <td class="time-slot">1:30 PM - 2:00 PM</td>
                   <td class="track-red">
                     <div class="session">
-                      <div class="session-title">Pentest Pains</div>
-                      <div class="speaker">Chris Traynor (25 min)</div>
+                      <div class="session-title"><a href="speaker-bios.html#chris-traynor">Pentest Pains</a></div>
+                      <div class="speaker"><a href="speaker-bios.html#chris-traynor">Chris Traynor</a> (25 min)</div>
                     </div>
                   </td>
                 </tr>
@@ -388,14 +399,14 @@
                   <td class="time-slot">2:00 PM - 3:00 PM</td>
                   <td class="track-blue">
                     <div class="session">
-                      <div class="session-title">Trailblazing: Lessons from Oregon Trail for the Secure Software Supply Chain</div>
-                      <div class="speaker">Kadi McKean</div>
+                      <div class="session-title"><a href="speaker-bios.html#kadi-mckean">Trailblazing: Lessons from Oregon Trail for the Secure Software Supply Chain</a></div>
+                      <div class="speaker"><a href="speaker-bios.html#kadi-mckean">Kadi McKean</a></div>
                     </div>
                   </td>
                   <td class="track-red">
                     <div class="session">
-                      <div class="session-title">Empowering Neurodivergent Individuals in Cybersecurity: Strategies for Inclusion and Success</div>
-                      <div class="speaker">Tamry Juntunen</div>
+                      <div class="session-title"><a href="speaker-bios.html#tamry-juntunen">Empowering Neurodivergent Individuals in Cybersecurity: Strategies for Inclusion and Success</a></div>
+                      <div class="speaker"><a href="speaker-bios.html#tamry-juntunen">Tamry Juntunen</a></div>
                     </div>
                   </td>
                 </tr>
@@ -403,14 +414,14 @@
                   <td class="time-slot">3:00 PM - 4:00 PM</td>
                   <td class="track-blue">
                     <div class="session">
-                      <div class="session-title">Adversarial Intelligence: Redefining Application Security through the eyes of an attacker</div>
-                      <div class="speaker">Roy Talyosef</div>
+                      <div class="session-title"><a href="speaker-bios.html#roy-talyosef">Adversarial Intelligence: Redefining Application Security through the eyes of an attacker</a></div>
+                      <div class="speaker"><a href="speaker-bios.html#roy-talyosef">Roy Talyosef</a></div>
                     </div>
                   </td>
                   <td class="track-red">
                     <div class="session">
-                      <div class="session-title">What to Tell Your Developers About NHI Security and Governance</div>
-                      <div class="speaker">Dwayne McDaniel</div>
+                      <div class="session-title"><a href="speaker-bios.html#dwayne-mcdaniel">What to Tell Your Developers About NHI Security and Governance</a></div>
+                      <div class="speaker"><a href="speaker-bios.html#dwayne-mcdaniel">Dwayne McDaniel</a></div>
                     </div>
                   </td>
                 </tr>
@@ -418,14 +429,14 @@
                   <td class="time-slot">4:00 PM - 5:00 PM</td>
                   <td class="track-blue">
                     <div class="session">
-                      <div class="session-title">Can a Hacker Murder Your City</div>
-                      <div class="speaker">Patrick Laverty</div>
+                      <div class="session-title"><a href="speaker-bios.html#patrick-laverty">Can a Hacker Murder Your City</a></div>
+                      <div class="speaker"><a href="speaker-bios.html#patrick-laverty">Patrick Laverty</a></div>
                     </div>
                   </td>
                   <td class="track-red">
                     <div class="session">
-                      <div class="session-title">Tips and Tricks To Creating your Your First Conference Talk</div>
-                      <div class="speaker">Whitney Phillips</div>
+                      <div class="session-title"><a href="speaker-bios.html#whitney-phillips">Tips and Tricks To Creating your Your First Conference Talk</a></div>
+                      <div class="speaker"><a href="speaker-bios.html#whitney-phillips">Whitney Phillips</a></div>
                     </div>
                   </td>
                 </tr>
@@ -433,14 +444,14 @@
                   <td class="time-slot">5:00 PM - 6:00 PM</td>
                   <td class="track-blue">
                     <div class="session">
-                      <div class="session-title">Defending Beyond Defense</div>
-                      <div class="speaker">Dr. Catherine J. Ullman</div>
+                      <div class="session-title"><a href="speaker-bios.html#catherine-ullman">Defending Beyond Defense</a></div>
+                      <div class="speaker"><a href="speaker-bios.html#catherine-ullman">Dr. Catherine J. Ullman</a></div>
                     </div>
                   </td>
                   <td class="track-red">
                     <div class="session">
-                      <div class="session-title">Securing the Grid of Tomorrow</div>
-                      <div class="speaker">Danielle McGuire</div>
+                      <div class="session-title"><a href="speaker-bios.html#danielle-mcguire">Securing the Grid of Tomorrow</a></div>
+                      <div class="speaker"><a href="speaker-bios.html#danielle-mcguire">Danielle McGuire</a></div>
                     </div>
                   </td>
                 </tr>
@@ -464,9 +475,9 @@
                 <p>For accessibility accommodations, please speak with a BSides312 staff member (identifiable by their staff t-shirts) or email <strong>accessibility@bsides312.org</strong>.</p>
               </div>
             </div>
-          </div>
-        </div>
-
+       </div>
+       </div>
+   
       </div>
     </section><!-- End Schedule Section -->
   </main><!-- End #main -->
