@@ -31,7 +31,7 @@ This repository contains the website for BSides312, which serves as the main inf
 - Multiple pages including:
   - Home page (index.html)
   - Speaker bios (speaker-bios.html)
-  - Schedule (schedule.html)
+  <!-- - Schedule (schedule.html) -->
   - Code of Conduct (coc.html)
   - Board details (board-details.html)
   - Support/Sponsorship information (support-us.html)
