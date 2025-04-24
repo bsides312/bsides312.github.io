@@ -153,7 +153,8 @@ h1, h2, h3, h4, h5, h6 {
   color: #9195a2;
 }
 .section-with-bg {
-  background-color: var(--background-color);
+  background-color: #101522; /* Dark background for contrast */
+  color: #fff;
 }
 
 /*--------------------------------------------------------------
@@ -984,23 +985,16 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Custom Button Styling */
 .btn-custom {
-  background-color: #2686b7; /* Color from the second button */
-  border-color: #2686b7; /* Border color from the second button */
-  font-family: 'Poppins', sans-serif; /* Font family from the second button */
-  font-size: 1.25rem; /* Font size from the first button */
-  border-radius: 2rem; /* Border radius from the second button */
-  color: #fff; /* Ensure text is white for contrast */
-  padding: 10px 20px; /* Add padding for better spacing */
-  text-decoration: none; /* Remove underline */
-  display: inline-block; /* Ensure proper button alignment */
+  background-color: #2686b7; /* Visible background color */
+  color: #fff; /* Visible text color */
+  padding: 10px 20px;
+  border-radius: 2rem;
   text-align: center;
-  transition: all 0.3s ease; /* Add hover effect */
-}
-
-.btn-custom:hover {
-  background-color: #1a5f85; /* Darker shade for hover effect */
-  border-color: #1a5f85;
-  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.25rem;
+  position: relative;
+  z-index: 10;
 }
 
 /* ======= Footer Styling ======= */
