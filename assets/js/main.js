@@ -160,6 +160,43 @@
   });
 
   /**
+   * FAQ accordion & toggle icons
+   */
+  document.addEventListener('DOMContentLoaded', () => {
+    const faqItems = document.querySelectorAll('.faq-list .collapsed');
+    
+    // Set up event listeners for bootstrap collapse events
+    const faqCollapseElements = document.querySelectorAll('.faq-list .collapse');
+    faqCollapseElements.forEach(collapseEl => {
+      collapseEl.addEventListener('show.bs.collapse', function() {
+        const question = this.previousElementSibling;
+        question.classList.remove('collapsed');
+        const downIcon = question.querySelector('.icon-show');
+        const upIcon = question.querySelector('.icon-close');
+        if (downIcon) downIcon.style.display = 'none';
+        if (upIcon) upIcon.style.display = 'inline-block';
+      });
+      
+      collapseEl.addEventListener('hide.bs.collapse', function() {
+        const question = this.previousElementSibling;
+        question.classList.add('collapsed');
+        const downIcon = question.querySelector('.icon-show');
+        const upIcon = question.querySelector('.icon-close');
+        if (downIcon) downIcon.style.display = 'inline-block';
+        if (upIcon) upIcon.style.display = 'none';
+      });
+    });
+    
+    // Initial setup for icons
+    faqItems.forEach(item => {
+      const downIcon = item.querySelector('.icon-show');
+      const upIcon = item.querySelector('.icon-close');
+      if (downIcon) downIcon.style.display = 'inline-block';
+      if (upIcon) upIcon.style.display = 'none';
+    });
+  });
+
+  /**
    * Initiate glightbox
    */
   const glightbox = GLightbox({
