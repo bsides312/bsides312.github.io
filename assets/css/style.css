@@ -785,7 +785,14 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 576px) {
   #supporters .supporter-logo img {
     width: 180px; /* 20% larger than original 150px for mobile */
-    padding: 4px;
+    padding: 2px; /* Reduced buffer space between logos */
+  }
+  
+  /* Ensure proper spacing for 3 logos per row */
+  #supporters .col-xs-6 {
+    width: 33.333%; /* Change from 50% (6/12) to 33.333% (4/12) */
+    padding-left: 5px;
+    padding-right: 5px;
   }
 }
 
