@@ -765,7 +765,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #supporters .supporter-logo img {
-  max-width: 100% !important; /* Allow images to scale up to their container size */
+  max-width: 120% !important; /* Make logos 20% larger */
+  transform: scale(1.2); /* Additional scaling for better visibility */
   width: 250px; /* Increase the width for desktop */
   height: auto !important; /* Maintain aspect ratio */
   background: #fff;
@@ -777,13 +778,13 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 992px) {
   #supporters .supporter-logo img {
-    width: 200px; /* Slightly smaller for tablets */
+    width: 240px; /* 20% larger than original 200px for tablets */
   }
 }
 
 @media (max-width: 576px) {
   #supporters .supporter-logo img {
-    width: 150px; /* Smaller size for mobile */
+    width: 180px; /* 20% larger than original 150px for mobile */
     padding: 4px;
   }
 }
@@ -806,6 +807,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .supporter-logo {
   margin-top: 10px; /* Reduce the top margin of the sponsor logos */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: visible; /* Allow logos to overflow their containers */
 }
 
 /* Make footer logo responsive and not too large */
