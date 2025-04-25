@@ -654,15 +654,17 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 1rem;
 }
 .venue-gallery img {
-  width: 100%;
+  width: 50%; /* 50% smaller on desktop */
   height: auto;
   object-fit: cover;
   transition: transform 0.3s ease;
+  margin: 0 auto;
+  display: block;
 }
 
 @media (max-width: 992px) {
   .venue-gallery img {
-    width: 100% !important; /* Reset to full width for smaller screens */
+    width: 25% !important; /* 75% smaller on mobile (25% of original size) */
   }
 }
 
@@ -765,7 +767,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #supporters .supporter-logo img {
-  max-width: 100% !important; /* Allow images to scale up to their container size */
+  max-width: 120% !important; /* Make logos 20% larger */
+  transform: scale(1.2); /* Additional scaling for better visibility */
   width: 250px; /* Increase the width for desktop */
   height: auto !important; /* Maintain aspect ratio */
   background: #fff;
@@ -777,14 +780,21 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 992px) {
   #supporters .supporter-logo img {
-    width: 200px; /* Slightly smaller for tablets */
+    width: 240px; /* 20% larger than original 200px for tablets */
   }
 }
 
 @media (max-width: 576px) {
   #supporters .supporter-logo img {
-    width: 150px; /* Smaller size for mobile */
-    padding: 4px;
+    width: 180px; /* 20% larger than original 150px for mobile */
+    padding: 2px; /* Reduced buffer space between logos */
+  }
+  
+  /* Ensure proper spacing for 3 logos per row */
+  #supporters .col-xs-4 {
+    width: 33.333%; /* 33.333% for 3 logos per row */
+    padding-left: 5px;
+    padding-right: 5px;
   }
 }
 
@@ -806,6 +816,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .supporter-logo {
   margin-top: 10px; /* Reduce the top margin of the sponsor logos */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: visible; /* Allow logos to overflow their containers */
 }
 
 /* Make footer logo responsive and not too large */
@@ -935,9 +949,9 @@ h1, h2, h3, h4, h5, h6 {
 /* Map Container */
 .map-container {
   position: relative;
-  width: 100%;
-  max-width: 800px; /* Shrink the map to a maximum width */
-  padding-bottom: 56.25%; /* Maintain 16:9 aspect ratio */
+  width: 50%; /* 50% smaller on desktop */
+  max-width: 400px; /* 50% of original 800px max-width */
+  padding-bottom: 28.125%; /* 50% of original 56.25% to maintain aspect ratio */
   height: 0;
   margin: 0 auto; /* Center the map */
   overflow: hidden;
@@ -950,6 +964,14 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   height: 100%;
   border: 0;
+}
+
+@media (max-width: 992px) {
+  .map-container {
+    width: 25%; /* 75% smaller on mobile (25% of original size) */
+    max-width: 200px; /* 25% of original 800px max-width */
+    padding-bottom: 14.0625%; /* 25% of original 56.25% to maintain aspect ratio */
+  }
 }
 
 /* Venue Info */
