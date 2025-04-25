@@ -642,16 +642,11 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------------------------------------------------
 # Venue Gallery
 --------------------------------------------------------------*/
-.venue-gallery-container {
-  padding: 2rem 0;
-  text-align: center;
-}
 .venue-gallery {
   overflow: hidden;
-  border-radius: 4px;
-  border-right: 3px solid #fff;
-  border-bottom: 3px solid #fff;
-  margin-bottom: 1rem;
+  border-radius: 4px; /* Keep rounded corners if needed */
+  border: none; /* Remove all borders */
+  margin-bottom: 1rem; /* Keep spacing if necessary */
 }
 .venue-gallery img {
   width: 50%; /* 50% smaller on desktop */
@@ -660,6 +655,19 @@ h1, h2, h3, h4, h5, h6 {
   transition: transform 0.3s ease;
   margin: 0 auto;
   display: block;
+  border-radius: 8px; /* Adjust the value for the desired roundness */
+  overflow: hidden; /* Ensures the corners are clipped */
+}
+
+/* Venue Gallery Images */
+.venue-gallery img {
+  border: none; /* Remove any borders */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margins */
+  display: block; /* Ensure the image fills its container */
+  width: 100%; /* Make the image responsive */
+  height: auto; /* Maintain aspect ratio */
+  box-shadow: none; /* Remove any shadows */
 }
 
 @media (max-width: 992px) {
