@@ -654,15 +654,17 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 1rem;
 }
 .venue-gallery img {
-  width: 100%;
+  width: 50%; /* 50% smaller on desktop */
   height: auto;
   object-fit: cover;
   transition: transform 0.3s ease;
+  margin: 0 auto;
+  display: block;
 }
 
 @media (max-width: 992px) {
   .venue-gallery img {
-    width: 100% !important; /* Reset to full width for smaller screens */
+    width: 25% !important; /* 75% smaller on mobile (25% of original size) */
   }
 }
 
@@ -947,9 +949,9 @@ h1, h2, h3, h4, h5, h6 {
 /* Map Container */
 .map-container {
   position: relative;
-  width: 100%;
-  max-width: 800px; /* Shrink the map to a maximum width */
-  padding-bottom: 56.25%; /* Maintain 16:9 aspect ratio */
+  width: 50%; /* 50% smaller on desktop */
+  max-width: 400px; /* 50% of original 800px max-width */
+  padding-bottom: 28.125%; /* 50% of original 56.25% to maintain aspect ratio */
   height: 0;
   margin: 0 auto; /* Center the map */
   overflow: hidden;
@@ -962,6 +964,14 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   height: 100%;
   border: 0;
+}
+
+@media (max-width: 992px) {
+  .map-container {
+    width: 25%; /* 75% smaller on mobile (25% of original size) */
+    max-width: 200px; /* 25% of original 800px max-width */
+    padding-bottom: 14.0625%; /* 25% of original 56.25% to maintain aspect ratio */
+  }
 }
 
 /* Venue Info */
