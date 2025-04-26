@@ -729,6 +729,15 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 auto; /* Center each gallery item */
 }
 
+/* New class for smaller photos with spacing */
+.smaller-photos {
+  width: 225px; /* Keep the width as needed */
+  margin: 15px; /* Increase spacing between photos */
+  display: inline-block; /* Ensure proper alignment */
+  border-radius: 8px; /* Add rounded corners */
+  overflow: hidden; /* Ensure the corners are clipped */
+}
+
 /*--------------------------------------------------------------
 # Board Image
 --------------------------------------------------------------*/
@@ -1186,4 +1195,9 @@ h1, h2, h3, h4, h5, h6 {
 #faq .faq-list p {
   margin-bottom: 0;
   padding: 10px 0 0 25px;
+}
+
+/* Move buttons slightly lower */
+.section-header .d-flex {
+  margin-top: 20px; /* Add spacing above the buttons */
 }
