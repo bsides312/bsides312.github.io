@@ -1,3 +1,15 @@
+.speaker-img.smaller-photos {
+  margin: 0 7.5px 15px 7.5px;
+}
+
+/* Mobile-first styles for home page */
+@media (max-width: 768px) {
+  .home-page .speaker-img {
+    width: 50%;
+    height: auto;
+    margin: 0 5px 10px 5px;
+  }
+}
 /**
 * Template Name: TheEvent
 * Updated: Sep 18 2023 with Bootstrap v5.3.2
@@ -40,6 +52,23 @@ a:focus {
   text-decoration: none;
 }
 
+/* Mobile Base Styles */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .nav-menu {
+    flex-direction: column;
+  }
+}
+
 /* Paragraphs and Lists */
 p, li {
   word-break: break-word;
@@ -56,6 +85,61 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 0 20px 0;
   padding: 0;
   color: #93bdfc;
+}
+
+@media (max-width: 768px) {
+  h1 { font-size: 28px; }
+  h2 { font-size: 24px; }
+  h3 { font-size: 20px; }
+  h4 { font-size: 18px; }
+  h5 { font-size: 16px; }
+  h6 { font-size: 14px; }
+  h1, h2, h3 {
+    margin-bottom: 15px;
+  }
+
+  /* Speaker page adjustments */
+  .speaker-img {
+    max-height: 200px;
+  }
+  
+  .speaker-card {
+    padding: 15px;
+    margin-bottom: 40px;
+  }
+  
+  .speaker-social {
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  /* Form field adjustments */
+  input, textarea, select {
+    width: 100% !important;
+    margin: 8px 0;
+    padding: 12px;
+  }
+  
+  .btn {
+    display: block;
+    width: 100%;
+    padding: 14px;
+  }
+  
+  /* Schedule table adjustments */
+  .schedule-table {
+    overflow-x: auto;
+    display: block;
+  }
+  
+  table {
+    font-size: 14px;
+  }
+  
+  td, th {
+    padding: 8px;
+    min-width: 120px;
+  }
 }
 
 /* Main Page */
@@ -647,9 +731,10 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 4px; /* Keep rounded corners if needed */
   border: none; /* Remove all borders */
   margin-bottom: 1rem; /* Keep spacing if necessary */
+  text-align: center; /* Center the gallery item */
 }
 .venue-gallery img {
-  width: 50%; /* 50% smaller on desktop */
+  width: 80%; /* Larger size on desktop */
   height: auto;
   object-fit: cover;
   transition: transform 0.3s ease;
@@ -662,6 +747,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Venue Gallery Images */
 .venue-gallery img {
   border: none; /* Remove any borders */
+  margin: 0 !important; /* Remove all spacing */
   padding: 0; /* Remove padding */
   margin: 0; /* Remove margins */
   display: block; /* Ensure the image fills its container */
@@ -672,7 +758,13 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 992px) {
   .venue-gallery img {
-    width: 25% !important; /* 75% smaller on mobile (25% of original size) */
+    width: 70% !important; /* Larger on tablets */
+  }
+}
+
+@media (max-width: 576px) {
+  .venue-gallery img {
+    width: 50% !important; /* 50% smaller on mobile as requested */
   }
 }
 
@@ -688,6 +780,12 @@ h1, h2, h3, h4, h5, h6 {
 /* Ensure venue gallery images are always in one row */
 .venue-gallery-container .row {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px; /* Add spacing between items */
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1200px; /* Limit maximum width */
   flex-wrap: nowrap; /* Prevent wrapping */
   overflow-x: auto; /* Allow horizontal scrolling if needed */
   gap: 1rem; /* Add spacing between images */
@@ -696,7 +794,16 @@ h1, h2, h3, h4, h5, h6 {
 
 .venue-gallery-container .col-lg-3,
 .venue-gallery-container .col-md-4 {
-  flex: 0 0 auto; /* Prevent columns from shrinking or growing */
+  flex: 0 0 300px; /* Fixed width for items */
+  margin: 5px; /* Small margin for spacing */
+  
+  @media (max-width: 768px) {
+    flex: 0 0 calc(50% - 20px); /* Two columns on tablet */
+  }
+  
+  @media (max-width: 480px) {
+    flex: 0 0 calc(100% - 20px); /* Single column on mobile */
+  }
   width: calc(100% / 5); /* Adjust width for 5 images */
 }
 
@@ -717,16 +824,23 @@ h1, h2, h3, h4, h5, h6 {
 /* Center the Venue Gallery */
 #venue-gallery .row {
   justify-content: center; /* Center the gallery items horizontally */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 .venue-gallery-container {
   text-align: center; /* Center the entire container */
   margin: 0 auto; /* Ensure the container is centered */
+  max-width: 1200px; /* Limit maximum width */
 }
 
 .venue-gallery {
-  display: inline-block; /* Ensure each gallery item is treated as inline for centering */
+  display: flex; /* Use flexbox for better centering */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
   margin: 0 auto; /* Center each gallery item */
+  width: 100%; /* Full width */
 }
 
 /* New class for smaller photos with spacing */
@@ -784,11 +898,11 @@ h1, h2, h3, h4, h5, h6 {
   padding: 10px 0 !important;
 }
 
+/* General logo styling */
 #supporters .supporter-logo img {
-  max-width: 120% !important; /* Make logos 20% larger */
-  transform: scale(1.2); /* Additional scaling for better visibility */
-  width: 250px; /* Increase the width for desktop */
-  height: auto !important; /* Maintain aspect ratio */
+  max-width: 100% !important;
+  width: 250px;
+  height: auto !important;
   background: #fff;
   border-radius: 8px;
   padding: 8px;
@@ -797,6 +911,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 992px) {
+.img-fluid {
+  width: 100%;
+  height: auto;
+  margin: 15px;
+  display: block;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.img-fluid:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
   #supporters .supporter-logo img {
     width: 240px; /* 20% larger than original 200px for tablets */
   }
@@ -804,13 +931,27 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 576px) {
   #supporters .supporter-logo img {
-    width: 180px; /* 20% larger than original 150px for mobile */
-    padding: 2px; /* Reduced buffer space between logos */
+    width: 140px; /* Smaller size for mobile */
+    padding: 4px;
   }
   
-  /* Ensure proper spacing for 3 logos per row */
+  /* Ensure proper spacing for logos */
   #supporters .col-xs-4 {
-    width: 33.333%; /* 33.333% for 3 logos per row */
+    width: 33.333%;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin-bottom: 16px; /* Add vertical spacing between rows */
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+  #supporters .supporter-logo img {
+    width: 120px; /* Even smaller for very small screens */
+  }
+  
+  /* More spacing for very small screens */
+  #supporters .col-xs-4 {
     padding-left: 5px;
     padding-right: 5px;
   }
@@ -837,7 +978,7 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: visible; /* Allow logos to overflow their containers */
+  overflow: hidden; /* Prevent logos from overflowing their containers */
 }
 
 /* Make footer logo responsive and not too large */
@@ -958,6 +1099,12 @@ h1, h2, h3, h4, h5, h6 {
   display: block;
 }
 
+/* Round corners for the map */
+#map {
+  border-radius: 8px; /* Adjust the value for the desired roundness */
+  overflow: hidden; /* Ensure the corners are clipped */
+}
+
 @media (max-width: 992px) {
   #map {
     width: 100% !important; /* Reset to full width for smaller screens */
@@ -973,6 +1120,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 0;
   margin: 0 auto; /* Center the map */
   overflow: hidden;
+  border-radius: 12px; /* Rounded corners */
 }
 
 .map-container iframe {
@@ -986,9 +1134,9 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 992px) {
   .map-container {
-    width: 25%; /* 75% smaller on mobile (25% of original size) */
-    max-width: 200px; /* 25% of original 800px max-width */
-    padding-bottom: 14.0625%; /* 25% of original 56.25% to maintain aspect ratio */
+    width: 80%; /* More reasonable width on mobile */
+    max-width: 300px; /* Adjusted max-width for mobile */
+    padding-bottom: 45%; /* Adjusted aspect ratio for mobile */
   }
 }
 
@@ -1201,4 +1349,10 @@ h1, h2, h3, h4, h5, h6 {
 /* Move buttons slightly lower */
 .section-header .d-flex {
   margin-top: 20px; /* Add spacing above the buttons */
+}
+
+/* Round corners for images in the Learn to Hack Section */
+#fun img {
+  border-radius: 8px; /* Adjust the value for the desired roundness */
+  overflow: hidden; /* Ensure the corners are clipped */
 }
