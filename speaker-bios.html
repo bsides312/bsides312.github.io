@@ -636,29 +636,36 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      // Get the hash and query parameters from the URL
-      const url = new URL(window.location.href);
-      const hash = url.hash.split('?')[0]; // Extract the hash (e.g., #steve-shelton)
-      const params = new URLSearchParams(url.hash.split('?')[1]); // Extract query parameters
-      const scrollOffset = parseInt(params.get('scrollOffset')) || 0; // Default to 0 if not provided
+ 
+</body>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // Check if there's a hash in the URL
+    const hash = window.location.hash; // Extract the hash (e.g., #steve-shelton)
 
-      if (hash) {
+    if (hash) {
+      // Prevent the browser's default behavior
+      history.scrollRestoration = 'manual'; // Disable automatic scroll restoration
+      window.location.hash = ''; // Temporarily clear the hash to prevent default scrolling
+
+      // Wait for the DOM to fully load before scrolling
+      setTimeout(() => {
         const targetElement = document.querySelector(hash);
         if (targetElement) {
           const targetPosition = targetElement.offsetTop;
+          const additionalOffset = window.innerHeight * 0.80; // Scroll an additional 80% of the viewport height
 
           // Scroll to the target element with the additional offset
           window.scrollTo({
-            top: targetPosition + scrollOffset,
+            top: targetPosition + additionalOffset,
             behavior: 'smooth'
           });
+
+          // Restore the hash in the URL
+          window.history.replaceState(null, null, hash);
         }
-      }
-    });
-  </script>
-
-</body>
-
+      }, 100); // Delay to ensure the DOM is fully loaded
+    }
+  });
+</script>
 </html>
