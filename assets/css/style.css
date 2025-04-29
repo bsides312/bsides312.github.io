@@ -873,6 +873,32 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center;
   align-items: center;
   padding: 10px 0;
+  margin: 0 auto;
+}
+
+/* Center platinum sponsors properly */
+#supporters .col-12.col-md-4.offset-md-4 {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 100%;
+}
+
+@media (max-width: 767px) {
+  #supporters .col-12.col-md-4.offset-md-4 {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+  }
+}
+
+#supporters .row.justify-content-center {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
 }
 
 /* General logo styling */
