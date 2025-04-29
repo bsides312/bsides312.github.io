@@ -711,6 +711,9 @@ h1, h2, h3, h4, h5, h6 {
   border: none;
   margin-bottom: 1rem;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .venue-gallery img {
   width: 80%;
@@ -721,16 +724,8 @@ h1, h2, h3, h4, h5, h6 {
   display: block;
   border-radius: 8px;
   overflow: hidden;
-}
-
-/* Venue Gallery Images */
-.venue-gallery img {
   border: none;
   padding: 0;
-  margin: 0;
-  display: block;
-  width: 100%;
-  height: auto;
   box-shadow: none;
 }
 
@@ -743,6 +738,13 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 576px) {
   .venue-gallery img {
     width: 50%;
+    margin: 0 auto;
+  }
+  .venue-gallery {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
   }
 }
 
