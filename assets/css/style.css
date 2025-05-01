@@ -495,6 +495,77 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*--------------------------------------------------------------
+# Error Page Styles
+--------------------------------------------------------------*/
+.error-container {
+  min-height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem 0;
+}
+
+.windows-95-theme {
+  font-family: 'Courier New', Courier, monospace;
+  border: 2px solid #000080;
+  width: 100%;
+  max-width: 420px;
+  background: #c0c0c0;
+  box-shadow: 8px 8px 0 #808080;
+  padding: 0;
+}
+
+.windows-title-bar {
+  background: linear-gradient(to bottom, #000080 90%, #8080ff 100%);
+  color: white;
+  padding: 6px 10px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid #000080;
+}
+
+.error-icon {
+  height: 18px;
+  vertical-align: middle;
+  margin-right: 6px;
+}
+
+.error-close-btn {
+  font-size: 18px;
+  font-family: Arial, sans-serif;
+  cursor: pointer;
+  background: #c0c0c0;
+  color: #000;
+  border: 1px solid #fff;
+  padding: 0 8px;
+  margin-left: 8px;
+  box-shadow: 1px 1px #808080;
+}
+
+.error-message-area {
+  padding: 24px 18px 18px 18px;
+}
+
+.error-message-text {
+  color: #000;
+  margin-bottom: 18px;
+}
+
+.windows-button {
+  font-family: inherit;
+  background: #e0e0e0;
+  border: 2px outset #fff;
+  color: #000;
+  padding: 2px 28px;
+  font-size: 1rem;
+  margin-top: 8px;
+  box-shadow: 1px 1px #808080;
+  cursor: pointer;
+}
+
+/*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
 #hero {
@@ -505,12 +576,20 @@ h1, h2, h3, h4, h5, h6 {
   overflow: hidden;
   position: relative;
 }
+
+#supporters {
+  width: 100%;
+  background: url(../img/hero-bg.jpg) top center;
+  background-size: cover;
+  position: relative;
+  padding: 60px 0;
+}
 @media (min-width: 1024px) {
-  #hero {
+  #hero, #supporters {
     background-attachment: fixed;
   }
 }
-#hero:before {
+#hero:before, #supporters:before {
   content: "";
   background: rgba(6, 12, 34, 0.8);
   position: absolute;
@@ -649,7 +728,7 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
-#about {
+#about, #keynote {
   background: url("../img/about-bg.jpg");
   background-size: cover;
   overflow: hidden;
@@ -658,9 +737,9 @@ h1, h2, h3, h4, h5, h6 {
   padding: 60px 0 40px 0;
 }
 @media (min-width: 1024px) {
-  #about { background-attachment: fixed; }
+  #about, #keynote { background-attachment: fixed; }
 }
-#about:before {
+#about:before, #keynote:before {
   content: "";
   background: rgba(13, 20, 41, 0.8);
   position: absolute;
@@ -669,7 +748,7 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
   right: 0;
 }
-#about h2, #about h3, #about p {
+#about h2, #about h3, #about p, #keynote h2, #keynote h3, #keynote p {
   color: #fff;
 }
 #about h2 {
@@ -923,6 +1002,26 @@ h1, h2, h3, h4, h5, h6 {
   overflow: hidden;
 }
 
+.error-section {
+  background: url('../img/about-bg.jpg') center center;
+  background-size: cover;
+  position: relative;
+}
+
+.error-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.7);
+}
+
+.windows-95-theme {
+  position: relative;
+  z-index: 1000;
+}
+
 .img-fluid:hover {
   transform: scale(1.05);
   transition: transform 0.3s ease;
@@ -1060,6 +1159,8 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 12px; /* Rounded corners */
   object-fit: cover; /* Ensures the image fits nicely */
   max-height: 400px; /* Optional: Limit the height for consistency */
+  position: relative;
+  z-index: 1000;
 }
 
 #Contribute .section-header {
