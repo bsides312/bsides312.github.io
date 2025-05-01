@@ -583,8 +583,9 @@
           const targetElement = document.querySelector(hash);
           if (targetElement) {
             const targetPosition = targetElement.offsetTop;
-            const additionalOffset = window.innerHeight * 0.80; // Scroll an additional 80% of the viewport height
-  
+            const offsetPercentage = 0.80; // Default offset percentage (80% of the viewport height)
+            const additionalOffset = window.innerHeight * offsetPercentage; // Calculate the additional offset dynamically
+              
             // Scroll to the target element with the additional offset
             window.scrollTo({
               top: targetPosition + additionalOffset,
