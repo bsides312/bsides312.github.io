@@ -3,9 +3,9 @@
 --------------------------------------------------------------*/
 :root {
   --primary-color: #f82249;
-  --secondary-color: #fff;
+  --secondary-color: #a7a7a7;
   --background-color: #212529;
-  --text-color: #eee;
+  --text-color: #a7a7a7;
   --hover-color: #e0072f;
 }
 
@@ -213,7 +213,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
   font-size: 18px;
   font-weight: 500;
-  color: #9195a2;
+  color: #fff;
 }
 .section-with-bg {
   background-color: #101522; /* Dark background for contrast */
@@ -315,7 +315,7 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color: rgba(202, 206, 221, 0.8);
+  color: rgba(255, 255, 255, 0.8);
   font-family: "Raleway", sans-serif;
   font-weight: 600;
   font-size: 14px;
