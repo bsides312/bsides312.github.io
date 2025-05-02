@@ -1,36 +1,21 @@
-# BSides312 - Chicago's Biggest Little Non-Profit Hacking Conference
+# BSides312 - Chicago's Non-Profit, COmmunity-Driven Infosec and Hacker Conference Website
 
-BSides312 is a community-driven, non-profit cybersecurity and hacking conference held in Chicago, Illinois. It follows the Security BSides model of creating accessible, collaborative information security events organized by and for the community.
+This is the official website for BSides312, Chicago's community-driven cybersecurity conference. The site provides information about the annual event including:
 
-## About the Project
-
-This repository contains the website for BSides312, which serves as the main information hub for:
-- Event details, schedule, and registration
+- Conference details and registration
 - Speaker information
 - Sponsorship opportunities
-- Community engagement and volunteering
+- Volunteer information
 - Code of conduct
+- Contact form functionality
 
-### Website Structure
-- HTML-based front-end website
-- Bootstrap framework for responsive design
-- Multiple pages including:
-  - Home page (index.html)
-  - Speaker bios (speaker-bios.html)
-  <!-- - Schedule (schedule.html) -->
-  - Code of Conduct (coc.html)
-  - Board details (board-details.html)
-  - Support/Sponsorship information (support-us.html)
+## Technologies Used
 
-## Development
-
-This website was built with:
 - HTML5
-- CSS3
-- Bootstrap 5.3.3
+- CSS3 (with Sass preprocessing)
 - JavaScript
-- Various libraries for animations and UI elements
+- PHP (for contact form)
+- Bootstrap 5.3.3 framework
+- GitHub Pages for hosting
 
-## License
-
-Copyright © BSides312. All Rights Reserved. 
+The website is built as a static site with dynamic contact form functionality, using Sass for CSS preprocessing, and hosted on GitHub Pages.
