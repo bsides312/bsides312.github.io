@@ -126,6 +126,17 @@
   on('click', '.navbar .dropdown > a', function(e) {
     if (select('#navbar').classList.contains('navbar-mobile')) {
       e.preventDefault()
+      
+      // Close all other dropdowns first
+      const dropdowns = document.querySelectorAll('.navbar .dropdown-active')
+      dropdowns.forEach(dropdown => {
+        // Skip the current dropdown being clicked
+        if (dropdown !== this.nextElementSibling) {
+          dropdown.classList.remove('dropdown-active')
+        }
+      })
+      
+      // Toggle the clicked dropdown
       this.nextElementSibling.classList.toggle('dropdown-active')
     }
   }, true)
@@ -259,7 +270,7 @@
    */
   window.addEventListener('load', () => {
     AOS.init({
-      duration: 1000,
+      duration: 300,
       easing: 'ease-in-out',
       once: true,
       mirror: false
