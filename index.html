@@ -39,15 +39,19 @@ I<!DOCTYPE html>
   <meta name="twitter:image" content="https://bsides312.org/images/summary_large_image.jpg">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="assets/img/favicon.png" rel="icon" width="32" height="32">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" width="180" height="180">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
 
-  <!-- Preload critical CSS and JS -->
-  <link rel="preload" href="assets/vendor/bootstrap/css/bootstrap.min.css" as="style">
-  <link rel="preload" href="assets/css/style.css" as="style">
+  <!-- Preload critical resources -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="assets/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="assets/css/style.css"></noscript>
+  <link rel="preload" href="assets/vendor/bootstrap/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css"></noscript>
   <link rel="preload" href="assets/vendor/glightbox/js/glightbox.min.js" as="script">
 
   <!-- Vendor CSS Files -->
@@ -674,7 +678,7 @@ I<!DOCTYPE html>
         <div class="row mt-4">
           <div class="col-lg-12">
             <div class="venue-map">
-              <iframe
+              <iframe loading="lazy"
                 src="https://www.google.com/maps?q=Irish+American+Heritage+Center,+4626+N+Knox+Ave,+Chicago,+IL+60630&output=embed"
                 style="border:0; width: 100%; height: 300px;"
                 allowfullscreen=""
