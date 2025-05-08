@@ -941,6 +941,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #supporters .section-header img {
   max-width: 100%;
+  width: 100%; /* Make tier images extend to the edge of their container */
   height: auto;
   display: block;
   margin-left: auto;
