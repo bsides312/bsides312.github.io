@@ -39,7 +39,10 @@ I<!DOCTYPE html>
   <meta name="twitter:image" content="https://bsides312.org/images/summary_large_image.jpg">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon" width="32" height="32">
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon" type="image/png" sizes="32x32">
+  <link href="assets/img/favicon.png" rel="icon" type="image/png" sizes="16x16">
+  <link href="assets/img/favicon.png" rel="shortcut icon" type="image/x-icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" width="180" height="180">
 
   <!-- Google Fonts -->
@@ -63,7 +66,9 @@ I<!DOCTYPE html>
 
   <!-- Template Main CSS File -->
 
-  <link href="assets/css/style.css" rel="stylesheet">
+  <link rel="preload" href="assets/css/style.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="assets/css/style.min.css"></noscript>
+  <link href="assets/css/style.css" rel="stylesheet" media="print" onload="this.media='all'">
 
   <!-- Structured Data for SEO -->
   <script type="application/ld+json">
@@ -606,7 +611,7 @@ I<!DOCTYPE html>
             <ul>
               <li><a class="nav-link scrollto" href="speaker-bios.html#steve-shelton">Meet our Speakers</a></li>
               <li><a class="nav-link scrollto" href="schedule.html#schedule">Conference Schedule</a></li>
-              <li><a class="nav-link scrollto" href="previous-speakers.html">Previous Speakers</a></li>
+              <li><a class="nav-link scrollto" href="previous-speakers.html#previous-speakers">Previous Speakers</a></li>
               <li><a class="nav-link scrollto" href="#fun">Learn to Hack</a></li>
               <li><a class="nav-link scrollto" href="#about">Venue & Parking</a></li>
               <li><a class="nav-link scrollto" href="coc.html#coc">Code of Conduct</a></li>
@@ -631,6 +636,9 @@ I<!DOCTYPE html>
   <!-- ======= Hero Section ======= -->
   <section id="hero">
     <div class="hero-container" data-aos="zoom-in" data-aos-delay="100">
+      <div class="text-center mb-4">
+        <img src="assets/img/about_logo.png" alt="BSides312 Logo" class="img-fluid hero-logo">
+      </div>
       <h1 class="mb-4 pb-0">Security BSides 312<br>Chicago's <span>Non-Profit</span> Hacker Conference</h1>
       <p class="mb-4 pb-0">Sunday, June 1st, 2025 (The day after <a href="https://thotcon.org" target="_blank" rel="noopener">THOTCON!)</a><br>
         <a href="https://maps.app.goo.gl/vnW4dmNZJnjcDHTH6" target="_blank" rel="noopener">Irish American Heritage Center,</a> Chicago Illinois</p>
@@ -680,7 +688,7 @@ I<!DOCTYPE html>
             <div class="venue-map">
               <iframe loading="lazy"
                 src="https://www.google.com/maps?q=Irish+American+Heritage+Center,+4626+N+Knox+Ave,+Chicago,+IL+60630&output=embed"
-                style="border:0; width: 100%; height: 300px;"
+                class="map-iframe"
                 allowfullscreen=""
                 loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"
@@ -795,7 +803,7 @@ I<!DOCTYPE html>
             </div>
           </div>
           <div class="col-lg-8 col-md-6">
-            <div class="keynote-details" style="position: relative; z-index: 1000;">
+            <div class="keynote-details z-index-1000">
               <h4>About Steve</h4>
               <p>Steve Shelton helps people and organizations align achievement with purpose and meaning. He founded Green Shoe Consulting to research, educate, consult, and coach individuals and organizations on stress and burnout, as well as teaching skills and strategies to alleviate and reduce the negative consequences of these challenges. He combines decades of experience as a cybersecurity salesperson with industry giants like Symantec, RSA, and Proofpoint, with evidence based, applied psychology frameworks to help performers in various high stress environments perform their best.</p>
               <h4>Keynote Synopsis</h4>
@@ -863,7 +871,7 @@ I<!DOCTYPE html>
       <!-- Platinum Sponsors -->
       <div class="row no-gutters supporters-wrap clearfix gy-4 gx-4 mb-5" data-aos="zoom-in" data-aos-delay="100">
         <div class="section-header">
-          <img src="assets/img/supporters/platinum3.png" alt="Platinum Sponsors" style="display: block; place-self: center;">
+          <img src="assets/img/supporters/platinum3.png" alt="Platinum Sponsors" class="sponsor-img-center">
         </div>
         <div class="col-12 col-md-4 offset-md-4">
           <div class="supporter-logo">
@@ -877,7 +885,7 @@ I<!DOCTYPE html>
       <!-- Gold Sponsors -->
       <div class="row no-gutters supporters-wrap clearfix gy-4 gx-4 mb-5" data-aos="zoom-in" data-aos-delay="100">
         <div class="section-header">
-          <img src="assets/img/supporters/gold3.png" alt="Gold Sponsors" style="display: block; place-self: center;">
+          <img src="assets/img/supporters/gold3.png" alt="Gold Sponsors" class="sponsor-img-center">
         </div>
         <div class="row justify-content-center">
           <div class="col-lg-4 col-md-4 col-xs-4">
@@ -936,7 +944,7 @@ I<!DOCTYPE html>
       <!-- Silver Sponsors -->
       <div class="row no-gutters supporters-wrap clearfix gy-4 gx-4 mb-5" data-aos="zoom-in" data-aos-delay="100">
         <div class="section-header">
-          <img src="assets/img/supporters/silver3.png" alt="Silver Sponsors" style="display: block; place-self: center;">
+          <img src="assets/img/supporters/silver3.png" alt="Silver Sponsors" class="sponsor-img-center">
         </div>
         <div class="row justify-content-center">
           <div class="col-lg-4 col-md-4 col-xs-4">
@@ -959,7 +967,7 @@ I<!DOCTYPE html>
       <!-- Bronze Sponsors -->
       <div class="row no-gutters supporters-wrap clearfix gy-4 gx-4 mb-5" data-aos="zoom-in" data-aos-delay="100">
         <div class="section-header">
-          <img src="assets/img/supporters/bronze3.png" alt="Bronze Sponsors" style="display: block; place-self: center;">
+          <img src="assets/img/supporters/bronze3.png" alt="Bronze Sponsors" class="sponsor-img-center">
         </div>
         <div class="row justify-content-center">
           <div class="col-lg-4 col-md-4 col-xs-4">
@@ -975,7 +983,7 @@ I<!DOCTYPE html>
       <!-- Founding Sponsors -->
       <div class="row no-gutters supporters-wrap clearfix gy-4 gx-4 mb-5" data-aos="zoom-in" data-aos-delay="100">
         <div class="section-header">
-          <img src="assets/img/supporters/founding3.png" alt="Founding Sponsors" style="display: block; place-self: center;">
+          <img src="assets/img/supporters/founding3.png" alt="Founding Sponsors" class="sponsor-img-center">
         </div>
         <div class="row justify-content-center">
           <div class="col-lg-4 col-md-4 col-xs-4">
@@ -998,7 +1006,7 @@ I<!DOCTYPE html>
       <!-- Community Sponsors -->
       <div class="row no-gutters supporters-wrap clearfix gy-4 gx-4 mb-5" data-aos="zoom-in" data-aos-delay="100">
         <div class="section-header">
-          <img src="assets/img/supporters/community3.png" alt="Community Sponsors" style="display: block; place-self: center;">
+          <img src="assets/img/supporters/community3.png" alt="Community Sponsors" class="sponsor-img-center">
         </div>
         <div class="row justify-content-center">
           <div class="col-lg-4 col-md-4 col-xs-4">
@@ -1166,7 +1174,7 @@ I<!DOCTYPE html>
 
     <!-- ======= Contribute Section ======= -->
    <section id="Contribute" class="section-with-bg">
-     <div class="container position-relative" data-aos="fade-up" style="z-index: 1000;">
+     <div class="container position-relative" data-aos="fade-up" class="z-index-1000">
        <div class="section-header">
          <h2>Donate your Time!</h2>
          <p>Here are some non-financial ways you can help support our cause:</p>

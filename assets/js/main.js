@@ -277,13 +277,7 @@
     })
   });
 
-  /**
-   * Integrate Papercall
-   
-    on('show.bs.modal', '#cfpModal', function(event) {
-    select('#cfpMmodal').value = event.relatedTarget.getAttribute('data-ticket-type')
-   }); */
-   /* Modernized modal code */
+   // CFP Modal initialization
    window.addEventListener('load', function() {
      const cfpModal = document.getElementById('cfpModal');
      if (cfpModal) {
@@ -300,7 +294,7 @@ document.addEventListener('DOMContentLoaded', function() {
   galleryImages.forEach(img => {
     img.onerror = function() {
       this.onerror = null;
-      this.src = 'assets/img/fallback.jpg';
+      this.src = '';
     };
   });
 
