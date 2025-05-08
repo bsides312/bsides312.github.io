@@ -736,10 +736,45 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
   padding: 60px 0 40px 0;
 }
-@media (min-width: 1024px) {
-  #about, #keynote { background-attachment: fixed; }
+#Contribute {
+  background: url("../img/about-bg.jpg");
+  padding: 0;
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+  color: #fff;
+  padding: 15px 0 10px 0;
 }
-#about:before, #keynote:before {
+#Contribute .section-header {
+  margin: 0;
+  padding-bottom: 5px;
+}
+#Contribute .section-header h2 {
+  font-size: 28px;
+  margin-bottom: 2px;
+}
+#Contribute .section-header p {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+#Contribute h3 {
+  font-size: 20px;
+  margin-bottom: 2px;
+}
+#Contribute p {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+#Contribute .row {
+  margin: 0;
+  padding: 0;
+  padding: 0;
+  gap: 0;
+}
+@media (min-width: 1024px) {
+  #about, #keynote, #Contribute { background-attachment: fixed; }
+}
+#about:before, #keynote:before, #Contribute:before {
   content: "";
   background: rgba(13, 20, 41, 0.8);
   position: absolute;
@@ -1123,8 +1158,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Ensure content is above the overlay */
-.footer-top > .container {
+.footer-top > .container,
+#Contribute .container {
   position: relative;
+  padding: 0;
   z-index: 3;
 }
 
@@ -1164,12 +1201,21 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 1000;
 }
 
-#Contribute .section-header {
+#Contribute .section-header,
+#Contribute .section-header,
+#volunteer .section-header,
+#cfp .section-header {
   display: flex;
+  margin: 0;
+  padding: 0;
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  height: 100%;
+}
+
+#Contribute .col-lg-6 {
+  margin: 0;
+  padding: 0;
 }
 
 
