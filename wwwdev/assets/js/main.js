@@ -229,12 +229,7 @@
     })
   });
 
-  /**
-   * Integrate Papercall
-   
-    on('show.bs.modal', '#cfpModal', function(event) {
-    select('#cfpMmodal').value = event.relatedTarget.getAttribute('data-ticket-type')
-   }); */
+   // CFP Modal initialization
    window.addEventListener('load', function() {
      const cfpModal = document.getElementById('cfpModal');
      if (cfpModal) {

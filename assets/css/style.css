@@ -1,5 +1,5 @@
 /*--------------------------------------------------------------
-# CSS Variables
+# CSS Variables & General Styles (Optimized)
 --------------------------------------------------------------*/
 :root {
   --primary-color: #f82249;
@@ -9,9 +9,6 @@
   --hover-color: #e0072f;
 }
 
-/*--------------------------------------------------------------
-# General Styles
---------------------------------------------------------------*/
 body {
   background: var(--background-color);
   color: var(--text-color);
@@ -23,23 +20,14 @@ a {
   text-decoration: none;
   transition: 0.5s;
 }
-
-a:hover,
-a:active,
-a:focus {
+a:hover, a:active, a:focus {
   color: var(--hover-color);
   outline: none;
   text-decoration: none;
 }
 
-p, li {
-  word-break: break-word;
-}
-
-p {
-  padding: 0;
-  margin: 0 0 30px 0;
-}
+p, li { word-break: break-word; }
+p { padding: 0; margin: 0 0 30px 0; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Raleway", sans-serif;
@@ -135,8 +123,8 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   height: 100%;
   overflow: visible;
-  background: #fff url("../img/preloader.svg") no-repeat center center;
-}
+  background: #fff no-repeat center center;
+  }
 
 /*--------------------------------------------------------------
 # Back to top button
@@ -495,6 +483,24 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*--------------------------------------------------------------
+# Custom Classes (Optimized)
+--------------------------------------------------------------*/
+.logo-max-width { max-width: 200px; }
+.footer-white-bg { background-color: #fff; }
+.social-icon-lg { font-size: 50px; }
+.text-italic-sm { font-style: italic; font-size: 80%; }
+.donate-btn {
+  background-color: #2686b7;
+  border-color: #2686b7;
+  font-family: 'Poppins', sans-serif;
+  border-radius: 2rem;
+}
+.map-iframe { border: 0; width: 100%; height: 300px; }
+.sponsor-img-center { display: block; place-self: center; }
+.z-index-1000 { position: relative; z-index: 1000; }
+.hidden-element { display: none; }
+
+/*--------------------------------------------------------------
 # Error Page Styles
 --------------------------------------------------------------*/
 .error-container {
@@ -736,10 +742,45 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
   padding: 60px 0 40px 0;
 }
-@media (min-width: 1024px) {
-  #about, #keynote { background-attachment: fixed; }
+#Contribute {
+  background: url("../img/about-bg.jpg");
+  padding: 0;
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+  color: #fff;
+  padding: 15px 0 10px 0;
 }
-#about:before, #keynote:before {
+#Contribute .section-header {
+  margin: 0;
+  padding-bottom: 5px;
+}
+#Contribute .section-header h2 {
+  font-size: 28px;
+  margin-bottom: 2px;
+}
+#Contribute .section-header p {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+#Contribute h3 {
+  font-size: 20px;
+  margin-bottom: 2px;
+}
+#Contribute p {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+#Contribute .row {
+  margin: 0;
+  padding: 0;
+  padding: 0;
+  gap: 0;
+}
+@media (min-width: 1024px) {
+  #about, #keynote, #Contribute { background-attachment: fixed; }
+}
+#about:before, #keynote:before, #Contribute:before {
   content: "";
   background: rgba(13, 20, 41, 0.8);
   position: absolute;
@@ -941,6 +982,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #supporters .section-header img {
   max-width: 100%;
+  width: 100%; /* Make tier images extend to the edge of their container */
   height: auto;
   display: block;
   margin-left: auto;
@@ -1122,8 +1164,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Ensure content is above the overlay */
-.footer-top > .container {
+.footer-top > .container,
+#Contribute .container {
   position: relative;
+  padding: 0;
   z-index: 3;
 }
 
@@ -1163,12 +1207,21 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 1000;
 }
 
-#Contribute .section-header {
+#Contribute .section-header,
+#Contribute .section-header,
+#volunteer .section-header,
+#cfp .section-header {
   display: flex;
+  margin: 0;
+  padding: 0;
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  height: 100%;
+}
+
+#Contribute .col-lg-6 {
+  margin: 0;
+  padding: 0;
 }
 
 
@@ -1467,4 +1520,22 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 200px;
   margin: 10px;
   object-position: center;
+}
+
+/* Hero Logo */
+.hero-logo {
+  max-height: 400px;
+}
+
+@media (max-width: 768px) {
+  .hero-logo {
+    max-height: 200px;
+  }
+}
+
+/* About logo size adjustment */
+img[src*="about_logo"] {
+  max-width: 64%;
+  height: auto;
+  margin: 0 auto;
 }
