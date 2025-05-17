@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /forms/
+Disallow: /includes/
+Disallow: /assets/vendor/
+Disallow: /wwwdev/
+
+# Sitemap
+Sitemap: https://bsides312.github.io/sitemap.xml

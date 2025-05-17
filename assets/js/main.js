@@ -294,7 +294,12 @@ document.addEventListener('DOMContentLoaded', function() {
   galleryImages.forEach(img => {
     img.onerror = function() {
       this.onerror = null;
-      this.src = '';
+      // Use a data URI for the placeholder image instead of an external file
+      this.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2YwZjBmMCIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiM4ODg4ODgiPkltYWdlIE5vdCBGb3VuZDwvdGV4dD48cGF0aCBkPSJNNTAsNTAgTDE1MCwxNTAgTTE1MCw1MCBMNTAsMTUwIiBzdHJva2U9IiM4ODg4ODgiIHN0cm9rZS13aWR0aD0iMiIvPjwvc3ZnPg==';
+      // Add a class to indicate error for styling purposes
+      this.classList.add('img-load-error');
+      // Log error without exposing sensitive information
+      console.error('Image failed to load: ' + this.alt);
     };
   });
 

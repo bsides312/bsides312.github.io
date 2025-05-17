@@ -6,8 +6,8 @@
   * For more info and help: https://bootstrapmade.com/php-email-form/
   */
 
-  // Replace contact@example.com with your real receiving email address
-  $receiving_email_address = 'contact@example.com';
+  // Use a proper email address for receiving form submissions
+  $receiving_email_address = 'security@bsides312.org';
 
   if( file_exists($php_email_form = '../assets/vendor/php-email-form/php-email-form.php' )) {
     include( $php_email_form );
@@ -19,9 +19,10 @@
   $contact->ajax = true;
   
   $contact->to = $receiving_email_address;
-  $contact->from_name = $_POST['name'];
-  $contact->from_email = $_POST['email'];
-  $contact->subject = $_POST['subject'];
+  // Sanitize user inputs to prevent XSS attacks
+  $contact->from_name = htmlspecialchars(strip_tags(trim($_POST['name'])), ENT_QUOTES, 'UTF-8');
+  $contact->from_email = filter_var(trim($_POST['email']), FILTER_SANITIZE_EMAIL);
+  $contact->subject = htmlspecialchars(strip_tags(trim($_POST['subject'])), ENT_QUOTES, 'UTF-8');
 
   // Uncomment below code if you want to use SMTP to send emails. You need to enter your correct SMTP credentials
   /*
@@ -33,9 +34,10 @@
   );
   */
 
-  $contact->add_message( $_POST['name'], 'From');
-  $contact->add_message( $_POST['email'], 'Email');
-  $contact->add_message( $_POST['message'], 'Message', 10);
+  // Sanitize message content before adding to form
+  $contact->add_message( htmlspecialchars(strip_tags(trim($_POST['name'])), ENT_QUOTES, 'UTF-8'), 'From');
+  $contact->add_message( filter_var(trim($_POST['email']), FILTER_SANITIZE_EMAIL), 'Email');
+  $contact->add_message( htmlspecialchars(strip_tags(trim($_POST['message'])), ENT_QUOTES, 'UTF-8'), 'Message', 10);
 
   echo $contact->send();
 ?>

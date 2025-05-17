@@ -1539,3 +1539,26 @@ img[src*="about_logo"] {
   height: auto;
   margin: 0 auto;
 }
+
+/* Styling for images that failed to load */
+.img-load-error {
+  border: 1px dashed #cc0000;
+  background-color: #f0f0f0;
+  opacity: 0.8;
+  min-height: 100px;
+  min-width: 100px;
+  display: inline-block;
+  position: relative;
+}
+
+.img-load-error::after {
+  content: "Image could not be loaded";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 12px;
+  color: #666;
+  text-align: center;
+  width: 90%;
+}
