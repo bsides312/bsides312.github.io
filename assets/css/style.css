@@ -1562,3 +1562,247 @@ img[src*="about_logo"] {
   text-align: center;
   width: 90%;
 }
+
+/*--------------------------------------------------------------
+# Schedule Table Styles
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Schedule Table Styles
+--------------------------------------------------------------*/
+.schedule-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-bottom: 2rem;
+  color: var(--text-color);
+}
+
+.schedule-table .talk-separator {
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.schedule-table .talk-separator td {
+  padding: 0;
+  border: none;
+}
+
+.schedule-table th {
+  background-color: rgba(6, 12, 34, 0.98);
+  padding: 15px;
+  text-align: center;
+  font-weight: 700;
+  color: #fff;
+  border-radius: 4px 4px 0 0;
+}
+
+.schedule-table .track-blue {
+  background-color: rgba(38, 134, 183, 0.2);
+  border-left: 4px solid #2686b7;
+}
+
+.schedule-table .track-red {
+  background-color: rgba(248, 34, 73, 0.2);
+  border-left: 4px solid var(--primary-color);
+}
+
+.schedule-table .time-slot {
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+  width: 150px;
+  background-color: rgba(6, 12, 34, 0.8);
+}
+
+.schedule-table td {
+  padding: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.schedule-table tr:last-child td {
+  border-bottom: none;
+}
+
+.schedule-table .session {
+  padding: 15px;
+}
+
+.schedule-table .session-title {
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #93bdfc;
+}
+
+.schedule-table .speaker {
+  font-style: italic;
+  color: #eee;
+}
+
+.schedule-table .closed {
+  text-align: center;
+  font-style: italic;
+  color: #9195a2;
+}
+
+.schedule-table .special-event {
+  background-color: rgba(6, 12, 34, 0.6);
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Special class for blue line special events to maintain blue background */
+.schedule-table .track-blue.special-event {
+  background-color: rgba(38, 134, 183, 0.2);
+  text-align: center;
+  font-weight: bold;
+  color: #93bdfc;
+}
+
+/* Session duration indicators */
+.schedule-table .session-30min {
+  position: relative;
+}
+
+.schedule-table .session-30min::after {
+  content: "30 min";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 0.75rem;
+  background-color: rgba(6, 12, 34, 0.7);
+  color: #fff;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.schedule-table .session-1hour {
+  position: relative;
+}
+
+.schedule-table .session-1hour::after {
+  content: "1 hour";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 0.75rem;
+  background-color: rgba(6, 12, 34, 0.7);
+  color: #fff;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+/* Rowspan styling for multi-cell sessions */
+.schedule-table .rowspan-2 {
+  vertical-align: middle;
+}
+
+/* Hide bottom border for cells that span multiple rows */
+.schedule-table .no-bottom-border {
+  border-bottom: none;
+}
+
+/* Responsive styles */
+@media (max-width: 767.98px) {
+  .schedule-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin-bottom: 20px;
+  }
+  
+  .schedule-table {
+    min-width: 750px;
+  }
+  
+  .schedule-table .time-slot {
+    width: 100px;
+    font-size: 0.85rem;
+  }
+  
+  .schedule-table td, .schedule-table th {
+    padding: 10px;
+  }
+  
+  .schedule-table .session-title {
+    font-size: 0.95rem;
+  }
+  
+  .schedule-table .speaker {
+    font-size: 0.85rem;
+  }
+  
+  .schedule-table .session-30min::after,
+  .schedule-table .session-1hour::after {
+    font-size: 0.7rem;
+    top: 5px;
+    right: 5px;
+  }
+}
+
+/* Enhanced accessibility */
+.schedule-table th[scope="col"] {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.schedule-nav {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.schedule-nav .btn {
+  background-color: #2686b7;
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.schedule-nav .btn:hover {
+  background-color: var(--primary-color);
+  transform: translateY(-2px);
+}
+
+.schedule-legend {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.legend-color {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+}
+
+.legend-blue {
+  background-color: #2686b7;
+}
+
+.legend-red {
+  background-color: var(--primary-color);
+}
+
+/* Style for links in the schedule table */
+.schedule-table a {
+    color: inherit; /* Keep text the original color */
+    text-decoration: none; /* Remove underline by default */
+    transition: text-decoration 0.2s ease;
+}
+
+.schedule-table a:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
