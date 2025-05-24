@@ -25,10 +25,49 @@
       thisForm.querySelector('.error-message').classList.remove('d-block');
       thisForm.querySelector('.sent-message').classList.remove('d-block');
 
-      let formData = new FormData( thisForm );
+      // Validate form inputs before submission
+      const name = thisForm.querySelector('input[name="name"]');
+      const email = thisForm.querySelector('input[name="email"]');
+      const subject = thisForm.querySelector('input[name="subject"]');
+      const message = thisForm.querySelector('textarea[name="message"]');
+      
+      // Basic input validation
+      if (name && !name.value.trim()) {
+        displayError(thisForm, 'Please enter your name');
+        return;
+      }
+      
+      if (email) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email.value.trim())) {
+          displayError(thisForm, 'Please enter a valid email address');
+          return;
+        }
+      }
+      
+      if (subject && !subject.value.trim()) {
+        displayError(thisForm, 'Please enter a subject');
+        return;
+      }
+      
+      if (message && !message.value.trim()) {
+        displayError(thisForm, 'Please enter your message');
+        return;
+      }
+      
+      let formData = new FormData(thisForm);
 
-      if ( recaptcha ) {
-        if(typeof grecaptcha !== "undefined" ) {
+      // Sanitize form data
+      for (let pair of formData.entries()) {
+        if (typeof pair[1] === 'string') {
+          // Basic sanitization - remove script tags
+          const sanitized = pair[1].replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '');
+          formData.set(pair[0], sanitized);
+        }
+      }
+
+      if (recaptcha) {
+        if(typeof grecaptcha !== "undefined") {
           grecaptcha.ready(function() {
             try {
               grecaptcha.execute(recaptcha, {action: 'php_email_form_submit'})
@@ -37,11 +76,13 @@
                 php_email_form_submit(thisForm, action, formData);
               })
             } catch(error) {
-              displayError(thisForm, error);
+              displayError(thisForm, 'reCaptcha error');
+              console.error('reCaptcha error:', error);
             }
           });
         } else {
-          displayError(thisForm, 'The reCaptcha javascript API url is not loaded!')
+          displayError(thisForm, 'The reCaptcha API is not available');
+          console.error('The reCaptcha javascript API url is not loaded!');
         }
       } else {
         php_email_form_submit(thisForm, action, formData);
@@ -72,13 +113,20 @@
       }
     })
     .catch((error) => {
-      displayError(thisForm, error);
+      // Generic error message for users
+      displayError(thisForm, 'An error occurred while sending the message. Please try again later.');
+      // Detailed error for developers in console
+      console.error('Form submission error:', error);
     });
   }
 
   function displayError(thisForm, error) {
     thisForm.querySelector('.loading').classList.remove('d-block');
-    thisForm.querySelector('.error-message').innerHTML = error;
+    // Sanitize error message to prevent XSS
+    const sanitizedError = typeof error === 'string' ?
+      error.replace(/</g, '&lt;').replace(/>/g, '&gt;') :
+      'An error occurred';
+    thisForm.querySelector('.error-message').innerHTML = sanitizedError;
     thisForm.querySelector('.error-message').classList.add('d-block');
   }
 

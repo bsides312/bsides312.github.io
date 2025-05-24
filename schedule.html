@@ -57,178 +57,6 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
-  <!-- Additional Schedule-specific CSS -->
-  <style>
-    .schedule-table {
-      width: 100%;
-      border-collapse: separate;
-      border-spacing: 0;
-      margin-bottom: 2rem;
-      color: var(--text-color);
-    }
-    
-    .schedule-table th {
-      background-color: rgba(6, 12, 34, 0.98);
-      padding: 15px;
-      text-align: center;
-      font-weight: 700;
-      color: #fff;
-      border-radius: 4px 4px 0 0;
-    }
-    
-    .schedule-table .track-blue {
-      background-color: rgba(38, 134, 183, 0.2);
-      border-left: 4px solid #2686b7;
-    }
-    
-    .schedule-table .track-red {
-      background-color: rgba(248, 34, 73, 0.2);
-      border-left: 4px solid var(--primary-color);
-    }
-    
-    .schedule-table .time-slot {
-      font-weight: bold;
-      text-align: center;
-      vertical-align: middle;
-      width: 150px;
-      background-color: rgba(6, 12, 34, 0.8);
-    }
-    
-    .schedule-table td {
-      padding: 15px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    }
-    
-    .schedule-table tr:last-child td {
-      border-bottom: none;
-    }
-    
-    .schedule-table .session {
-      padding: 15px;
-    }
-    
-    .schedule-table .session-title {
-      font-weight: 600;
-      margin-bottom: 5px;
-      color: #93bdfc;
-    }
-    
-    .schedule-table .speaker {
-      font-style: italic;
-      color: #eee;
-    }
-    
-    .schedule-table .closed {
-      text-align: center;
-      font-style: italic;
-      color: #9195a2;
-    }
-    
-    .schedule-table .special-event {
-      background-color: rgba(6, 12, 34, 0.6);
-      text-align: center;
-      font-weight: bold;
-    }
-    
-    /* Responsive styles */
-    @media (max-width: 767.98px) {
-      .schedule-container {
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-        margin-bottom: 20px;
-      }
-      
-      .schedule-table {
-        min-width: 750px;
-      }
-      
-      .schedule-table .time-slot {
-        width: 100px;
-        font-size: 0.85rem;
-      }
-      
-      .schedule-table td, .schedule-table th {
-        padding: 10px;
-      }
-      
-      .schedule-table .session-title {
-        font-size: 0.95rem;
-      }
-      
-      .schedule-table .speaker {
-        font-size: 0.85rem;
-      }
-    }
-
-    /* Enhanced accessibility */
-    .schedule-table th[scope="col"] {
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-    
-    .schedule-nav {
-      margin-bottom: 2rem;
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
-    
-    .schedule-nav .btn {
-      background-color: #2686b7;
-      border: none;
-      color: white;
-      padding: 8px 16px;
-      border-radius: 4px;
-      font-weight: 600;
-      transition: all 0.3s ease;
-    }
-    
-    .schedule-nav .btn:hover {
-      background-color: var(--primary-color);
-      transform: translateY(-2px);
-    }
-    
-    .schedule-legend {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      margin-bottom: 1.5rem;
-      flex-wrap: wrap;
-    }
-    
-    .legend-item {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-    
-    .legend-color {
-      width: 20px;
-      height: 20px;
-      border-radius: 4px;
-    }
-    
-    .legend-blue {
-      background-color: #2686b7;
-    }
-    
-    .legend-red {
-      background-color: var(--primary-color);
-    }
-
-    /* Style for links in the schedule table */
-    .schedule-table a {
-        color: inherit; /* Keep text the original color */
-        text-decoration: none; /* Remove underline by default */
-        transition: text-decoration 0.2s ease;
-    }
-    
-    .schedule-table a:hover {
-        text-decoration: underline; /* Add underline on hover */
-    }
-  </style>
 
   <!-- Structured Data for SEO -->
   <script type="application/ld+json">
@@ -331,9 +159,10 @@
       <div class="container" data-aos="fade-up">
 
        <div class="section-header">
-          <h2>Event Schedule</h2>
-          <p>Two Tracks - Blue Line & Red Line</p>
-        </div>
+         <h2>Event Schedule</h2>
+         <p>Two Tracks - Blue Line & Red Line</p>
+       </div>
+
 
         <!-- Full Schedule (Visible on all devices) -->
         <div id="full-schedule">
@@ -345,34 +174,59 @@
               <thead>
                 <tr>
                   <th scope="col">Time</th>
-                  <th scope="col">
+                  <th scope="col" class="track-blue">
                     Blue Line Track
-                    (Main Auditorium)
+                    (Main Theater)
                   </th>
-                  <th scope="col">
+                  <th scope="col" class="track-red">
                     Red Line Track
-                    (Classroom 304)
+                    (Classroom 109)
                   </th>
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td class="time-slot">10:00 AM</td>
-                  <td colspan="2" class="special-event">Opening Ceremonies</td>
+                <tr class="talk-separator">
+                  <td colspan="3"></td>
                 </tr>
                 <tr>
-                  <td class="time-slot">10:30 AM - 11:30 AM</td>
-                  <td colspan="2" class="special-event" id="keynote">Keynote - <a href="speaker-bios.html#steve-shelton">Steve Shelton</a> (Main Auditorium)</td>
+                  <td class="time-slot">10:00</td>
+                  <td class="track-blue">
+                    <div class="session">
+                      <div class="session-title">Opening Ceremonies</div>
+                    </div>
+                  </td>
+                  <td class="track-red closed">Closed</td>
+                </tr>
+                <tr class="talk-separator">
+                  <td colspan="3"></td>
                 </tr>
                 <tr>
-                  <td class="time-slot">11:30 AM - 12:30 PM</td>
-                  <td class="track-blue" id="pires">
+                  <td class="time-slot">10:30</td>
+                  <td class="track-blue session-1hour rowspan-2 no-bottom-border" rowspan="2">
+                    <div class="session">
+                      <div class="session-title"><a href="speaker-bios.html#steve-shelton">(Keynote) When the Night Has Come:
+Finding Belonging in a World That Doesn't Understand Us</a></div>
+                      <div class="speaker"><a href="speaker-bios.html#steve-shelton">Steve Shelton</a></div>
+                    </div>
+                  </td>
+                  <td class="track-red closed">Closed</td>
+                </tr>
+                <tr>
+                  <td class="time-slot">11:00</td>
+                  <td class="track-red closed">Closed</td>
+                </tr>
+                <tr class="talk-separator">
+                  <td colspan="3"></td>
+                </tr>
+                <tr>
+                  <td class="time-slot">11:30</td>
+                  <td class="track-blue session-1hour rowspan-2 no-bottom-border" rowspan="2" id="pires">
                     <div class="session">
                       <div class="session-title"><a href="speaker-bios.html#filipi-pires">Misconfiguration-Driven Cloud Attacks: A Graph-Based Exploration</a></div>
                       <div class="speaker"><a href="speaker-bios.html#filipi-pires">Filipi Pires</a></div>
                     </div>
                   </td>
-                  <td class="track-red" id="juntunen">
+                  <td class="track-red session-1hour rowspan-2 no-bottom-border" rowspan="2" id="juntunen">
                     <div class="session">
                       <div class="session-title"><a href="speaker-bios.html#tamry-juntunen">Empowering Neurodivergent Individuals in Cybersecurity: Strategies for Inclusion and Success</a></div>
                       <div class="speaker"><a href="speaker-bios.html#tamry-juntunen">Tamry Juntunen</a></div>
@@ -380,63 +234,73 @@
                   </td>
                 </tr>
                 <tr>
-                  <td class="time-slot">12:30 PM - 1:00 PM</td>
+                  <td class="time-slot">12:00</td>
+                </tr>
+                <tr>
+                  <td class="time-slot">12:30</td>
                   <td colspan="2" class="special-event">Lunch</td>
                 </tr>
                 <tr>
-                  <td class="time-slot">1:00 PM - 1:30 PM</td>
-                  <td class="track-blue" id="traynor">
-                    <div class="session">
-                      <div class="session-title"><a href="speaker-bios.html#chris-traynor">Pentest Pains</a></div>
-                      <div class="speaker"><a href="speaker-bios.html#chris-traynor">Chris Traynor</a> (25 min)</div>
-                    </div>
-                  </td>
-                  <td class="track-red" id="smith">
-                    <div class="session">
-                      <div class="session-title"><a href="speaker-bios.html#zack-smith">Monsters Under Your Bed - Mapping the Dark Web with Python</a></div>
-                      <div class="speaker"><a href="speaker-bios.html#zack-smith">Zack Smith</a> (25 min)</div>
-                    </div>
-                  </td>
+                  <td class="time-slot">1:00</td>
+                  <td colspan="2" class="special-event">Lunch</td>
+                </tr>
+                <tr class="talk-separator">
+                  <td colspan="3"></td>
                 </tr>
                 <tr>
-                  <td class="time-slot">1:30 PM - 2:30 PM</td>
-                  <td class="track-blue" id="hernandez">
-                    <div class="session">
-                      <div class="session-title"><a href="speaker-bios.html#jose-hernandez">Bringing Down the BYOVD: Leveraging WDAC to End Malicious Driver Attacks</a></div>
-                      <div class="speaker"><a href="speaker-bios.html#jose-hernandez">Jose Enrique Hernandez</a></div>
-                    </div>
-                  </td>
-                  <td class="track-red" id="ullman">
-                    <div class="session">
-                      <div class="session-title"><a href="speaker-bios.html#catherine-ullman">Defending Beyond Defense</a></div>
-                      <div class="speaker"><a href="speaker-bios.html#catherine-ullman">Dr. Catherine J. Ullman</a></div>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="time-slot">2:30 PM - 3:00 PM</td>
-                  <td class="track-blue" id="terrano">
+                  <td class="time-slot">1:30</td>
+                  <td class="track-blue session-30min" id="terrano">
                     <div class="session">
                       <div class="session-title"><a href="speaker-bios.html#ginji-terrano">Open Sesame</a></div>
-                      <div class="speaker"><a href="speaker-bios.html#ginji-terrano">ギンジ🐾ターラノー</a> (25 min)</div>
+                      <div class="speaker"><a href="speaker-bios.html#ginji-terrano">ギンジ🐾ターラノー</a></div>
                     </div>
                   </td>
-                  <td class="track-red" id="gallucci">
+                  <td class="track-red session-30min" id="smith">
                     <div class="session">
-                      <div class="session-title"><a href="speaker-bios.html#olivia-gallucci">Unlocking macOS Internals: A Beginner's Guide to Apple's Open Source Code</a></div>
-                      <div class="speaker"><a href="speaker-bios.html#olivia-gallucci">Olivia Gallucci</a> (25 min)</div>
+                      <div class="session-title"><a href="speaker-bios.html#zack-smith">Monsters Under Your Bed - Mapping the Dark Web with Python</a></div>
+                      <div class="speaker"><a href="speaker-bios.html#zack-smith">Zack Smith</a></div>
                     </div>
                   </td>
                 </tr>
+                <tr class="talk-separator">
+                  <td colspan="3"></td>
+                </tr>
                 <tr>
-                  <td class="time-slot">3:00 PM - 4:00 PM</td>
-                  <td class="track-blue" id="mckean">
+                  <td class="time-slot">2:00</td>
+                  <td class="track-blue session-1hour rowspan-2 no-bottom-border" rowspan="2" id="mckean">
                     <div class="session">
                       <div class="session-title"><a href="speaker-bios.html#kadi-mckean">Trailblazing: Lessons from Oregon Trail for the Secure Software Supply Chain</a></div>
                       <div class="speaker"><a href="speaker-bios.html#kadi-mckean">Kadi McKean</a></div>
                     </div>
                   </td>
-                  <td class="track-red" id="mcdaniel">
+                  <td class="track-red session-30min" id="gallucci">
+                    <div class="session">
+                      <div class="session-title"><a href="speaker-bios.html#olivia-gallucci">Unlocking macOS Internals: A Beginner's Guide to Apple's Open Source Code</a></div>
+                      <div class="speaker"><a href="speaker-bios.html#olivia-gallucci">Olivia Gallucci</a></div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="time-slot">2:30</td>
+                  <td class="track-red session-30min" id="traynor">
+                    <div class="session">
+                      <div class="session-title"><a href="speaker-bios.html#chris-traynor">Pentest Pains</a></div>
+                      <div class="speaker"><a href="speaker-bios.html#chris-traynor">Chris Traynor</a></div>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="talk-separator">
+                  <td colspan="3"></td>
+                </tr>
+                <tr>
+                  <td class="time-slot">3:00</td>
+                  <td class="track-blue session-1hour rowspan-2 no-bottom-border" rowspan="2" id="laverty">
+                    <div class="session">
+                      <div class="session-title"><a href="speaker-bios.html#patrick-laverty">Can a Hacker Murder Your City</a></div>
+                      <div class="speaker"><a href="speaker-bios.html#patrick-laverty">Patrick Laverty</a></div>
+                    </div>
+                  </td>
+                  <td class="track-red session-1hour rowspan-2 no-bottom-border" rowspan="2" id="mcdaniel">
                     <div class="session">
                       <div class="session-title"><a href="speaker-bios.html#dwayne-mcdaniel">What to Tell Your Developers About NHI Security and Governance</a></div>
                       <div class="speaker"><a href="speaker-bios.html#dwayne-mcdaniel">Dwayne McDaniel</a></div>
@@ -444,14 +308,20 @@
                   </td>
                 </tr>
                 <tr>
-                  <td class="time-slot">4:00 PM - 5:00 PM</td>
-                  <td class="track-blue" id="talyosef">
+                  <td class="time-slot">3:30</td>
+                </tr>
+                <tr class="talk-separator">
+                  <td colspan="3"></td>
+                </tr>
+                <tr>
+                  <td class="time-slot">4:00</td>
+                  <td class="track-blue session-1hour rowspan-2 no-bottom-border" rowspan="2" id="ullman">
                     <div class="session">
-                      <div class="session-title"><a href="speaker-bios.html#roy-talyosef">Adversarial Intelligence: Redefining Application Security through the eyes of an attacker</a></div>
-                      <div class="speaker"><a href="speaker-bios.html#roy-talyosef">Roy Talyosef</a></div>
+                      <div class="session-title"><a href="speaker-bios.html#catherine-ullman">Defending Beyond Defense</a></div>
+                      <div class="speaker"><a href="speaker-bios.html#catherine-ullman">Dr. Catherine J. Ullman</a></div>
                     </div>
                   </td>
-                  <td class="track-red" id="phillips">
+                  <td class="track-red session-1hour rowspan-2 no-bottom-border" rowspan="2" id="phillips">
                     <div class="session">
                       <div class="session-title"><a href="speaker-bios.html#whitney-phillips">Tips and Tricks To Creating your Your First Conference Talk</a></div>
                       <div class="speaker"><a href="speaker-bios.html#whitney-phillips">Whitney Phillips</a></div>
@@ -459,14 +329,20 @@
                   </td>
                 </tr>
                 <tr>
-                  <td class="time-slot">5:00 PM - 6:00 PM</td>
-                  <td class="track-blue" id="laverty">
+                  <td class="time-slot">4:30</td>
+                </tr>
+                <tr class="talk-separator">
+                  <td colspan="3"></td>
+                </tr>
+                <tr>
+                  <td class="time-slot">5:00</td>
+                  <td class="track-blue session-1hour rowspan-2 no-bottom-border" rowspan="2" id="talyosef">
                     <div class="session">
-                      <div class="session-title"><a href="speaker-bios.html#patrick-laverty">Can a Hacker Murder Your City</a></div>
-                      <div class="speaker"><a href="speaker-bios.html#patrick-laverty">Patrick Laverty</a></div>
+                      <div class="session-title"><a href="speaker-bios.html#roy-talyosef">Adversarial Intelligence: Redefining Application Security through the eyes of an attacker</a></div>
+                      <div class="speaker"><a href="speaker-bios.html#roy-talyosef">Roy Talyosef</a></div>
                     </div>
                   </td>
-                  <td class="track-red" id="mcguire">
+                  <td class="track-red session-1hour rowspan-2 no-bottom-border" rowspan="2" id="mcguire">
                     <div class="session">
                       <div class="session-title"><a href="speaker-bios.html#danielle-mcguire">Securing the Grid of Tomorrow</a></div>
                       <div class="speaker"><a href="speaker-bios.html#danielle-mcguire">Danielle McGuire</a></div>
@@ -474,28 +350,20 @@
                   </td>
                 </tr>
                 <tr>
-                  <td class="time-slot">6:00 PM</td>
-                  <td colspan="2" class="special-event">Closing Ceremonies</td>
+                  <td class="time-slot">5:30</td>
+                </tr>
+                <tr class="talk-separator">
+                  <td colspan="3"></td>
+                </tr>
+                <tr>
+                  <td class="time-slot">6:00</td>
+                  <td class="track-blue special-event">Closing Ceremonies</td>
+                  <td class="track-red closed">Closed</td>
                 </tr>
               </tbody>
             </table>
           </div>
         </div>
-
-        <!-- Additional information and accessibility notes -->
-        <div class="mt-5">
-          <div class="row justify-content-center">
-            <div class="col-md-8">
-              <div class="alert alert-info" role="alert">
-                <h4 class="alert-heading">Schedule Information</h4>
-                <p>All sessions will take place at the Irish American Heritage Center. The Blue Line track is in the Main Auditorium, and the Red Line track is in Classroom 304.</p>
-                <p>Breaks with refreshments will be available between sessions in the main hallway.</p>
-                <p>For accessibility accommodations, please speak with a BSides312 staff member (identifiable by their staff t-shirts) or email <strong>accessibility@bsides312.org</strong>.</p>
-              </div>
-            </div>
-       </div>
-       </div>
-   
       </div>
     </section><!-- End Schedule Section -->
   </main><!-- End #main -->
@@ -605,3 +473,4 @@
 </body>
 
 </html>
+
