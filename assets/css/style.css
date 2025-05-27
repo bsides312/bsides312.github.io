@@ -1806,3 +1806,30 @@ img[src*="about_logo"] {
 .schedule-table a:hover {
     text-decoration: underline; /* Add underline on hover */
 }
+
+#activities {
+  background: url("../img/about-bg.jpg") center center;
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+  color: #fff;
+  padding: 60px 0 40px 0;
+}
+#activities {
+  background: url("../img/about_logo.png") center center;
+  background-size: cover;
+  background-attachment: fixed;
+  overflow: hidden;
+  position: relative;
+  color: #fff;
+  padding: 60px 0 40px 0;
+}
+#activities:before {
+  content: "";
+  background: rgba(13, 20, 41, 0.8);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
