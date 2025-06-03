@@ -1,4 +1,4 @@
-# BSides312 - Chicago's Non-Profit, Community-Driven Infosec and Hacker Conference Website
+# BSides312 - Chicago's Community-Driven Infosec and Hacker Conference Website
 
 This is the official website for BSides312, Chicago's community-driven cybersecurity conference. The site provides information about the annual event including:
 
