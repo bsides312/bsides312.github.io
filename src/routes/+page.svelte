@@ -33,7 +33,10 @@
 			BSides312 brings together security professionals, researchers, and enthusiasts for an unforgettable day of learning and networking.
 		</p>
 		<div class="text-center">
-			<a href="#tickets" class="btn-primary">Stay Tuned!</a>
+			<p class="mb-3">See you in 2026! In the meantime:</p>
+			<a href="https://www.youtube.com/channel/UCrCPvWW8z-_O8uUM8-ySz7g" target="_blank" rel="noopener" class="btn-primary">
+				<i class="bi bi-youtube me-2"></i>Follow us on YouTube for past talks
+			</a>
 		</div>
 	</div>
 </section>
