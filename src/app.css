@@ -189,8 +189,10 @@ h3 {
   display: block;
   margin: 0 auto 30px;
   max-height: 80px;
+  max-width: 100%;
   width: auto;
   height: auto;
+  object-fit: contain;
 }
 
 /* FAQ Accordion */
@@ -327,6 +329,7 @@ h3 {
 
   .sponsor-img-center {
     max-height: 60px;
+    max-width: 90%;
     margin: 0 auto 20px;
   }
 
@@ -360,6 +363,7 @@ h3 {
 
   .sponsor-img-center {
     max-height: 45px;
+    max-width: 85%;
     margin: 0 auto 15px;
   }
 
@@ -371,6 +375,7 @@ h3 {
 @media (max-width: 400px) {
   .sponsor-img-center {
     max-height: 35px;
+    max-width: 80%;
     margin: 0 auto 10px;
   }
 
