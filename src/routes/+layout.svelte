@@ -1,6 +1,37 @@
 <script lang="ts">
 	import '../app.css';
 	import { base } from '$app/paths';
+	import { onMount } from 'svelte';
+
+	let mobileMenuActive = false;
+
+	function toggleMobileMenu() {
+		mobileMenuActive = !mobileMenuActive;
+	}
+
+	function closeMobileMenu() {
+		mobileMenuActive = false;
+	}
+
+	onMount(() => {
+		// Close mobile menu when clicking outside
+		const handleClickOutside = (event: MouseEvent) => {
+			const navbar = document.getElementById('navbar');
+			const toggle = document.querySelector('.mobile-nav-toggle');
+			
+			if (navbar && toggle && 
+				!navbar.contains(event.target as Node) && 
+				!toggle.contains(event.target as Node)) {
+				mobileMenuActive = false;
+			}
+		};
+
+		document.addEventListener('click', handleClickOutside);
+		
+		return () => {
+			document.removeEventListener('click', handleClickOutside);
+		};
+	});
 </script>
 
 <header id="header" class="d-flex align-items-center">
@@ -12,17 +43,17 @@
 		</div>
 
 		<nav id="navbar" class="navbar order-last order-lg-0">
-			<ul>
-				<li><a class="nav-link" href="{base}/">Home</a></li>
-				<li><a class="nav-link" href="{base}/#contribute">Get Tickets</a></li>
+			<ul class:active={mobileMenuActive}>
+				<li><a class="nav-link" href="{base}/" on:click={closeMobileMenu}>Home</a></li>
+				<li><a class="nav-link" href="{base}/#contribute" on:click={closeMobileMenu}>Get Tickets</a></li>
 				<li class="dropdown">
 					<a class="nav-link" href="{base}/#supporters" aria-haspopup="true" aria-expanded="false">
 						<span>Sponsor Us</span> 
 						<i class="bi bi-chevron-down"></i>
 					</a>
 					<ul>
-						<li><a class="nav-link" href="{base}/support">How to Donate</a></li>
-						<li><a class="nav-link" href="{base}/#supporters">Current Supporters</a></li>
+						<li><a class="nav-link" href="{base}/support" on:click={closeMobileMenu}>How to Donate</a></li>
+						<li><a class="nav-link" href="{base}/#supporters" on:click={closeMobileMenu}>Current Supporters</a></li>
 					</ul>
 				</li>
 				<li class="dropdown">
@@ -31,8 +62,8 @@
 						<i class="bi bi-chevron-down"></i>
 					</a>
 					<ul>
-						<li><a class="nav-link" href="{base}/#contribute">Volunteer</a></li>
-						<li><a class="nav-link" href="{base}/#contribute">Call for Presentations</a></li>
+						<li><a class="nav-link" href="{base}/#contribute" on:click={closeMobileMenu}>Volunteer</a></li>
+						<li><a class="nav-link" href="{base}/#contribute" on:click={closeMobileMenu}>Call for Presentations</a></li>
 					</ul>
 				</li>
 				<li class="dropdown">
@@ -41,11 +72,11 @@
 						<i class="bi bi-chevron-down"></i>
 					</a>
 					<ul>
-						<li><a class="nav-link" href="{base}/speakers">Meet our Speakers</a></li>
-						<li><a class="nav-link" href="{base}/schedule">Conference Schedule</a></li>
-						<li><a class="nav-link" href="{base}/previous-speakers">Previous Speakers</a></li>
-						<li><a class="nav-link" href="{base}/#about">Venue & Parking</a></li>
-						<li><a class="nav-link" href="{base}/code-of-conduct">Code of Conduct</a></li>
+						<li><a class="nav-link" href="{base}/speakers" on:click={closeMobileMenu}>Meet our Speakers</a></li>
+						<li><a class="nav-link" href="{base}/schedule" on:click={closeMobileMenu}>Conference Schedule</a></li>
+						<li><a class="nav-link" href="{base}/previous-speakers" on:click={closeMobileMenu}>Previous Speakers</a></li>
+						<li><a class="nav-link" href="{base}/#about" on:click={closeMobileMenu}>Venue & Parking</a></li>
+						<li><a class="nav-link" href="{base}/code-of-conduct" on:click={closeMobileMenu}>Code of Conduct</a></li>
 					</ul>
 				</li>
 				<li class="dropdown">
@@ -54,20 +85,20 @@
 						<i class="bi bi-chevron-down"></i>
 					</a>
 					<ul>
-						<li><a class="nav-link" href="{base}/#about">About BSides312</a></li>
-						<li><a class="nav-link" href="{base}/board">Our Board</a></li>
-						<li><a class="nav-link" href="{base}/#faq">FAQ</a></li>
-						<li><a class="nav-link" href="{base}/privacy">Privacy Policy</a></li>
+						<li><a class="nav-link" href="{base}/#about" on:click={closeMobileMenu}>About BSides312</a></li>
+						<li><a class="nav-link" href="{base}/board" on:click={closeMobileMenu}>Our Board</a></li>
+						<li><a class="nav-link" href="{base}/#faq" on:click={closeMobileMenu}>FAQ</a></li>
+						<li><a class="nav-link" href="{base}/privacy" on:click={closeMobileMenu}>Privacy Policy</a></li>
 					</ul>
 				</li>
 				<li>
-					<a class="nav-link" href="https://www.youtube.com/channel/UCrCPvWW8z-_O8uUM8-ySz7g" target="_blank" rel="noopener">
+					<a class="nav-link" href="https://www.youtube.com/channel/UCrCPvWW8z-_O8uUM8-ySz7g" target="_blank" rel="noopener" on:click={closeMobileMenu}>
 						<i class="bi bi-youtube me-1"></i>YouTube
 					</a>
 				</li>
-				<li><a class="nav-link" href="#footer">Contact</a></li>
+				<li><a class="nav-link" href="#footer" on:click={closeMobileMenu}>Contact</a></li>
 			</ul>
-			<i class="bi bi-list mobile-nav-toggle"></i>
+			<i class="bi bi-list mobile-nav-toggle" on:click={toggleMobileMenu} on:keydown={(e) => e.key === 'Enter' && toggleMobileMenu()} tabindex="0" role="button" aria-label="Toggle mobile menu"></i>
 		</nav>
 	</div>
 </header>
@@ -261,6 +292,14 @@
 		font-size: 24px;
 		color: #fff;
 		cursor: pointer;
+		padding: 8px;
+		border-radius: 4px;
+		transition: all 0.3s ease;
+	}
+
+	.mobile-nav-toggle:hover {
+		background: rgba(93, 189, 252, 0.1);
+		color: #5dbdfc;
 	}
 
 	main {
@@ -344,14 +383,29 @@
 			top: 80px;
 			left: 0;
 			right: 0;
-			background: rgba(6, 12, 34, 0.95);
+			background: rgba(6, 12, 34, 0.98);
+			backdrop-filter: blur(15px);
 			flex-direction: column;
 			padding: 20px;
-			gap: 0;
+			gap: 10px;
+			border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+			max-height: calc(100vh - 80px);
+			overflow-y: auto;
 		}
 
 		.navbar ul.active {
 			display: flex;
+		}
+
+		.navbar ul li {
+			width: 100%;
+		}
+
+		.nav-link {
+			width: 100%;
+			justify-content: flex-start;
+			padding: 12px 15px;
+			border-radius: 8px;
 		}
 
 		.dropdown ul {
@@ -359,9 +413,30 @@
 			opacity: 1;
 			visibility: visible;
 			transform: none;
-			background: transparent;
-			border: none;
-			padding-left: 20px;
+			background: rgba(93, 189, 252, 0.1);
+			border: 1px solid rgba(93, 189, 252, 0.2);
+			border-radius: 8px;
+			margin-top: 10px;
+			padding: 10px;
+		}
+
+		.dropdown ul .nav-link {
+			padding: 8px 15px;
+			font-size: 0.9rem;
+		}
+	}
+
+	@media (max-width: 576px) {
+		#logo img {
+			max-height: 50px;
+		}
+
+		.footer-links h4 {
+			font-size: 1.1rem;
+		}
+
+		.social-links {
+			justify-content: center;
 		}
 	}
 </style> 

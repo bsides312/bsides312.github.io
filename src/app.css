@@ -4,7 +4,8 @@
   --secondary-color: #060c22;
   --dark-bg: #0c0c0c;
   --text-light: #ffffff;
-  --text-muted: rgba(255, 255, 255, 0.8);
+  --text-muted: rgba(255, 255, 255, 0.85);
+  --text-dark-contrast: rgba(255, 255, 255, 0.95);
   --border-light: rgba(255, 255, 255, 0.1);
   --gradient-primary: linear-gradient(135deg, #5dbdfc 0%, #3a9ef0 100%);
 }
@@ -130,7 +131,7 @@ h3 {
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 60px;
+  width: min(60px, 20vw);
   height: 3px;
   background: var(--gradient-primary);
   border-radius: 2px;
@@ -138,19 +139,30 @@ h3 {
 
 /* Cards */
 .card {
-  background: rgba(6, 12, 34, 0.4);
+  background: rgba(6, 12, 34, 0.5);
   border: 1px solid var(--border-light);
   border-radius: 15px;
   padding: 30px;
   margin-bottom: 30px;
   transition: all 0.3s ease;
   backdrop-filter: blur(10px);
+  color: var(--text-dark-contrast);
 }
 
 .card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-5px);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
   border-color: var(--primary-color);
+  background: rgba(6, 12, 34, 0.7);
+}
+
+.card .card-title {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.card p, .card li {
+  color: var(--text-dark-contrast);
 }
 
 /* Sponsor Logos */
@@ -296,6 +308,11 @@ h3 {
   .section {
     padding: 40px 0;
   }
+
+  .section-header h2::after {
+    width: min(40px, 25vw);
+    height: 2px;
+  }
   
   .board-img {
     width: 150px;
@@ -304,6 +321,10 @@ h3 {
   
   .sponsor-logo img {
     max-height: 80px;
+  }
+
+  .card {
+    padding: 25px;
   }
 }
 
@@ -324,5 +345,13 @@ h3 {
   .board-member {
     padding: 20px;
     text-align: center;
+  }
+
+  .section-header h2::after {
+    width: min(30px, 30vw);
+  }
+
+  .sponsor-img-center {
+    max-height: 60px;
   }
 } 

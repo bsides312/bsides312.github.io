@@ -16,7 +16,7 @@
 
 		<div class="row justify-content-center">
 			<div class="col-lg-8">
-				<div class="card text-center p-5">
+				<div class="card text-center p-5 main-cfp-card">
 					<div class="card-body">
 						<i class="bi bi-megaphone display-1 text-primary mb-4"></i>
 						<h3 class="mb-4">Call for Presentations</h3>
@@ -43,7 +43,7 @@
 
 		<div class="row mt-5">
 			<div class="col-md-6">
-				<div class="card h-100">
+				<div class="card h-100 info-card">
 					<div class="card-body">
 						<h4 class="card-title">
 							<i class="bi bi-lightbulb text-warning me-2"></i>What We're Looking For
@@ -59,7 +59,7 @@
 				</div>
 			</div>
 			<div class="col-md-6">
-				<div class="card h-100">
+				<div class="card h-100 info-card">
 					<div class="card-body">
 						<h4 class="card-title">
 							<i class="bi bi-clock text-info me-2"></i>Important Dates
@@ -83,23 +83,129 @@
 </section>
 
 <style>
-	.card {
-		border: none;
-		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-		transition: transform 0.2s ease;
+	.main-cfp-card {
+		background: rgba(6, 12, 34, 0.6);
+		border: 2px solid rgba(93, 189, 252, 0.3);
+		border-radius: 20px;
+		backdrop-filter: blur(15px);
 	}
 
-	.card:hover {
-		transform: translateY(-2px);
+	.main-cfp-card .card-body {
+		padding: 2rem;
+	}
+
+	.main-cfp-card h3 {
+		color: var(--primary-color);
+		font-weight: 700;
+	}
+
+	.main-cfp-card p {
+		color: var(--text-dark-contrast);
+		font-size: 1.1rem;
+		line-height: 1.6;
+	}
+
+	.info-card {
+		background: rgba(6, 12, 34, 0.6);
+		border: 1px solid rgba(255, 255, 255, 0.2);
+		border-radius: 15px;
+		transition: all 0.3s ease;
+		backdrop-filter: blur(10px);
+	}
+
+	.info-card:hover {
+		transform: translateY(-5px);
+		box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+		border-color: var(--primary-color);
+		background: rgba(6, 12, 34, 0.8);
+	}
+
+	.info-card .card-title {
+		color: var(--primary-color);
+		font-size: 1.4rem;
+		font-weight: 600;
+		margin-bottom: 1.5rem;
+	}
+
+	.info-card li {
+		color: var(--text-dark-contrast);
+		font-size: 1rem;
+		margin-bottom: 0.75rem;
+		display: flex;
+		align-items: center;
+	}
+
+	.info-card li strong {
+		color: var(--primary-color);
 	}
 
 	.display-1 {
 		font-size: 4rem;
+		opacity: 0.9;
+	}
+
+	.btn-outline-primary {
+		border: 2px solid var(--primary-color);
+		color: var(--primary-color);
+		background: transparent;
+		padding: 12px 30px;
+		border-radius: 50px;
+		font-weight: 600;
+		text-decoration: none;
+		transition: all 0.3s ease;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+	}
+
+	.btn-outline-primary:hover {
+		background: var(--primary-color);
+		color: white;
+		transform: translateY(-2px);
+		box-shadow: 0 8px 25px rgba(93, 189, 252, 0.3);
 	}
 
 	@media (max-width: 768px) {
 		.display-1 {
 			font-size: 3rem;
+		}
+
+		.main-cfp-card .card-body {
+			padding: 1.5rem;
+		}
+
+		.main-cfp-card h3 {
+			font-size: 1.8rem;
+		}
+
+		.main-cfp-card p {
+			font-size: 1rem;
+		}
+
+		.info-card .card-title {
+			font-size: 1.2rem;
+		}
+
+		.info-card li {
+			font-size: 0.95rem;
+		}
+	}
+
+	@media (max-width: 576px) {
+		.display-1 {
+			font-size: 2.5rem;
+		}
+
+		.main-cfp-card .card-body {
+			padding: 1rem;
+		}
+
+		.main-cfp-card h3 {
+			font-size: 1.6rem;
+		}
+
+		.btn-primary, .btn-outline-primary {
+			padding: 10px 25px;
+			font-size: 0.9rem;
 		}
 	}
 </style> 

@@ -34,22 +34,22 @@
 						{#if member.social}
 							<div class="social-links mb-3">
 								{#if member.social.linkedin}
-									<a href={member.social.linkedin} target="_blank" rel="noopener">
+									<a href={member.social.linkedin} target="_blank" rel="noopener" aria-label="{member.name} LinkedIn Profile">
 										<i class="bi bi-linkedin"></i>
 									</a>
 								{/if}
 								{#if member.social.twitter}
-									<a href={member.social.twitter} target="_blank" rel="noopener">
+									<a href={member.social.twitter} target="_blank" rel="noopener" aria-label="{member.name} Twitter Profile">
 										<i class="bi bi-twitter"></i>
 									</a>
 								{/if}
 								{#if member.social.facebook}
-									<a href={member.social.facebook} target="_blank" rel="noopener">
+									<a href={member.social.facebook} target="_blank" rel="noopener" aria-label="{member.name} Facebook Profile">
 										<i class="bi bi-facebook"></i>
 									</a>
 								{/if}
 								{#if member.social.instagram}
-									<a href={member.social.instagram} target="_blank" rel="noopener">
+									<a href={member.social.instagram} target="_blank" rel="noopener" aria-label="{member.name} Instagram Profile">
 										<i class="bi bi-instagram"></i>
 									</a>
 								{/if}
