@@ -70,39 +70,45 @@
 				<li><a class="nav-link" href="{base}/" on:click={closeMobileMenu}>Home</a></li>
 				<li><a class="nav-link" href="{base}/#contribute" on:click={closeMobileMenu}>Get Tickets</a></li>
 				<li class="dropdown" class:mobile-active={activeDropdown === 'sponsor'}>
-					<a class="nav-link" href="{base}/#supporters" aria-haspopup="true">
-						<span>Sponsor Us</span> 
-						<i class="bi bi-chevron-down desktop-only"></i>
-					</a>
-					<button class="mobile-dropdown-toggle" type="button" aria-expanded={activeDropdown === 'sponsor'} aria-label="Toggle sponsor menu" on:click={() => toggleDropdown('sponsor')}>
-						<i class="bi" class:bi-chevron-down={activeDropdown !== 'sponsor'} class:bi-chevron-up={activeDropdown === 'sponsor'}></i>
-					</button>
+					<div class="dropdown-header">
+						<a class="nav-link" href="{base}/#supporters" aria-haspopup="true">
+							<span>Sponsor Us</span> 
+							<i class="bi bi-chevron-down desktop-only"></i>
+						</a>
+						<button class="mobile-dropdown-toggle" type="button" aria-expanded={activeDropdown === 'sponsor'} aria-label="Toggle sponsor menu" on:click={() => toggleDropdown('sponsor')}>
+							<i class="bi" class:bi-chevron-down={activeDropdown !== 'sponsor'} class:bi-chevron-up={activeDropdown === 'sponsor'}></i>
+						</button>
+					</div>
 					<ul class:mobile-show={activeDropdown === 'sponsor'}>
 						<li><a class="nav-link" href="{base}/support" on:click={closeMobileMenu}>How to Donate</a></li>
 						<li><a class="nav-link" href="{base}/#supporters" on:click={closeMobileMenu}>Current Supporters</a></li>
 					</ul>
 				</li>
 				<li class="dropdown" class:mobile-active={activeDropdown === 'contribute'}>
-					<a class="nav-link" href="{base}/#contribute" aria-haspopup="true">
-						<span>Contribute</span> 
-						<i class="bi bi-chevron-down desktop-only"></i>
-					</a>
-					<button class="mobile-dropdown-toggle" type="button" aria-expanded={activeDropdown === 'contribute'} aria-label="Toggle contribute menu" on:click={() => toggleDropdown('contribute')}>
-						<i class="bi" class:bi-chevron-down={activeDropdown !== 'contribute'} class:bi-chevron-up={activeDropdown === 'contribute'}></i>
-					</button>
+					<div class="dropdown-header">
+						<a class="nav-link" href="{base}/#contribute" aria-haspopup="true">
+							<span>Contribute</span> 
+							<i class="bi bi-chevron-down desktop-only"></i>
+						</a>
+						<button class="mobile-dropdown-toggle" type="button" aria-expanded={activeDropdown === 'contribute'} aria-label="Toggle contribute menu" on:click={() => toggleDropdown('contribute')}>
+							<i class="bi" class:bi-chevron-down={activeDropdown !== 'contribute'} class:bi-chevron-up={activeDropdown === 'contribute'}></i>
+						</button>
+					</div>
 					<ul class:mobile-show={activeDropdown === 'contribute'}>
 						<li><a class="nav-link" href="{base}/#contribute" on:click={closeMobileMenu}>Volunteer</a></li>
 						<li><a class="nav-link" href="{base}/#contribute" on:click={closeMobileMenu}>Call for Presentations</a></li>
 					</ul>
 				</li>
 				<li class="dropdown" class:mobile-active={activeDropdown === 'event'}>
-					<a class="nav-link" href="{base}/" aria-haspopup="true">
-						<span>Event</span> 
-						<i class="bi bi-chevron-down desktop-only"></i>
-					</a>
-					<button class="mobile-dropdown-toggle" type="button" aria-expanded={activeDropdown === 'event'} aria-label="Toggle event menu" on:click={() => toggleDropdown('event')}>
-						<i class="bi" class:bi-chevron-down={activeDropdown !== 'event'} class:bi-chevron-up={activeDropdown === 'event'}></i>
-					</button>
+					<div class="dropdown-header">
+						<a class="nav-link" href="{base}/" aria-haspopup="true">
+							<span>Event</span> 
+							<i class="bi bi-chevron-down desktop-only"></i>
+						</a>
+						<button class="mobile-dropdown-toggle" type="button" aria-expanded={activeDropdown === 'event'} aria-label="Toggle event menu" on:click={() => toggleDropdown('event')}>
+							<i class="bi" class:bi-chevron-down={activeDropdown !== 'event'} class:bi-chevron-up={activeDropdown === 'event'}></i>
+						</button>
+					</div>
 					<ul class:mobile-show={activeDropdown === 'event'}>
 						<li><a class="nav-link" href="{base}/speakers" on:click={closeMobileMenu}>Meet our Speakers</a></li>
 						<li><a class="nav-link" href="{base}/schedule" on:click={closeMobileMenu}>Conference Schedule</a></li>
@@ -112,13 +118,15 @@
 					</ul>
 				</li>
 				<li class="dropdown" class:mobile-active={activeDropdown === 'about'}>
-					<a class="nav-link" href="{base}/" aria-haspopup="true">
-						<span>About</span> 
-						<i class="bi bi-chevron-down desktop-only"></i>
-					</a>
-					<button class="mobile-dropdown-toggle" type="button" aria-expanded={activeDropdown === 'about'} aria-label="Toggle about menu" on:click={() => toggleDropdown('about')}>
-						<i class="bi" class:bi-chevron-down={activeDropdown !== 'about'} class:bi-chevron-up={activeDropdown === 'about'}></i>
-					</button>
+					<div class="dropdown-header">
+						<a class="nav-link" href="{base}/" aria-haspopup="true">
+							<span>About</span> 
+							<i class="bi bi-chevron-down desktop-only"></i>
+						</a>
+						<button class="mobile-dropdown-toggle" type="button" aria-expanded={activeDropdown === 'about'} aria-label="Toggle about menu" on:click={() => toggleDropdown('about')}>
+							<i class="bi" class:bi-chevron-down={activeDropdown !== 'about'} class:bi-chevron-up={activeDropdown === 'about'}></i>
+						</button>
+					</div>
 					<ul class:mobile-show={activeDropdown === 'about'}>
 						<li><a class="nav-link" href="{base}/#about" on:click={closeMobileMenu}>About BSides312</a></li>
 						<li><a class="nav-link" href="{base}/board" on:click={closeMobileMenu}>Our Board</a></li>
@@ -338,6 +346,13 @@
 		transition: all 0.3s ease;
 	}
 
+	.dropdown-header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 100%;
+	}
+
 	.desktop-only {
 		display: inline;
 	}
@@ -468,15 +483,25 @@
 			width: 100%;
 		}
 
-		.dropdown li {
+		.dropdown-header {
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
-			padding: 5px 0;
+			width: 100%;
+		}
+
+		.dropdown-header .nav-link {
+			flex: 1;
+			margin-right: 10px;
+		}
+
+		.dropdown-header .mobile-dropdown-toggle {
+			flex-shrink: 0;
+			padding: 12px;
+			border-radius: 8px;
 		}
 
 		.nav-link {
-			flex: 1;
 			justify-content: flex-start;
 			padding: 12px 15px;
 			border-radius: 8px;
@@ -509,13 +534,14 @@
 			opacity: 1;
 			visibility: visible;
 			max-height: 300px;
-			padding: 10px;
+			padding: 10px 0;
 		}
 
 		.dropdown ul .nav-link {
 			padding: 8px 15px;
 			font-size: 0.9rem;
 			justify-content: flex-start;
+			margin-right: 0;
 		}
 	}
 
