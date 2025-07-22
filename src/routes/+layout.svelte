@@ -1,13 +1,12 @@
 <script lang="ts">
 	import '../app.css';
-	import logoImg from '$lib/logo.png';
 </script>
 
 <header id="header" class="d-flex align-items-center">
 	<div class="container-fluid container-xxl d-flex align-items-center">
 		<div id="logo" class="me-auto">
 			<a href="/" class="scrollto">
-				<img src={logoImg} alt="BSides312 Logo" />
+				<img src="assets/img/logo.png" alt="BSides312 Logo" />
 			</a>
 		</div>
 
@@ -83,7 +82,7 @@
 				<!-- Logo and About -->
 				<div class="col-lg-4 col-md-6">
 					<div class="footer-info mb-4">
-						<img src={logoImg} alt="BSides312 Logo" class="mb-3" />
+						<img src="assets/img/logo.png" alt="BSides312 Logo" class="mb-3" />
 						<p>
 							BSides312 is Chicago's biggest little non-profit hacking & information security
 							conference, run by and for the local community.
