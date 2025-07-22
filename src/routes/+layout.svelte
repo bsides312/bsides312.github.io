@@ -74,7 +74,7 @@
 						<span>Sponsor Us</span> 
 						<i class="bi bi-chevron-down desktop-only"></i>
 					</a>
-					<button class="mobile-dropdown-toggle" type="button" aria-expanded={activeDropdown === 'sponsor'} on:click={() => toggleDropdown('sponsor')}>
+					<button class="mobile-dropdown-toggle" type="button" aria-expanded={activeDropdown === 'sponsor'} aria-label="Toggle sponsor menu" on:click={() => toggleDropdown('sponsor')}>
 						<i class="bi" class:bi-chevron-down={activeDropdown !== 'sponsor'} class:bi-chevron-up={activeDropdown === 'sponsor'}></i>
 					</button>
 					<ul class:mobile-show={activeDropdown === 'sponsor'}>
@@ -87,7 +87,7 @@
 						<span>Contribute</span> 
 						<i class="bi bi-chevron-down desktop-only"></i>
 					</a>
-					<button class="mobile-dropdown-toggle" type="button" aria-expanded={activeDropdown === 'contribute'} on:click={() => toggleDropdown('contribute')}>
+					<button class="mobile-dropdown-toggle" type="button" aria-expanded={activeDropdown === 'contribute'} aria-label="Toggle contribute menu" on:click={() => toggleDropdown('contribute')}>
 						<i class="bi" class:bi-chevron-down={activeDropdown !== 'contribute'} class:bi-chevron-up={activeDropdown === 'contribute'}></i>
 					</button>
 					<ul class:mobile-show={activeDropdown === 'contribute'}>
@@ -100,7 +100,7 @@
 						<span>Event</span> 
 						<i class="bi bi-chevron-down desktop-only"></i>
 					</a>
-					<button class="mobile-dropdown-toggle" type="button" aria-expanded={activeDropdown === 'event'} on:click={() => toggleDropdown('event')}>
+					<button class="mobile-dropdown-toggle" type="button" aria-expanded={activeDropdown === 'event'} aria-label="Toggle event menu" on:click={() => toggleDropdown('event')}>
 						<i class="bi" class:bi-chevron-down={activeDropdown !== 'event'} class:bi-chevron-up={activeDropdown === 'event'}></i>
 					</button>
 					<ul class:mobile-show={activeDropdown === 'event'}>
@@ -116,7 +116,7 @@
 						<span>About</span> 
 						<i class="bi bi-chevron-down desktop-only"></i>
 					</a>
-					<button class="mobile-dropdown-toggle" type="button" aria-expanded={activeDropdown === 'about'} on:click={() => toggleDropdown('about')}>
+					<button class="mobile-dropdown-toggle" type="button" aria-expanded={activeDropdown === 'about'} aria-label="Toggle about menu" on:click={() => toggleDropdown('about')}>
 						<i class="bi" class:bi-chevron-down={activeDropdown !== 'about'} class:bi-chevron-up={activeDropdown === 'about'}></i>
 					</button>
 					<ul class:mobile-show={activeDropdown === 'about'}>
