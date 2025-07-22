@@ -1,61 +1,40 @@
 <script lang="ts">
-	import { sponsors, getSponsorsByTier, sponsorTierImages, type Sponsor } from '$lib/stores/sponsors';
+	import { sponsors, getSponsorsByTier, sponsorTierImages } from '$lib/stores/sponsors';
 	import { faqItems } from '$lib/stores/faq';
-	import { onMount } from 'svelte';
+	import aboutLogoImg from '$lib/about_logo.png';
 
-	let expandedFAQ = '';
+	// Group sponsors by tier for display
+	$: sponsorTiers = ['platinum', 'gold', 'silver', 'bronze', 'founding', 'community'].map(tier => ({
+		tierName: tier.charAt(0).toUpperCase() + tier.slice(1),
+		tierSponsors: getSponsorsByTier(tier as any),
+		tierImage: sponsorTierImages[tier as keyof typeof sponsorTierImages]
+	})).filter(tier => tier.tierSponsors.length > 0);
 
-	function toggleFAQ(id: string) {
-		expandedFAQ = expandedFAQ === id ? '' : id;
+	// FAQ state management
+	let activeFaq: string | null = null;
+
+	function toggleFaq(id: string) {
+		activeFaq = activeFaq === id ? null : id;
 	}
-
-	interface SponsorTierData {
-		tierName: string;
-		tierSponsors: Sponsor[];
-		tierImage: string;
-	}
-
-	function renderSponsorTier(tierName: string, tier: Sponsor['tier']): SponsorTierData | null {
-		const tierSponsors = getSponsorsByTier(tier);
-		if (tierSponsors.length === 0) return null;
-		
-		return { tierName, tierSponsors, tierImage: sponsorTierImages[tier] };
-	}
-
-	const sponsorTiers = [
-		renderSponsorTier('Platinum Sponsors', 'platinum'),
-		renderSponsorTier('Gold Sponsors', 'gold'),
-		renderSponsorTier('Silver Sponsors', 'silver'),
-		renderSponsorTier('Bronze Sponsors', 'bronze'),
-		renderSponsorTier('Founding Sponsors', 'founding'),
-		renderSponsorTier('Community Sponsors', 'community')
-	].filter((tier): tier is SponsorTierData => tier !== null);
 </script>
 
 <svelte:head>
 	<title>BSides312 - Chicago's Biggest Little Non-Profit Hacking Conference</title>
-	<meta name="description" content="BSides312 is Chicago's biggest little non-profit hacking & information security conference. Join us May 15th, 2026 for talks, workshops, and networking." />
+	<meta name="description" content="BSides312 is Chicago's biggest little non-profit hacking & information security conference. Join us for talks, workshops, and networking with security professionals from around the world." />
 </svelte:head>
 
 <!-- Hero Section -->
 <section class="hero">
 	<div class="hero-content">
 		<div class="text-center mb-4">
-			<img src="/assets/img/about_logo.png" alt="BSides312 Logo" class="img-fluid hero-logo" style="max-height: 200px;" />
+			<img src={aboutLogoImg} alt="BSides312 Logo" class="img-fluid hero-logo" style="max-height: 200px;" />
 		</div>
-		<h1>Chicago's Biggest Little <br /><span>Non-Profit</span> Hacker Conference</h1>
-		<p>May 15th, 2026<br />Chicago, IL</p>
-		<a href="#tickets" class="btn-primary">Stay Tuned!</a>
-		<div class="mt-4 pt-3">
-			<p class="mb-2 pb-0">See you in 2026, and in the meantime:</p>
-			<a
-				href="https://www.youtube.com/channel/UCrCPvWW8z-_O8uUM8-ySz7g"
-				target="_blank"
-				rel="noopener"
-				class="btn-primary"
-			>
-				<i class="bi bi-youtube me-2"></i>Subscribe to our YouTube for all our past talks
-			</a>
+		<h1 class="text-center mb-4">Chicago's Biggest Little Non-Profit Hacking Conference</h1>
+		<p class="lead text-center mb-4">
+			BSides312 brings together security professionals, researchers, and enthusiasts for an unforgettable day of learning and networking.
+		</p>
+		<div class="text-center">
+			<a href="#tickets" class="btn-primary">Stay Tuned!</a>
 		</div>
 	</div>
 </section>
@@ -151,14 +130,14 @@
 						<li>
 							<button 
 								class="faq-question"
-								class:expanded={expandedFAQ === faq.id}
-								on:click={() => toggleFAQ(faq.id)}
+								class:expanded={activeFaq === faq.id}
+								on:click={() => toggleFaq(faq.id)}
 								type="button"
 							>
 								{faq.question}
-								<i class="bi" class:bi-chevron-down={expandedFAQ !== faq.id} class:bi-chevron-up={expandedFAQ === faq.id}></i>
+								<i class="bi" class:bi-chevron-down={activeFaq !== faq.id} class:bi-chevron-up={activeFaq === faq.id}></i>
 							</button>
-							{#if expandedFAQ === faq.id}
+							{#if activeFaq === faq.id}
 								<div class="faq-answer">
 									{@html faq.answer.replace(/\n\n/g, '</p><p>').replace(/^/, '<p>').replace(/$/, '</p>')}
 								</div>
