@@ -17,6 +17,10 @@ const config = {
 			precompress: false,
 			strict: true
 		}),
+		// Configure paths for GitHub Pages project site
+		paths: {
+			base: process.argv.includes('dev') ? '' : '/bsides312.github.io'
+		},
 		prerender: {
 			handleMissingId: 'warn' // Don't fail build on missing anchor IDs
 		}
