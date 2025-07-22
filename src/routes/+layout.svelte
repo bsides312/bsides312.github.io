@@ -21,7 +21,9 @@
 
 	function toggleDropdown(dropdownId: string) {
 		// Toggle dropdown regardless of screen size - CSS will handle mobile/desktop behavior
+		console.log('Toggling dropdown:', dropdownId, 'Current active:', activeDropdown);
 		activeDropdown = activeDropdown === dropdownId ? null : dropdownId;
+		console.log('New active dropdown:', activeDropdown);
 	}
 
 	onMount(() => {
@@ -74,8 +76,7 @@
 							<i class="bi bi-chevron-down desktop-only"></i>
 						</a>
 						<button class="mobile-dropdown-toggle" type="button" aria-expanded={activeDropdown === 'sponsor'} aria-label="Toggle sponsor menu" 
-							on:click={() => toggleDropdown('sponsor')} 
-							on:keydown={(e) => (e.key === 'Enter' || e.key === ' ') && toggleDropdown('sponsor')}>
+							on:click={() => toggleDropdown('sponsor')}>
 							<i class="bi" class:bi-chevron-down={activeDropdown !== 'sponsor'} class:bi-chevron-up={activeDropdown === 'sponsor'}></i>
 						</button>
 					</div>
@@ -91,8 +92,7 @@
 							<i class="bi bi-chevron-down desktop-only"></i>
 						</a>
 						<button class="mobile-dropdown-toggle" type="button" aria-expanded={activeDropdown === 'contribute'} aria-label="Toggle contribute menu" 
-							on:click={() => toggleDropdown('contribute')} 
-							on:keydown={(e) => (e.key === 'Enter' || e.key === ' ') && toggleDropdown('contribute')}>
+							on:click={() => toggleDropdown('contribute')}>
 							<i class="bi" class:bi-chevron-down={activeDropdown !== 'contribute'} class:bi-chevron-up={activeDropdown === 'contribute'}></i>
 						</button>
 					</div>
@@ -108,8 +108,7 @@
 							<i class="bi bi-chevron-down desktop-only"></i>
 						</a>
 						<button class="mobile-dropdown-toggle" type="button" aria-expanded={activeDropdown === 'event'} aria-label="Toggle event menu" 
-							on:click={() => toggleDropdown('event')} 
-							on:keydown={(e) => (e.key === 'Enter' || e.key === ' ') && toggleDropdown('event')}>
+							on:click={() => toggleDropdown('event')}>
 							<i class="bi" class:bi-chevron-down={activeDropdown !== 'event'} class:bi-chevron-up={activeDropdown === 'event'}></i>
 						</button>
 					</div>
@@ -128,8 +127,7 @@
 							<i class="bi bi-chevron-down desktop-only"></i>
 						</a>
 						<button class="mobile-dropdown-toggle" type="button" aria-expanded={activeDropdown === 'about'} aria-label="Toggle about menu" 
-							on:click={() => toggleDropdown('about')} 
-							on:keydown={(e) => (e.key === 'Enter' || e.key === ' ') && toggleDropdown('about')}>
+							on:click={() => toggleDropdown('about')}>
 							<i class="bi" class:bi-chevron-down={activeDropdown !== 'about'} class:bi-chevron-up={activeDropdown === 'about'}></i>
 						</button>
 					</div>
@@ -343,24 +341,19 @@
 
 	.mobile-dropdown-toggle {
 		display: none;
-		background: rgba(93, 189, 252, 0.1);
+		background: none;
 		border: none;
 		color: #fff;
-		padding: 10px;
+		padding: 8px;
 		cursor: pointer;
 		font-size: 1rem;
-		border-radius: 6px;
 		transition: all 0.3s ease;
-		min-width: 40px;
-		height: 40px;
-		display: flex;
-		align-items: center;
-		justify-content: center;
 	}
 
 	.mobile-dropdown-toggle:hover {
-		background: rgba(93, 189, 252, 0.2);
+		background: rgba(93, 189, 252, 0.1);
 		color: #5dbdfc;
+		border-radius: 4px;
 	}
 
 	.dropdown-header {
@@ -469,7 +462,7 @@
 		}
 
 		.mobile-dropdown-toggle {
-			display: flex !important;
+			display: block;
 		}
 
 		.navbar ul {
@@ -505,15 +498,11 @@
 			align-items: center;
 			justify-content: space-between;
 			width: 100%;
-			background: rgba(255, 255, 255, 0.05);
-			border-radius: 8px;
-			padding: 8px;
 		}
 
 		.dropdown-header .nav-link {
 			flex: 1;
 			margin-right: 10px;
-			padding: 8px 12px;
 		}
 
 		.dropdown-header .mobile-dropdown-toggle {
@@ -545,27 +534,22 @@
 			border-radius: 8px;
 			margin-top: 10px;
 			padding: 0;
-			transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+			transition: all 0.3s ease;
 			width: 100%;
 		}
 
 		.dropdown ul.mobile-show {
 			opacity: 1;
 			visibility: visible;
-			max-height: 400px;
+			max-height: 300px;
 			padding: 10px 0;
 		}
 
 		.dropdown ul .nav-link {
-			padding: 12px 20px;
+			padding: 8px 15px;
 			font-size: 0.9rem;
 			justify-content: flex-start;
 			margin-right: 0;
-			background: transparent;
-		}
-
-		.dropdown ul .nav-link:hover {
-			background: rgba(255, 255, 255, 0.1);
 		}
 	}
 
