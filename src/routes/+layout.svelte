@@ -20,10 +20,8 @@
 	}
 
 	function toggleDropdown(dropdownId: string) {
-		// Only handle dropdown on mobile
-		if (window.innerWidth <= 768) {
-			activeDropdown = activeDropdown === dropdownId ? null : dropdownId;
-		}
+		// Toggle dropdown regardless of screen size - CSS will handle mobile/desktop behavior
+		activeDropdown = activeDropdown === dropdownId ? null : dropdownId;
 	}
 
 	onMount(() => {
@@ -40,7 +38,7 @@
 			}
 		};
 
-		// Close dropdowns on window resize
+		// Close dropdowns on window resize to desktop
 		const handleResize = () => {
 			if (window.innerWidth > 768) {
 				activeDropdown = null;
@@ -75,7 +73,9 @@
 							<span>Sponsor Us</span> 
 							<i class="bi bi-chevron-down desktop-only"></i>
 						</a>
-						<button class="mobile-dropdown-toggle" type="button" aria-expanded={activeDropdown === 'sponsor'} aria-label="Toggle sponsor menu" on:click={() => toggleDropdown('sponsor')}>
+						<button class="mobile-dropdown-toggle" type="button" aria-expanded={activeDropdown === 'sponsor'} aria-label="Toggle sponsor menu" 
+							on:click={() => toggleDropdown('sponsor')} 
+							on:keydown={(e) => (e.key === 'Enter' || e.key === ' ') && toggleDropdown('sponsor')}>
 							<i class="bi" class:bi-chevron-down={activeDropdown !== 'sponsor'} class:bi-chevron-up={activeDropdown === 'sponsor'}></i>
 						</button>
 					</div>
@@ -90,7 +90,9 @@
 							<span>Contribute</span> 
 							<i class="bi bi-chevron-down desktop-only"></i>
 						</a>
-						<button class="mobile-dropdown-toggle" type="button" aria-expanded={activeDropdown === 'contribute'} aria-label="Toggle contribute menu" on:click={() => toggleDropdown('contribute')}>
+						<button class="mobile-dropdown-toggle" type="button" aria-expanded={activeDropdown === 'contribute'} aria-label="Toggle contribute menu" 
+							on:click={() => toggleDropdown('contribute')} 
+							on:keydown={(e) => (e.key === 'Enter' || e.key === ' ') && toggleDropdown('contribute')}>
 							<i class="bi" class:bi-chevron-down={activeDropdown !== 'contribute'} class:bi-chevron-up={activeDropdown === 'contribute'}></i>
 						</button>
 					</div>
@@ -105,7 +107,9 @@
 							<span>Event</span> 
 							<i class="bi bi-chevron-down desktop-only"></i>
 						</a>
-						<button class="mobile-dropdown-toggle" type="button" aria-expanded={activeDropdown === 'event'} aria-label="Toggle event menu" on:click={() => toggleDropdown('event')}>
+						<button class="mobile-dropdown-toggle" type="button" aria-expanded={activeDropdown === 'event'} aria-label="Toggle event menu" 
+							on:click={() => toggleDropdown('event')} 
+							on:keydown={(e) => (e.key === 'Enter' || e.key === ' ') && toggleDropdown('event')}>
 							<i class="bi" class:bi-chevron-down={activeDropdown !== 'event'} class:bi-chevron-up={activeDropdown === 'event'}></i>
 						</button>
 					</div>
@@ -123,7 +127,9 @@
 							<span>About</span> 
 							<i class="bi bi-chevron-down desktop-only"></i>
 						</a>
-						<button class="mobile-dropdown-toggle" type="button" aria-expanded={activeDropdown === 'about'} aria-label="Toggle about menu" on:click={() => toggleDropdown('about')}>
+						<button class="mobile-dropdown-toggle" type="button" aria-expanded={activeDropdown === 'about'} aria-label="Toggle about menu" 
+							on:click={() => toggleDropdown('about')} 
+							on:keydown={(e) => (e.key === 'Enter' || e.key === ' ') && toggleDropdown('about')}>
 							<i class="bi" class:bi-chevron-down={activeDropdown !== 'about'} class:bi-chevron-up={activeDropdown === 'about'}></i>
 						</button>
 					</div>
@@ -337,13 +343,24 @@
 
 	.mobile-dropdown-toggle {
 		display: none;
-		background: none;
+		background: rgba(93, 189, 252, 0.1);
 		border: none;
 		color: #fff;
-		padding: 8px;
+		padding: 10px;
 		cursor: pointer;
 		font-size: 1rem;
+		border-radius: 6px;
 		transition: all 0.3s ease;
+		min-width: 40px;
+		height: 40px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.mobile-dropdown-toggle:hover {
+		background: rgba(93, 189, 252, 0.2);
+		color: #5dbdfc;
 	}
 
 	.dropdown-header {
@@ -452,7 +469,7 @@
 		}
 
 		.mobile-dropdown-toggle {
-			display: block;
+			display: flex !important;
 		}
 
 		.navbar ul {
@@ -488,17 +505,19 @@
 			align-items: center;
 			justify-content: space-between;
 			width: 100%;
+			background: rgba(255, 255, 255, 0.05);
+			border-radius: 8px;
+			padding: 8px;
 		}
 
 		.dropdown-header .nav-link {
 			flex: 1;
 			margin-right: 10px;
+			padding: 8px 12px;
 		}
 
 		.dropdown-header .mobile-dropdown-toggle {
 			flex-shrink: 0;
-			padding: 12px;
-			border-radius: 8px;
 		}
 
 		.nav-link {
@@ -526,22 +545,27 @@
 			border-radius: 8px;
 			margin-top: 10px;
 			padding: 0;
-			transition: all 0.3s ease;
+			transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 			width: 100%;
 		}
 
 		.dropdown ul.mobile-show {
 			opacity: 1;
 			visibility: visible;
-			max-height: 300px;
+			max-height: 400px;
 			padding: 10px 0;
 		}
 
 		.dropdown ul .nav-link {
-			padding: 8px 15px;
+			padding: 12px 20px;
 			font-size: 0.9rem;
 			justify-content: flex-start;
 			margin-right: 0;
+			background: transparent;
+		}
+
+		.dropdown ul .nav-link:hover {
+			background: rgba(255, 255, 255, 0.1);
 		}
 	}
 
