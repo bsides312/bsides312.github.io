@@ -1,62 +1,63 @@
 <script lang="ts">
 	import '../app.css';
+	import { base } from '$app/paths';
 </script>
 
 <header id="header" class="d-flex align-items-center">
 	<div class="container-fluid container-xxl d-flex align-items-center">
 		<div id="logo" class="me-auto">
-			<a href="/" class="scrollto">
-				<img src="assets/img/logo.png" alt="BSides312 Logo" />
+			<a href="{base}/" class="scrollto">
+				<img src="{base}/assets/img/logo.png" alt="BSides312 Logo" />
 			</a>
 		</div>
 
 		<nav id="navbar" class="navbar order-last order-lg-0">
 			<ul>
-				<li><a class="nav-link" href="/">Home</a></li>
-				<li><a class="nav-link" href="/#contribute">Get Tickets</a></li>
+				<li><a class="nav-link" href="{base}/">Home</a></li>
+				<li><a class="nav-link" href="{base}/#contribute">Get Tickets</a></li>
 				<li class="dropdown">
-					<a class="nav-link" href="/#supporters" aria-haspopup="true" aria-expanded="false">
+					<a class="nav-link" href="{base}/#supporters" aria-haspopup="true" aria-expanded="false">
 						<span>Sponsor Us</span> 
 						<i class="bi bi-chevron-down"></i>
 					</a>
 					<ul>
-						<li><a class="nav-link" href="/support">How to Donate</a></li>
-						<li><a class="nav-link" href="/#supporters">Current Supporters</a></li>
+						<li><a class="nav-link" href="{base}/support">How to Donate</a></li>
+						<li><a class="nav-link" href="{base}/#supporters">Current Supporters</a></li>
 					</ul>
 				</li>
 				<li class="dropdown">
-					<a class="nav-link" href="/#contribute" aria-haspopup="true" aria-expanded="false">
+					<a class="nav-link" href="{base}/#contribute" aria-haspopup="true" aria-expanded="false">
 						<span>Contribute</span> 
 						<i class="bi bi-chevron-down"></i>
 					</a>
 					<ul>
-						<li><a class="nav-link" href="/#contribute">Volunteer</a></li>
-						<li><a class="nav-link" href="/#contribute">Call for Presentations</a></li>
+						<li><a class="nav-link" href="{base}/#contribute">Volunteer</a></li>
+						<li><a class="nav-link" href="{base}/#contribute">Call for Presentations</a></li>
 					</ul>
 				</li>
 				<li class="dropdown">
-					<a href="/" class="nav-link" aria-haspopup="true" aria-expanded="false">
+					<a href="{base}/" class="nav-link" aria-haspopup="true" aria-expanded="false">
 						<span>Event</span> 
 						<i class="bi bi-chevron-down"></i>
 					</a>
 					<ul>
-						<li><a class="nav-link" href="/speakers">Meet our Speakers</a></li>
-						<li><a class="nav-link" href="/schedule">Conference Schedule</a></li>
-						<li><a class="nav-link" href="/previous-speakers">Previous Speakers</a></li>
-						<li><a class="nav-link" href="/#about">Venue & Parking</a></li>
-						<li><a class="nav-link" href="/code-of-conduct">Code of Conduct</a></li>
+						<li><a class="nav-link" href="{base}/speakers">Meet our Speakers</a></li>
+						<li><a class="nav-link" href="{base}/schedule">Conference Schedule</a></li>
+						<li><a class="nav-link" href="{base}/previous-speakers">Previous Speakers</a></li>
+						<li><a class="nav-link" href="{base}/#about">Venue & Parking</a></li>
+						<li><a class="nav-link" href="{base}/code-of-conduct">Code of Conduct</a></li>
 					</ul>
 				</li>
 				<li class="dropdown">
-					<a class="nav-link" href="/" aria-haspopup="true" aria-expanded="false">
+					<a class="nav-link" href="{base}/" aria-haspopup="true" aria-expanded="false">
 						<span>About</span> 
 						<i class="bi bi-chevron-down"></i>
 					</a>
 					<ul>
-						<li><a class="nav-link" href="/#about">About BSides312</a></li>
-						<li><a class="nav-link" href="/board">Our Board</a></li>
-						<li><a class="nav-link" href="/#faq">FAQ</a></li>
-						<li><a class="nav-link" href="/privacy">Privacy Policy</a></li>
+						<li><a class="nav-link" href="{base}/#about">About BSides312</a></li>
+						<li><a class="nav-link" href="{base}/board">Our Board</a></li>
+						<li><a class="nav-link" href="{base}/#faq">FAQ</a></li>
+						<li><a class="nav-link" href="{base}/privacy">Privacy Policy</a></li>
 					</ul>
 				</li>
 				<li>
@@ -82,7 +83,7 @@
 				<!-- Logo and About -->
 				<div class="col-lg-4 col-md-6">
 					<div class="footer-info mb-4">
-						<img src="assets/img/logo.png" alt="BSides312 Logo" class="mb-3" />
+						<img src="{base}/assets/img/logo.png" alt="BSides312 Logo" class="mb-3" />
 						<p>
 							BSides312 is Chicago's biggest little non-profit hacking & information security
 							conference, run by and for the local community.
@@ -155,9 +156,9 @@
 						</div>
 						<h4>Quick Links</h4>
 						<ul>
-							<li><a href="/code-of-conduct">Code of Conduct</a></li>
-							<li><a href="/privacy">Privacy Policy</a></li>
-							<li><a href="/board">Our Board</a></li>
+							<li><a href="{base}/code-of-conduct">Code of Conduct</a></li>
+							<li><a href="{base}/privacy">Privacy Policy</a></li>
+							<li><a href="{base}/board">Our Board</a></li>
 						</ul>
 					</div>
 				</div>

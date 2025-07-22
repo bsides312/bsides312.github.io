@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { sponsors, getSponsorsByTier, sponsorTierImages } from '$lib/stores/sponsors';
 	import { faqItems } from '$lib/stores/faq';
+	import { base } from '$app/paths';
 
 	// Group sponsors by tier for display
 	$: sponsorTiers = ['platinum', 'gold', 'silver', 'bronze', 'founding', 'community'].map(tier => ({
@@ -26,7 +27,7 @@
 <section class="hero">
 	<div class="hero-content">
 		<div class="text-center mb-4">
-			<img src="assets/img/about_logo.png" alt="BSides312 Logo" class="img-fluid hero-logo" style="max-height: 200px;" />
+			<img src="{base}/assets/img/about_logo.png" alt="BSides312 Logo" class="img-fluid hero-logo" style="max-height: 200px;" />
 		</div>
 		<h1 class="text-center mb-4">Chicago's Biggest Little Non-Profit Hacking Conference</h1>
 		<p class="lead text-center mb-4">
