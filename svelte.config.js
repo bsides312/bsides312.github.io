@@ -17,11 +17,6 @@ const config = {
 			precompress: false,
 			strict: true
 		}),
-		// Configure paths for GitHub Pages
-		paths: {
-			// Set base path if using a custom domain, leave empty for username.github.io
-			base: process.argv.includes('dev') ? '' : process.env.BASE_PATH || ''
-		},
 		prerender: {
 			handleMissingId: 'warn' // Don't fail build on missing anchor IDs
 		}
