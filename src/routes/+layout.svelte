@@ -19,9 +19,8 @@
 		activeDropdown = null;
 	}
 
-	function toggleDropdown(dropdownId: string, event: Event) {
-		event.preventDefault();
-		// On mobile, toggle the dropdown
+	function toggleDropdown(dropdownId: string) {
+		// Only handle dropdown on mobile
 		if (window.innerWidth <= 768) {
 			activeDropdown = activeDropdown === dropdownId ? null : dropdownId;
 		}
@@ -71,30 +70,30 @@
 				<li><a class="nav-link" href="{base}/" on:click={closeMobileMenu}>Home</a></li>
 				<li><a class="nav-link" href="{base}/#contribute" on:click={closeMobileMenu}>Get Tickets</a></li>
 				<li class="dropdown" class:active={activeDropdown === 'sponsor'}>
-					<a class="nav-link dropdown-toggle" href="{base}/#supporters" aria-haspopup="true" aria-expanded={activeDropdown === 'sponsor'} on:click={(e) => toggleDropdown('sponsor', e)}>
+					<button class="nav-link dropdown-toggle" type="button" aria-haspopup="true" aria-expanded={activeDropdown === 'sponsor'} on:click={() => toggleDropdown('sponsor')}>
 						<span>Sponsor Us</span> 
 						<i class="bi" class:bi-chevron-down={activeDropdown !== 'sponsor'} class:bi-chevron-up={activeDropdown === 'sponsor'}></i>
-					</a>
+					</button>
 					<ul class:show={activeDropdown === 'sponsor'}>
 						<li><a class="nav-link" href="{base}/support" on:click={closeMobileMenu}>How to Donate</a></li>
 						<li><a class="nav-link" href="{base}/#supporters" on:click={closeMobileMenu}>Current Supporters</a></li>
 					</ul>
 				</li>
 				<li class="dropdown" class:active={activeDropdown === 'contribute'}>
-					<a class="nav-link dropdown-toggle" href="{base}/#contribute" aria-haspopup="true" aria-expanded={activeDropdown === 'contribute'} on:click={(e) => toggleDropdown('contribute', e)}>
+					<button class="nav-link dropdown-toggle" type="button" aria-haspopup="true" aria-expanded={activeDropdown === 'contribute'} on:click={() => toggleDropdown('contribute')}>
 						<span>Contribute</span> 
 						<i class="bi" class:bi-chevron-down={activeDropdown !== 'contribute'} class:bi-chevron-up={activeDropdown === 'contribute'}></i>
-					</a>
+					</button>
 					<ul class:show={activeDropdown === 'contribute'}>
 						<li><a class="nav-link" href="{base}/#contribute" on:click={closeMobileMenu}>Volunteer</a></li>
 						<li><a class="nav-link" href="{base}/#contribute" on:click={closeMobileMenu}>Call for Presentations</a></li>
 					</ul>
 				</li>
 				<li class="dropdown" class:active={activeDropdown === 'event'}>
-					<a href="{base}/" class="nav-link dropdown-toggle" aria-haspopup="true" aria-expanded={activeDropdown === 'event'} on:click={(e) => toggleDropdown('event', e)}>
+					<button class="nav-link dropdown-toggle" type="button" aria-haspopup="true" aria-expanded={activeDropdown === 'event'} on:click={() => toggleDropdown('event')}>
 						<span>Event</span> 
 						<i class="bi" class:bi-chevron-down={activeDropdown !== 'event'} class:bi-chevron-up={activeDropdown === 'event'}></i>
-					</a>
+					</button>
 					<ul class:show={activeDropdown === 'event'}>
 						<li><a class="nav-link" href="{base}/speakers" on:click={closeMobileMenu}>Meet our Speakers</a></li>
 						<li><a class="nav-link" href="{base}/schedule" on:click={closeMobileMenu}>Conference Schedule</a></li>
@@ -104,10 +103,10 @@
 					</ul>
 				</li>
 				<li class="dropdown" class:active={activeDropdown === 'about'}>
-					<a class="nav-link dropdown-toggle" href="{base}/" aria-haspopup="true" aria-expanded={activeDropdown === 'about'} on:click={(e) => toggleDropdown('about', e)}>
+					<button class="nav-link dropdown-toggle" type="button" aria-haspopup="true" aria-expanded={activeDropdown === 'about'} on:click={() => toggleDropdown('about')}>
 						<span>About</span> 
 						<i class="bi" class:bi-chevron-down={activeDropdown !== 'about'} class:bi-chevron-up={activeDropdown === 'about'}></i>
-					</a>
+					</button>
 					<ul class:show={activeDropdown === 'about'}>
 						<li><a class="nav-link" href="{base}/#about" on:click={closeMobileMenu}>About BSides312</a></li>
 						<li><a class="nav-link" href="{base}/board" on:click={closeMobileMenu}>Our Board</a></li>
@@ -271,6 +270,11 @@
 		display: flex;
 		align-items: center;
 		gap: 5px;
+		background: none;
+		border: none;
+		font-family: inherit;
+		font-size: inherit;
+		cursor: pointer;
 	}
 
 	.nav-link:hover {
@@ -436,6 +440,13 @@
 			cursor: pointer;
 		}
 
+		/* Override desktop hover behavior on mobile */
+		.dropdown:hover ul {
+			opacity: 0;
+			visibility: hidden;
+			transform: translateY(-10px);
+		}
+
 		.dropdown ul {
 			position: static;
 			opacity: 0;
@@ -462,19 +473,6 @@
 			padding: 8px 15px;
 			font-size: 0.9rem;
 			justify-content: flex-start;
-		}
-
-		/* Override hover behavior on mobile */
-		.dropdown:hover ul {
-			opacity: 0;
-			visibility: hidden;
-			max-height: 0;
-		}
-
-		.dropdown.active ul.show {
-			opacity: 1;
-			visibility: visible;
-			max-height: 300px;
 		}
 	}
 
