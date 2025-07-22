@@ -4,13 +4,27 @@
 	import { onMount } from 'svelte';
 
 	let mobileMenuActive = false;
+	let activeDropdown: string | null = null;
 
 	function toggleMobileMenu() {
 		mobileMenuActive = !mobileMenuActive;
+		// Close any open dropdowns when toggling main menu
+		if (!mobileMenuActive) {
+			activeDropdown = null;
+		}
 	}
 
 	function closeMobileMenu() {
 		mobileMenuActive = false;
+		activeDropdown = null;
+	}
+
+	function toggleDropdown(dropdownId: string, event: Event) {
+		event.preventDefault();
+		// On mobile, toggle the dropdown
+		if (window.innerWidth <= 768) {
+			activeDropdown = activeDropdown === dropdownId ? null : dropdownId;
+		}
 	}
 
 	onMount(() => {
@@ -23,13 +37,23 @@
 				!navbar.contains(event.target as Node) && 
 				!toggle.contains(event.target as Node)) {
 				mobileMenuActive = false;
+				activeDropdown = null;
+			}
+		};
+
+		// Close dropdowns on window resize
+		const handleResize = () => {
+			if (window.innerWidth > 768) {
+				activeDropdown = null;
 			}
 		};
 
 		document.addEventListener('click', handleClickOutside);
+		window.addEventListener('resize', handleResize);
 		
 		return () => {
 			document.removeEventListener('click', handleClickOutside);
+			window.removeEventListener('resize', handleResize);
 		};
 	});
 </script>
@@ -46,32 +70,32 @@
 			<ul class:active={mobileMenuActive}>
 				<li><a class="nav-link" href="{base}/" on:click={closeMobileMenu}>Home</a></li>
 				<li><a class="nav-link" href="{base}/#contribute" on:click={closeMobileMenu}>Get Tickets</a></li>
-				<li class="dropdown">
-					<a class="nav-link" href="{base}/#supporters" aria-haspopup="true" aria-expanded="false">
+				<li class="dropdown" class:active={activeDropdown === 'sponsor'}>
+					<a class="nav-link dropdown-toggle" href="{base}/#supporters" aria-haspopup="true" aria-expanded={activeDropdown === 'sponsor'} on:click={(e) => toggleDropdown('sponsor', e)}>
 						<span>Sponsor Us</span> 
-						<i class="bi bi-chevron-down"></i>
+						<i class="bi" class:bi-chevron-down={activeDropdown !== 'sponsor'} class:bi-chevron-up={activeDropdown === 'sponsor'}></i>
 					</a>
-					<ul>
+					<ul class:show={activeDropdown === 'sponsor'}>
 						<li><a class="nav-link" href="{base}/support" on:click={closeMobileMenu}>How to Donate</a></li>
 						<li><a class="nav-link" href="{base}/#supporters" on:click={closeMobileMenu}>Current Supporters</a></li>
 					</ul>
 				</li>
-				<li class="dropdown">
-					<a class="nav-link" href="{base}/#contribute" aria-haspopup="true" aria-expanded="false">
+				<li class="dropdown" class:active={activeDropdown === 'contribute'}>
+					<a class="nav-link dropdown-toggle" href="{base}/#contribute" aria-haspopup="true" aria-expanded={activeDropdown === 'contribute'} on:click={(e) => toggleDropdown('contribute', e)}>
 						<span>Contribute</span> 
-						<i class="bi bi-chevron-down"></i>
+						<i class="bi" class:bi-chevron-down={activeDropdown !== 'contribute'} class:bi-chevron-up={activeDropdown === 'contribute'}></i>
 					</a>
-					<ul>
+					<ul class:show={activeDropdown === 'contribute'}>
 						<li><a class="nav-link" href="{base}/#contribute" on:click={closeMobileMenu}>Volunteer</a></li>
 						<li><a class="nav-link" href="{base}/#contribute" on:click={closeMobileMenu}>Call for Presentations</a></li>
 					</ul>
 				</li>
-				<li class="dropdown">
-					<a href="{base}/" class="nav-link" aria-haspopup="true" aria-expanded="false">
+				<li class="dropdown" class:active={activeDropdown === 'event'}>
+					<a href="{base}/" class="nav-link dropdown-toggle" aria-haspopup="true" aria-expanded={activeDropdown === 'event'} on:click={(e) => toggleDropdown('event', e)}>
 						<span>Event</span> 
-						<i class="bi bi-chevron-down"></i>
+						<i class="bi" class:bi-chevron-down={activeDropdown !== 'event'} class:bi-chevron-up={activeDropdown === 'event'}></i>
 					</a>
-					<ul>
+					<ul class:show={activeDropdown === 'event'}>
 						<li><a class="nav-link" href="{base}/speakers" on:click={closeMobileMenu}>Meet our Speakers</a></li>
 						<li><a class="nav-link" href="{base}/schedule" on:click={closeMobileMenu}>Conference Schedule</a></li>
 						<li><a class="nav-link" href="{base}/previous-speakers" on:click={closeMobileMenu}>Previous Speakers</a></li>
@@ -79,12 +103,12 @@
 						<li><a class="nav-link" href="{base}/code-of-conduct" on:click={closeMobileMenu}>Code of Conduct</a></li>
 					</ul>
 				</li>
-				<li class="dropdown">
-					<a class="nav-link" href="{base}/" aria-haspopup="true" aria-expanded="false">
+				<li class="dropdown" class:active={activeDropdown === 'about'}>
+					<a class="nav-link dropdown-toggle" href="{base}/" aria-haspopup="true" aria-expanded={activeDropdown === 'about'} on:click={(e) => toggleDropdown('about', e)}>
 						<span>About</span> 
-						<i class="bi bi-chevron-down"></i>
+						<i class="bi" class:bi-chevron-down={activeDropdown !== 'about'} class:bi-chevron-up={activeDropdown === 'about'}></i>
 					</a>
-					<ul>
+					<ul class:show={activeDropdown === 'about'}>
 						<li><a class="nav-link" href="{base}/#about" on:click={closeMobileMenu}>About BSides312</a></li>
 						<li><a class="nav-link" href="{base}/board" on:click={closeMobileMenu}>Our Board</a></li>
 						<li><a class="nav-link" href="{base}/#faq" on:click={closeMobileMenu}>FAQ</a></li>
@@ -403,26 +427,54 @@
 
 		.nav-link {
 			width: 100%;
-			justify-content: flex-start;
+			justify-content: space-between;
 			padding: 12px 15px;
 			border-radius: 8px;
 		}
 
+		.dropdown-toggle {
+			cursor: pointer;
+		}
+
 		.dropdown ul {
 			position: static;
-			opacity: 1;
-			visibility: visible;
+			opacity: 0;
+			visibility: hidden;
+			max-height: 0;
+			overflow: hidden;
 			transform: none;
 			background: rgba(93, 189, 252, 0.1);
 			border: 1px solid rgba(93, 189, 252, 0.2);
 			border-radius: 8px;
 			margin-top: 10px;
+			padding: 0;
+			transition: all 0.3s ease;
+		}
+
+		.dropdown ul.show {
+			opacity: 1;
+			visibility: visible;
+			max-height: 300px;
 			padding: 10px;
 		}
 
 		.dropdown ul .nav-link {
 			padding: 8px 15px;
 			font-size: 0.9rem;
+			justify-content: flex-start;
+		}
+
+		/* Override hover behavior on mobile */
+		.dropdown:hover ul {
+			opacity: 0;
+			visibility: hidden;
+			max-height: 0;
+		}
+
+		.dropdown.active ul.show {
+			opacity: 1;
+			visibility: visible;
+			max-height: 300px;
 		}
 	}
 
