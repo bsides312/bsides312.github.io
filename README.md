@@ -2,31 +2,44 @@
 
 BSides312 is Chicago's Biggest Little Non-Profit Hacking & Information Security Conference.
 
-## 🚀 Deployment
+## 🚀 Built with SvelteKit
 
-This site is automatically deployed to GitHub Pages using GitHub Actions. The deployment workflow is triggered on every push to the `main` or `master` branch.
+This website has been rebuilt using modern web technologies:
 
-### GitHub Pages Configuration
-
-- **Custom Domain**: `bsides312.org` (configured via CNAME file)
-- **Source**: GitHub Actions workflow
-- **Build**: Static site deployment
-- **SSL**: Enabled via GitHub Pages
-
-### Manual Deployment
-
-If you need to deploy manually:
-
-1. Ensure your repository settings have GitHub Pages enabled
-2. Set the source to "GitHub Actions"
-3. Push changes to the main branch
-4. The workflow will automatically build and deploy
+- **SvelteKit** - Modern web framework
+- **TypeScript** - Type safety and better developer experience
+- **Static Site Generation** - Optimized for GitHub Pages
+- **Responsive Design** - Mobile-first approach with Bootstrap
 
 ## 🛠️ Development
 
-### Current Setup (Static HTML)
+### Prerequisites
+- Node.js 20+
+- npm
 
-The site is currently built with static HTML, CSS, and JavaScript. To serve locally:
+### Getting Started
+
+1. Clone the repository:
+```bash
+git clone https://github.com/bsides312/bsides312.github.io.git
+cd bsides312.github.io
+```
+
+2. Install dependencies:
+```bash
+npm install
+```
+
+3. Start the development server:
+```bash
+npm run dev
+```
+
+4. Open your browser and visit `http://localhost:5173`
+
+### Legacy Static Development
+
+For the static HTML version, you can serve locally:
 
 ```bash
 # Using Python
@@ -39,50 +52,79 @@ npx http-server -p 8000
 npm run serve
 ```
 
-### Future Svelte Migration
-
-The project is prepared for future migration to SvelteKit:
+### Building for Production
 
 ```bash
-# Install dependencies
-npm install
-
-# Start development server
-npm run dev
-
-# Build for production
 npm run build
+```
 
-# Preview production build
-npm run preview
+This will generate a static site in the `build/` directory.
+
+## 📦 Deployment
+
+The site automatically deploys to GitHub Pages when changes are pushed to the `main` branch via GitHub Actions.
+
+### GitHub Pages Configuration
+
+- **Custom Domain**: `bsides312.org` (configured via CNAME file)
+- **Source**: GitHub Actions workflow
+- **Build**: Static site deployment
+- **SSL**: Enabled via GitHub Pages
+
+### Manual Deployment
+
+You can also deploy manually by running:
+```bash
+npm run build
+# Then upload the contents of the build/ directory to your web server
 ```
 
 ## 📁 Project Structure
 
 ```
-├── assets/                 # Static assets (CSS, JS, images)
+├── src/                    # SvelteKit source files
+├── static/                 # Static assets (CSS, JS, images)
 ├── .github/workflows/      # GitHub Actions workflows
-├── *.html                  # HTML pages
 ├── CNAME                   # Custom domain configuration
 ├── .nojekyll              # Disable Jekyll processing
 ├── package.json           # Node.js dependencies and scripts
-├── svelte.config.js       # SvelteKit configuration (for future use)
-└── vite.config.js         # Vite configuration (for future use)
+├── svelte.config.js       # SvelteKit configuration
+└── vite.config.js         # Vite configuration
 ```
 
-## 🔧 Configuration Files
+## 🎯 Features
 
-- **`.github/workflows/static.yml`**: GitHub Actions workflow for deployment
-- **`CNAME`**: Custom domain configuration for GitHub Pages
-- **`.nojekyll`**: Prevents GitHub from processing the site with Jekyll
-- **`package.json`**: Prepared for future Svelte development
-- **`svelte.config.js`**: SvelteKit configuration for static site generation
-- **`vite.config.js`**: Vite build configuration
+- **Homepage**: Hero section, about info, sponsor showcase, FAQ
+- **Board Members**: Detailed profiles with photos and social links
+- **Support**: Corporate sponsorship tiers with donation links
+- **Previous Speakers**: Historical speaker data from past years
+- **Code of Conduct & Privacy Policy**: Legal compliance pages
+- **Responsive Design**: Works perfectly on all devices
+
+## 📅 BSides312 2026
+
+**Date**: May 15th, 2026
+**Location**: Chicago, IL
+
+Stay tuned for speaker announcements and ticket sales!
+
+## 🤝 Contributing
+
+We welcome contributions! Please feel free to:
+- Report bugs via GitHub Issues
+- Submit feature requests
+- Create pull requests for improvements
+
+## 📞 Contact
+
+- **Email**: questions [@] bsides312.org
+- **Website**: https://bsides312.org
+- **YouTube**: [BSides312 Channel](https://www.youtube.com/channel/UCrCPvWW8z-_O8uUM8-ySz7g)
 
 ## 🌐 Live Site
 
 Visit the live site at: [https://bsides312.org](https://bsides312.org)
 
-## 📝 License
+## 📄 License
 
 Copyright 2025 Hak4Kidz NFP. All Rights Reserved.

@@ -23,13 +23,24 @@ yarn.lock
 dist/
 build/
 .svelte-kit/
+/.svelte-kit
+/build
+
+# Output
+.output
+.vercel
+.netlify
+.wrangler
 
 # Environment files
 .env
+.env.*
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
+!.env.example
+!.env.test
 
 # Logs
 logs
@@ -56,3 +67,7 @@ jspm_packages/
 # Temporary folders
 tmp/
 temp/
+
+# Vite
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*
