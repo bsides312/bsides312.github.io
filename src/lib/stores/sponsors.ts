@@ -129,5 +129,5 @@ export const sponsorTierImages = {
 };
 
 export function getSponsorsByTier(tier: Sponsor['tier']): Sponsor[] {
-	return sponsors.filter(sponsor => sponsor.tier === tier);
-} 
+	return sponsors.filter((sponsor) => sponsor.tier === tier);
+}

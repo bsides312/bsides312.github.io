@@ -14,23 +14,27 @@ This website has been rebuilt using modern web technologies:
 ## 🛠️ Development
 
 ### Prerequisites
+
 - Node.js 20+
 - npm
 
 ### Getting Started
 
 1. Clone the repository:
+
 ```bash
 git clone https://github.com/bsides312/bsides312.github.io.git
 cd bsides312.github.io
 ```
 
 2. Install dependencies:
+
 ```bash
 npm install
 ```
 
 3. Start the development server:
+
 ```bash
 npm run dev
 ```
@@ -74,6 +78,7 @@ The site automatically deploys to GitHub Pages when changes are pushed to the `m
 ### Manual Deployment
 
 You can also deploy manually by running:
+
 ```bash
 npm run build
 # Then upload the contents of the build/ directory to your web server
@@ -111,6 +116,7 @@ Stay tuned for speaker announcements and ticket sales!
 ## 🤝 Contributing
 
 We welcome contributions! Please feel free to:
+
 - Report bugs via GitHub Issues
 - Submit feature requests
 - Create pull requests for improvements

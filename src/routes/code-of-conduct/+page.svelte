@@ -4,13 +4,16 @@
 
 <svelte:head>
 	<title>Code of Conduct - BSides312</title>
-	<meta name="description" content="BSides312 Code of Conduct - ensuring a harassment-free, inclusive conference experience for all attendees." />
+	<meta
+		name="description"
+		content="BSides312 Code of Conduct - ensuring a harassment-free, inclusive conference experience for all attendees."
+	/>
 </svelte:head>
 
 <!-- Hero Section -->
 <section class="hero">
 	<div class="hero-content">
-		<h1>BSides312<br><span>Code of Conduct</span></h1>
+		<h1>BSides312<br /><span>Code of Conduct</span></h1>
 		<p>Creating an inclusive and welcoming environment for all</p>
 	</div>
 </section>
@@ -26,7 +29,13 @@
 				<div class="coc-content">
 					<div class="coc-section">
 						<h3>Our Commitment</h3>
-						<p>BSides312 is dedicated to providing a harassment-free, inclusive, and welcoming experience for everyone, regardless of gender identity and expression, sexual orientation, disability, physical appearance, body size, race, ethnicity, nationality, age, religion, veteran status, or any other protected characteristic. We do not tolerate harassment of conference participants in any form.</p>
+						<p>
+							BSides312 is dedicated to providing a harassment-free, inclusive, and welcoming
+							experience for everyone, regardless of gender identity and expression, sexual
+							orientation, disability, physical appearance, body size, race, ethnicity, nationality,
+							age, religion, veteran status, or any other protected characteristic. We do not
+							tolerate harassment of conference participants in any form.
+						</p>
 					</div>
 
 					<div class="coc-section">
@@ -65,16 +74,39 @@
 							<li>All reports will be reviewed and investigated promptly</li>
 						</ul>
 
-						<p>Participants asked to stop any harassing behavior are expected to comply immediately. Conference staff may take any action deemed appropriate, including warning the offender, expulsion from the conference without refund, or banning from future events.</p>
+						<p>
+							Participants asked to stop any harassing behavior are expected to comply immediately.
+							Conference staff may take any action deemed appropriate, including warning the
+							offender, expulsion from the conference without refund, or banning from future events.
+						</p>
 					</div>
 
 					<div class="coc-section">
 						<h3>Inclusivity Statement</h3>
-						<p>We actively welcome and value the contributions of people from all backgrounds. We prioritize the safety and inclusion of marginalized groups over maintaining the comfort of privileged groups. Our goal is to create an environment where all participants can fully engage in conference activities.</p>
+						<p>
+							We actively welcome and value the contributions of people from all backgrounds. We
+							prioritize the safety and inclusion of marginalized groups over maintaining the
+							comfort of privileged groups. Our goal is to create an environment where all
+							participants can fully engage in conference activities.
+						</p>
 
-						<p>This Code of Conduct applies to all conference spaces including talks, workshops, social gatherings and our website. We expect participants to follow these rules at the conference venue and encourage their application in all professional settings.</p>
+						<p>
+							This Code of Conduct applies to all conference spaces including talks, workshops,
+							social gatherings and our website. We expect participants to follow these rules at the
+							conference venue and encourage their application in all professional settings.
+						</p>
 
-						<p>This Code of Conduct is based on and modified from the <a href="https://geekfeminism.wikia.org/wiki/Conference_anti-harassment/Policy" target="_blank" rel="noopener">Geek Feminism wiki</a> and the <a href="https://www.contributor-covenant.org/" target="_blank" rel="noopener">Contributor Covenant</a>.</p>
+						<p>
+							This Code of Conduct is based on and modified from the <a
+								href="https://geekfeminism.wikia.org/wiki/Conference_anti-harassment/Policy"
+								target="_blank"
+								rel="noopener">Geek Feminism wiki</a
+							>
+							and the
+							<a href="https://www.contributor-covenant.org/" target="_blank" rel="noopener"
+								>Contributor Covenant</a
+							>.
+						</p>
 					</div>
 				</div>
 			</div>
@@ -173,4 +205,4 @@
 			padding-left: 20px;
 		}
 	}
-</style> 
+</style>

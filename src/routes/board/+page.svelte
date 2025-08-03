@@ -4,13 +4,16 @@
 
 <svelte:head>
 	<title>Board Members - BSides312</title>
-	<meta name="description" content="Meet the BSides312 Board of Directors - Chicago's community-run security conference leadership team" />
+	<meta
+		name="description"
+		content="Meet the BSides312 Board of Directors - Chicago's community-run security conference leadership team"
+	/>
 </svelte:head>
 
 <!-- Hero Section -->
 <section class="hero">
 	<div class="hero-content">
-		<h1>BSides312<br><span>Board of Directors</span></h1>
+		<h1>BSides312<br /><span>Board of Directors</span></h1>
 		<p>Meet the team behind Chicago's biggest little hacker conference</p>
 	</div>
 </section>
@@ -20,7 +23,10 @@
 	<div class="container">
 		<div class="section-header">
 			<h2>Board Member Details</h2>
-			<p>Our BSides312 Board of Directors comprises a close-knit group of longtime friends, many of whom created the original BSides Chicago!</p>
+			<p>
+				Our BSides312 Board of Directors comprises a close-knit group of longtime friends, many of
+				whom created the original BSides Chicago!
+			</p>
 		</div>
 
 		{#each boardMembers as member}
@@ -34,22 +40,42 @@
 						{#if member.social}
 							<div class="social-links mb-3">
 								{#if member.social.linkedin}
-									<a href={member.social.linkedin} target="_blank" rel="noopener" aria-label="{member.name} LinkedIn Profile">
+									<a
+										href={member.social.linkedin}
+										target="_blank"
+										rel="noopener"
+										aria-label="{member.name} LinkedIn Profile"
+									>
 										<i class="bi bi-linkedin"></i>
 									</a>
 								{/if}
 								{#if member.social.twitter}
-									<a href={member.social.twitter} target="_blank" rel="noopener" aria-label="{member.name} Twitter Profile">
+									<a
+										href={member.social.twitter}
+										target="_blank"
+										rel="noopener"
+										aria-label="{member.name} Twitter Profile"
+									>
 										<i class="bi bi-twitter"></i>
 									</a>
 								{/if}
 								{#if member.social.facebook}
-									<a href={member.social.facebook} target="_blank" rel="noopener" aria-label="{member.name} Facebook Profile">
+									<a
+										href={member.social.facebook}
+										target="_blank"
+										rel="noopener"
+										aria-label="{member.name} Facebook Profile"
+									>
 										<i class="bi bi-facebook"></i>
 									</a>
 								{/if}
 								{#if member.social.instagram}
-									<a href={member.social.instagram} target="_blank" rel="noopener" aria-label="{member.name} Instagram Profile">
+									<a
+										href={member.social.instagram}
+										target="_blank"
+										rel="noopener"
+										aria-label="{member.name} Instagram Profile"
+									>
 										<i class="bi bi-instagram"></i>
 									</a>
 								{/if}
@@ -57,7 +83,10 @@
 						{/if}
 						<h4>{member.title}</h4>
 						<div class="bio">
-							{@html member.bio.replace(/\n\n/g, '</p><p>').replace(/^/, '<p>').replace(/$/, '</p>')}
+							{@html member.bio
+								.replace(/\n\n/g, '</p><p>')
+								.replace(/^/, '<p>')
+								.replace(/$/, '</p>')}
 						</div>
 					</div>
 				</div>
@@ -187,4 +216,4 @@
 			font-size: 1rem;
 		}
 	}
-</style> 
+</style>

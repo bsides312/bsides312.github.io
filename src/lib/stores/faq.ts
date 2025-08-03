@@ -26,7 +26,8 @@ We understand the passion and drive of countless individuals eager to share thei
 	{
 		id: 'two-bsides-allowed',
 		question: 'Two BSides in the same city? Is that allowed?',
-		answer: 'Yes. In fact, Security BSides International approved Delhi and Los Angeles to have two Security BSides conferences, and now Chicago!'
+		answer:
+			'Yes. In fact, Security BSides International approved Delhi and Los Angeles to have two Security BSides conferences, and now Chicago!'
 	},
 	{
 		id: 'dress-code',
@@ -47,7 +48,7 @@ If you really love wearing a suit, please go for it. If you love being goth, que
 	},
 	{
 		id: 'photography',
-		question: 'What\'s your photography policy?',
+		question: "What's your photography policy?",
 		answer: `We encourage you to document and share your BSides312 experience, but always ask for permission before photographing individuals' faces or other identifying features, and be clear about where the photos may be used. Speakers may indicate if they don't want their presentations recorded or photographed, so listen up!`
 	},
 	{
@@ -60,4 +61,4 @@ If you really love wearing a suit, please go for it. If you love being goth, que
 		question: 'Can I submit a talk for next year?',
 		answer: `Absolutely! Our Call for Presentations (CFP) for the next event typically opens about 4-5 months before the conference. Follow us on social media or join our mailing list to be notified when submissions open. We encourage talks from speakers of all experience levels, including first-time presenters. If you're interested in speaking but unsure about the process, feel free to reach out to us for mentorship.`
 	}
-]; 
+];
