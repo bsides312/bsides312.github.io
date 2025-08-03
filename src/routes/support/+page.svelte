@@ -13,31 +13,20 @@
 			name: 'Community',
 			price: 'Cross Promotion Collaboration',
 			description: 'Community partnerships and collaboration',
-			benefits: [
-				'Logo on this website',
-				'Social media mentions'
-			]
+			benefits: ['Logo on this website', 'Social media mentions']
 		},
 		{
 			name: 'Basic',
 			price: '$500',
 			description: 'Choose two benefits',
-			benefits: [
-				'Logo on this website or venue',
-				'(2) Event pass',
-				'Social media mentions'
-			],
+			benefits: ['Logo on this website or venue', '(2) Event pass', 'Social media mentions'],
 			donateUrl: 'https://paypal.me/bsides312/500'
 		},
 		{
 			name: 'Bronze',
 			price: '$1000',
 			description: 'Essential sponsorship package',
-			benefits: [
-				'Logo on this website',
-				'(2) Event pass',
-				'Social media mentions'
-			],
+			benefits: ['Logo on this website', '(2) Event pass', 'Social media mentions'],
 			donateUrl: 'https://paypal.me/bsides312/1000'
 		},
 		{
@@ -95,14 +84,20 @@
 
 <svelte:head>
 	<title>Support Us - BSides312</title>
-	<meta name="description" content="Support BSides312 through corporate sponsorship or donations. Help us make Chicago's biggest little hacker conference possible." />
+	<meta
+		name="description"
+		content="Support BSides312 through corporate sponsorship or donations. Help us make Chicago's biggest little hacker conference possible."
+	/>
 </svelte:head>
 
 <!-- Hero Section -->
 <section class="hero">
 	<div class="hero-content">
-		<h1>BSides312<br><span>Support Us</span></h1>
-		<p>BSides312 is run by the Hak4Kidz nonprofit, making corporate sponsorships and personal donations tax-deductible.</p>
+		<h1>BSides312<br /><span>Support Us</span></h1>
+		<p>
+			BSides312 is run by the Hak4Kidz nonprofit, making corporate sponsorships and personal
+			donations tax-deductible.
+		</p>
 		<a href="#support" class="btn-primary">DONATE!</a>
 	</div>
 </section>
@@ -113,7 +108,10 @@
 		<div class="section-header">
 			<h2>Believe In Us</h2>
 			<p>Corporate Sponsorship and Donation Options</p>
-			<p>To become a BSides312 corporate sponsor, email sponsorship [@] bsides312.org or use the 'Donate Now' buttons below.</p>
+			<p>
+				To become a BSides312 corporate sponsor, email sponsorship [@] bsides312.org or use the
+				'Donate Now' buttons below.
+			</p>
 		</div>
 
 		<div class="row">
@@ -121,7 +119,7 @@
 				<h3>Corporate Sponsorship Tiers</h3>
 			</div>
 
-			{#each sponsorshipTiers as tier}
+			{#each sponsorshipTiers as tier (tier.name)}
 				<div class="col-xs-4 col-md-3 mb-4">
 					<div class="sponsorship-card" class:highlighted={tier.highlighted}>
 						<div class="card-header">
@@ -133,7 +131,7 @@
 						</div>
 						<div class="card-body">
 							<ul class="benefits-list">
-								{#each tier.benefits as benefit}
+								{#each tier.benefits as benefit (benefit)}
 									<li>
 										<i class="bi bi-check-circle"></i>
 										{benefit}
@@ -147,9 +145,7 @@
 									Donate Now
 								</a>
 							{:else}
-								<div class="contact-note">
-									Contact us for details
-								</div>
+								<div class="contact-note">Contact us for details</div>
 							{/if}
 						</div>
 					</div>
@@ -336,4 +332,4 @@
 			font-size: 0.85rem;
 		}
 	}
-</style> 
+</style>

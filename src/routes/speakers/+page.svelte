@@ -4,14 +4,19 @@
 
 <svelte:head>
 	<title>Speakers - BSides312</title>
-	<meta name="description" content="Meet the expert speakers presenting at BSides312 - Chicago's biggest little cybersecurity conference." />
+	<meta
+		name="description"
+		content="Meet the expert speakers presenting at BSides312 - Chicago's biggest little cybersecurity conference."
+	/>
 </svelte:head>
 
 <section class="section">
 	<div class="container">
 		<div class="section-header text-center mb-5">
 			<h1>Speaker Lineup Coming Soon</h1>
-			<p class="lead">We're working hard to bring you an amazing lineup of speakers for BSides312 2026!</p>
+			<p class="lead">
+				We're working hard to bring you an amazing lineup of speakers for BSides312 2026!
+			</p>
 		</div>
 
 		<div class="row justify-content-center">
@@ -21,18 +26,24 @@
 						<i class="bi bi-megaphone display-1 text-primary mb-4"></i>
 						<h3 class="mb-4">Call for Presentations</h3>
 						<p class="mb-4">
-							Are you passionate about cybersecurity? Do you have knowledge, research, or experiences to share with the community? 
-							We want to hear from you! Our Call for Presentations (CFP) will open soon.
+							Are you passionate about cybersecurity? Do you have knowledge, research, or
+							experiences to share with the community? We want to hear from you! Our Call for
+							Presentations (CFP) will open soon.
 						</p>
 						<p class="mb-4">
-							<strong>Conference Date:</strong> May 15th, 2026<br>
+							<strong>Conference Date:</strong> May 15th, 2026<br />
 							<strong>Location:</strong> Chicago, IL
 						</p>
 						<div class="d-grid gap-2 d-md-block">
 							<a href="{base}/previous-speakers" class="btn btn-primary me-md-2">
 								<i class="bi bi-people me-2"></i>View Previous Speakers
 							</a>
-							<a href="https://www.youtube.com/channel/UCrCPvWW8z-_O8uUM8-ySz7g" target="_blank" rel="noopener" class="btn btn-outline-primary">
+							<a
+								href="https://www.youtube.com/channel/UCrCPvWW8z-_O8uUM8-ySz7g"
+								target="_blank"
+								rel="noopener"
+								class="btn btn-outline-primary"
+							>
 								<i class="bi bi-youtube me-2"></i>Watch Past Talks
 							</a>
 						</div>
@@ -50,10 +61,19 @@
 						</h4>
 						<ul class="list-unstyled">
 							<li><i class="bi bi-check-circle text-success me-2"></i>Cutting-edge research</li>
-							<li><i class="bi bi-check-circle text-success me-2"></i>Practical security tools and techniques</li>
-							<li><i class="bi bi-check-circle text-success me-2"></i>Career development and industry insights</li>
+							<li>
+								<i class="bi bi-check-circle text-success me-2"></i>Practical security tools and
+								techniques
+							</li>
+							<li>
+								<i class="bi bi-check-circle text-success me-2"></i>Career development and industry
+								insights
+							</li>
 							<li><i class="bi bi-check-circle text-success me-2"></i>Community-driven projects</li>
-							<li><i class="bi bi-check-circle text-success me-2"></i>Diverse perspectives and experiences</li>
+							<li>
+								<i class="bi bi-check-circle text-success me-2"></i>Diverse perspectives and
+								experiences
+							</li>
 						</ul>
 					</div>
 				</div>
@@ -203,9 +223,10 @@
 			font-size: 1.6rem;
 		}
 
-		.btn-primary, .btn-outline-primary {
+		.btn-primary,
+		.btn-outline-primary {
 			padding: 10px 25px;
 			font-size: 0.9rem;
 		}
 	}
-</style> 
+</style>

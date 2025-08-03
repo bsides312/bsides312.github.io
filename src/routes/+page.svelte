@@ -1,14 +1,20 @@
 <script lang="ts">
-	import { sponsors, getSponsorsByTier, sponsorTierImages } from '$lib/stores/sponsors';
+	import { getSponsorsByTier, sponsorTierImages } from '$lib/stores/sponsors';
 	import { faqItems } from '$lib/stores/faq';
 	import { base } from '$app/paths';
 
+	type SponsorTier = 'platinum' | 'gold' | 'silver' | 'bronze' | 'founding' | 'community';
+
 	// Group sponsors by tier for display
-	$: sponsorTiers = ['platinum', 'gold', 'silver', 'bronze', 'founding', 'community'].map(tier => ({
-		tierName: tier.charAt(0).toUpperCase() + tier.slice(1),
-		tierSponsors: getSponsorsByTier(tier as any),
-		tierImage: sponsorTierImages[tier as keyof typeof sponsorTierImages]
-	})).filter(tier => tier.tierSponsors.length > 0);
+	const sponsorTiers = (
+		['platinum', 'gold', 'silver', 'bronze', 'founding', 'community'] as SponsorTier[]
+	)
+		.map((tier) => ({
+			tierName: tier.charAt(0).toUpperCase() + tier.slice(1),
+			tierSponsors: getSponsorsByTier(tier),
+			tierImage: sponsorTierImages[tier]
+		}))
+		.filter((tier) => tier.tierSponsors.length > 0);
 
 	// FAQ state management
 	let activeFaq: string | null = null;
@@ -20,22 +26,36 @@
 
 <svelte:head>
 	<title>BSides312 - Chicago's Biggest Little Non-Profit Hacking Conference</title>
-	<meta name="description" content="BSides312 is Chicago's biggest little non-profit hacking & information security conference. Join us for talks, workshops, and networking with security professionals from around the world." />
+	<meta
+		name="description"
+		content="BSides312 is Chicago's biggest little non-profit hacking & information security conference. Join us for talks, workshops, and networking with security professionals from around the world."
+	/>
 </svelte:head>
 
 <!-- Hero Section -->
 <section class="hero">
 	<div class="hero-content">
 		<div class="text-center mb-4">
-			<img src="{base}/assets/img/about_logo.png" alt="BSides312 Logo" class="img-fluid hero-logo" style="max-height: 200px;" />
+			<img
+				src="{base}/assets/img/about_logo.png"
+				alt="BSides312 Logo"
+				class="img-fluid hero-logo"
+				style="max-height: 200px;"
+			/>
 		</div>
 		<h1 class="text-center mb-4">Chicago's Biggest Little Non-Profit Hacking Conference</h1>
 		<p class="lead text-center mb-4">
-			BSides312 brings together security professionals, researchers, and enthusiasts for an unforgettable day of learning and networking.
+			BSides312 brings together security professionals, researchers, and enthusiasts for an
+			unforgettable day of learning and networking.
 		</p>
 		<div class="text-center">
 			<p class="mb-3">See you in 2026! In the meantime:</p>
-			<a href="https://www.youtube.com/channel/UCrCPvWW8z-_O8uUM8-ySz7g" target="_blank" rel="noopener" class="btn-primary">
+			<a
+				href="https://www.youtube.com/channel/UCrCPvWW8z-_O8uUM8-ySz7g"
+				target="_blank"
+				rel="noopener"
+				class="btn-primary"
+			>
 				<i class="bi bi-youtube me-2"></i>Follow us on YouTube for past talks
 			</a>
 		</div>
@@ -49,22 +69,23 @@
 			<div class="col-lg-6">
 				<h2>About BSides312</h2>
 				<p>
-					BSides312 is a nonprofit one-day conference run by longtime members of Chicago's hacking and
-					infosec community. In fact, many of them founded the original BSides Chicago! It's built as a
-					collaborative venue: whether you hack hardware, excel at logistics, or just bring curious
-					friends, you help shape the conversation.
+					BSides312 is a nonprofit one-day conference run by longtime members of Chicago's hacking
+					and infosec community. In fact, many of them founded the original BSides Chicago! It's
+					built as a collaborative venue: whether you hack hardware, excel at logistics, or just
+					bring curious friends, you help shape the conversation.
 				</p>
 				<p>
 					Like every BSides event, the conference follows a community-driven model built by and for
 					hackers. Its purpose is to widen the conversation beyond the usual boundaries, offering
 					space for people to both present and take part in an intimate, collaborative setting. The
-					result is an intense mix of discussions, demos, and interaction where new ideas take shape.
+					result is an intense mix of discussions, demos, and interaction where new ideas take
+					shape.
 				</p>
 				<p>
 					If you and your organization are as passionate about the security community as we are and
 					would like to sponsor our event, please reach out questions [@] bsides312.org. To show our
-					thanks, sponsors will be welcome to chat about themselves and their organization, fostering
-					connections with the BSides312 community.
+					thanks, sponsors will be welcome to chat about themselves and their organization,
+					fostering connections with the BSides312 community.
 				</p>
 			</div>
 			<div class="col-lg-6">
@@ -98,13 +119,13 @@
 			A huge thank you to all our sponsors for making this event possible!
 		</div>
 
-		{#each sponsorTiers as tier}
+		{#each sponsorTiers as tier (tier.tierName)}
 			<div class="row no-gutters supporters-wrap clearfix gy-4 gx-4 mb-5">
 				<div class="section-header">
 					<img src={tier.tierImage} alt={tier.tierName} class="sponsor-img-center" />
 				</div>
 				<div class="row justify-content-center">
-					{#each tier.tierSponsors as sponsor}
+					{#each tier.tierSponsors as sponsor (sponsor.name)}
 						<div class="col-lg-4 col-md-4 col-xs-4">
 							<div class="sponsor-logo">
 								<a href={sponsor.url} target="_blank" rel="noopener">
@@ -129,20 +150,28 @@
 		<div class="row justify-content-center">
 			<div class="col-lg-9">
 				<ul class="faq-list">
-					{#each faqItems as faq}
+					{#each faqItems as faq (faq.id)}
 						<li>
-							<button 
+							<button
 								class="faq-question"
 								class:expanded={activeFaq === faq.id}
 								on:click={() => toggleFaq(faq.id)}
 								type="button"
 							>
 								{faq.question}
-								<i class="bi" class:bi-chevron-down={activeFaq !== faq.id} class:bi-chevron-up={activeFaq === faq.id}></i>
+								<i
+									class="bi"
+									class:bi-chevron-down={activeFaq !== faq.id}
+									class:bi-chevron-up={activeFaq === faq.id}
+								></i>
 							</button>
 							{#if activeFaq === faq.id}
 								<div class="faq-answer">
-									{@html faq.answer.replace(/\n\n/g, '</p><p>').replace(/^/, '<p>').replace(/$/, '</p>')}
+									<!-- eslint-disable-next-line svelte/no-at-html-tags -->
+									{@html faq.answer
+										.replace(/\n\n/g, '</p><p>')
+										.replace(/^/, '<p>')
+										.replace(/$/, '</p>')}
 								</div>
 							{/if}
 						</li>

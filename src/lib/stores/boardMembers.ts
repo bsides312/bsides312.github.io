@@ -58,4 +58,4 @@ Professionally, Johnny leads Offensive Security for a Fortune 1000/Global 5000 m
 		image: `${base}/assets/img/about/mkavka.jpg`,
 		bio: `Mike "Shecky" Kavka has been involved in the Chicago security community for over 10 years. Currently a Senior Security Engineer as his day job, he has volunteered with events such as Blue Team Con and Hak4Kidz. Outside of the security world, Shecky is involved with model railroading, community theatre, and sings the National Anthem at some sporting events.`
 	}
-]; 
+];

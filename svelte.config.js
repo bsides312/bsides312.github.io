@@ -17,12 +17,16 @@ const config = {
 			precompress: false,
 			strict: true
 		}),
-		// Configure paths for GitHub Pages project site
+		// Configure paths for GitHub Pages with custom domain (bsides312.org)
+		// Custom domains don't need a base path
 		paths: {
-			base: process.argv.includes('dev') ? '' : '/bsides312.github.io'
+			base: process.argv.includes('dev') ? '' : ''
 		},
+		// Prerender all pages for static hosting
 		prerender: {
-			handleMissingId: 'warn' // Don't fail build on missing anchor IDs
+			handleHttpError: 'warn',
+			handleMissingId: 'warn',
+			entries: ['*']
 		}
 	}
 };

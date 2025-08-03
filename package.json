@@ -1,7 +1,8 @@
 {
-	"name": "bsides312-svelte",
+	"name": "bsides312-website",
+	"description": "BSides312 - Chicago's Biggest Little Non-Profit Hacking & Information Security Conference",
+	"version": "1.0.0",
 	"private": true,
-	"version": "0.0.1",
 	"type": "module",
 	"scripts": {
 		"dev": "vite dev",
@@ -11,7 +12,9 @@
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"format": "prettier --write .",
-		"lint": "prettier --check . && eslint ."
+		"lint": "prettier --check . && eslint .",
+		"serve": "python3 -m http.server 8000",
+		"serve-alt": "npx http-server -p 8000"
 	},
 	"devDependencies": {
 		"@eslint/compat": "^1.2.5",
@@ -31,5 +34,20 @@
 		"typescript": "^5.0.0",
 		"typescript-eslint": "^8.20.0",
 		"vite": "^7.0.4"
-	}
+	},
+	"keywords": [
+		"bsides",
+		"cybersecurity",
+		"conference",
+		"chicago",
+		"hacking",
+		"infosec"
+	],
+	"author": "BSides312 Team",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/bsides312/bsides312.github.io.git"
+	},
+	"homepage": "https://bsides312.org"
 }
