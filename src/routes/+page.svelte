@@ -1,14 +1,18 @@
 <script lang="ts">
-	import { sponsors, getSponsorsByTier, sponsorTierImages } from '$lib/stores/sponsors';
+	import { getSponsorsByTier, sponsorTierImages } from '$lib/stores/sponsors';
 	import { faqItems } from '$lib/stores/faq';
 	import { base } from '$app/paths';
 
+	type SponsorTier = 'platinum' | 'gold' | 'silver' | 'bronze' | 'founding' | 'community';
+
 	// Group sponsors by tier for display
-	$: sponsorTiers = ['platinum', 'gold', 'silver', 'bronze', 'founding', 'community']
+	const sponsorTiers = (
+		['platinum', 'gold', 'silver', 'bronze', 'founding', 'community'] as SponsorTier[]
+	)
 		.map((tier) => ({
 			tierName: tier.charAt(0).toUpperCase() + tier.slice(1),
-			tierSponsors: getSponsorsByTier(tier as any),
-			tierImage: sponsorTierImages[tier as keyof typeof sponsorTierImages]
+			tierSponsors: getSponsorsByTier(tier),
+			tierImage: sponsorTierImages[tier]
 		}))
 		.filter((tier) => tier.tierSponsors.length > 0);
 
@@ -115,13 +119,13 @@
 			A huge thank you to all our sponsors for making this event possible!
 		</div>
 
-		{#each sponsorTiers as tier}
+		{#each sponsorTiers as tier (tier.tierName)}
 			<div class="row no-gutters supporters-wrap clearfix gy-4 gx-4 mb-5">
 				<div class="section-header">
 					<img src={tier.tierImage} alt={tier.tierName} class="sponsor-img-center" />
 				</div>
 				<div class="row justify-content-center">
-					{#each tier.tierSponsors as sponsor}
+					{#each tier.tierSponsors as sponsor (sponsor.name)}
 						<div class="col-lg-4 col-md-4 col-xs-4">
 							<div class="sponsor-logo">
 								<a href={sponsor.url} target="_blank" rel="noopener">
@@ -146,7 +150,7 @@
 		<div class="row justify-content-center">
 			<div class="col-lg-9">
 				<ul class="faq-list">
-					{#each faqItems as faq}
+					{#each faqItems as faq (faq.id)}
 						<li>
 							<button
 								class="faq-question"
@@ -163,6 +167,7 @@
 							</button>
 							{#if activeFaq === faq.id}
 								<div class="faq-answer">
+									<!-- eslint-disable-next-line svelte/no-at-html-tags -->
 									{@html faq.answer
 										.replace(/\n\n/g, '</p><p>')
 										.replace(/^/, '<p>')

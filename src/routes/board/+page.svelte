@@ -29,7 +29,7 @@
 			</p>
 		</div>
 
-		{#each boardMembers as member}
+		{#each boardMembers as member (member.id)}
 			<div class="row align-items-center mb-5 board-member-row" id={member.id}>
 				<div class="col-md-4 text-center">
 					<img src={member.image} alt={member.name} class="board-img" />
@@ -83,6 +83,7 @@
 						{/if}
 						<h4>{member.title}</h4>
 						<div class="bio">
+							<!-- eslint-disable-next-line svelte/no-at-html-tags -->
 							{@html member.bio
 								.replace(/\n\n/g, '</p><p>')
 								.replace(/^/, '<p>')

@@ -119,7 +119,7 @@
 				<h3>Corporate Sponsorship Tiers</h3>
 			</div>
 
-			{#each sponsorshipTiers as tier}
+			{#each sponsorshipTiers as tier (tier.name)}
 				<div class="col-xs-4 col-md-3 mb-4">
 					<div class="sponsorship-card" class:highlighted={tier.highlighted}>
 						<div class="card-header">
@@ -131,7 +131,7 @@
 						</div>
 						<div class="card-body">
 							<ul class="benefits-list">
-								{#each tier.benefits as benefit}
+								{#each tier.benefits as benefit (benefit)}
 									<li>
 										<i class="bi bi-check-circle"></i>
 										{benefit}

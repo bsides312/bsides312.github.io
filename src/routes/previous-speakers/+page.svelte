@@ -115,12 +115,12 @@
 			<p>View our talented speakers from past BSides312 conferences</p>
 		</div>
 
-		{#each previousSpeakers as yearGroup}
+		{#each previousSpeakers as yearGroup (yearGroup.year)}
 			<div class="year-section">
 				<h3 class="year-header">{yearGroup.year}</h3>
 
 				<div class="row">
-					{#each yearGroup.speakers as speaker}
+					{#each yearGroup.speakers as speaker (speaker.name)}
 						<div class="col-md-6 col-lg-4">
 							<div class="speaker-card">
 								<h4 class="speaker-name">{speaker.name}</h4>
