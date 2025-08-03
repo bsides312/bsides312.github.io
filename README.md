@@ -1,42 +1,88 @@
-# BSides312 - Chicago's Community-Driven Infosec and Hacker Conference Website
+# BSides312 Website
 
-This is the official website for BSides312, Chicago's community-driven cybersecurity conference. The site provides information about the annual event including:
+BSides312 is Chicago's Biggest Little Non-Profit Hacking & Information Security Conference.
 
-- Conference details and registration
-- Speaker information
-- Sponsorship opportunities
-- Volunteer information
-- Code of conduct
-- Contact form functionality
+## 🚀 Deployment
 
-## Technologies Used
+This site is automatically deployed to GitHub Pages using GitHub Actions. The deployment workflow is triggered on every push to the `main` or `master` branch.
 
-- HTML5
-- CSS3 (with Sass preprocessing)
-- JavaScript
-- PHP (for contact form)
-- Bootstrap 5.3.3 framework
-- GitHub Pages for hosting
+### GitHub Pages Configuration
 
-The website is built as a static site with dynamic contact form functionality, using Sass for CSS preprocessing, and hosted on GitHub Pages.
+- **Custom Domain**: `bsides312.org` (configured via CNAME file)
+- **Source**: GitHub Actions workflow
+- **Build**: Static site deployment
+- **SSL**: Enabled via GitHub Pages
 
-## Common Modifications
-1. **Updating Speakers**:
-   - Edit speaker details in the JSON-LD script (lines 65-174)
-   - Update speaker images in `/assets/img/speakers/`
-   - Add a new speaker section in speaker-bios.html, including talk title, abstract and bio
+### Manual Deployment
 
-2. **Changing Schedule**:
-   - Update the JSON-LD script
+If you need to deploy manually:
 
-3. **Updating Supporters**:
-   - Add/remove supporter logos in `/assets/img/supporters/`
-   - Add the image to the proper Supporters tier in index.html, and provide hyperlink to their website 
+1. Ensure your repository settings have GitHub Pages enabled
+2. Set the source to "GitHub Actions"
+3. Push changes to the main branch
+4. The workflow will automatically build and deploy
 
-4. **Changing Venue Details**:
-   - Update venue info in about section (lines 640-689)
-   - Modify venue images in `/assets/img/venue-gallery/`
+## 🛠️ Development
 
-### Styling
-- CSS is compiled from Sass files in `/assets/scss/`
-- Main stylesheet is `/assets/css/style.css` (compiled from `/assets/scss/style.scss`)
+### Current Setup (Static HTML)
+
+The site is currently built with static HTML, CSS, and JavaScript. To serve locally:
+
+```bash
+# Using Python
+python3 -m http.server 8000
+
+# Using Node.js
+npx http-server -p 8000
+
+# Using npm script
+npm run serve
+```
+
+### Future Svelte Migration
+
+The project is prepared for future migration to SvelteKit:
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
+```
+
+## 📁 Project Structure
+
+```
+├── assets/                 # Static assets (CSS, JS, images)
+├── .github/workflows/      # GitHub Actions workflows
+├── *.html                  # HTML pages
+├── CNAME                   # Custom domain configuration
+├── .nojekyll              # Disable Jekyll processing
+├── package.json           # Node.js dependencies and scripts
+├── svelte.config.js       # SvelteKit configuration (for future use)
+└── vite.config.js         # Vite configuration (for future use)
+```
+
+## 🔧 Configuration Files
+
+- **`.github/workflows/static.yml`**: GitHub Actions workflow for deployment
+- **`CNAME`**: Custom domain configuration for GitHub Pages
+- **`.nojekyll`**: Prevents GitHub from processing the site with Jekyll
+- **`package.json`**: Prepared for future Svelte development
+- **`svelte.config.js`**: SvelteKit configuration for static site generation
+- **`vite.config.js`**: Vite build configuration
+
+## 🌐 Live Site
+
+Visit the live site at: [https://bsides312.org](https://bsides312.org)
+
+## 📝 License
+
+Copyright 2025 Hak4Kidz NFP. All Rights Reserved.
