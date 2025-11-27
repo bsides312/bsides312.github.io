@@ -19,7 +19,7 @@
 </section>
 
 <!-- Code of Conduct Section -->
-<section class="section">
+<section id="code-of-conduct" class="section">
 	<div class="container">
 		<div class="section-header">
 			<h2>Code of Conduct</h2>
@@ -113,96 +113,3 @@
 		</div>
 	</div>
 </section>
-
-<style>
-	.coc-content {
-		max-width: 900px;
-		margin: 0 auto;
-	}
-
-	.coc-section {
-		background: rgba(6, 12, 34, 0.4);
-		border-radius: 15px;
-		padding: 40px;
-		margin-bottom: 30px;
-		border-left: 4px solid var(--primary-color);
-		backdrop-filter: blur(10px);
-		border: 1px solid rgba(255, 255, 255, 0.1);
-	}
-
-	.coc-section h3 {
-		color: var(--primary-color);
-		font-size: 1.8rem;
-		margin-bottom: 20px;
-		font-family: 'Raleway', sans-serif;
-		font-weight: 700;
-	}
-
-	.coc-section p {
-		color: var(--text-light);
-		line-height: 1.8;
-		margin-bottom: 20px;
-		font-size: 1.1rem;
-	}
-
-	.coc-section p:last-child {
-		margin-bottom: 0;
-	}
-
-	.coc-section ul {
-		color: var(--text-light);
-		line-height: 1.8;
-		margin-bottom: 20px;
-		padding-left: 30px;
-	}
-
-	.coc-section li {
-		margin-bottom: 10px;
-		font-size: 1.05rem;
-	}
-
-	.coc-section a {
-		color: var(--primary-color);
-		text-decoration: none;
-		border-bottom: 1px solid transparent;
-		transition: all 0.3s ease;
-	}
-
-	.coc-section a:hover {
-		border-bottom-color: var(--primary-color);
-		color: #93bdfc;
-	}
-
-	@media (max-width: 768px) {
-		.coc-section {
-			padding: 30px 25px;
-		}
-
-		.coc-section h3 {
-			font-size: 1.5rem;
-		}
-
-		.coc-section p,
-		.coc-section li {
-			font-size: 1rem;
-		}
-
-		.coc-section ul {
-			padding-left: 25px;
-		}
-	}
-
-	@media (max-width: 576px) {
-		.coc-section {
-			padding: 25px 20px;
-		}
-
-		.coc-section h3 {
-			font-size: 1.3rem;
-		}
-
-		.coc-section ul {
-			padding-left: 20px;
-		}
-	}
-</style>

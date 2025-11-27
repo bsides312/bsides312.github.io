@@ -72,11 +72,11 @@
 			<ul class:active={mobileMenuActive}>
 				<li><a class="nav-link" href="{base}/" on:click={closeMobileMenu}>Home</a></li>
 				<li>
-					<a class="nav-link" href="{base}/#contribute" on:click={closeMobileMenu}>Get Tickets</a>
+					<a class="nav-link" href="https://www.simpletix.com/e/security-bsides312-2026-tickets-247316" target="_blank" rel="noopener" on:click={closeMobileMenu}>Get Tickets</a>
 				</li>
 				<li class="dropdown" class:mobile-active={activeDropdown === 'sponsor'}>
 					<div class="dropdown-header">
-						<a class="nav-link" href="{base}/#supporters" aria-haspopup="true">
+						<a class="nav-link" href="{base}/support#support" aria-haspopup="true">
 							<span>Sponsor Us</span>
 							<i class="bi bi-chevron-down desktop-only"></i>
 						</a>
@@ -96,12 +96,10 @@
 					</div>
 					<ul class:mobile-show={activeDropdown === 'sponsor'}>
 						<li>
-							<a class="nav-link" href="{base}/support" on:click={closeMobileMenu}>How to Donate</a>
+							<a class="nav-link" href="{base}/support#supporters" on:click={closeMobileMenu}>Corporate Sponsorship</a>
 						</li>
 						<li>
-							<a class="nav-link" href="{base}/#supporters" on:click={closeMobileMenu}
-								>Current Supporters</a
-							>
+							<a class="nav-link" href="{base}/#supporters" on:click={closeMobileMenu}>Current Supporters</a>
 						</li>
 					</ul>
 				</li>
@@ -130,9 +128,7 @@
 							<a class="nav-link" href="{base}/#contribute" on:click={closeMobileMenu}>Volunteer</a>
 						</li>
 						<li>
-							<a class="nav-link" href="{base}/#contribute" on:click={closeMobileMenu}
-								>Call for Presentations</a
-							>
+							<a class="nav-link" href="{base}/speakers#speakers" on:click={closeMobileMenu}>CFP</a>
 						</li>
 					</ul>
 				</li>
@@ -158,17 +154,7 @@
 					</div>
 					<ul class:mobile-show={activeDropdown === 'event'}>
 						<li>
-							<a class="nav-link" href="{base}/speakers" on:click={closeMobileMenu}
-								>Meet our Speakers</a
-							>
-						</li>
-						<li>
-							<a class="nav-link" href="{base}/schedule" on:click={closeMobileMenu}
-								>Conference Schedule</a
-							>
-						</li>
-						<li>
-							<a class="nav-link" href="{base}/previous-speakers" on:click={closeMobileMenu}
+							<a class="nav-link" href="{base}/previous-speakers#previous-speakers" on:click={closeMobileMenu}
 								>Previous Speakers</a
 							>
 						</li>
@@ -177,7 +163,7 @@
 							>
 						</li>
 						<li>
-							<a class="nav-link" href="{base}/code-of-conduct" on:click={closeMobileMenu}
+							<a class="nav-link" href="{base}/code-of-conduct#code-of-conduct" on:click={closeMobileMenu}
 								>Code of Conduct</a
 							>
 						</li>
@@ -209,11 +195,11 @@
 							>
 						</li>
 						<li>
-							<a class="nav-link" href="{base}/board" on:click={closeMobileMenu}>Our Board</a>
+							<a class="nav-link" href="{base}/board#board" on:click={closeMobileMenu}>Our Board</a>
 						</li>
 						<li><a class="nav-link" href="{base}/#faq" on:click={closeMobileMenu}>FAQ</a></li>
 						<li>
-							<a class="nav-link" href="{base}/privacy" on:click={closeMobileMenu}>Privacy Policy</a
+							<a class="nav-link" href="{base}/privacy#privacy" on:click={closeMobileMenu}>Privacy Policy</a
 							>
 						</li>
 					</ul>
@@ -229,7 +215,7 @@
 						<i class="bi bi-youtube me-1"></i>YouTube
 					</a>
 				</li>
-				<li><a class="nav-link" href="#footer" on:click={closeMobileMenu}>Contact</a></li>
+				<li><a class="nav-link" href="{base}/#footer" on:click={closeMobileMenu}>Contact</a></li>
 			</ul>
 			<i
 				class="bi bi-list mobile-nav-toggle"
@@ -269,7 +255,6 @@
 						<p>
 							<strong>Phone:</strong> (760) BAker-3-9969<br />
 							<strong>Email:</strong> questions [@] bsides312.org<br />
-							<strong>Venue:</strong> Chicago, IL<br />
 						</p>
 					</div>
 				</div>
@@ -327,9 +312,9 @@
 						</div>
 						<h4>Quick Links</h4>
 						<ul>
-							<li><a href="{base}/code-of-conduct">Code of Conduct</a></li>
-							<li><a href="{base}/privacy">Privacy Policy</a></li>
-							<li><a href="{base}/board">Our Board</a></li>
+							<li><a href="{base}/code-of-conduct#code-of-conduct">Code of Conduct</a></li>
+							<li><a href="{base}/privacy#privacy">Privacy Policy</a></li>
+							<li><a href="{base}/board#board">Our Board</a></li>
 						</ul>
 					</div>
 				</div>

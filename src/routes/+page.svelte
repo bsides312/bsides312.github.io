@@ -35,12 +35,12 @@
 <!-- Hero Section -->
 <section class="hero">
 	<div class="hero-content">
-		<div class="text-center mb-4">
+		<div class="text-center mb-0">
 			<img
 				src="{base}/assets/img/about_logo.png"
 				alt="BSides312 Logo"
 				class="img-fluid hero-logo"
-				style="max-height: 200px;"
+				style="max-height: 360px;"
 			/>
 		</div>
 		<h1 class="text-center mb-4">Chicago's Biggest Little Non-Profit Hacking Conference</h1>
@@ -49,15 +49,33 @@
 			unforgettable day of learning and networking.
 		</p>
 		<div class="text-center">
-			<p class="mb-3">See you in 2026! In the meantime:</p>
-			<a
-				href="https://www.youtube.com/channel/UCrCPvWW8z-_O8uUM8-ySz7g"
-				target="_blank"
-				rel="noopener"
-				class="btn-primary"
-			>
-				<i class="bi bi-youtube me-2"></i>Follow us on YouTube for past talks
-			</a>
+			<p class="mb-3"><strong>We'll be back May 16TH, 2026!!</strong></p>
+			<div class="hero-buttons">
+				<div class="hero-buttons-row">
+					<a
+						href="https://www.simpletix.com/e/security-bsides312-2026-tickets-247316"
+						target="_blank"
+						rel="noopener"
+						class="btn-primary btn-transparent"
+					>
+						<i class="bi bi-ticket-perforated me-2"></i>Get Tickets
+					</a>
+					<a
+						href="https://tinyurl.com/bsides312"
+						target="_blank"
+						rel="noopener"
+						class="btn-primary btn-transparent"
+					>
+						<i class="bi bi-discord me-2"></i>Join our Discord!
+					</a>
+					<a
+						href="{base}/support"
+						class="btn-primary btn-transparent"
+					>
+						<i class="bi bi-heart-fill me-2"></i>Sponsor Us!
+					</a>
+				</div>
+			</div>
 		</div>
 	</div>
 </section>
@@ -71,7 +89,7 @@
 				<p>
 					BSides312 is a nonprofit one-day conference run by longtime members of Chicago's hacking
 					and infosec community. In fact, many of them founded the original BSides Chicago! It's
-					built as a collaborative venue: whether you hack hardware, excel at logistics, or just
+					built as a collaborative venue; whether you hack hardware, excel at logistics, or just
 					bring curious friends, you help shape the conversation.
 				</p>
 				<p>
@@ -92,17 +110,38 @@
 				<div class="row">
 					<div class="col-lg-6">
 						<h3>Where</h3>
-						<p>Chicago, IL</p>
+						<p>
+							Irish American Heritage Center<br />
+							4626 N Knox Ave<br />
+							Chicago, IL
+						</p>
+						<div class="map-container">
+							<iframe
+								src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2967.8!2d-87.7425!3d41.9645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fcc7f9c0f0f0f%3A0x0!2s4626%20N%20Knox%20Ave%2C%20Chicago%2C%20IL!5e0!3m2!1sen!2sus!4v1234567890"
+								width="100%"
+								height="200"
+								style="border:0;border-radius:8px;"
+								allowfullscreen
+								loading="lazy"
+								referrerpolicy="no-referrer-when-downgrade"
+								title="Irish American Heritage Center Location"
+							></iframe>
+							<a
+								href="https://maps.app.goo.gl/RuApEvazVQGJAXHi7"
+								target="_blank"
+								rel="noopener"
+								class="map-link-btn"
+							>
+								<i class="bi bi-geo-alt-fill"></i> Open in Google Maps
+							</a>
+						</div>
 					</div>
 					<div class="col-lg-6">
 						<h3>When</h3>
-						<p>May 15th, 2026</p>
+						<p>May 16th, 2026</p>
 					</div>
 				</div>
 				<div class="row mt-3">
-					<div class="col-lg-12">
-						<h3>Lodging TBD</h3>
-					</div>
 				</div>
 			</div>
 		</div>
@@ -115,10 +154,15 @@
 		<div class="section-header">
 			<h2>Sponsors</h2>
 		</div>
-		<div class="alert alert-warning container-fluid text-center fw-bold" role="alert">
-			A huge thank you to all our sponsors for making this event possible!
+		<div class="text-center mb-4">
+			<a href="{base}/support#support" class="btn-sponsor-cta">
+				<i class="bi bi-heart-fill me-2"></i>Click for Sponsorship info!
+			</a>
 		</div>
-
+		<div class="alert alert-warning container-fluid text-center fw-bold" role="alert">
+			Sponsors logos will be listed here as they sign!
+		</div>
+		<!-- Sponsor tiers images temporarily hidden
 		{#each sponsorTiers as tier (tier.tierName)}
 			<div class="row no-gutters supporters-wrap clearfix gy-4 gx-4 mb-5">
 				<div class="section-header">
@@ -137,8 +181,85 @@
 				</div>
 			</div>
 		{/each}
+		-->
 	</div>
 </section>
+
+<!-- Contribute Section -->
+<section id="contribute" class="section section-with-bg">
+	<div class="container">
+		<div class="section-header">
+			<h2>Donate your Time!</h2>
+		</div>
+		<div class="alert alert-success container-fluid text-center fw-bold" role="alert">
+			Here are some non-financial ways you can help support our cause:
+		</div>
+
+		<div class="row">
+			<div class="col-lg-6">
+				<div id="volunteer">
+					<div class="section-header">
+						<h3>Volunteer With Us</h3>
+						<p>
+							Want to help make BSides312 2026 amazing? We're looking for volunteers to help with
+							various aspects of the conference!
+						</p>
+					</div>
+					<div class="text-center mb-4">
+						<a
+							href="https://forms.gle/KnWpqtqJ7fB8Y9ja8"
+							target="_blank"
+							rel="noopener"
+							class="btn-primary"
+						>
+							<i class="bi bi-hand-thumbs-up me-2"></i>Sign Up to Volunteer
+						</a>
+					</div>
+					<div class="cfp-details">
+						<p>
+							Whether you want to help with registration, assist speakers, or support setup and
+							logistics, we have opportunities for all skill levels and interests. Join our team and be
+							part of making this event a success!
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-6">
+				<div id="cfp">
+					<div class="section-header">
+						<h3>Call for Presentations</h3>
+						<p>
+							We are looking for speakers of all experience levels! Share your knowledge, research, and
+							insights with the BSides312 community.
+						</p>
+					</div>
+					<div class="text-center mb-4">
+						<a
+							href="https://sessionize.com/bsides312"
+							target="_blank"
+							rel="noopener"
+							class="btn-primary"
+						>
+							<i class="bi bi-megaphone me-2"></i>Submit Your Proposal
+						</a>
+					</div>
+					<div class="cfp-details">
+						<p>
+							<strong>Talk Formats:</strong> Choose between 25-minute or 50-minute presentation slots
+						</p>
+						<p>
+							Whether you're a first-time speaker or a seasoned presenter, we want to hear from you.
+							Topics can range from technical deep-dives to broader security concepts, privacy, policy,
+							and beyond.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
 
 <!-- FAQ Section -->
 <section id="faq" class="section">
@@ -181,126 +302,3 @@
 		</div>
 	</div>
 </section>
-
-<!-- Contribute Section -->
-<section id="contribute" class="section section-with-bg">
-	<div class="container">
-		<div class="section-header">
-			<h2>Donate your Time!</h2>
-			<p>Here are some non-financial ways you can help support our cause:</p>
-		</div>
-
-		<div class="row">
-			<div class="col-lg-6">
-				<div id="volunteer">
-					<div class="section-header">
-						<h3>Volunteer With Us</h3>
-						<p>Call for Volunteers is currently closed</p>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-lg-6">
-				<div id="cfp">
-					<div class="section-header">
-						<h3>Call for Presentations</h3>
-						<p>Call for Presentations is currently closed</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-
-<style>
-	.hero-logo {
-		animation: fadeInUp 1s ease-out 0.5s both;
-	}
-
-	.alert {
-		background: rgba(255, 193, 7, 0.2);
-		border: 1px solid #ffc107;
-		color: #ffc107;
-		border-radius: 10px;
-		padding: 15px;
-		margin-bottom: 40px;
-	}
-
-	.supporters-wrap {
-		margin-bottom: 60px;
-	}
-
-	.faq-question {
-		width: 100%;
-		text-align: left;
-		background: rgba(93, 189, 252, 0.1);
-		border: none;
-		color: white;
-		padding: 20px;
-		border-radius: 10px;
-		cursor: pointer;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		font-size: 1.1rem;
-		font-weight: 600;
-		transition: all 0.3s ease;
-	}
-
-	.faq-question:hover {
-		background: rgba(93, 189, 252, 0.2);
-	}
-
-	.faq-question.expanded {
-		background: rgba(93, 189, 252, 0.2);
-		border-bottom-left-radius: 0;
-		border-bottom-right-radius: 0;
-	}
-
-	.faq-answer {
-		background: rgba(6, 12, 34, 0.4);
-		padding: 20px;
-		border-bottom-left-radius: 10px;
-		border-bottom-right-radius: 10px;
-		color: rgba(255, 255, 255, 0.8);
-		line-height: 1.6;
-	}
-
-	.faq-answer :global(p) {
-		margin-bottom: 15px;
-	}
-
-	.faq-answer :global(p:last-child) {
-		margin-bottom: 0;
-	}
-
-	.faq-list {
-		list-style: none;
-		padding: 0;
-		margin: 0;
-	}
-
-	.faq-list li {
-		margin-bottom: 15px;
-		border-radius: 10px;
-		overflow: hidden;
-	}
-
-	@media (max-width: 768px) {
-		.hero h1 {
-			font-size: 2.5rem;
-		}
-
-		.col-lg-4.col-md-4.col-xs-4 {
-			flex: 0 0 50%;
-			max-width: 50%;
-		}
-	}
-
-	@media (max-width: 576px) {
-		.col-lg-4.col-md-4.col-xs-4 {
-			flex: 0 0 100%;
-			max-width: 100%;
-		}
-	}
-</style>

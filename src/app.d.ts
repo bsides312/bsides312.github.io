@@ -8,6 +8,11 @@ declare global {
 		// interface PageState {}
 		// interface Platform {}
 	}
+
+	namespace svelteHTML {
+		// You can add custom HTML attributes here if needed
+		// interface HTMLAttributes<T> {}
+	}
 }
 
 export {};
