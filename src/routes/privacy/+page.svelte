@@ -19,7 +19,7 @@
 </section>
 
 <!-- Privacy Policy Section -->
-<section class="section">
+<section id="privacy" class="section">
 	<div class="container">
 		<div class="section-header">
 			<h2>Privacy Policy</h2>
@@ -97,108 +97,3 @@
 		</div>
 	</div>
 </section>
-
-<style>
-	.privacy-content {
-		margin-bottom: 40px;
-	}
-
-	.privacy-section {
-		background: rgba(6, 12, 34, 0.4);
-		border-radius: 15px;
-		padding: 40px;
-		margin-bottom: 30px;
-		border-left: 4px solid var(--primary-color);
-		backdrop-filter: blur(10px);
-		border: 1px solid rgba(255, 255, 255, 0.1);
-	}
-
-	.privacy-section h3 {
-		color: var(--primary-color);
-		font-size: 1.8rem;
-		margin-bottom: 20px;
-		font-family: 'Raleway', sans-serif;
-		font-weight: 700;
-	}
-
-	.privacy-section p {
-		color: var(--text-light);
-		line-height: 1.8;
-		margin-bottom: 20px;
-		font-size: 1.1rem;
-	}
-
-	.privacy-section p:last-child {
-		margin-bottom: 0;
-	}
-
-	.privacy-section ul {
-		color: var(--text-light);
-		line-height: 1.8;
-		margin-bottom: 20px;
-		padding-left: 30px;
-	}
-
-	.privacy-section li {
-		margin-bottom: 15px;
-		font-size: 1.05rem;
-	}
-
-	.attribution {
-		background: rgba(6, 12, 34, 0.2);
-		border-radius: 10px;
-		padding: 20px;
-		border: 1px solid rgba(255, 255, 255, 0.1);
-	}
-
-	.attribution p {
-		margin: 0;
-		color: var(--text-muted);
-		font-style: italic;
-	}
-
-	.attribution a {
-		color: var(--primary-color);
-		text-decoration: none;
-		border-bottom: 1px solid transparent;
-		transition: all 0.3s ease;
-	}
-
-	.attribution a:hover {
-		border-bottom-color: var(--primary-color);
-		color: #93bdfc;
-	}
-
-	@media (max-width: 768px) {
-		.privacy-section {
-			padding: 30px 25px;
-		}
-
-		.privacy-section h3 {
-			font-size: 1.5rem;
-		}
-
-		.privacy-section p,
-		.privacy-section li {
-			font-size: 1rem;
-		}
-
-		.privacy-section ul {
-			padding-left: 25px;
-		}
-	}
-
-	@media (max-width: 576px) {
-		.privacy-section {
-			padding: 25px 20px;
-		}
-
-		.privacy-section h3 {
-			font-size: 1.3rem;
-		}
-
-		.privacy-section ul {
-			padding-left: 20px;
-		}
-	}
-</style>

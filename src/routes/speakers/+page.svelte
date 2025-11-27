@@ -10,7 +10,7 @@
 	/>
 </svelte:head>
 
-<section class="section">
+<section id="speakers" class="section">
 	<div class="container">
 		<div class="section-header text-center mb-5">
 			<h1>Speaker Lineup Coming Soon</h1>
@@ -27,15 +27,22 @@
 						<h3 class="mb-4">Call for Presentations</h3>
 						<p class="mb-4">
 							Are you passionate about cybersecurity? Do you have knowledge, research, or
-							experiences to share with the community? We want to hear from you! Our Call for
-							Presentations (CFP) will open soon.
+							experiences to share with the community? We want to hear from you!
 						</p>
 						<p class="mb-4">
-							<strong>Conference Date:</strong> May 15th, 2026<br />
+							<strong>Conference Date:</strong> May 16th, 2026<br />
 							<strong>Location:</strong> Chicago, IL
 						</p>
 						<div class="d-grid gap-2 d-md-block">
-							<a href="{base}/previous-speakers" class="btn btn-primary me-md-2">
+							<a
+								href="https://sessionize.com/bsides312"
+								target="_blank"
+								rel="noopener"
+								class="btn btn-primary mb-3 w-100"
+							>
+								<i class="bi bi-megaphone me-2"></i>Submit Your Proposal
+							</a>
+							<a href="{base}/previous-speakers" class="btn btn-outline-primary me-md-2">
 								<i class="bi bi-people me-2"></i>View Previous Speakers
 							</a>
 							<a
@@ -60,7 +67,9 @@
 							<i class="bi bi-lightbulb text-warning me-2"></i>What We're Looking For
 						</h4>
 						<ul class="list-unstyled">
-							<li><i class="bi bi-check-circle text-success me-2"></i>Cutting-edge research</li>
+							<li>
+								<i class="bi bi-check-circle text-success me-2"></i><strong>ACTIONABLE</strong>&nbsp;Information
+							</li>
 							<li>
 								<i class="bi bi-check-circle text-success me-2"></i>Practical security tools and
 								techniques
@@ -85,10 +94,10 @@
 							<i class="bi bi-clock text-info me-2"></i>Important Dates
 						</h4>
 						<ul class="list-unstyled">
-							<li><strong>CFP Opens:</strong> TBA</li>
-							<li><strong>CFP Closes:</strong> TBA</li>
-							<li><strong>Speaker Notifications:</strong> TBA</li>
-							<li><strong>Conference Date:</strong> May 15th, 2026</li>
+							<li><strong>CFP Opens:</strong>&nbsp;November 27th, 2025</li>
+							<li><strong>CFP Closes:</strong>&nbsp;February 28th, 2026</li>
+							<li><strong>Speaker Notifications:</strong>&nbsp;By March 15th, 2026</li>
+							<li><strong>Conference Date:</strong>&nbsp;May 16th, 2026</li>
 						</ul>
 						<p class="mt-3">
 							<small class="text-muted">
@@ -101,132 +110,3 @@
 		</div>
 	</div>
 </section>
-
-<style>
-	.main-cfp-card {
-		background: rgba(6, 12, 34, 0.6);
-		border: 2px solid rgba(93, 189, 252, 0.3);
-		border-radius: 20px;
-		backdrop-filter: blur(15px);
-	}
-
-	.main-cfp-card .card-body {
-		padding: 2rem;
-	}
-
-	.main-cfp-card h3 {
-		color: var(--primary-color);
-		font-weight: 700;
-	}
-
-	.main-cfp-card p {
-		color: var(--text-dark-contrast);
-		font-size: 1.1rem;
-		line-height: 1.6;
-	}
-
-	.info-card {
-		background: rgba(6, 12, 34, 0.6);
-		border: 1px solid rgba(255, 255, 255, 0.2);
-		border-radius: 15px;
-		transition: all 0.3s ease;
-		backdrop-filter: blur(10px);
-	}
-
-	.info-card:hover {
-		transform: translateY(-5px);
-		box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
-		border-color: var(--primary-color);
-		background: rgba(6, 12, 34, 0.8);
-	}
-
-	.info-card .card-title {
-		color: var(--primary-color);
-		font-size: 1.4rem;
-		font-weight: 600;
-		margin-bottom: 1.5rem;
-	}
-
-	.info-card li {
-		color: var(--text-dark-contrast);
-		font-size: 1rem;
-		margin-bottom: 0.75rem;
-		display: flex;
-		align-items: center;
-	}
-
-	.info-card li strong {
-		color: var(--primary-color);
-	}
-
-	.display-1 {
-		font-size: 4rem;
-		opacity: 0.9;
-	}
-
-	.btn-outline-primary {
-		border: 2px solid var(--primary-color);
-		color: var(--primary-color);
-		background: transparent;
-		padding: 12px 30px;
-		border-radius: 50px;
-		font-weight: 600;
-		text-decoration: none;
-		transition: all 0.3s ease;
-		text-transform: uppercase;
-		letter-spacing: 1px;
-	}
-
-	.btn-outline-primary:hover {
-		background: var(--primary-color);
-		color: white;
-		transform: translateY(-2px);
-		box-shadow: 0 8px 25px rgba(93, 189, 252, 0.3);
-	}
-
-	@media (max-width: 768px) {
-		.display-1 {
-			font-size: 3rem;
-		}
-
-		.main-cfp-card .card-body {
-			padding: 1.5rem;
-		}
-
-		.main-cfp-card h3 {
-			font-size: 1.8rem;
-		}
-
-		.main-cfp-card p {
-			font-size: 1rem;
-		}
-
-		.info-card .card-title {
-			font-size: 1.2rem;
-		}
-
-		.info-card li {
-			font-size: 0.95rem;
-		}
-	}
-
-	@media (max-width: 576px) {
-		.display-1 {
-			font-size: 2.5rem;
-		}
-
-		.main-cfp-card .card-body {
-			padding: 1rem;
-		}
-
-		.main-cfp-card h3 {
-			font-size: 1.6rem;
-		}
-
-		.btn-primary,
-		.btn-outline-primary {
-			padding: 10px 25px;
-			font-size: 0.9rem;
-		}
-	}
-</style>

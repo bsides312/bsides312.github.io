@@ -91,9 +91,9 @@ h3 {
 
 /* Buttons */
 .btn-primary {
-	background: var(--gradient-primary);
-	border: none;
-	color: white;
+	background: transparent;
+	border: 2px solid #5dbdfc;
+	color: #5dbdfc;
 	padding: 15px 40px;
 	border-radius: 50px;
 	font-weight: 600;
@@ -106,8 +106,43 @@ h3 {
 
 .btn-primary:hover {
 	transform: translateY(-3px);
-	box-shadow: 0 10px 30px rgba(93, 189, 252, 0.3);
+	background: rgba(93, 189, 252, 0.2);
+	color: #5dbdfc;
+}
+
+.btn-primary:active {
+	background: #5dbdfc;
 	color: white;
+}
+
+.btn-sponsor-cta {
+	background: transparent;
+	border: 2px solid #5dbdfc;
+	color: #5dbdfc;
+	padding: 15px 40px;
+	border-radius: 30px;
+	font-weight: 700;
+	text-decoration: none;
+	display: inline-flex;
+	align-items: center;
+	transition: all 0.3s ease;
+	text-transform: uppercase;
+	letter-spacing: 1.5px;
+	font-size: 1.1rem;
+	box-shadow: 0 5px 20px rgba(93, 189, 252, 0.3);
+}
+
+.btn-sponsor-cta:hover {
+	transform: translateY(-3px);
+	background: rgba(93, 189, 252, 0.2);
+	box-shadow: 0 8px 25px rgba(93, 189, 252, 0.4);
+	color: #5dbdfc;
+}
+
+.btn-sponsor-cta:active {
+	background: #5dbdfc;
+	color: white;
+	transform: translateY(-1px);
 }
 
 /* Section Styles */
@@ -389,4 +424,154 @@ h3 {
 	.sponsor-logo img {
 		max-height: 50px;
 	}
+}
+
+/* Alert boxes styling - neon green hollow rectangles (override Bootstrap) */
+.alert-warning,
+.alert-success {
+	background-color: transparent !important;
+	border: 2px solid #39ff14 !important;
+	color: #39ff14 !important;
+	border-radius: 8px !important;
+}
+
+.alert-warning a,
+.alert-success a {
+	color: #39ff14 !important;
+	text-decoration: underline;
+}
+
+.alert-warning a:hover,
+.alert-success a:hover {
+	color: #5aff35 !important;
+}
+
+.prospectus-link {
+	color: #39ff14 !important;
+	text-decoration: none !important;
+}
+
+.prospectus-link:hover {
+	color: #5aff35 !important;
+}
+
+/* Sponsorship Card Styles */
+.sponsorship-card {
+	background: transparent;
+	border: 3px solid #5dbdfc;
+	border-radius: 15px;
+	box-shadow: 0 4px 12px rgba(93, 189, 252, 0.2);
+	transition: all 0.3s ease;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	color: #fff;
+}
+
+.sponsorship-card:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 8px 24px rgba(93, 189, 252, 0.4);
+	border-color: #5dbdfc;
+}
+
+.sponsorship-card.highlighted {
+	border-width: 4px;
+	border-color: #5dbdfc;
+	box-shadow: 0 8px 24px rgba(93, 189, 252, 0.4);
+}
+
+.sponsorship-card.highlighted:hover {
+	box-shadow: 0 12px 32px rgba(93, 189, 252, 0.5);
+}
+
+.sponsorship-card .card-header {
+	padding: 30px 25px 20px;
+	text-align: center;
+	border-bottom: 2px solid #5dbdfc;
+}
+
+.sponsorship-card .card-header .tier-name {
+	font-size: 28px;
+	font-weight: 700;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	color: #5dbdfc;
+}
+
+.sponsorship-card .card-header .tier-price {
+	font-size: 36px;
+	font-weight: 800;
+	margin-bottom: 10px;
+	color: #ffffff;
+}
+
+.sponsorship-card .card-header .tier-description {
+	font-size: 14px;
+	margin-bottom: 0;
+	color: rgba(255, 255, 255, 0.85);
+	font-style: italic;
+}
+
+.sponsorship-card .card-body {
+	padding: 25px;
+	flex-grow: 1;
+}
+
+.sponsorship-card .card-body .benefits-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.sponsorship-card .card-body .benefits-list li {
+	padding: 10px 0;
+	font-size: 15px;
+	line-height: 1.6;
+	border-bottom: 1px solid rgba(93, 189, 252, 0.2);
+	color: rgba(255, 255, 255, 0.9);
+}
+
+.sponsorship-card .card-body .benefits-list li:last-child {
+	border-bottom: none;
+}
+
+.sponsorship-card .card-body .benefits-list li i {
+	color: #5dbdfc;
+	margin-right: 10px;
+	font-size: 18px;
+}
+
+.sponsorship-card .card-footer {
+	padding: 25px;
+	text-align: center;
+	border-top: 2px solid #5dbdfc;
+}
+
+.sponsorship-card .card-footer .btn-donate {
+	display: inline-block;
+	padding: 12px 40px;
+	background: #5dbdfc;
+	color: #ffffff;
+	border-radius: 50px;
+	font-weight: 700;
+	font-size: 16px;
+	text-decoration: none;
+	transition: all 0.3s ease;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	border: none;
+}
+
+.sponsorship-card .card-footer .btn-donate:hover {
+	background: #4a9fd8;
+	transform: scale(1.05);
+	box-shadow: 0 4px 12px rgba(93, 189, 252, 0.4);
+}
+
+.sponsorship-card .card-footer .contact-note {
+	font-size: 14px;
+	font-style: italic;
+	color: rgba(255, 255, 255, 0.85);
 }

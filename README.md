@@ -210,7 +210,7 @@ npm run build
 
 ## BSides312 2026
 
-**Date**: May 15th, 2026
+**Date**: May 16th, 2026
 **Location**: Chicago, IL
 
 Stay tuned for speaker announcements and ticket sales!
