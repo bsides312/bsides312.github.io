@@ -426,33 +426,33 @@ h3 {
 	}
 }
 
-/* Alert boxes styling - neon green hollow rectangles (override Bootstrap) */
+/* Alert boxes styling - neon purple hollow rectangles (override Bootstrap) */
 .alert-warning,
 .alert-success {
 	background-color: transparent !important;
-	border: 2px solid #39ff14 !important;
-	color: #39ff14 !important;
+	border: 2px solid #bf40bf !important;
+	color: #bf40bf !important;
 	border-radius: 8px !important;
 }
 
 .alert-warning a,
 .alert-success a {
-	color: #39ff14 !important;
+	color: #bf40bf !important;
 	text-decoration: underline;
 }
 
 .alert-warning a:hover,
 .alert-success a:hover {
-	color: #5aff35 !important;
+	color: #d966ff !important;
 }
 
 .prospectus-link {
-	color: #39ff14 !important;
+	color: #bf40bf !important;
 	text-decoration: none !important;
 }
 
 .prospectus-link:hover {
-	color: #5aff35 !important;
+	color: #d966ff !important;
 }
 
 /* Sponsorship Card Styles */

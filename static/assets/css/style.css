@@ -1769,24 +1769,24 @@ img[src*="about_logo"] {
 
 .schedule-table .track-blue {
   background-color: transparent;
-  border: 2px solid #39ff14;
-  color: #39ff14;
+  border: 2px solid #bf40bf;
+  color: #bf40bf;
 }
 
 .schedule-table .track-blue .session-title,
 .schedule-table .track-blue .speaker {
-  color: #39ff14;
+  color: #bf40bf;
 }
 
 .schedule-table .track-red {
   background-color: transparent;
-  border: 2px solid #39ff14;
-  color: #39ff14;
+  border: 2px solid #bf40bf;
+  color: #bf40bf;
 }
 
 .schedule-table .track-red .session-title,
 .schedule-table .track-red .speaker {
-  color: #39ff14;
+  color: #bf40bf;
 }
 
 .schedule-table .time-slot {
@@ -1833,13 +1833,13 @@ img[src*="about_logo"] {
   font-weight: bold;
 }
 
-/* Special class for blue line special events to maintain neon green styling */
+/* Special class for blue line special events to maintain neon purple styling */
 .schedule-table .track-blue.special-event {
   background-color: transparent;
-  border: 2px solid #39ff14;
+  border: 2px solid #bf40bf;
   text-align: center;
   font-weight: bold;
-  color: #39ff14;
+  color: #bf40bf;
 }
 
 /* Session duration indicators */
@@ -1978,12 +1978,12 @@ img[src*="about_logo"] {
 
 .legend-blue {
   background-color: transparent;
-  border: 2px solid #39ff14;
+  border: 2px solid #bf40bf;
 }
 
 .legend-red {
   background-color: transparent;
-  border: 2px solid #39ff14;
+  border: 2px solid #bf40bf;
 }
 
 /* Style for links in the schedule table */
@@ -2650,24 +2650,24 @@ img[src*="about_logo"] {
   padding: 12px 0;
 }
 
-/* Alert boxes styling - neon green hollow rectangles */
+/* Alert boxes styling - neon purple hollow rectangles */
 .alert-warning,
 .alert-success {
   background-color: transparent !important;
-  border: 2px solid #39ff14 !important;
-  color: #39ff14 !important;
+  border: 2px solid #bf40bf !important;
+  color: #bf40bf !important;
   border-radius: 8px;
 }
 
 .alert-warning a,
 .alert-success a {
-  color: #39ff14 !important;
+  color: #bf40bf !important;
   text-decoration: underline;
 }
 
 .alert-warning a:hover,
 .alert-success a:hover {
-  color: #5aff35 !important;
+  color: #d966ff !important;
 }
 
 /* Mobile Responsiveness for Page-Specific Styles */
