@@ -160,9 +160,9 @@
 			</a>
 		</div>
 		<div class="alert alert-warning container-fluid text-center fw-bold" role="alert">
+			Our Call for Sponsors is still open!
 			Sponsors logos will be listed here as they sign!
 		</div>
-		<!-- Sponsor tiers images temporarily hidden
 		{#each sponsorTiers as tier (tier.tierName)}
 			<div class="row no-gutters supporters-wrap clearfix gy-4 gx-4 mb-5">
 				<div class="section-header">
@@ -181,7 +181,6 @@
 				</div>
 			</div>
 		{/each}
-		-->
 	</div>
 </section>
 
