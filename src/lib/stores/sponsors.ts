@@ -19,6 +19,12 @@ export const sponsors: Sponsor[] = [
 		logo: `${base}/assets/img/supporters/burbsec.jpg`,
 		url: 'https://burbsec.org/',
 		tier: 'community'
+	},
+	{
+		name: 'OzCon',
+		logo: `${base}/assets/img/supporters/ozcon.jpg`,
+		url: 'https://theozcon.com/',
+		tier: 'community'
 	}
 ];
 
