@@ -4,12 +4,7 @@ import { sveltekit } from '@sveltejs/kit/vite';
 export default defineConfig({
 	plugins: [sveltekit()],
 
-	// GitHub Pages configuration
-	base: process.env.NODE_ENV === 'production' ? '/' : '/',
-
 	build: {
-		outDir: 'dist',
-		assetsDir: 'assets',
 		sourcemap: false,
 		minify: 'terser',
 		rollupOptions: {
