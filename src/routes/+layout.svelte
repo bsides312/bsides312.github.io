@@ -593,8 +593,8 @@
 			border-radius: 8px;
 		}
 
-		/* Override desktop hover behavior on mobile */
-		.dropdown:hover ul {
+		/* Override desktop hover behavior on mobile - but not when dropdown is actively open */
+		.dropdown:not(.mobile-active):hover ul {
 			opacity: 0;
 			visibility: hidden;
 			transform: translateY(-10px);
@@ -616,7 +616,8 @@
 			width: 100%;
 		}
 
-		.dropdown ul.mobile-show {
+		/* Use higher specificity to ensure mobile-show wins over hover states */
+		.dropdown.mobile-active ul.mobile-show {
 			opacity: 1;
 			visibility: visible;
 			max-height: 300px;
