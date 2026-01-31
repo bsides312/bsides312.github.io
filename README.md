@@ -235,4 +235,4 @@ Visit the live site at: [https://bsides312.org](https://bsides312.org)
 
 ## License
 
-Copyright 2025 Hak4Kidz NFP. All Rights Reserved.
+Copyright 2026 Hak4Kidz NFP. All Rights Reserved.

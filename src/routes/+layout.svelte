@@ -253,7 +253,7 @@
 					<div class="footer-links mb-4">
 						<h4>Contact Us</h4>
 						<p>
-							<strong>Phone:</strong> (760) BAker-3-9969<br />
+							<strong>Phone:</strong> <a href="https://en.wikipedia.org/wiki/Mojave_phone_booth" target="_blank" rel="noopener">(760) BAker-3-9969</a><br />
 							<strong>Email:</strong> questions [@] bsides312.org<br />
 						</p>
 					</div>
@@ -324,7 +324,7 @@
 	<div class="copyright-section">
 		<div class="container">
 			<div class="copyright text-center py-3">
-				Copyright 2025 <strong>Hak4Kidz NFP</strong>. All Rights Reserved.
+				Copyright 2026 <strong>Hak4Kidz NFP</strong>. All Rights Reserved.
 			</div>
 		</div>
 	</div>

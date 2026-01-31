@@ -227,7 +227,7 @@
 			<div class="col-lg-6">
 				<div id="cfp">
 					<div class="section-header">
-						<h3>Call for Presentations</h3>
+						<h3>Call for Presentations (Closes Feb 28th!)</h3>
 						<p>
 							We are looking for speakers of all experience levels! Share your knowledge, research, and
 							insights with the BSides312 community.
