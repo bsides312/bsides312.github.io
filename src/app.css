@@ -145,6 +145,31 @@ h3 {
 	transform: translateY(-1px);
 }
 
+/* Button Glow */
+.btn-primary,
+.btn-sponsor-cta,
+.btn-donate,
+.btn-outline-primary,
+.btn-info,
+.btn-custom,
+.btn-transparent,
+.btn-primary-action {
+	box-shadow: 0 0 15px rgba(93, 189, 252, 0.3);
+	transition: box-shadow 0.3s ease;
+}
+
+/* Remove glow from hero buttons */
+.hero .btn-primary,
+.hero .btn-sponsor-cta,
+.hero .btn-donate,
+.hero .btn-outline-primary,
+.hero .btn-info,
+.hero .btn-custom,
+.hero .btn-transparent,
+.hero .btn-primary-action {
+	box-shadow: none;
+}
+
 /* Section Styles */
 .section {
 	padding: 80px 0;
@@ -212,6 +237,7 @@ h3 {
 	padding: 20px;
 	text-align: center;
 	transition: all 0.3s ease;
+	box-shadow: 0 0 20px rgba(93, 189, 252, 0.3);
 }
 
 .sponsor-logo img {
@@ -235,6 +261,7 @@ h3 {
 	width: auto;
 	height: auto;
 	object-fit: contain;
+	box-shadow: 0 0 15px rgba(93, 189, 252, 0.3);
 }
 
 /* FAQ Accordion */
