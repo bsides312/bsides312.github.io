@@ -200,25 +200,7 @@
 					<div class="section-header">
 						<h3>Volunteer With Us</h3>
 						<p>
-							Want to help make BSides312 2026 amazing? We're looking for volunteers to help with
-							various aspects of the conference!
-						</p>
-					</div>
-					<div class="text-center mb-4">
-						<a
-							href="https://forms.gle/KnWpqtqJ7fB8Y9ja8"
-							target="_blank"
-							rel="noopener"
-							class="btn-primary"
-						>
-							<i class="bi bi-hand-thumbs-up me-2"></i>Sign Up to Volunteer
-						</a>
-					</div>
-					<div class="cfp-details">
-						<p>
-							Whether you want to help with registration, assist speakers, or support setup and
-							logistics, we have opportunities for all skill levels and interests. Join our team and be
-							part of making this event a success!
+							Our call for volunteers is closed for 2026, but thank you for your interest!
 						</p>
 					</div>
 				</div>
