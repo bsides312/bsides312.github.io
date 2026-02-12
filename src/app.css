@@ -602,3 +602,93 @@ h3 {
 	font-style: italic;
 	color: rgba(255, 255, 255, 0.85);
 }
+
+/* Ribbon Image Gallery */
+.ribbon-gallery {
+	width: 100%;
+	overflow: hidden;
+	padding: 40px 0 0;
+	position: relative;
+}
+
+.ribbon-gallery::before,
+.ribbon-gallery::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 80px;
+	z-index: 2;
+	pointer-events: none;
+}
+
+.ribbon-gallery::before {
+	left: 0;
+	background: linear-gradient(to right, rgba(6, 12, 34, 0.9), transparent);
+}
+
+.ribbon-gallery::after {
+	right: 0;
+	background: linear-gradient(to left, rgba(6, 12, 34, 0.9), transparent);
+}
+
+.ribbon-track {
+	display: flex;
+	gap: 12px;
+	animation: ribbonScroll 60s linear infinite;
+	width: max-content;
+}
+
+.ribbon-track:hover {
+	animation-play-state: paused;
+}
+
+.ribbon-img {
+	height: 260px;
+	width: calc((100vw - 36px) / 4);
+	border-radius: 8px;
+	object-fit: cover;
+	flex-shrink: 0;
+	transition: transform 0.3s ease, filter 0.3s ease;
+	filter: brightness(0.85);
+}
+
+.ribbon-img:hover {
+	transform: scale(1.08);
+	filter: brightness(1);
+	z-index: 1;
+}
+
+@keyframes ribbonScroll {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(-50%);
+	}
+}
+
+@media (max-width: 768px) {
+	.ribbon-img {
+		width: calc((100vw - 24px) / 3);
+	}
+
+	.ribbon-gallery {
+		padding: 25px 0 0;
+	}
+
+	.ribbon-gallery::before,
+	.ribbon-gallery::after {
+		width: 40px;
+	}
+}
+
+@media (max-width: 480px) {
+	.ribbon-img {
+		width: calc((100vw - 16px) / 2);
+	}
+
+	.ribbon-track {
+		gap: 8px;
+	}
+}

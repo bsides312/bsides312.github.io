@@ -146,6 +146,22 @@
 			</div>
 		</div>
 	</div>
+
+	<!-- Ribbon Image Gallery -->
+	<div class="ribbon-gallery">
+		<div class="ribbon-track">
+			{#each Array(2) as _, copy}
+				{#each Array(31) as _, i}
+					<img
+						src="{base}/assets/img/gallery/{i + 1}.webp"
+						alt="BSides312 gallery photo {i + 1}"
+						class="ribbon-img"
+						loading="lazy"
+					/>
+				{/each}
+			{/each}
+		</div>
+	</div>
 </section>
 
 <!-- Sponsors Section -->
