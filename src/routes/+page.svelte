@@ -22,6 +22,17 @@
 	function toggleFaq(id: string) {
 		activeFaq = activeFaq === id ? null : id;
 	}
+
+	// Gallery lightbox
+	let lightboxSrc: string | null = null;
+
+	function openLightbox(src: string) {
+		lightboxSrc = src;
+	}
+
+	function closeLightbox() {
+		lightboxSrc = null;
+	}
 </script>
 
 <svelte:head>
@@ -152,17 +163,40 @@
 		<div class="ribbon-track">
 			{#each Array(2) as _, copy}
 				{#each Array(31) as _, i}
-					<img
-						src="{base}/assets/img/gallery/{i + 1}.webp"
-						alt="BSides312 gallery photo {i + 1}"
-						class="ribbon-img"
-						loading="lazy"
-					/>
+					<button
+						class="ribbon-img-btn"
+						on:click={() => openLightbox(`${base}/assets/img/gallery/${i + 1}.webp`)}
+						type="button"
+						aria-label="View gallery photo {i + 1}"
+					>
+						<img
+							src="{base}/assets/img/gallery/{i + 1}.webp"
+							alt="BSides312 gallery photo {i + 1}"
+							class="ribbon-img"
+							loading="lazy"
+						/>
+					</button>
 				{/each}
 			{/each}
 		</div>
 	</div>
 </section>
+
+<!-- Gallery Lightbox Modal -->
+{#if lightboxSrc}
+	<div
+		class="lightbox-overlay"
+		on:click={closeLightbox}
+		on:keydown={(e) => e.key === 'Escape' && closeLightbox()}
+		role="dialog"
+		aria-modal="true"
+		aria-label="Gallery image viewer"
+		tabindex="-1"
+	>
+		<button class="lightbox-close" on:click={closeLightbox} aria-label="Close lightbox">&times;</button>
+		<img src={lightboxSrc} alt="BSides312 gallery photo full size" class="lightbox-img" />
+	</div>
+{/if}
 
 <!-- Sponsors Section -->
 <section id="supporters" class="section section-with-bg">

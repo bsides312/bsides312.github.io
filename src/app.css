@@ -635,7 +635,7 @@ h3 {
 .ribbon-track {
 	display: flex;
 	gap: 12px;
-	animation: ribbonScroll 60s linear infinite;
+	animation: ribbonScroll 75s linear infinite;
 	width: max-content;
 }
 
@@ -691,4 +691,67 @@ h3 {
 	.ribbon-track {
 		gap: 8px;
 	}
+}
+
+/* Ribbon gallery image button wrapper */
+.ribbon-img-btn {
+	padding: 0;
+	border: none;
+	background: none;
+	cursor: pointer;
+	flex-shrink: 0;
+	line-height: 0;
+}
+
+/* Gallery Lightbox Modal */
+.lightbox-overlay {
+	position: fixed;
+	inset: 0;
+	z-index: 9999;
+	background: rgba(0, 0, 0, 0.92);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 30px;
+	cursor: pointer;
+	animation: lightboxFadeIn 0.25s ease-out;
+}
+
+.lightbox-img {
+	max-width: 90vw;
+	max-height: 90vh;
+	object-fit: contain;
+	border-radius: 8px;
+	box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+	cursor: default;
+	animation: lightboxZoomIn 0.25s ease-out;
+}
+
+.lightbox-close {
+	position: absolute;
+	top: 20px;
+	right: 30px;
+	background: none;
+	border: none;
+	color: #fff;
+	font-size: 3rem;
+	cursor: pointer;
+	line-height: 1;
+	opacity: 0.7;
+	transition: opacity 0.2s ease;
+	z-index: 10000;
+}
+
+.lightbox-close:hover {
+	opacity: 1;
+}
+
+@keyframes lightboxFadeIn {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+
+@keyframes lightboxZoomIn {
+	from { transform: scale(0.9); opacity: 0; }
+	to { transform: scale(1); opacity: 1; }
 }
