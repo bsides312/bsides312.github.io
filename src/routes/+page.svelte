@@ -2,6 +2,9 @@
 	import { getSponsorsByTier, sponsorTierImages } from '$lib/stores/sponsors';
 	import { faqItems } from '$lib/stores/faq';
 	import { base } from '$app/paths';
+	import type { PageData } from './$types';
+
+	export let data: PageData;
 
 	type SponsorTier = 'platinum' | 'gold' | 'silver' | 'bronze' | 'founding' | 'community';
 
@@ -162,15 +165,15 @@
 	<div class="ribbon-gallery">
 		<div class="ribbon-track">
 			{#each Array(2) as _, copy}
-				{#each Array(31) as _, i}
+				{#each data.galleryImages as imgPath, i}
 					<button
 						class="ribbon-img-btn"
-						on:click={() => openLightbox(`${base}/assets/img/gallery/${i + 1}.webp`)}
+						on:click={() => openLightbox(`${base}${imgPath}`)}
 						type="button"
 						aria-label="View gallery photo {i + 1}"
 					>
 						<img
-							src="{base}/assets/img/gallery/{i + 1}.webp"
+							src="{base}{imgPath}"
 							alt="BSides312 gallery photo {i + 1}"
 							class="ribbon-img"
 							loading="lazy"
