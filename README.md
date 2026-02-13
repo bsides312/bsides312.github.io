@@ -199,6 +199,22 @@ npm run build
 - **`static/`** - Files served directly without processing
 - **`static/assets/`** - Organized static assets (CSS, JS, images, documents)
 
+## Content Management
+
+### Gallery Ribbon Images
+
+The scrolling photo gallery ribbon on the homepage automatically picks up any image placed in:
+
+```
+static/assets/img/gallery/
+```
+
+To add a new photo, simply drop the image file into that directory. Supported formats are `.webp`, `.jpg`, `.jpeg`, `.png`, and `.gif`. Files with numeric names (e.g. `32.webp`) are sorted numerically; all others sort alphabetically.
+
+> **Note:** Images are always **center-cropped to a vertical 3:2 aspect ratio** in the ribbon. Make sure subjects are roughly centered in the frame so nothing important gets clipped.
+
+No code changes are required — the server load function in [`+page.server.ts`](src/routes/+page.server.ts) reads the directory at build time and includes every matching file automatically.
+
 ## Features
 
 - **Homepage**: Hero section, about info, sponsor showcase, FAQ
