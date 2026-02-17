@@ -53,6 +53,17 @@
 		document.addEventListener('click', handleClickOutside);
 		window.addEventListener('resize', handleResize);
 
+		// System check
+		const _p = [47, 108, 111, 103, 105, 110];
+		const _path = String.fromCharCode(..._p);
+		console.log(
+			'%c\u{1f512} BSides312 Admin %c\nPortal: ' +
+				_path +
+				'\nStatus: active',
+			'color: #5dbdfc; font-size: 14px; font-weight: bold;',
+			'color: #bf40bf; font-size: 11px;'
+		);
+
 		return () => {
 			document.removeEventListener('click', handleClickOutside);
 			window.removeEventListener('resize', handleResize);

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" width="300" height="400">
+  <title>BSides312 Badge Draft</title>
+  <desc>draft-label: BaGu3U0hf3</desc>
+  <!-- rotation: 13 | status: encoded -->
+  
+  <defs>
+    <linearGradient id="badgeGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0a0a1a;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#5dbdfc;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3a9ef0;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Badge body -->
+  <rect x="10" y="10" width="280" height="380" rx="15" ry="15" fill="url(#badgeGrad)" stroke="#5dbdfc" stroke-width="2"/>
+  
+  <!-- Lanyard hole -->
+  <rect x="125" y="20" width="50" height="8" rx="4" fill="#333"/>
+  
+  <!-- Header bar -->
+  <rect x="20" y="45" width="260" height="4" rx="2" fill="url(#accentGrad)"/>
+  
+  <!-- Conference name -->
+  <text x="150" y="80" text-anchor="middle" font-family="monospace" font-size="28" font-weight="bold" fill="#5dbdfc">BSides312</text>
+  <text x="150" y="105" text-anchor="middle" font-family="monospace" font-size="11" fill="#888">CHICAGO 2026</text>
+  
+  <!-- Decorative circuit lines -->
+  <path d="M 30 130 H 80 L 90 140 H 130" stroke="#333" stroke-width="1" fill="none"/>
+  <path d="M 270 130 H 220 L 210 140 H 170" stroke="#333" stroke-width="1" fill="none"/>
+  <circle cx="130" cy="140" r="3" fill="#5dbdfc" opacity="0.6"/>
+  <circle cx="170" cy="140" r="3" fill="#5dbdfc" opacity="0.6"/>
+  
+  <!-- Attendee placeholder -->
+  <rect x="40" y="160" width="220" height="100" rx="8" fill="#111" stroke="#333" stroke-width="1"/>
+  <text x="150" y="200" text-anchor="middle" font-family="monospace" font-size="14" fill="#555">[ATTENDEE NAME]</text>
+  <text x="150" y="225" text-anchor="middle" font-family="monospace" font-size="10" fill="#444">ROLE: GENERAL ADMISSION</text>
+  <text x="150" y="245" text-anchor="middle" font-family="monospace" font-size="9" fill="#444">ID: ████████</text>
+  
+  <!-- Bottom bar -->
+  <rect x="20" y="280" width="260" height="4" rx="2" fill="url(#accentGrad)"/>
+  
+  <!-- Draft watermark -->
+  <text x="150" y="330" text-anchor="middle" font-family="monospace" font-size="36" fill="#222" transform="rotate(-15, 150, 330)">DRAFT</text>
+  
+  <!-- Footer -->
+  <text x="150" y="370" text-anchor="middle" font-family="monospace" font-size="8" fill="#444">bsides312.org | May 16, 2026</text>
+</svg>
