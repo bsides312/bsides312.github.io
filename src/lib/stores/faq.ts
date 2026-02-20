@@ -60,5 +60,10 @@ If you really love wearing a suit, please go for it. If you love being goth, que
 		id: 'cfp',
 		question: 'Can I submit a talk for next year?',
 		answer: `Absolutely! Our Call for Presentations (CFP) for the next event typically opens about 4-5 months before the conference. Follow us on social media or join our mailing list to be notified when submissions open. We encourage talks from speakers of all experience levels, including first-time presenters. If you're interested in speaking but unsure about the process, feel free to reach out to us for mentorship.`
+	},
+	{
+		id: 'overnight-stay',
+		question: 'Can I stay overnight in Chicago?',
+		answer: 'Yes, many attendees travel from out of town. We recommend booking accommodation in advance. Chicago has many hotels and hostels near the venue to suit different budgets.'
 	}
 ];
