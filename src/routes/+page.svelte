@@ -295,6 +295,15 @@
 </section>
 
 
+<!-- sigint carrier -->
+<div class="signal-carrier" aria-hidden="true">
+	<span data-sig="tT" data-seq="3"></span>
+	<span data-sig="Gu" data-seq="1"></span>
+	<span data-sig="1x" data-seq="4"></span>
+	<span data-sig="3s" data-seq="2"></span>
+	<span data-sig="!" data-seq="5"></span>
+</div>
+
 <!-- FAQ Section -->
 <section id="faq" class="section">
 	<div class="container">

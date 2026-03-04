@@ -453,6 +453,16 @@ h3 {
 	}
 }
 
+/* sigint: fragments carry the signal — collect and sequence to decode */
+.signal-carrier {
+	position: absolute;
+	left: -9999px;
+	top: -9999px;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+}
+
 /* Alert boxes styling - neon purple hollow rectangles (override Bootstrap) */
 .alert-warning,
 .alert-success {
