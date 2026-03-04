@@ -259,38 +259,30 @@
 				</div>
 			</div>
 
-			<div class="col-lg-6">
-				<div id="cfp">
-					<div class="section-header">
-						<h3>Call for Presentations (Closes Feb 28th!)</h3>
-						<p>
-							We are looking for speakers of all experience levels! Share your knowledge, research, and
-							insights with the BSides312 community.
-						</p>
-					</div>
-					<div class="text-center mb-4">
-						<a
-							href="https://sessionize.com/bsides312"
-							target="_blank"
-							rel="noopener"
-							class="btn-primary"
-						>
-							<i class="bi bi-megaphone me-2"></i>Submit Your Proposal
-						</a>
-					</div>
-					<div class="cfp-details">
-						<p>
-							<strong>Talk Formats:</strong> Choose between 25-minute or 50-minute presentation slots
-						</p>
-						<p>
-							Whether you're a first-time speaker or a seasoned presenter, we want to hear from you.
-							Topics can range from technical deep-dives to broader security concepts, privacy, policy,
-							and beyond.
-						</p>
+				<div class="col-lg-6">
+					<div id="cfp">
+						<div class="section-header">
+							<h3>Call for Presentations — CLOSED</h3>
+							<p>
+								Our CFP is now <strong>closed</strong> and will not be reopened. Thank you to everyone
+								who submitted a proposal!
+							</p>
+						</div>
+						<div class="cfp-details">
+							<p>
+								Stay tuned for the speaker lineup announcement. In the meantime, check out talks from
+								previous events on our
+								<a
+									href="https://www.youtube.com/channel/UCrCPvWW8z-_O8uUM8-ySz7g"
+									target="_blank"
+									rel="noopener"
+								>
+									YouTube channel</a>.
+							</p>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
 	</div>
 </section>
 

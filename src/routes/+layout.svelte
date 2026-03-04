@@ -139,7 +139,7 @@
 							<a class="nav-link" href="{base}/#contribute" on:click={closeMobileMenu}>Volunteer</a>
 						</li>
 						<li>
-							<a class="nav-link" href="{base}/speakers#speakers" on:click={closeMobileMenu}>CFP</a>
+							<a class="nav-link" href="{base}/speakers#speakers" on:click={closeMobileMenu}>Speakers</a>
 						</li>
 					</ul>
 				</li>

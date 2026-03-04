@@ -23,25 +23,21 @@
 			<div class="col-lg-8">
 				<div class="card text-center p-5 main-cfp-card">
 					<div class="card-body">
-						<i class="bi bi-megaphone display-1 text-primary mb-4"></i>
-						<h3 class="mb-4">Call for Presentations</h3>
+						<i class="bi bi-lock display-1 text-danger mb-4"></i>
+						<h3 class="mb-4">Call for Presentations — CLOSED</h3>
 						<p class="mb-4">
-							Are you passionate about cybersecurity? Do you have knowledge, research, or
-							experiences to share with the community? We want to hear from you!
+							Our CFP is now <strong>closed</strong> and will not be reopened. Thank you to everyone
+							who submitted a proposal!
+						</p>
+						<p class="mb-4">
+							Stay tuned for the speaker lineup announcement. In the meantime, check out talks from
+							previous events on our YouTube channel.
 						</p>
 						<p class="mb-4">
 							<strong>Conference Date:</strong> May 16th, 2026<br />
 							<strong>Location:</strong> Chicago, IL
 						</p>
 						<div class="d-grid gap-2 d-md-block">
-							<a
-								href="https://sessionize.com/bsides312"
-								target="_blank"
-								rel="noopener"
-								class="btn btn-primary mb-3 w-100"
-							>
-								<i class="bi bi-megaphone me-2"></i>Submit Your Proposal
-							</a>
 							<a href="{base}/previous-speakers" class="btn btn-outline-primary me-md-2">
 								<i class="bi bi-people me-2"></i>View Previous Speakers
 							</a>
@@ -94,14 +90,14 @@
 							<i class="bi bi-clock text-info me-2"></i>Important Dates
 						</h4>
 						<ul class="list-unstyled">
-							<li><strong>CFP Opens:</strong>&nbsp;November 27th, 2025</li>
-							<li><strong>CFP Closes:</strong>&nbsp;February 28th, 2026</li>
+							<li><strong>CFP Opened:</strong>&nbsp;November 27th, 2025</li>
+							<li><strong>CFP Closed:</strong>&nbsp;February 28th, 2026</li>
 							<li><strong>Speaker Notifications:</strong>&nbsp;By March 15th, 2026</li>
 							<li><strong>Conference Date:</strong>&nbsp;May 16th, 2026</li>
 						</ul>
 						<p class="mt-3">
 							<small class="text-muted">
-								Follow us on social media or subscribe to our newsletter for CFP announcements!
+								Follow us on social media for the speaker lineup announcement!
 							</small>
 						</p>
 					</div>

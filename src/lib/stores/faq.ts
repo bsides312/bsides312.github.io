@@ -58,7 +58,7 @@ If you really love wearing a suit, please go for it. If you love being goth, que
 	},
 	{
 		id: 'cfp',
-		question: 'Can I submit a talk for next year?',
-		answer: `Absolutely! Our Call for Presentations (CFP) for the next event typically opens about 4-5 months before the conference. Follow us on social media or join our mailing list to be notified when submissions open. We encourage talks from speakers of all experience levels, including first-time presenters. If you're interested in speaking but unsure about the process, feel free to reach out to us for mentorship.`
+		question: 'Can I still submit a talk?',
+		answer: `Our Call for Presentations (CFP) for BSides312 2026 is now closed and will not be reopened. Stay tuned for the speaker lineup announcement! In the meantime, check out talks from previous events on our <a href="https://www.youtube.com/channel/UCrCPvWW8z-_O8uUM8-ySz7g" target="_blank" rel="noopener">YouTube channel</a>. For future events, follow us on social media or join our mailing list to be notified when submissions open.`
 	}
 ];
