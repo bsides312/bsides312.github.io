@@ -44,7 +44,7 @@ If you really love wearing a suit, please go for it. If you love being goth, que
 	{
 		id: 'parking',
 		question: 'Is there parking at the venue?',
-		answer: 'TBD in 2026!'
+		answer: 'YES! We have around 100 parking spaces available. This has proven to be more than enough in the past'
 	},
 	{
 		id: 'photography',
@@ -54,7 +54,7 @@ If you really love wearing a suit, please go for it. If you love being goth, que
 	{
 		id: 'accessibility',
 		question: 'Is the venue mobility accessible?',
-		answer: 'The TBD in 2026, though this is a primary concern when choosing our venues!'
+		answer: 'Yes! This venue has an ADA-compliant main entrance and restrooms, and all of our content is in accessible rooms.'
 	},
 	{
 		id: 'cfp',
