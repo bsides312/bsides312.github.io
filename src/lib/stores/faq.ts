@@ -47,6 +47,11 @@ If you really love wearing a suit, please go for it. If you love being goth, que
 		answer: 'YES! We have around 100 parking spaces available. This has proven to be more than enough in the past'
 	},
 	{
+		id: 'hotels',
+		question: 'Where can I find safe overnight lodging?',
+		answer: 'Chicago is surprisingly devoid of hotels outside of Downtown, and we do not recommend staying there as it is very far and expensive. AirBNB near the venue is a good bet. The venue is also on the CTA Blue Line, so staying anywhere along that line will work as well. Many choose to stay around the Rosemont stop, which has cheaper hotels. '
+	},
+	{
 		id: 'photography',
 		question: "What's your photography policy?",
 		answer: `We encourage you to document and share your BSides312 experience, but always ask for permission before photographing individuals' faces or other identifying features, and be clear about where the photos may be used. Speakers may indicate if they don't want their presentations recorded or photographed, so listen up!`
