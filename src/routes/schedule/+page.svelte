@@ -99,6 +99,7 @@
 		<div class="section-header">
 			<h2>Event Schedule</h2>
 			<p>May 16th, 2026 &mdash; Irish American Heritage Center, Chicago</p>
+			<br>Presentations are added automatically as speakers confirm their attendance.
 		</div>
 
 		{#if loading}

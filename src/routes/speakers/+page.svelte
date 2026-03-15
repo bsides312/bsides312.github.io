@@ -110,7 +110,8 @@
 	<div class="container">
 		<div class="section-header">
 			<h2>Speakers</h2>
-			<p>Meet the experts presenting at BSides312 2026</p>
+			<p>Meet the experts presenting at BSides312 2026! 
+				<br>New speakers are added automatically as they confirm their attendance.</p>
 		</div>
 
 		{#if loading}
