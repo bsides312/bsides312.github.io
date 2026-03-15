@@ -653,7 +653,7 @@ div[id] {
 .alert-success {
 	background-color: transparent !important;
 	border: 2px solid #bf40bf !important;
-	color: #39ff14 !important;
+	color: #00ffaa !important;
 	border-radius: 8px !important;
 	box-shadow: 0 0 18px rgba(191, 64, 191, 0.35) !important;
 	transition: box-shadow 0.3s ease;
@@ -666,13 +666,13 @@ div[id] {
 
 .alert-warning a,
 .alert-success a {
-	color: #39ff14 !important;
+	color: #00ffaa !important;
 	text-decoration: underline;
 }
 
 .alert-warning a:hover,
 .alert-success a:hover {
-	color: #7fff00 !important;
+	color: #66ffcc !important;
 }
 
 /* ============================================================
