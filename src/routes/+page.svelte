@@ -54,7 +54,6 @@
 				src="{base}/assets/img/about_logo.png"
 				alt="BSides312 Logo"
 				class="img-fluid hero-logo"
-				style="max-height: 360px;"
 			/>
 		</div>
 		<h1 class="text-center mb-4">Chicago's Biggest Little Non-Profit Hacking Conference</h1>
@@ -95,7 +94,7 @@
 </section>
 
 <!-- About Section -->
-<section id="about" class="section">
+<section id="about" class="section section-with-bg">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-6 mb-4">
@@ -137,7 +136,7 @@
 							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2967.8!2d-87.7425!3d41.9645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fcc7f9c0f0f0f%3A0x0!2s4626%20N%20Knox%20Ave%2C%20Chicago%2C%20IL!5e0!3m2!1sen!2sus!4v1234567890"
 							width="100%"
 							height="200"
-							style="border:0;border-radius:8px;"
+							class="map-iframe"
 							allowfullscreen
 							loading="lazy"
 							referrerpolicy="no-referrer-when-downgrade"
@@ -258,7 +257,7 @@
 						</h3>
 						<p>Our call for volunteers is closed for 2026, but thank you for your interest!</p>
 						<p class="mb-0">
-							<small style="color: rgba(255,255,255,0.6);">
+							<small class="text-muted-60">
 								<i class="bi bi-bell me-1"></i>Follow us on social media to be notified when volunteer applications open for future events.
 							</small>
 						</p>
@@ -303,7 +302,7 @@
 </div>
 
 <!-- FAQ Section -->
-<section id="faq" class="section">
+<section id="faq" class="section section-with-bg">
 	<div class="container">
 		<div class="section-header">
 			<h2>Frequently Asked Questions</h2>

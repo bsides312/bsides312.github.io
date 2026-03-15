@@ -10,16 +10,8 @@
 	/>
 </svelte:head>
 
-<!-- Hero Section -->
-<section class="hero">
-	<div class="hero-content">
-		<h1>BSides312<br /><span>Code of Conduct</span></h1>
-		<p>Creating an inclusive and welcoming environment for all</p>
-	</div>
-</section>
-
 <!-- Code of Conduct Section -->
-<section id="code-of-conduct" class="section">
+<section id="code-of-conduct" class="section section-with-bg">
 	<div class="container">
 		<div class="section-header">
 			<h2>Code of Conduct</h2>

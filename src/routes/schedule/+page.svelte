@@ -10,15 +10,6 @@
 	/>
 </svelte:head>
 
-<!-- Hero Section -->
-<section class="hero">
-	<div class="hero-content">
-		<h1>BSides312<br /><span>Event Schedule</span></h1>
-		<p>Two Tracks! Maybe more!</p>
-		<a href="#schedule" class="btn-primary">Coming Soon</a>
-	</div>
-</section>
-
 <!-- Schedule Section -->
 <section id="schedule" class="section section-with-bg">
 	<div class="container">

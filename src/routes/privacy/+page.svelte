@@ -10,16 +10,8 @@
 	/>
 </svelte:head>
 
-<!-- Hero Section -->
-<section class="hero">
-	<div class="hero-content">
-		<h1>BSides312<br /><span>Privacy Policy</span></h1>
-		<p>How we protect and handle your information</p>
-	</div>
-</section>
-
 <!-- Privacy Policy Section -->
-<section id="privacy" class="section">
+<section id="privacy" class="section section-with-bg">
 	<div class="container">
 		<div class="section-header">
 			<h2>Privacy Policy</h2>

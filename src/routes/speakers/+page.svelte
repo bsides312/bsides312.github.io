@@ -10,7 +10,7 @@
 	/>
 </svelte:head>
 
-<section id="speakers" class="section">
+<section id="speakers" class="section section-with-bg">
 	<div class="container">
 		<div class="section-header text-center mb-5">
 			<h1>Speaker Lineup Coming Soon</h1>

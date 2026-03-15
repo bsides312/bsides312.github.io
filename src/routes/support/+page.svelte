@@ -80,40 +80,28 @@
 	/>
 </svelte:head>
 
-<!-- Hero Section -->
-<section class="hero">
-	<div class="hero-content">
-		<h1>BSides312<br /><span>Support Us</span></h1>
-		<p>
-			BSides312 is run by the Hak4Kidz nonprofit, making corporate sponsorships and personal
-			donations tax-deductible.
-		</p>
-		<div class="hero-buttons">
-			<a href="#support" class="btn-primary">DONATE!</a>
-			<a href="{base}/assets/docs/BSides 312_2026_Sponsor_Prospectus.pdf" target="_blank" rel="noopener" class="btn-primary btn-transparent">View Prospectus</a>
-		</div>
-	</div>
-</section>
-
 <!-- Corporate Sponsorship Section -->
 <section id="support" class="section section-with-bg">
 	<div class="container">
 		<div class="section-header">
-			<h2>Believe In Us</h2>
+			<h2>Support Us</h2>
+			<div class="mt-3 d-flex flex-wrap gap-3 justify-content-center">
+				<a href="https://paypal.me/bsides312" target="_blank" rel="noopener" class="btn-primary">Make an Ad-Hoc Donation!</a>
+				<a href="{base}/assets/docs/BSides 312_2026_Sponsor_Prospectus.pdf" target="_blank" rel="noopener" class="btn-primary">View Sponsorship Prospectus</a>
+			</div>
 		</div>
 
 		<div class="alert alert-success container-fluid text-center fw-bold" role="alert">
 			<a href="{base}/assets/docs/BSides 312_2026_Sponsor_Prospectus.pdf" target="_blank" rel="noopener" class="prospectus-link">
 				Help make Chicago's biggest little hacker conference possible through corporate sponsorship!<br>
-				Click here for the 2026 Sponsors Prospectus!
+				BSides312 is run by the Hak4Kidz nonprofit, making corporate sponsorships and personal
+				donations tax-deductible.
 			</a>
 		</div>
-
 		<div class="row justify-content-center">
 			<div class="section-header">
-				<h3>Corporate Sponsorship Tiers</h3>
+				<br><h3>Corporate Sponsorship Tiers</h3>
 			</div>
-
 			{#each sponsorshipTiers as tier (tier.name)}
 				<div class="col-lg-4 col-md-6 col-sm-12 mb-4">
 					<div class="sponsorship-card" class:highlighted={tier.highlighted}>

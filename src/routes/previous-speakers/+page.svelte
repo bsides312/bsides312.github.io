@@ -98,15 +98,6 @@
 	<meta name="description" content="View our talented speakers from past BSides312 conferences" />
 </svelte:head>
 
-<!-- Hero Section -->
-<section class="hero">
-	<div class="hero-content">
-		<h1>BSides312<br /><span>Previous Speakers</span></h1>
-		<p>BSides312 Conference Alumni</p>
-		<a href="#previous-speakers" class="btn-primary">VIEW SPEAKERS</a>
-	</div>
-</section>
-
 <!-- Previous Speakers Section -->
 <section id="previous-speakers" class="section section-with-bg">
 	<div class="container">
@@ -117,7 +108,7 @@
 
 		{#each previousSpeakers as yearGroup (yearGroup.year)}
 			<div class="mb-5">
-				<h3 class="mb-4 pb-2" style="border-bottom: 2px solid rgba(93,189,252,0.3);">
+				<h3 class="mb-4 pb-2 year-heading">
 					<i class="bi bi-calendar-event text-warning me-2"></i>{yearGroup.year}
 				</h3>
 
@@ -130,7 +121,7 @@
 										<i class="bi bi-person text-info me-2"></i>{speaker.name}
 									</h5>
 									{#if speaker.topic}
-										<p class="mb-0" style="font-size: 0.9rem; color: rgba(255,255,255,0.7);">{speaker.topic}</p>
+										<p class="mb-0 speaker-topic">{speaker.topic}</p>
 									{/if}
 								</div>
 							</div>

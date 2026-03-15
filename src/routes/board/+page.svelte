@@ -10,16 +10,8 @@
 	/>
 </svelte:head>
 
-<!-- Hero Section -->
-<section class="hero">
-	<div class="hero-content">
-		<h1>BSides312<br /><span>Board of Directors</span></h1>
-		<p>Meet the team behind Chicago's biggest little hacker conference</p>
-	</div>
-</section>
-
 <!-- Board Member Details Section -->
-<section id="board" class="section">
+<section id="board" class="section section-with-bg">
 	<div class="container">
 		<div class="section-header">
 			<h2>Board Member Details</h2>
@@ -38,8 +30,8 @@
 						</div>
 						<div class="col-md-9">
 							<h3 class="card-title mb-1">{member.name}</h3>
-							<p class="mb-3" style="color: rgba(255,255,255,0.7); font-size: 1.1rem;">
-								<i class="bi bi-briefcase me-2" style="color: var(--primary-color);"></i>{member.title}
+							<p class="mb-3 board-role">
+								<i class="bi bi-briefcase text-info me-2"></i>{member.title}
 							</p>
 							{#if member.social}
 								<div class="social-links mb-3">
