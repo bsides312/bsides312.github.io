@@ -471,14 +471,15 @@ div[id] {
 }
 
 .section-header p {
-	display: inline-block;
+	display: block;
+	width: fit-content;
+	margin: 12px auto 0;
 	background-color: transparent;
 	border: 2px solid #bf40bf;
 	color: #00ffaa;
 	border-radius: 8px;
 	box-shadow: 0 0 18px rgba(191, 64, 191, 0.35);
 	padding: 6px 18px;
-	margin-top: 8px;
 	transition: box-shadow 0.3s ease;
 }
 
