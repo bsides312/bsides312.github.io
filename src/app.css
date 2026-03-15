@@ -470,6 +470,22 @@ div[id] {
 	padding-bottom: 20px;
 }
 
+.section-header p {
+	display: inline-block;
+	background-color: transparent;
+	border: 2px solid #bf40bf;
+	color: #00ffaa;
+	border-radius: 8px;
+	box-shadow: 0 0 18px rgba(191, 64, 191, 0.35);
+	padding: 6px 18px;
+	margin-top: 8px;
+	transition: box-shadow 0.3s ease;
+}
+
+.section-header p:hover {
+	box-shadow: 0 0 30px rgba(191, 64, 191, 0.55);
+}
+
 .section-header h2::after {
 	content: '';
 	position: absolute;
