@@ -264,14 +264,17 @@
 						<div class="section-header">
 							<h3>Call for Presentations — CLOSED</h3>
 							<p>
-								Our CFP is now <strong>closed</strong> and will not be reopened. Thank you to everyone
-								who submitted a proposal!
+								Our CFP is now <strong>closed</strong> and all talks have been selected. Thank you to
+								everyone who submitted a proposal!
+							</p>
+							<p>
+								If you submitted a talk, please check your email for a message from
+								<strong>bsides312@events.sessionize.com</strong> with your selection status.
 							</p>
 						</div>
 						<div class="cfp-details">
 							<p>
-								Stay tuned for the speaker lineup announcement. In the meantime, check out talks from
-								previous events on our
+								In the meantime, check out talks from previous events on our
 								<a
 									href="https://www.youtube.com/channel/UCrCPvWW8z-_O8uUM8-ySz7g"
 									target="_blank"

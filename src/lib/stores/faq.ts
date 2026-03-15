@@ -64,6 +64,6 @@ If you really love wearing a suit, please go for it. If you love being goth, que
 	{
 		id: 'cfp',
 		question: 'Can I still submit a talk?',
-		answer: `Our Call for Presentations (CFP) for BSides312 2026 is now closed and will not be reopened. Stay tuned for the speaker lineup announcement! In the meantime, check out talks from previous events on our <a href="https://www.youtube.com/channel/UCrCPvWW8z-_O8uUM8-ySz7g" target="_blank" rel="noopener">YouTube channel</a>. For future events, follow us on social media or join our mailing list to be notified when submissions open.`
+		answer: `Our Call for Presentations (CFP) for BSides312 2026 is now closed and all talks have been selected. If you submitted a talk, please check your email for a message from <strong>bsides312@events.sessionize.com</strong> with your selection status. In the meantime, check out talks from previous events on our <a href="https://www.youtube.com/channel/UCrCPvWW8z-_O8uUM8-ySz7g" target="_blank" rel="noopener">YouTube channel</a>. For future events, follow us on social media or join our mailing list to be notified when submissions open.`
 	}
 ];

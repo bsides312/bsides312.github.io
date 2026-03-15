@@ -26,12 +26,15 @@
 						<i class="bi bi-lock display-1 text-danger mb-4"></i>
 						<h3 class="mb-4">Call for Presentations — CLOSED</h3>
 						<p class="mb-4">
-							Our CFP is now <strong>closed</strong> and will not be reopened. Thank you to everyone
-							who submitted a proposal!
+							Our CFP is now <strong>closed</strong> and all talks have been selected. Thank you to
+							everyone who submitted a proposal!
 						</p>
 						<p class="mb-4">
-							Stay tuned for the speaker lineup announcement. In the meantime, check out talks from
-							previous events on our YouTube channel.
+							If you submitted a talk, please check your email for a message from
+							<strong>bsides312@events.sessionize.com</strong> with your selection status.
+						</p>
+						<p class="mb-4">
+							In the meantime, check out talks from previous events on our YouTube channel.
 						</p>
 						<p class="mb-4">
 							<strong>Conference Date:</strong> May 16th, 2026<br />
