@@ -116,17 +116,23 @@
 		</div>
 
 		{#each previousSpeakers as yearGroup (yearGroup.year)}
-			<div class="year-section">
-				<h3 class="year-header">{yearGroup.year}</h3>
+			<div class="mb-5">
+				<h3 class="mb-4 pb-2" style="border-bottom: 2px solid rgba(93,189,252,0.3);">
+					<i class="bi bi-calendar-event text-warning me-2"></i>{yearGroup.year}
+				</h3>
 
 				<div class="row">
 					{#each yearGroup.speakers as speaker (speaker.name)}
-						<div class="col-md-6 col-lg-4">
-							<div class="speaker-card">
-								<h4 class="speaker-name">{speaker.name}</h4>
-								{#if speaker.topic}
-									<p class="speaker-topic">{speaker.topic}</p>
-								{/if}
+						<div class="col-md-6 col-lg-4 mb-3">
+							<div class="card h-100">
+								<div class="card-body">
+									<h5 class="card-title mb-1">
+										<i class="bi bi-person text-info me-2"></i>{speaker.name}
+									</h5>
+									{#if speaker.topic}
+										<p class="mb-0" style="font-size: 0.9rem; color: rgba(255,255,255,0.7);">{speaker.topic}</p>
+									{/if}
+								</div>
 							</div>
 						</div>
 					{/each}
@@ -134,15 +140,16 @@
 			</div>
 		{/each}
 
-		<div class="youtube-section">
-			<div class="text-center">
-				<h3>Want to see these talks?</h3>
-				<p>Check out our YouTube channel for recordings of many past presentations!</p>
+		<div class="card text-center p-4 mt-3">
+			<div class="card-body">
+				<i class="bi bi-youtube display-1 text-danger mb-3"></i>
+				<h3 class="mb-3">Want to see these talks?</h3>
+				<p class="mb-4">Check out our YouTube channel for recordings of many past presentations!</p>
 				<a
 					href="https://www.youtube.com/channel/UCrCPvWW8z-_O8uUM8-ySz7g"
 					target="_blank"
 					rel="noopener"
-					class="btn-primary"
+					class="btn btn-outline-primary"
 				>
 					<i class="bi bi-youtube me-2"></i>Visit Our YouTube Channel
 				</a>

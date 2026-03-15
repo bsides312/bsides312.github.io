@@ -98,64 +98,66 @@
 <section id="about" class="section">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-6">
-				<h2>About BSides312</h2>
-				<p>
-					BSides312 is a nonprofit one-day conference run by longtime members of Chicago's hacking
-					and infosec community. In fact, many of them founded the original BSides Chicago! It's
-					built as a collaborative venue; whether you hack hardware, excel at logistics, or just
-					bring curious friends, you help shape the conversation.
-				</p>
-				<p>
-					Like every BSides event, the conference follows a community-driven model built by and for
-					hackers. Its purpose is to widen the conversation beyond the usual boundaries, offering
-					space for people to both present and take part in an intimate, collaborative setting. The
-					result is an intense mix of discussions, demos, and interaction where new ideas take
-					shape.
-				</p>
-				<p>
-					If you and your organization are as passionate about the security community as we are and
-					would like to sponsor our event, please reach out questions [@] bsides312.org. To show our
-					thanks, sponsors will be welcome to chat about themselves and their organization,
-					fostering connections with the BSides312 community.
-				</p>
+			<div class="col-lg-6 mb-4">
+				<div class="card h-100">
+					<div class="card-body">
+						<h2><i class="bi bi-terminal me-2"></i>About BSides312</h2>
+						<p>
+							BSides312 is a nonprofit one-day conference run by longtime members of Chicago's hacking
+							and infosec community. In fact, many of them founded the original BSides Chicago! It's
+							built as a collaborative venue; whether you hack hardware, excel at logistics, or just
+							bring curious friends, you help shape the conversation.
+						</p>
+						<p>
+							Like every BSides event, the conference follows a community-driven model built by and for
+							hackers. Its purpose is to widen the conversation beyond the usual boundaries, offering
+							space for people to both present and take part in an intimate, collaborative setting. The
+							result is an intense mix of discussions, demos, and interaction where new ideas take
+							shape.
+						</p>
+						<p>
+							If you and your organization are as passionate about the security community as we are and
+							would like to sponsor our event, please reach out questions [@] bsides312.org. To show our
+							thanks, sponsors will be welcome to chat about themselves and their organization,
+							fostering connections with the BSides312 community.
+						</p>
+					</div>
+				</div>
 			</div>
 			<div class="col-lg-6">
-				<div class="row">
-					<div class="col-lg-6">
-						<h3>Where</h3>
+				<div class="card mb-3">
+					<div class="card-body">
+						<h3 class="card-title"><i class="bi bi-geo-alt-fill text-danger me-2"></i>Where</h3>
 						<p>
 							Irish American Heritage Center<br />
 							4626 N Knox Ave<br />
 							Chicago, IL
 						</p>
-						<div class="map-container">
-							<iframe
-								src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2967.8!2d-87.7425!3d41.9645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fcc7f9c0f0f0f%3A0x0!2s4626%20N%20Knox%20Ave%2C%20Chicago%2C%20IL!5e0!3m2!1sen!2sus!4v1234567890"
-								width="100%"
-								height="200"
-								style="border:0;border-radius:8px;"
-								allowfullscreen
-								loading="lazy"
-								referrerpolicy="no-referrer-when-downgrade"
-								title="Irish American Heritage Center Location"
-							></iframe>
-							<a
-								href="https://maps.app.goo.gl/RuApEvazVQGJAXHi7"
-								target="_blank"
-								rel="noopener"
-								class="map-link-btn"
-							>
-								<i class="bi bi-geo-alt-fill"></i> Open in Google Maps
-							</a>
-						</div>
-					</div>
-					<div class="col-lg-6">
-						<h3>When</h3>
-						<p>May 16th, 2026</p>
+						<iframe
+							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2967.8!2d-87.7425!3d41.9645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fcc7f9c0f0f0f%3A0x0!2s4626%20N%20Knox%20Ave%2C%20Chicago%2C%20IL!5e0!3m2!1sen!2sus!4v1234567890"
+							width="100%"
+							height="200"
+							style="border:0;border-radius:8px;"
+							allowfullscreen
+							loading="lazy"
+							referrerpolicy="no-referrer-when-downgrade"
+							title="Irish American Heritage Center Location"
+						></iframe>
+						<a
+							href="https://maps.app.goo.gl/RuApEvazVQGJAXHi7"
+							target="_blank"
+							rel="noopener"
+							class="map-link-btn"
+						>
+							<i class="bi bi-box-arrow-up-right me-1"></i>Open in Google Maps
+						</a>
 					</div>
 				</div>
-				<div class="row mt-3">
+				<div class="card">
+					<div class="card-body">
+						<h3 class="card-title"><i class="bi bi-calendar-event text-warning me-2"></i>When</h3>
+						<p class="mb-0"><strong>May 16th, 2026</strong> &mdash; Full day event</p>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -248,44 +250,45 @@
 		</div>
 
 		<div class="row">
-			<div class="col-lg-6">
-				<div id="volunteer">
-					<div class="section-header">
-						<h3>Volunteer With Us</h3>
-						<p>
-							Our call for volunteers is closed for 2026, but thank you for your interest!
+			<div class="col-lg-6 mb-4" id="volunteer">
+				<div class="card h-100">
+					<div class="card-body">
+						<h3 class="card-title">
+							<i class="bi bi-people-fill text-info me-2"></i>Volunteer With Us
+						</h3>
+						<p>Our call for volunteers is closed for 2026, but thank you for your interest!</p>
+						<p class="mb-0">
+							<small style="color: rgba(255,255,255,0.6);">
+								<i class="bi bi-bell me-1"></i>Follow us on social media to be notified when volunteer applications open for future events.
+							</small>
 						</p>
 					</div>
 				</div>
 			</div>
 
-				<div class="col-lg-6">
-					<div id="cfp">
-						<div class="section-header">
-							<h3>Call for Presentations — CLOSED</h3>
-							<p>
-								Our CFP is now <strong>closed</strong> and all talks have been selected. Thank you to
-								everyone who submitted a proposal!
-							</p>
-							<p>
-								If you submitted a talk, please check your email for a message from
-								<strong>bsides312@events.sessionize.com</strong> with your selection status.
-							</p>
-						</div>
-						<div class="cfp-details">
-							<p>
-								In the meantime, check out talks from previous events on our
-								<a
-									href="https://www.youtube.com/channel/UCrCPvWW8z-_O8uUM8-ySz7g"
-									target="_blank"
-									rel="noopener"
-								>
-									YouTube channel</a>.
-							</p>
-						</div>
+			<div class="col-lg-6 mb-4" id="cfp">
+				<div class="card h-100">
+					<div class="card-body">
+						<h3 class="card-title">
+							<i class="bi bi-mic-fill text-warning me-2"></i>Call for Presentations — CLOSED
+						</h3>
+						<p>
+							Our CFP is now <strong>closed</strong> and all talks have been selected. Thank you to
+							everyone who submitted a proposal!
+						</p>
+						<p>
+							If you submitted a talk, please check your email for a message from
+							<strong>bsides312@events.sessionize.com</strong> with your selection status.
+						</p>
+						<p class="mb-0">
+							In the meantime, check out talks from previous events on our
+							<a href="https://www.youtube.com/channel/UCrCPvWW8z-_O8uUM8-ySz7g" target="_blank" rel="noopener">
+								<i class="bi bi-youtube me-1"></i>YouTube channel</a>.
+						</p>
 					</div>
 				</div>
 			</div>
+		</div>
 	</div>
 </section>
 

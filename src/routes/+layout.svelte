@@ -346,7 +346,6 @@
 		margin: 0;
 		padding: 0;
 		font-family: 'Open Sans', sans-serif;
-		background-color: #0c0c0c;
 		color: #fff;
 	}
 

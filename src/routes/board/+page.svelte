@@ -30,64 +30,48 @@
 		</div>
 
 		{#each boardMembers as member (member.id)}
-			<div class="row align-items-center mb-5 board-member-row" id={member.id}>
-				<div class="col-md-4 text-center">
-					<img src={member.image} alt={member.name} class="board-img" />
-				</div>
-				<div class="col-md-8">
-					<div class="board-member-details">
-						<h3>{member.name}</h3>
-						{#if member.social}
-							<div class="social-links mb-3">
-								{#if member.social.linkedin}
-									<a
-										href={member.social.linkedin}
-										target="_blank"
-										rel="noopener"
-										aria-label="{member.name} LinkedIn Profile"
-									>
-										<i class="bi bi-linkedin"></i>
-									</a>
-								{/if}
-								{#if member.social.twitter}
-									<a
-										href={member.social.twitter}
-										target="_blank"
-										rel="noopener"
-										aria-label="{member.name} Twitter Profile"
-									>
-										<i class="bi bi-twitter"></i>
-									</a>
-								{/if}
-								{#if member.social.facebook}
-									<a
-										href={member.social.facebook}
-										target="_blank"
-										rel="noopener"
-										aria-label="{member.name} Facebook Profile"
-									>
-										<i class="bi bi-facebook"></i>
-									</a>
-								{/if}
-								{#if member.social.instagram}
-									<a
-										href={member.social.instagram}
-										target="_blank"
-										rel="noopener"
-										aria-label="{member.name} Instagram Profile"
-									>
-										<i class="bi bi-instagram"></i>
-									</a>
-								{/if}
+			<div class="card mb-4" id={member.id}>
+				<div class="card-body">
+					<div class="row align-items-center">
+						<div class="col-md-3 text-center mb-3 mb-md-0">
+							<img src={member.image} alt={member.name} class="board-img" />
+						</div>
+						<div class="col-md-9">
+							<h3 class="card-title mb-1">{member.name}</h3>
+							<p class="mb-3" style="color: rgba(255,255,255,0.7); font-size: 1.1rem;">
+								<i class="bi bi-briefcase me-2" style="color: var(--primary-color);"></i>{member.title}
+							</p>
+							{#if member.social}
+								<div class="social-links mb-3">
+									{#if member.social.linkedin}
+										<a href={member.social.linkedin} target="_blank" rel="noopener" aria-label="{member.name} LinkedIn Profile">
+											<i class="bi bi-linkedin"></i>
+										</a>
+									{/if}
+									{#if member.social.twitter}
+										<a href={member.social.twitter} target="_blank" rel="noopener" aria-label="{member.name} Twitter Profile">
+											<i class="bi bi-twitter"></i>
+										</a>
+									{/if}
+									{#if member.social.facebook}
+										<a href={member.social.facebook} target="_blank" rel="noopener" aria-label="{member.name} Facebook Profile">
+											<i class="bi bi-facebook"></i>
+										</a>
+									{/if}
+									{#if member.social.instagram}
+										<a href={member.social.instagram} target="_blank" rel="noopener" aria-label="{member.name} Instagram Profile">
+											<i class="bi bi-instagram"></i>
+										</a>
+									{/if}
+								</div>
+							{/if}
+							<div class="bio">
+								<!-- eslint-disable-next-line svelte/no-at-html-tags -->
+								{@html member.bio
+									.replace(/\n\n/g, '</p><p>')
+									.replace(/^/, '<p>')
+									.replace(/$/, '</p>')}
 							</div>
-						{/if}
-						<h4>{member.title}</h4>
-						<div class="bio">
-							<!-- eslint-disable-next-line svelte/no-at-html-tags -->
-							{@html member.bio
-								.replace(/\n\n/g, '</p><p>')
-								.replace(/^/, '<p>')
-								.replace(/$/, '</p>')}
 						</div>
 					</div>
 				</div>
