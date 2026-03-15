@@ -1406,7 +1406,7 @@ div[id] {
 		display: block;
 	}
 
-	.navbar ul {
+	.navbar > ul {
 		display: none;
 		position: fixed;
 		top: 80px;
@@ -1422,7 +1422,7 @@ div[id] {
 		overflow-y: auto;
 	}
 
-	.navbar ul.active {
+	.navbar > ul.active {
 		display: flex;
 	}
 
