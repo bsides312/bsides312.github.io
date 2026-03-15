@@ -49,14 +49,12 @@
 <!-- Hero Section -->
 <section class="hero">
 	<div class="hero-content">
-		<div class="text-center mb-0">
-			<img
-				src="{base}/assets/img/about_logo.png"
-				alt="BSides312 Logo"
-				class="img-fluid hero-logo"
-			/>
-		</div>
-		<h1 class="text-center mb-4">Chicago's Biggest Little Non-Profit Hacking Conference</h1>
+		<img
+			src="{base}/assets/img/about_logo.png"
+			alt="BSides312 Logo"
+			class="img-fluid hero-logo"
+		/>
+		<h1 class="text-center mb-4">Non-Profit Hacking Conference</h1>
 		<p class="lead text-center mb-4">
 			BSides312 brings together security professionals, researchers, and enthusiasts for an
 			unforgettable day of learning and networking.
@@ -90,6 +88,9 @@
 				</div>
 			</div>
 		</div>
+	</div>
+	<div class="scroll-indicator" aria-hidden="true">
+		<i class="bi bi-chevron-double-down"></i>
 	</div>
 </section>
 
