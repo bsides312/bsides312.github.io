@@ -178,6 +178,16 @@
 					</div>
 					<ul class:mobile-show={activeDropdown === 'event'}>
 						<li>
+							<a class="nav-link" href="{base}/schedule#schedule" on:click={closeMobileMenu}
+								>Schedule</a
+							>
+						</li>
+						<li>
+							<a class="nav-link" href="{base}/speakers#speakers" on:click={closeMobileMenu}
+								>Speakers</a
+							>
+						</li>
+						<li>
 							<a class="nav-link" href="{base}/previous-speakers#previous-speakers" on:click={closeMobileMenu}
 								>Previous Speakers</a
 							>

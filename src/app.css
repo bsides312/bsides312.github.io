@@ -8,6 +8,10 @@
 	--text-light: #ffffff;
 	--text-muted: rgba(255, 255, 255, 0.85);
 	--text-dark-contrast: rgba(255, 255, 255, 0.95);
+	--green-line: #00cc55;
+	--orange-line: #ff6624;
+	--green-line-glow: rgba(0, 204, 85, 0.35);
+	--orange-line-glow: rgba(255, 102, 36, 0.35);
 	--border-light: rgba(255, 255, 255, 0.1);
 	--gradient-primary: linear-gradient(135deg, #5dbdfc 0%, #3a9ef0 100%);
 }
@@ -1587,5 +1591,405 @@ div[id] {
 
 	.sponsor-logo img {
 		max-height: 50px;
+	}
+}
+
+/* ============================================================
+   CTA Line Branding
+   ============================================================ */
+.cta-badge {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	font-weight: 900;
+	font-size: 1rem;
+	font-style: italic;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	color: #fff;
+	flex-shrink: 0;
+	letter-spacing: -1px;
+}
+
+.cta-badge.green-badge {
+	background: var(--green-line);
+	box-shadow: 0 0 12px var(--green-line-glow);
+}
+
+.cta-badge.orange-badge {
+	background: var(--orange-line);
+	box-shadow: 0 0 12px var(--orange-line-glow);
+}
+
+.cta-badge.mini {
+	width: 20px;
+	height: 20px;
+	font-size: 0.6rem;
+}
+
+.green-text { color: var(--green-line); }
+.orange-text { color: var(--orange-line); }
+
+.cta-legend {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+	margin-bottom: 30px;
+	flex-wrap: wrap;
+}
+
+.cta-legend-item {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.cta-line-name {
+	font-weight: 700;
+	font-size: 0.95rem;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+.cta-line-sub {
+	font-size: 0.75rem;
+	color: rgba(255, 255, 255, 0.5);
+}
+
+.cta-legend-sep {
+	color: rgba(255, 255, 255, 0.25);
+	font-size: 1.2rem;
+}
+
+/* ============================================================
+   Schedule Grid
+   ============================================================ */
+.schedule-wrapper {
+	overflow-x: auto;
+	-webkit-overflow-scrolling: touch;
+	border-radius: 12px;
+	border: 1px solid rgba(93, 189, 252, 0.15);
+}
+
+.schedule-grid {
+	display: grid;
+	grid-template-columns: 76px 1fr 1fr;
+	min-width: 560px;
+}
+
+.sched-header-time {
+	background: rgba(6, 12, 34, 0.85);
+	padding: 14px 10px;
+	font-size: 0.7rem;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	color: rgba(255, 255, 255, 0.4);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-bottom: 2px solid rgba(93, 189, 252, 0.2);
+}
+
+.sched-header {
+	padding: 14px 18px;
+	font-weight: 700;
+	font-size: 0.95rem;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	border-bottom: 2px solid rgba(93, 189, 252, 0.2);
+}
+
+.sched-header-green {
+	background: rgba(0, 204, 85, 0.07);
+	color: var(--green-line);
+	border-left: 1px solid rgba(0, 204, 85, 0.15);
+}
+
+.sched-header-orange {
+	background: rgba(255, 102, 36, 0.07);
+	color: var(--orange-line);
+	border-left: 1px solid rgba(255, 102, 36, 0.15);
+}
+
+.sched-time {
+	padding: 14px 8px;
+	font-size: 0.75rem;
+	font-weight: 700;
+	font-family: 'Courier New', monospace;
+	color: rgba(255, 255, 255, 0.55);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	line-height: 1.3;
+	border-top: 1px solid rgba(255, 255, 255, 0.05);
+	background: rgba(6, 12, 34, 0.5);
+}
+
+.sched-session {
+	padding: 14px 16px;
+	border-top: 1px solid rgba(255, 255, 255, 0.05);
+	border-left: 1px solid rgba(255, 255, 255, 0.05);
+	min-height: 70px;
+}
+
+/* Full-width spanning row (opening, keynote, lunch, closing, afterparty) */
+.sched-spanning {
+	grid-column: 2 / 4;
+	display: flex;
+	align-items: center;
+	gap: 14px;
+	background: rgba(93, 189, 252, 0.06);
+	border-left: 3px solid rgba(93, 189, 252, 0.4) !important;
+	min-height: auto;
+	padding: 12px 20px;
+}
+
+.sched-spanning-icon {
+	font-size: 1.4rem;
+	color: var(--primary-color);
+	flex-shrink: 0;
+}
+
+.sched-spanning-title {
+	font-weight: 700;
+	font-size: 0.95rem;
+	color: rgba(255, 255, 255, 0.9);
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+}
+
+.sched-green {
+	background: rgba(0, 204, 85, 0.04);
+	border-left: 3px solid rgba(0, 204, 85, 0.25) !important;
+}
+
+.sched-orange {
+	background: rgba(255, 102, 36, 0.04);
+	border-left: 3px solid rgba(255, 102, 36, 0.25) !important;
+}
+
+.sched-empty {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	opacity: 0.25;
+}
+
+.sched-talk-title {
+	font-weight: 600;
+	font-size: 0.9rem;
+	line-height: 1.4;
+	color: var(--text-dark-contrast);
+	margin-bottom: 6px;
+}
+
+.sched-speaker {
+	font-size: 0.8rem;
+	color: rgba(255, 255, 255, 0.65);
+	margin-bottom: 6px;
+	display: flex;
+	align-items: center;
+	gap: 5px;
+}
+
+.sched-dur {
+	display: inline-block;
+	font-size: 0.68rem;
+	font-weight: 700;
+	padding: 2px 8px;
+	border-radius: 50px;
+}
+
+.sched-dur-green {
+	background: rgba(0, 204, 85, 0.12);
+	color: var(--green-line);
+	border: 1px solid rgba(0, 204, 85, 0.3);
+}
+
+.sched-dur-orange {
+	background: rgba(255, 102, 36, 0.12);
+	color: var(--orange-line);
+	border: 1px solid rgba(255, 102, 36, 0.3);
+}
+
+.sched-dur-plenum {
+	background: rgba(93, 189, 252, 0.1);
+	color: rgba(255, 255, 255, 0.5);
+	border: 1px solid rgba(93, 189, 252, 0.2);
+}
+
+.sched-empty-marker {
+	font-size: 1rem;
+	color: rgba(255, 255, 255, 0.2);
+}
+
+.sched-note {
+	text-align: center;
+	margin-top: 20px;
+	font-size: 0.8rem;
+	color: rgba(255, 255, 255, 0.4);
+}
+
+/* ============================================================
+   Speaker Cards
+   ============================================================ */
+.speakers-grid {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 22px;
+}
+
+.speaker-card {
+	background: rgba(6, 12, 34, 0.5);
+	border: 1px solid var(--border-light);
+	border-radius: 15px;
+	padding: 24px 18px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	transition: all 0.3s ease;
+	backdrop-filter: blur(10px);
+	box-shadow: 0 0 18px rgba(93, 189, 252, 0.1);
+}
+
+.speaker-card:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 0 32px rgba(93, 189, 252, 0.3);
+	border-color: var(--primary-color);
+	background: rgba(6, 12, 34, 0.7);
+}
+
+.speaker-photo {
+	width: 110px;
+	height: 110px;
+	border-radius: 50%;
+	object-fit: cover;
+	border: 2px solid rgba(93, 189, 252, 0.3);
+	box-shadow: 0 0 18px rgba(93, 189, 252, 0.2);
+	margin-bottom: 14px;
+}
+
+.speaker-name {
+	font-family: 'Raleway', sans-serif;
+	font-size: 1.05rem;
+	font-weight: 700;
+	color: var(--text-light);
+	margin-bottom: 4px;
+}
+
+.speaker-tagline {
+	font-size: 0.78rem;
+	color: rgba(255, 255, 255, 0.55);
+	margin-bottom: 10px;
+	line-height: 1.4;
+}
+
+.speaker-track-badge {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	padding: 3px 10px;
+	border-radius: 50px;
+	font-size: 0.68rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	margin-bottom: 10px;
+}
+
+.speaker-track-badge.green {
+	background: rgba(0, 204, 85, 0.1);
+	color: var(--green-line);
+	border: 1px solid rgba(0, 204, 85, 0.3);
+}
+
+.speaker-track-badge.orange {
+	background: rgba(255, 102, 36, 0.1);
+	color: var(--orange-line);
+	border: 1px solid rgba(255, 102, 36, 0.3);
+}
+
+.speaker-talk {
+	font-size: 0.8rem;
+	color: rgba(255, 255, 255, 0.7);
+	line-height: 1.5;
+	flex-grow: 1;
+	margin-bottom: 14px;
+}
+
+.speaker-links {
+	display: flex;
+	gap: 8px;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.speaker-links a {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background: rgba(93, 189, 252, 0.1);
+	color: var(--primary-color);
+	text-decoration: none;
+	font-size: 0.82rem;
+	transition: all 0.2s ease;
+}
+
+.speaker-links a:hover {
+	background: var(--primary-color);
+	color: #fff;
+	transform: translateY(-2px);
+}
+
+@media (max-width: 1100px) {
+	.speakers-grid {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+@media (max-width: 768px) {
+	.sched-header {
+		padding: 10px 10px;
+		font-size: 0.78rem;
+		gap: 7px;
+	}
+
+	.sched-session {
+		padding: 10px 10px;
+	}
+
+	.sched-talk-title {
+		font-size: 0.82rem;
+	}
+
+	.speakers-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (max-width: 480px) {
+	.speakers-grid {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 14px;
+	}
+
+	.speaker-photo {
+		width: 80px;
+		height: 80px;
+	}
+
+	.speaker-name {
+		font-size: 0.9rem;
 	}
 }
