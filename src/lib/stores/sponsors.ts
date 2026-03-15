@@ -9,6 +9,12 @@ export interface Sponsor {
 
 export const sponsors: Sponsor[] = [
 	{
+		name: 'Material Security',
+		logo: `${base}/assets/img/supporters/material.jpg`,
+		url: 'https://material.security',
+		tier: 'gold'
+	},
+	{
 		name: 'Picus Security',
 		logo: `${base}/assets/img/supporters/picus.jpg`,
 		url: 'https://www.picussecurity.com/',
