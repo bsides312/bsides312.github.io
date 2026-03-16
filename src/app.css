@@ -25,6 +25,7 @@
 
 html {
 	scroll-behavior: smooth;
+	font-size: 125%;
 }
 
 body {
@@ -850,6 +851,9 @@ div[id] {
    ============================================================ */
 .ribbon-gallery {
 	width: 100%;
+	max-width: 1320px;
+	margin-left: auto;
+	margin-right: auto;
 	overflow: hidden;
 	padding: 40px 0 0;
 	position: relative;
@@ -888,7 +892,7 @@ div[id] {
 }
 
 .ribbon-img-btn {
-	width: calc((100vw - 36px) * 0.7 / 4);
+	width: calc((100vw - 36px) * 0.35 / 4);
 	aspect-ratio: 4 / 6;
 	overflow: hidden;
 	border-radius: 8px;
@@ -926,13 +930,13 @@ div[id] {
 
 .ribbon-speaker-card {
 	flex: 0 0 auto;
-	width: 140px;
+	width: 244px;
 	text-align: center;
 }
 
 .ribbon-speaker-img {
-	width: 110px;
-	height: 110px;
+	width: 206px;
+	height: 206px;
 	border-radius: 50%;
 	object-fit: cover;
 	border: 3px solid rgba(93, 189, 252, 0.3);
@@ -980,6 +984,7 @@ div[id] {
 	width: 100%;
 	height: 220px;
 	object-fit: cover;
+	object-position: top;
 }
 
 .activity-card .card-title {
