@@ -21,7 +21,7 @@
 					topic: 'Misconfiguration-Driven Cloud Attacks: A Graph-Based Exploration'
 				},
 				{ name: 'Ginji Terrano', topic: 'Open Sesame' },
-				{ name: 'Jose Hernandez', topic: '' },
+				{ name: 'Jose Hernandez', topic: 'Bringing Down the BYOVD: Leveraging WDAC to End Malicious Driver Attacks' },
 				{
 					name: 'Kadi McKean',
 					topic: 'Trailblazing: Lessons from Oregon Trail for the Secure Software Supply Chain'
