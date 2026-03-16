@@ -220,11 +220,10 @@
 					</div>
 					<ul class:mobile-show={activeDropdown === 'about'}>
 						<li>
-							<a class="nav-link" href="{base}/#about" on:click={closeMobileMenu}>About BSides312</a
-							>
+							<a class="nav-link" href="{base}/about" on:click={closeMobileMenu}>About BSides312</a>
 						</li>
 						<li>
-							<a class="nav-link" href="{base}/board#board" on:click={closeMobileMenu}>Our Board</a>
+							<a class="nav-link" href="{base}/about#board" on:click={closeMobileMenu}>Our Board</a>
 						</li>
 						<li><a class="nav-link" href="{base}/#faq" on:click={closeMobileMenu}>FAQ</a></li>
 						<li>
@@ -343,7 +342,7 @@
 						<ul>
 							<li><a href="{base}/code-of-conduct#code-of-conduct">Code of Conduct</a></li>
 							<li><a href="{base}/privacy#privacy">Privacy Policy</a></li>
-							<li><a href="{base}/board#board">Our Board</a></li>
+							<li><a href="{base}/about#board">Our Board</a></li>
 						</ul>
 					</div>
 				</div>

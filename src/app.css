@@ -384,12 +384,16 @@ footer {
 	color: white;
 }
 
+.btn.btn-outline-primary {
+	border-radius: 50px;
+}
+
 .btn-sponsor-cta {
 	background: transparent;
 	border: 2px solid #5dbdfc;
 	color: #5dbdfc;
 	padding: 15px 40px;
-	border-radius: 30px;
+	border-radius: 50px;
 	font-weight: 700;
 	text-decoration: none;
 	display: inline-flex;

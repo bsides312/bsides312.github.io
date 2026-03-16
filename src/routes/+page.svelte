@@ -55,6 +55,50 @@
 	function closeLightbox() {
 		lightboxSrc = null;
 	}
+
+	function downloadCalendar() {
+		const icsContent = `BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BSides312//BSides312 2026//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VTIMEZONE
+TZID:America/Chicago
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0600
+TZOFFSETTO:-0500
+TZNAME:CDT
+DTSTART:20260308T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0600
+TZNAME:CST
+DTSTART:20261101T020000
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:bsides312-2026@bsides312.org
+DTSTART;TZID=America/Chicago:20260516T090000
+DTEND;TZID=America/Chicago:20260516T190000
+SUMMARY:BSides312 2026
+LOCATION:Irish American Heritage Center\\, 4626 N Knox Ave\\, Chicago\\, IL 60641
+DESCRIPTION:BSides312 is a nonprofit one-day conference run by longtime members of Chicago's hacking and infosec community. Join us for talks, workshops, and networking with security professionals from around the world.
+URL:https://bsides312.org
+END:VEVENT
+END:VCALENDAR`;
+		const blob = new Blob([icsContent], { type: 'text/calendar' });
+		const url = URL.createObjectURL(blob);
+		const a = document.createElement('a');
+		a.href = url;
+		a.download = 'BSides312-2026.ics';
+		document.body.appendChild(a);
+		a.click();
+		document.body.removeChild(a);
+		URL.revokeObjectURL(url);
+	}
 </script>
 
 <svelte:head>
@@ -113,46 +157,23 @@
 	</div>
 </section>
 
-<!-- About Section -->
+<!-- About Section Teaser -->
 <section id="about" class="section section-with-bg">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-6 mb-4">
-				<div class="card h-100">
-					<div class="card-body">
-						<h2><i class="bi bi-terminal me-2"></i>About BSides312</h2>
-						<p>
-							BSides312 is a nonprofit one-day conference run by longtime members of Chicago's hacking
-							and infosec community. In fact, many of them founded the original BSides Chicago! It's
-							built as a collaborative venue; whether you hack hardware, excel at logistics, or just
-							bring curious friends, you help shape the conversation.
-						</p>
-						<p>
-							Like every BSides event, the conference follows a community-driven model built by and for
-							hackers. Its purpose is to widen the conversation beyond the usual boundaries, offering
-							space for people to both present and take part in an intimate, collaborative setting. The
-							result is an intense mix of discussions, demos, and interaction where new ideas take
-							shape.
-						</p>
-						<p>
-							If you and your organization are as passionate about the security community as we are and
-							would like to support our event, please reach out questions [@] bsides312.org. To show our
-							thanks, supporters will be welcome to chat about themselves and their organization,
-							fostering connections with the BSides312 community.
-						</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-6">
+			<div class="col-12">
 				<div class="card mb-3">
 					<div class="card-body">
-						<h3 class="card-title"><i class="bi bi-geo-alt-fill text-danger me-2"></i>Where</h3>
+						<h3 class="card-title"><i class="bi bi-geo-alt-fill text-danger me-2"></i>When and Where</h3>
 						<p>
+							<strong>Date:</strong> May 16th, 2026<br />
+							<strong>Time:</strong> 9:00 AM - 7:00 PM CST<br />
+							<br />
 							Irish American Heritage Center<br />
 							4626 N Knox Ave<br />
-							Chicago, IL
-
-							TONS of parking!
+							Chicago, IL<br />
+							<br />
+							<small>TONS of parking!</small>
 						</p>
 						<iframe
 							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2967.8!2d-87.7425!3d41.9645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fcc7f9c0f0f0f%3A0x0!2s4626%20N%20Knox%20Ave%2C%20Chicago%2C%20IL!5e0!3m2!1sen!2sus!4v1234567890"
@@ -172,12 +193,14 @@
 						>
 							<i class="bi bi-box-arrow-up-right me-1"></i>Open in Google Maps
 						</a>
-					</div>
-				</div>
-				<div class="card">
-					<div class="card-body">
-						<h3 class="card-title"><i class="bi bi-calendar-event text-warning me-2"></i>When</h3>
-						<p class="mb-0"><strong>May 16th, 2026</strong> &mdash; Full day event</p>
+						<button
+							class="btn btn-outline-primary btn-sm ms-2"
+							on:click={downloadCalendar}
+							type="button"
+							aria-label="Add BSides312 to calendar"
+						>
+							<i class="bi bi-calendar-plus me-1"></i>Add to Calendar
+						</button>
 					</div>
 				</div>
 			</div>
@@ -322,8 +345,10 @@
 		</div>
 		{#each sponsorTiers as tier (tier.tierName)}
 			<div class="row no-gutters supporters-wrap clearfix gy-4 gx-4 mb-5">
-				<div class="section-header">
-					<img src={tier.tierImage} alt={tier.tierName} class="sponsor-img-center" />
+				<div class="col-12">
+					<div class="section-header">
+						<img src={tier.tierImage} alt={tier.tierName} class="sponsor-img-center" />
+					</div>
 				</div>
 				<div class="row justify-content-center">
 					{#each tier.tierSponsors as sponsor (sponsor.name)}
