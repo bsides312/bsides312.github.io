@@ -237,7 +237,7 @@
 				<div class="ribbon-track">
 					{#each Array(3) as _}
 						{#each speakerPhotos as speaker, i}
-							<div class="ribbon-speaker-card">
+							<a href="{base}/speakers#speakers" class="ribbon-speaker-card">
 								<img
 									src={speaker.profilePicture}
 									alt={speaker.fullName}
@@ -245,7 +245,7 @@
 									loading="lazy"
 								/>
 								<div class="ribbon-speaker-name">{speaker.fullName}</div>
-							</div>
+							</a>
 						{/each}
 					{/each}
 				</div>

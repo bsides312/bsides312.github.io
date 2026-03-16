@@ -96,6 +96,16 @@
 	function visibleLinks(links: SpeakerLink[]): SpeakerLink[] {
 		return links.filter((l) => l.linkType !== 'Sessionize' && l.linkType !== 'Company_Website');
 	}
+
+	let selectedSpeaker: Speaker | null = null;
+
+	function openSpeakerModal(speaker: Speaker) {
+		selectedSpeaker = speaker;
+	}
+
+	function closeSpeakerModal() {
+		selectedSpeaker = null;
+	}
 </script>
 
 <svelte:head>
@@ -129,7 +139,7 @@
 		{:else}
 			<div class="speakers-grid">
 				{#each speakers as speaker (speaker.id)}
-					<div class="speaker-card">
+					<button class="speaker-card" type="button" on:click={() => openSpeakerModal(speaker)}>
 						<img
 							class="speaker-photo"
 							src={speaker.profilePicture}
@@ -155,21 +165,76 @@
 										target="_blank"
 										rel="noopener"
 										aria-label="{speaker.fullName} {link.title}"
+										on:click|stopPropagation
 									>
 										<i class="bi {linkIcon(link.linkType)}"></i>
 									</a>
 								{/each}
 							</div>
 						{/if}
-					</div>
+					</button>
 				{/each}
 			</div>
 
-			<div class="text-center mt-5">
+			<div class="text-center mt-5" style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
 				<a href="/schedule#schedule" class="btn btn-outline-primary">
 					<i class="bi bi-calendar3 me-2"></i>View Full Schedule
+				</a>
+				<a href="/previous-speakers#previous-speakers" class="btn btn-outline-primary">
+					<i class="bi bi-clock-history me-2"></i>Previous Speakers
 				</a>
 			</div>
 		{/if}
 	</div>
 </section>
+
+{#if selectedSpeaker}
+	<div
+		class="speaker-modal-overlay"
+		on:click={closeSpeakerModal}
+		on:keydown={(e) => e.key === 'Escape' && closeSpeakerModal()}
+		role="dialog"
+		aria-modal="true"
+		aria-label="{selectedSpeaker.fullName} bio"
+		tabindex="-1"
+	>
+		<!-- svelte-ignore a11y-no-static-element-interactions a11y-click-events-have-key-events -->
+		<div class="speaker-modal" on:click|stopPropagation>
+			<button class="speaker-modal-close" on:click={closeSpeakerModal} aria-label="Close">&times;</button>
+			<div class="speaker-modal-header">
+				<img
+					class="speaker-modal-photo"
+					src={selectedSpeaker.profilePicture}
+					alt={selectedSpeaker.fullName}
+				/>
+				<div class="speaker-modal-info">
+					<h3 class="speaker-modal-name">{selectedSpeaker.fullName}</h3>
+					<div class="speaker-modal-tagline">{selectedSpeaker.tagLine}</div>
+					{#if trackClass(selectedSpeaker.id)}
+						<div class="speaker-track-badge {trackClass(selectedSpeaker.id)}">
+							<span class="cta-badge {trackClass(selectedSpeaker.id)}-badge mini">L</span>
+							{trackLabel(selectedSpeaker.id)}
+						</div>
+					{/if}
+				</div>
+			</div>
+			{#if selectedSpeaker.sessions.length}
+				<div class="speaker-modal-talk">
+					<i class="bi bi-chat-quote-fill me-2"></i>{cleanTitle(selectedSpeaker.sessions[0].name)}
+				</div>
+			{/if}
+			{#if selectedSpeaker.bio}
+				<div class="speaker-modal-bio">{selectedSpeaker.bio}</div>
+			{/if}
+			{#if visibleLinks(selectedSpeaker.links).length}
+				<div class="speaker-modal-links">
+					{#each visibleLinks(selectedSpeaker.links) as link (link.url)}
+						<a href={link.url} target="_blank" rel="noopener" aria-label="{selectedSpeaker.fullName} {link.title}">
+							<i class="bi {linkIcon(link.linkType)}"></i>
+						</a>
+					{/each}
+				</div>
+			{/if}
+		</div>
+	</div>
+{/if}

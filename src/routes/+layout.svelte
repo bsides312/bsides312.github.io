@@ -188,11 +188,6 @@
 							>
 						</li>
 						<li>
-							<a class="nav-link" href="{base}/previous-speakers#previous-speakers" on:click={closeMobileMenu}
-								>Previous Speakers</a
-							>
-						</li>
-						<li>
 							<a class="nav-link" href="{base}/#about" on:click={closeMobileMenu}>Venue & Parking</a
 							>
 						</li>
