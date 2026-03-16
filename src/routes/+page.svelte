@@ -2,11 +2,30 @@
 	import { getSponsorsByTier, sponsorTierImages } from '$lib/stores/sponsors';
 	import { faqItems } from '$lib/stores/faq';
 	import { base } from '$app/paths';
+	import { onMount } from 'svelte';
 	import type { PageData } from './$types';
 
 	export let data: PageData;
 
 	type SponsorTier = 'platinum' | 'gold' | 'silver' | 'bronze' | 'founding' | 'community';
+
+	// Speaker photos for the scrolling gallery
+	interface SpeakerPhoto {
+		profilePicture: string;
+		fullName: string;
+	}
+	let speakerPhotos: SpeakerPhoto[] = [];
+
+	onMount(async () => {
+		try {
+			const res = await fetch('https://sessionize.com/api/v2/v1trm5nf/view/Speakers');
+			if (res.ok) {
+				speakerPhotos = await res.json();
+			}
+		} catch {
+			// silently fail — gallery just won't show
+		}
+	});
 
 	// Group sponsors by tier for display
 	const sponsorTiers = (
@@ -202,6 +221,87 @@
 		<img src={lightboxSrc} alt="BSides312 gallery photo full size" class="lightbox-img" />
 	</div>
 {/if}
+
+<!-- Ride the L Section -->
+<section id="ride-the-l" class="section section-with-bg">
+	<div class="container">
+		<div class="section-header">
+			<h2>Ride the L</h2>
+			<p>Check out all our 1337 neighborhoods!</p>
+		</div>
+
+		<!-- 2 Talk Tracks -->
+		<h3 class="subsection-heading"><i class="bi bi-mic-fill me-2"></i>2 Talk Tracks!</h3>
+		{#if speakerPhotos.length}
+			<div class="ribbon-gallery speaker-ribbon">
+				<div class="ribbon-track">
+					{#each Array(3) as _}
+						{#each speakerPhotos as speaker, i}
+							<div class="ribbon-speaker-card">
+								<img
+									src={speaker.profilePicture}
+									alt={speaker.fullName}
+									class="ribbon-speaker-img"
+									loading="lazy"
+								/>
+								<div class="ribbon-speaker-name">{speaker.fullName}</div>
+							</div>
+						{/each}
+					{/each}
+				</div>
+			</div>
+		{/if}
+		<div class="text-center mt-3 mb-5">
+			<a href="{base}/speakers#speakers" class="btn btn-outline-primary">
+				<i class="bi bi-people-fill me-2"></i>Meet All Speakers
+			</a>
+		</div>
+
+		<!-- Win Prizes -->
+		<h3 class="subsection-heading"><i class="bi bi-trophy-fill me-2"></i>Win Prizes!</h3>
+		<div class="row justify-content-center gy-4">
+			<div class="col-lg-4 col-md-6">
+				<div class="card activity-card h-100">
+					<img
+						src="{base}/assets/img/activities/ctf.jpg"
+						alt="CTF Hacking Challenge"
+						class="activity-card-img"
+						loading="lazy"
+					/>
+					<div class="card-body text-center">
+						<h4 class="card-title">CTF Hacking Challenge!</h4>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-6">
+				<div class="card activity-card h-100">
+					<img
+						src="{base}/assets/img/activities/toool.jpg"
+						alt="Lockpicking"
+						class="activity-card-img"
+						loading="lazy"
+					/>
+					<div class="card-body text-center">
+						<h4 class="card-title">Lockpicking!</h4>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-6">
+				<div class="card activity-card h-100">
+					<img
+						src="{base}/assets/img/activities/lintile.jpg"
+						alt="Game Shows with Lintile"
+						class="activity-card-img"
+						loading="lazy"
+					/>
+					<div class="card-body text-center">
+						<h4 class="card-title">Game Shows with Lintile!</h4>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
 
 <!-- Supporters Section -->
 <section id="supporters" class="section section-with-bg">

@@ -918,6 +918,76 @@ div[id] {
 }
 
 /* ============================================================
+   Speaker Ribbon Gallery
+   ============================================================ */
+.speaker-ribbon {
+	margin-bottom: 10px;
+}
+
+.ribbon-speaker-card {
+	flex: 0 0 auto;
+	width: 140px;
+	text-align: center;
+}
+
+.ribbon-speaker-img {
+	width: 110px;
+	height: 110px;
+	border-radius: 50%;
+	object-fit: cover;
+	border: 3px solid rgba(93, 189, 252, 0.3);
+	transition: all 0.3s ease;
+	filter: brightness(0.85);
+}
+
+.ribbon-speaker-card:hover .ribbon-speaker-img {
+	transform: scale(1.08);
+	filter: brightness(1);
+	border-color: var(--primary-color);
+}
+
+.ribbon-speaker-name {
+	margin-top: 8px;
+	font-size: 0.8rem;
+	color: rgba(255, 255, 255, 0.7);
+	line-height: 1.2;
+}
+
+/* ============================================================
+   Subsection Headings
+   ============================================================ */
+.subsection-heading {
+	text-align: center;
+	margin-bottom: 28px;
+	color: #fff;
+	font-size: 1.5rem;
+}
+
+/* ============================================================
+   Activity Cards
+   ============================================================ */
+.activity-card {
+	overflow: hidden;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.activity-card:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 8px 25px rgba(93, 189, 252, 0.15);
+}
+
+.activity-card-img {
+	width: 100%;
+	height: 220px;
+	object-fit: cover;
+}
+
+.activity-card .card-title {
+	font-size: 1.15rem;
+	margin-bottom: 0;
+}
+
+/* ============================================================
    Gallery Lightbox Modal
    ============================================================ */
 .lightbox-overlay {
