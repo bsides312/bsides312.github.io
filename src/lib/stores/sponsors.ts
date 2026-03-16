@@ -34,7 +34,7 @@ export const sponsors: Sponsor[] = [
 	}
 ];
 
-// Sponsor tier images
+// Supporter tier images
 export const sponsorTierImages = {
 	platinum: `${base}/assets/img/supporters/platinum3.png`,
 	gold: `${base}/assets/img/supporters/gold3.png`,

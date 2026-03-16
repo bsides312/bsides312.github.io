@@ -83,7 +83,7 @@
 						href="{base}/support"
 						class="btn-primary btn-transparent"
 					>
-						<i class="bi bi-heart-fill me-2"></i>Sponsor Us!
+						<i class="bi bi-heart-fill me-2"></i>Support Us!
 					</a>
 				</div>
 			</div>
@@ -117,8 +117,8 @@
 						</p>
 						<p>
 							If you and your organization are as passionate about the security community as we are and
-							would like to sponsor our event, please reach out questions [@] bsides312.org. To show our
-							thanks, sponsors will be welcome to chat about themselves and their organization,
+							would like to support our event, please reach out questions [@] bsides312.org. To show our
+							thanks, supporters will be welcome to chat about themselves and their organization,
 							fostering connections with the BSides312 community.
 						</p>
 					</div>
@@ -203,11 +203,11 @@
 	</div>
 {/if}
 
-<!-- Sponsors Section -->
+<!-- Supporters Section -->
 <section id="supporters" class="section section-with-bg">
 	<div class="container">
 		<div class="section-header">
-			<h2>Sponsors</h2>
+			<h2>Supporters</h2>
 		</div>
 		<div class="text-center mb-4">
 			<a href="{base}/support#support" class="btn-sponsor-cta">
@@ -215,8 +215,8 @@
 			</a>
 		</div>
 		<div class="alert alert-warning container-fluid text-center fw-bold" role="alert">
-			Our Call for Sponsors is still open!
-			Sponsors logos will be listed here as they sign!
+			Our Call for Supporters is still open!
+			Supporter logos will be listed here as they sign!
 		</div>
 		{#each sponsorTiers as tier (tier.tierName)}
 			<div class="row no-gutters supporters-wrap clearfix gy-4 gx-4 mb-5">

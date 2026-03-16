@@ -101,14 +101,14 @@
 				<li class="dropdown" class:mobile-active={activeDropdown === 'sponsor'}>
 					<div class="dropdown-header">
 						<a class="nav-link" href="{base}/support#support" aria-haspopup="true">
-							<span>Sponsor Us</span>
+							<span>Support Us</span>
 							<i class="bi bi-chevron-down desktop-only"></i>
 						</a>
 						<button
 							class="mobile-dropdown-toggle"
 							type="button"
 							aria-expanded={activeDropdown === 'sponsor'}
-							aria-label="Toggle sponsor menu"
+							aria-label="Toggle support menu"
 							on:click={() => toggleDropdown('sponsor')}
 						>
 							<i

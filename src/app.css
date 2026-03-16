@@ -560,7 +560,7 @@ div[id] {
 }
 
 /* ============================================================
-   Sponsor Logos
+   Supporter Logos
    ============================================================ */
 .sponsor-logo {
 	padding: 20px;
@@ -1515,7 +1515,7 @@ div[id] {
 		height: 150px;
 	}
 
-	/* Sponsors */
+	/* Supporters */
 	.sponsor-logo img {
 		max-height: 80px;
 	}
@@ -1586,7 +1586,7 @@ div[id] {
 		width: min(30px, 30vw);
 	}
 
-	/* Sponsors */
+	/* Supporters */
 	.sponsor-img-center {
 		max-height: 45px;
 		max-width: 85%;
