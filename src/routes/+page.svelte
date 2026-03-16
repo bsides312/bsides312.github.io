@@ -226,12 +226,12 @@
 <section id="ride-the-l" class="section section-with-bg">
 	<div class="container">
 		<div class="section-header">
-			<h2>Ride the L</h2>
-			<p>Check out all our 1337 neighborhoods!</p>
+			<h2>Ride the L with Us!</h2>
+			<p>Check out all our 1337 neighborhoods you can explore!</p>
 		</div>
 
 		<!-- 2 Talk Tracks -->
-		<h3 class="subsection-heading"><i class="bi bi-mic-fill me-2"></i>2 Talk Tracks!</h3>
+		<h3 class="subsection-heading"><i class="bi bi-mic-fill me-2"></i>2 Talk Tracks with 15 Presenters from a Variety of Backgrounds!</h3>
 		{#if speakerPhotos.length}
 			<div class="ribbon-gallery speaker-ribbon">
 				<div class="ribbon-track">
@@ -253,12 +253,12 @@
 		{/if}
 		<div class="text-center mt-3 mb-5">
 			<a href="{base}/speakers#speakers" class="btn btn-outline-primary">
-				<i class="bi bi-people-fill me-2"></i>Meet All Speakers
+				<i class="bi bi-people-fill me-2"></i>Meet All the Speakers
 			</a>
 		</div>
 
 		<!-- Win Prizes -->
-		<h3 class="subsection-heading"><i class="bi bi-trophy-fill me-2"></i>Win Prizes!</h3>
+		<h3 class="subsection-heading"><i class="bi bi-trophy-fill me-2"></i>Win Prizes while Learning and Testing new Skills!</h3>
 		<div class="row justify-content-center gy-4">
 			<div class="col-lg-4 col-md-6">
 				<div class="card activity-card h-100">
