@@ -19,7 +19,6 @@
 
 		<div class="row justify-content-center">
 			<div class="col-lg-9">
-
 				<div class="card mb-4">
 					<div class="card-body">
 						<h3 class="card-title">
@@ -42,10 +41,22 @@
 						</h3>
 						<p>All participants are expected to:</p>
 						<ul class="list-unstyled">
-							<li><i class="bi bi-check-circle text-success me-2"></i>Exercise consideration and respect in speech and actions</li>
-							<li><i class="bi bi-check-circle text-success me-2"></i>Refrain from demeaning, discriminatory, or harassing behavior</li>
-							<li><i class="bi bi-check-circle text-success me-2"></i>Be mindful of your surroundings and fellow participants</li>
-							<li><i class="bi bi-check-circle text-success me-2"></i>Alert conference staff if you notice violations of this Code</li>
+							<li>
+								<i class="bi bi-check-circle text-success me-2"></i>Exercise consideration and
+								respect in speech and actions
+							</li>
+							<li>
+								<i class="bi bi-check-circle text-success me-2"></i>Refrain from demeaning,
+								discriminatory, or harassing behavior
+							</li>
+							<li>
+								<i class="bi bi-check-circle text-success me-2"></i>Be mindful of your surroundings
+								and fellow participants
+							</li>
+							<li>
+								<i class="bi bi-check-circle text-success me-2"></i>Alert conference staff if you
+								notice violations of this Code
+							</li>
 						</ul>
 					</div>
 				</div>
@@ -57,15 +68,34 @@
 						</h3>
 						<p>Harassment includes, but is not limited to:</p>
 						<ul class="list-unstyled">
-							<li><i class="bi bi-x-circle text-danger me-2"></i>Verbal comments that reinforce social structures of domination</li>
-							<li><i class="bi bi-x-circle text-danger me-2"></i>Sexual imagery in public spaces</li>
-							<li><i class="bi bi-x-circle text-danger me-2"></i>Deliberate intimidation, stalking, or following</li>
-							<li><i class="bi bi-x-circle text-danger me-2"></i>Sustained disruption of talks or other events</li>
+							<li>
+								<i class="bi bi-x-circle text-danger me-2"></i>Verbal comments that reinforce social
+								structures of domination
+							</li>
+							<li>
+								<i class="bi bi-x-circle text-danger me-2"></i>Sexual imagery in public spaces
+							</li>
+							<li>
+								<i class="bi bi-x-circle text-danger me-2"></i>Deliberate intimidation, stalking, or
+								following
+							</li>
+							<li>
+								<i class="bi bi-x-circle text-danger me-2"></i>Sustained disruption of talks or
+								other events
+							</li>
 							<li><i class="bi bi-x-circle text-danger me-2"></i>Inappropriate physical contact</li>
 							<li><i class="bi bi-x-circle text-danger me-2"></i>Unwelcome sexual attention</li>
-							<li><i class="bi bi-x-circle text-danger me-2"></i>Advocating for, or encouraging, any of the above behavior</li>
-							<li><i class="bi bi-x-circle text-danger me-2"></i>Microaggressions and subtle exclusionary behaviors</li>
-							<li><i class="bi bi-x-circle text-danger me-2"></i>Deliberate misgendering or deadnaming</li>
+							<li>
+								<i class="bi bi-x-circle text-danger me-2"></i>Advocating for, or encouraging, any
+								of the above behavior
+							</li>
+							<li>
+								<i class="bi bi-x-circle text-danger me-2"></i>Microaggressions and subtle
+								exclusionary behaviors
+							</li>
+							<li>
+								<i class="bi bi-x-circle text-danger me-2"></i>Deliberate misgendering or deadnaming
+							</li>
 						</ul>
 					</div>
 				</div>
@@ -77,9 +107,18 @@
 						</h3>
 						<p>If you experience or witness violations of this Code:</p>
 						<ul class="list-unstyled">
-							<li><i class="bi bi-check-circle text-success me-2"></i>Contact any staff member (clearly identified by badges)</li>
-							<li><i class="bi bi-check-circle text-success me-2"></i>Email: questions [at] bsides312.org</li>
-							<li><i class="bi bi-check-circle text-success me-2"></i>All reports will be reviewed and investigated promptly</li>
+							<li>
+								<i class="bi bi-check-circle text-success me-2"></i>Contact any staff member
+								(clearly identified by badges)
+							</li>
+							<li>
+								<i class="bi bi-check-circle text-success me-2"></i>Email: questions [at]
+								bsides312.org
+							</li>
+							<li>
+								<i class="bi bi-check-circle text-success me-2"></i>All reports will be reviewed and
+								investigated promptly
+							</li>
 						</ul>
 						<p class="mt-3">
 							Participants asked to stop any harassing behavior are expected to comply immediately.
@@ -118,7 +157,6 @@
 						</p>
 					</div>
 				</div>
-
 			</div>
 		</div>
 	</div>

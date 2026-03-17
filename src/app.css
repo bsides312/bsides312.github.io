@@ -34,8 +34,7 @@ body {
 	font-family: 'Open Sans', sans-serif;
 	background-color: var(--dark-bg);
 	background-image:
-		linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-		url('/assets/img/cta_bg.jpg');
+		linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/assets/img/cta_bg.jpg');
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
@@ -329,7 +328,8 @@ footer {
 }
 
 @keyframes scrollBounce {
-	0%, 100% {
+	0%,
+	100% {
 		transform: translateY(0);
 		opacity: 0.45;
 	}
@@ -552,7 +552,9 @@ div[id] {
 
 .card:hover {
 	transform: translateY(-5px);
-	box-shadow: 0 0 35px rgba(93, 189, 252, 0.4), 0 20px 40px rgba(0, 0, 0, 0.3);
+	box-shadow:
+		0 0 35px rgba(93, 189, 252, 0.4),
+		0 20px 40px rgba(0, 0, 0, 0.3);
 	border-color: var(--primary-color);
 	background: rgba(6, 12, 34, 0.7);
 }
@@ -616,7 +618,9 @@ div[id] {
 	overflow: hidden;
 	border: 1px solid var(--border-light);
 	box-shadow: 0 0 15px rgba(93, 189, 252, 0.12);
-	transition: box-shadow 0.3s ease, border-color 0.3s ease;
+	transition:
+		box-shadow 0.3s ease,
+		border-color 0.3s ease;
 }
 
 .faq-list li:hover {
@@ -919,7 +923,9 @@ div[id] {
 	object-fit: cover;
 	object-position: center;
 	display: block;
-	transition: transform 0.3s ease, filter 0.3s ease;
+	transition:
+		transform 0.3s ease,
+		filter 0.3s ease;
 	filter: brightness(0.85);
 }
 
@@ -981,7 +987,9 @@ div[id] {
    ============================================================ */
 .activity-card {
 	overflow: hidden;
-	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	transition:
+		transform 0.3s ease,
+		box-shadow 0.3s ease;
 }
 
 .activity-card:hover {
@@ -1056,7 +1064,9 @@ div[id] {
 	border: 1px solid #333;
 	border-radius: 8px;
 	overflow: hidden;
-	box-shadow: 0 0 40px rgba(0, 255, 0, 0.1), 0 0 80px rgba(0, 0, 0, 0.5);
+	box-shadow:
+		0 0 40px rgba(0, 255, 0, 0.1),
+		0 0 80px rgba(0, 0, 0, 0.5);
 	font-family: 'Courier New', Courier, monospace;
 }
 
@@ -1075,9 +1085,15 @@ div[id] {
 	border-radius: 50%;
 }
 
-.terminal-dot.red { background: #ff5f56; }
-.terminal-dot.yellow { background: #ffbd2e; }
-.terminal-dot.green { background: #27c93f; }
+.terminal-dot.red {
+	background: #ff5f56;
+}
+.terminal-dot.yellow {
+	background: #ffbd2e;
+}
+.terminal-dot.green {
+	background: #27c93f;
+}
 
 .terminal-title {
 	color: #666;
@@ -1431,28 +1447,52 @@ div[id] {
 }
 
 @keyframes ribbonScroll {
-	0% { transform: translateX(0); }
-	100% { transform: translateX(-50%); }
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(-50%);
+	}
 }
 
 @keyframes lightboxFadeIn {
-	from { opacity: 0; }
-	to { opacity: 1; }
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
 }
 
 @keyframes lightboxZoomIn {
-	from { transform: scale(0.9); opacity: 0; }
-	to { transform: scale(1); opacity: 1; }
+	from {
+		transform: scale(0.9);
+		opacity: 0;
+	}
+	to {
+		transform: scale(1);
+		opacity: 1;
+	}
 }
 
 @keyframes pulse {
-	0%, 100% { opacity: 1; }
-	50% { opacity: 0.4; }
+	0%,
+	100% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0.4;
+	}
 }
 
 @keyframes blink {
-	0%, 100% { opacity: 1; }
-	50% { opacity: 0; }
+	0%,
+	100% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0;
+	}
 }
 
 /* ============================================================
@@ -1759,8 +1799,12 @@ div[id] {
 	font-size: 0.6rem;
 }
 
-.green-text { color: var(--green-line); }
-.orange-text { color: var(--orange-line); }
+.green-text {
+	color: var(--green-line);
+}
+.orange-text {
+	color: var(--orange-line);
+}
 
 .cta-legend {
 	display: flex;

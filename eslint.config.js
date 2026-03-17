@@ -56,7 +56,9 @@ export default ts.config(
 		rules: {
 			// Relax some Svelte-specific rules
 			'svelte/require-each-key': 'warn',
-			'svelte/no-immutable-reactive-statements': 'warn'
+			'svelte/no-immutable-reactive-statements': 'warn',
+			// base is '' for this static site — no resolve() wrapper needed
+			'svelte/no-navigation-without-resolve': 'off'
 		}
 	}
 );

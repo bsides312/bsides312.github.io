@@ -49,7 +49,9 @@
 	<div class="container">
 		<div class="card mb-4">
 			<div class="card-body">
-				<h3 class="card-title"><i class="bi bi-calendar-event text-warning me-2"></i>When & Where</h3>
+				<h3 class="card-title">
+					<i class="bi bi-calendar-event text-warning me-2"></i>When & Where
+				</h3>
 				<p>
 					<strong>Date:</strong> May 16th, 2026<br />
 					<strong>Time:</strong> 9:00 AM - 7:00 PM CST<br />
@@ -98,8 +100,8 @@
 	<!-- Ribbon Image Gallery -->
 	<div class="ribbon-gallery">
 		<div class="ribbon-track">
-			{#each Array(2) as _, copy}
-				{#each data.galleryImages as imgPath, i}
+			{#each [0, 1] as copy (copy)}
+				{#each data.galleryImages as imgPath, i (imgPath)}
 					<button
 						class="ribbon-img-btn"
 						on:click={() => openLightbox(`${base}${imgPath}`)}
@@ -130,8 +132,10 @@
 		aria-label="Gallery image viewer"
 		tabindex="-1"
 	>
-		<button class="lightbox-close" on:click={closeLightbox} aria-label="Close lightbox">&times;</button>
-		<img src={lightboxSrc} alt="BSides312 gallery photo full size" class="lightbox-img" />
+		<button class="lightbox-close" on:click={closeLightbox} aria-label="Close lightbox"
+			>&times;</button
+		>
+		<img src={lightboxSrc} alt="BSides312 gallery full size" class="lightbox-img" />
 	</div>
 {/if}
 
@@ -203,22 +207,42 @@
 							{#if member.social}
 								<div class="social-links mb-3">
 									{#if member.social.linkedin}
-										<a href={member.social.linkedin} target="_blank" rel="noopener" aria-label="{member.name} LinkedIn Profile">
+										<a
+											href={member.social.linkedin}
+											target="_blank"
+											rel="noopener"
+											aria-label="{member.name} LinkedIn Profile"
+										>
 											<i class="bi bi-linkedin"></i>
 										</a>
 									{/if}
 									{#if member.social.twitter}
-										<a href={member.social.twitter} target="_blank" rel="noopener" aria-label="{member.name} Twitter Profile">
+										<a
+											href={member.social.twitter}
+											target="_blank"
+											rel="noopener"
+											aria-label="{member.name} Twitter Profile"
+										>
 											<i class="bi bi-twitter"></i>
 										</a>
 									{/if}
 									{#if member.social.facebook}
-										<a href={member.social.facebook} target="_blank" rel="noopener" aria-label="{member.name} Facebook Profile">
+										<a
+											href={member.social.facebook}
+											target="_blank"
+											rel="noopener"
+											aria-label="{member.name} Facebook Profile"
+										>
 											<i class="bi bi-facebook"></i>
 										</a>
 									{/if}
 									{#if member.social.instagram}
-										<a href={member.social.instagram} target="_blank" rel="noopener" aria-label="{member.name} Instagram Profile">
+										<a
+											href={member.social.instagram}
+											target="_blank"
+											rel="noopener"
+											aria-label="{member.name} Instagram Profile"
+										>
 											<i class="bi bi-instagram"></i>
 										</a>
 									{/if}

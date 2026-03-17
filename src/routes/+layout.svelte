@@ -70,9 +70,7 @@
 		const _p = [47, 108, 111, 103, 105, 110];
 		const _path = String.fromCharCode(..._p);
 		console.log(
-			'%c\u{1f512} BSides312 Admin %c\nPortal: ' +
-				_path +
-				'\nStatus: active',
+			'%c\u{1f512} BSides312 Admin %c\nPortal: ' + _path + '\nStatus: active',
 			'color: #5dbdfc; font-size: 14px; font-weight: bold;',
 			'color: #bf40bf; font-size: 11px;'
 		);
@@ -96,11 +94,22 @@
 			<ul class:active={mobileMenuActive}>
 				<li><a class="nav-link" href="{base}/" on:click={closeMobileMenu}>Home</a></li>
 				<li>
-					<a class="nav-link" href="https://www.simpletix.com/e/security-bsides312-2026-tickets-247316" target="_blank" rel="noopener" on:click={closeMobileMenu}>Get Tickets</a>
+					<a
+						class="nav-link"
+						href="https://www.simpletix.com/e/security-bsides312-2026-tickets-247316"
+						target="_blank"
+						rel="noopener"
+						on:click={closeMobileMenu}>Get Tickets</a
+					>
 				</li>
 				<li class="dropdown" class:mobile-active={activeDropdown === 'sponsor'}>
 					<div class="dropdown-header">
-						<a class="nav-link" href="{base}/support#support" aria-haspopup="true" on:click={closeMobileMenu}>
+						<a
+							class="nav-link"
+							href="{base}/support#support"
+							aria-haspopup="true"
+							on:click={closeMobileMenu}
+						>
 							<span>Support Us</span>
 							<i class="bi bi-chevron-down desktop-only"></i>
 						</a>
@@ -120,16 +129,25 @@
 					</div>
 					<ul class:mobile-show={activeDropdown === 'sponsor'}>
 						<li>
-							<a class="nav-link" href="{base}/support#supporters" on:click={closeMobileMenu}>Corporate Sponsorship</a>
+							<a class="nav-link" href="{base}/support#supporters" on:click={closeMobileMenu}
+								>Corporate Sponsorship</a
+							>
 						</li>
 						<li>
-							<a class="nav-link" href="{base}/#supporters" on:click={closeMobileMenu}>Current Supporters</a>
+							<a class="nav-link" href="{base}/#supporters" on:click={closeMobileMenu}
+								>Current Supporters</a
+							>
 						</li>
 					</ul>
 				</li>
 				<li class="dropdown" class:mobile-active={activeDropdown === 'contribute'}>
 					<div class="dropdown-header">
-						<a class="nav-link" href="{base}/#contribute" aria-haspopup="true" on:click={closeMobileMenu}>
+						<a
+							class="nav-link"
+							href="{base}/#contribute"
+							aria-haspopup="true"
+							on:click={closeMobileMenu}
+						>
 							<span>Contribute</span>
 							<i class="bi bi-chevron-down desktop-only"></i>
 						</a>
@@ -152,7 +170,9 @@
 							<a class="nav-link" href="{base}/#contribute" on:click={closeMobileMenu}>Volunteer</a>
 						</li>
 						<li>
-							<a class="nav-link" href="{base}/speakers#speakers" on:click={closeMobileMenu}>Speakers</a>
+							<a class="nav-link" href="{base}/speakers#speakers" on:click={closeMobileMenu}
+								>Speakers</a
+							>
 						</li>
 					</ul>
 				</li>
@@ -192,8 +212,10 @@
 							>
 						</li>
 						<li>
-							<a class="nav-link" href="{base}/code-of-conduct#code-of-conduct" on:click={closeMobileMenu}
-								>Code of Conduct</a
+							<a
+								class="nav-link"
+								href="{base}/code-of-conduct#code-of-conduct"
+								on:click={closeMobileMenu}>Code of Conduct</a
 							>
 						</li>
 					</ul>
@@ -227,7 +249,8 @@
 						</li>
 						<li><a class="nav-link" href="{base}/about#faq" on:click={closeMobileMenu}>FAQ</a></li>
 						<li>
-							<a class="nav-link" href="{base}/privacy#privacy" on:click={closeMobileMenu}>Privacy Policy</a
+							<a class="nav-link" href="{base}/privacy#privacy" on:click={closeMobileMenu}
+								>Privacy Policy</a
 							>
 						</li>
 					</ul>
@@ -281,7 +304,12 @@
 					<div class="footer-links mb-4">
 						<h4>Contact Us</h4>
 						<p>
-							<strong>Phone:</strong> <a href="https://en.wikipedia.org/wiki/Mojave_phone_booth" target="_blank" rel="noopener">(760) BAker-3-9969</a><br />
+							<strong>Phone:</strong>
+							<a
+								href="https://en.wikipedia.org/wiki/Mojave_phone_booth"
+								target="_blank"
+								rel="noopener">(760) BAker-3-9969</a
+							><br />
 							<strong>Email:</strong> questions [@] bsides312.org<br />
 						</p>
 					</div>

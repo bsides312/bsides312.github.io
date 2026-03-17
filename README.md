@@ -43,23 +43,24 @@ npm run dev
 4. **Open your browser and visit:** `http://localhost:5173`
 
 The development server supports:
+
 - Hot Module Replacement (HMR)
 - TypeScript compilation
 - Automatic browser refresh on file changes
 
 ### Available Scripts
 
-| Script | Description |
-|--------|-------------|
-| `npm run dev` | Start development server with HMR |
-| `npm run build` | Build for production |
-| `npm run preview` | Preview production build locally |
-| `npm run check` | Run TypeScript and Svelte checks |
-| `npm run check:watch` | Run checks in watch mode |
-| `npm run format` | Format code with Prettier |
-| `npm run lint` | Check code formatting and run ESLint |
-| `npm run serve` | Serve static files with Python |
-| `npm run serve-alt` | Serve static files with Node.js |
+| Script                | Description                          |
+| --------------------- | ------------------------------------ |
+| `npm run dev`         | Start development server with HMR    |
+| `npm run build`       | Build for production                 |
+| `npm run preview`     | Preview production build locally     |
+| `npm run check`       | Run TypeScript and Svelte checks     |
+| `npm run check:watch` | Run checks in watch mode             |
+| `npm run format`      | Format code with Prettier            |
+| `npm run lint`        | Check code formatting and run ESLint |
+| `npm run serve`       | Serve static files with Python       |
+| `npm run serve-alt`   | Serve static files with Node.js      |
 
 ### Code Quality
 
@@ -71,6 +72,7 @@ This project uses several tools to maintain code quality:
 - **Svelte Check** - Svelte-specific type checking
 
 Before committing, run:
+
 ```bash
 npm run lint    # Check formatting and linting
 npm run check   # Run type checking
@@ -79,28 +81,33 @@ npm run check   # Run type checking
 ### Development Workflow
 
 1. **Create a feature branch:**
+
 ```bash
 git checkout -b feature/your-feature-name
 ```
 
 2. **Make your changes and test locally:**
+
 ```bash
 npm run dev
 ```
 
 3. **Run quality checks:**
+
 ```bash
 npm run lint
 npm run check
 ```
 
 4. **Build and test production version:**
+
 ```bash
 npm run build
 npm run preview
 ```
 
 5. **Commit and push your changes:**
+
 ```bash
 git add .
 git commit -m "feat: your feature description"
@@ -114,6 +121,7 @@ npm run build
 ```
 
 This will:
+
 - Compile TypeScript to JavaScript
 - Bundle and optimize all assets
 - Generate a static site in the `build/` directory

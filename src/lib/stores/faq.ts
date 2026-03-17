@@ -44,12 +44,14 @@ If you really love wearing a suit, please go for it. If you love being goth, que
 	{
 		id: 'parking',
 		question: 'Is there parking at the venue?',
-		answer: 'YES! We have around 100 parking spaces available. This has proven to be more than enough in the past'
+		answer:
+			'YES! We have around 100 parking spaces available. This has proven to be more than enough in the past'
 	},
 	{
 		id: 'hotels',
 		question: 'Where can I find safe overnight lodging?',
-		answer: 'Chicago is surprisingly devoid of hotels outside of Downtown, and we do not recommend staying there as it is very far and expensive. AirBNB near the venue is a good bet. The venue is also on the CTA Blue Line, so staying anywhere along that line will work as well. Many choose to stay around the Rosemont stop, which has cheaper hotels. '
+		answer:
+			'Chicago is surprisingly devoid of hotels outside of Downtown, and we do not recommend staying there as it is very far and expensive. AirBNB near the venue is a good bet. The venue is also on the CTA Blue Line, so staying anywhere along that line will work as well. Many choose to stay around the Rosemont stop, which has cheaper hotels. '
 	},
 	{
 		id: 'photography',
@@ -59,7 +61,8 @@ If you really love wearing a suit, please go for it. If you love being goth, que
 	{
 		id: 'accessibility',
 		question: 'Is the venue mobility accessible?',
-		answer: 'Yes! This venue has an ADA-compliant main entrance and restrooms, and all of our content is in accessible rooms.'
+		answer:
+			'Yes! This venue has an ADA-compliant main entrance and restrooms, and all of our content is in accessible rooms.'
 	},
 	{
 		id: 'cfp',

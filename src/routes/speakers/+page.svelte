@@ -66,12 +66,18 @@
 
 	function linkIcon(type: string): string {
 		switch (type) {
-			case 'LinkedIn': return 'bi-linkedin';
-			case 'Twitter': return 'bi-twitter-x';
-			case 'Facebook': return 'bi-facebook';
-			case 'Blog': return 'bi-globe';
-			case 'Company_Website': return 'bi-briefcase';
-			default: return 'bi-link-45deg';
+			case 'LinkedIn':
+				return 'bi-linkedin';
+			case 'Twitter':
+				return 'bi-twitter-x';
+			case 'Facebook':
+				return 'bi-facebook';
+			case 'Blog':
+				return 'bi-globe';
+			case 'Company_Website':
+				return 'bi-briefcase';
+			default:
+				return 'bi-link-45deg';
 		}
 	}
 
@@ -120,8 +126,10 @@
 	<div class="container">
 		<div class="section-header">
 			<h2>Speakers</h2>
-			<p>Meet the experts presenting at BSides312 2026! 
-				<br>New speakers are added automatically as they confirm their attendance.</p>
+			<p>
+				Meet the experts presenting at BSides312 2026!
+				<br />New speakers are added automatically as they confirm their attendance.
+			</p>
 		</div>
 
 		{#if loading}
@@ -176,7 +184,10 @@
 				{/each}
 			</div>
 
-			<div class="text-center mt-5" style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+			<div
+				class="text-center mt-5"
+				style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;"
+			>
 				<a href="/schedule#schedule" class="btn btn-outline-primary">
 					<i class="bi bi-calendar3 me-2"></i>View Full Schedule
 				</a>
@@ -200,7 +211,9 @@
 	>
 		<!-- svelte-ignore a11y-no-static-element-interactions a11y-click-events-have-key-events -->
 		<div class="speaker-modal" on:click|stopPropagation>
-			<button class="speaker-modal-close" on:click={closeSpeakerModal} aria-label="Close">&times;</button>
+			<button class="speaker-modal-close" on:click={closeSpeakerModal} aria-label="Close"
+				>&times;</button
+			>
 			<div class="speaker-modal-header">
 				<img
 					class="speaker-modal-photo"
@@ -229,7 +242,12 @@
 			{#if visibleLinks(selectedSpeaker.links).length}
 				<div class="speaker-modal-links">
 					{#each visibleLinks(selectedSpeaker.links) as link (link.url)}
-						<a href={link.url} target="_blank" rel="noopener" aria-label="{selectedSpeaker.fullName} {link.title}">
+						<a
+							href={link.url}
+							target="_blank"
+							rel="noopener"
+							aria-label="{selectedSpeaker.fullName} {link.title}"
+						>
 							<i class="bi {linkIcon(link.linkType)}"></i>
 						</a>
 					{/each}

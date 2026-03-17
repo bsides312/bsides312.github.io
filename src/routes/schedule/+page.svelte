@@ -66,8 +66,7 @@
 
 	function getTrack(time: string, room: string): Session | undefined {
 		return allSessions.find(
-			(s) =>
-				s.startsAt === time && s.room === room && !s.isPlenumSession && !s.isServiceSession
+			(s) => s.startsAt === time && s.room === room && !s.isPlenumSession && !s.isServiceSession
 		);
 	}
 
@@ -99,7 +98,7 @@
 		<div class="section-header">
 			<h2>Event Schedule</h2>
 			<p>May 16th, 2026 &mdash; Irish American Heritage Center, Chicago</p>
-			<br>Presentations are added automatically as speakers confirm their attendance.
+			<br />Presentations are added automatically as speakers confirm their attendance.
 		</div>
 
 		{#if loading}
@@ -111,7 +110,8 @@
 			</div>
 		{:else if error}
 			<div class="alert alert-warning text-center" role="alert">
-				<i class="bi bi-exclamation-triangle me-2"></i>Could not load schedule. Please try again later.
+				<i class="bi bi-exclamation-triangle me-2"></i>Could not load schedule. Please try again
+				later.
 			</div>
 		{:else}
 			<!-- CTA line legend -->
@@ -146,7 +146,7 @@
 						<span>Orange Line</span>
 					</div>
 
-					{#each timeSlots as time}
+					{#each timeSlots as time (time)}
 						{@const spanning = getSpanning(time)}
 						{@const green = getTrack(time, 'GREEN LINE')}
 						{@const orange = getTrack(time, 'ORANGE LINE')}

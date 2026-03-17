@@ -56,7 +56,7 @@
 		<span class="terminal-title">FREQ_MONITOR v3.12</span>
 	</div>
 	<div class="terminal-body">
-		{#each currentLines as line}
+		{#each currentLines as line, i (i)}
 			<p class="terminal-line">{line}</p>
 		{/each}
 		{#if showCode}

@@ -104,11 +104,7 @@ END:VCALENDAR`;
 <!-- Hero Section -->
 <section class="hero">
 	<div class="hero-content">
-		<img
-			src="{base}/assets/img/about_logo.png"
-			alt="BSides312 Logo"
-			class="img-fluid hero-logo"
-		/>
+		<img src="{base}/assets/img/about_logo.png" alt="BSides312 Logo" class="img-fluid hero-logo" />
 		<h1 class="text-center mb-4">Non-Profit Hacking Conference</h1>
 		<p class="lead text-center mb-4">
 			BSides312 brings together security professionals, researchers, and enthusiasts for an
@@ -134,10 +130,7 @@ END:VCALENDAR`;
 					>
 						<i class="bi bi-discord me-2"></i>Join our Discord!
 					</a>
-					<a
-						href="{base}/support"
-						class="btn-primary btn-transparent"
-					>
+					<a href="{base}/support" class="btn-primary btn-transparent">
 						<i class="bi bi-heart-fill me-2"></i>Support Us!
 					</a>
 				</div>
@@ -156,7 +149,9 @@ END:VCALENDAR`;
 			<div class="col-12">
 				<div class="card mb-3">
 					<div class="card-body">
-						<h3 class="card-title"><i class="bi bi-geo-alt-fill text-danger me-2"></i>When and Where</h3>
+						<h3 class="card-title">
+							<i class="bi bi-geo-alt-fill text-danger me-2"></i>When and Where
+						</h3>
 						<p>
 							<strong>Date:</strong> May 16th, 2026<br />
 							<strong>Time:</strong> 9:00 AM - 7:00 PM CST<br />
@@ -202,8 +197,8 @@ END:VCALENDAR`;
 	<!-- Ribbon Image Gallery -->
 	<div class="ribbon-gallery">
 		<div class="ribbon-track">
-			{#each Array(2) as _, copy}
-				{#each data.galleryImages as imgPath, i}
+			{#each [0, 1] as copy (copy)}
+				{#each data.galleryImages as imgPath, i (imgPath)}
 					<button
 						class="ribbon-img-btn"
 						on:click={() => openLightbox(`${base}${imgPath}`)}
@@ -234,8 +229,10 @@ END:VCALENDAR`;
 		aria-label="Gallery image viewer"
 		tabindex="-1"
 	>
-		<button class="lightbox-close" on:click={closeLightbox} aria-label="Close lightbox">&times;</button>
-		<img src={lightboxSrc} alt="BSides312 gallery photo full size" class="lightbox-img" />
+		<button class="lightbox-close" on:click={closeLightbox} aria-label="Close lightbox"
+			>&times;</button
+		>
+		<img src={lightboxSrc} alt="BSides312 gallery full size" class="lightbox-img" />
 	</div>
 {/if}
 
@@ -248,12 +245,15 @@ END:VCALENDAR`;
 		</div>
 
 		<!-- 2 Talk Tracks -->
-		<h3 class="subsection-heading"><i class="bi bi-mic-fill me-2"></i>2 Talk Tracks with 15 Presenters from a Variety of Backgrounds!</h3>
+		<h3 class="subsection-heading">
+			<i class="bi bi-mic-fill me-2"></i>2 Talk Tracks with 15 Presenters from a Variety of
+			Backgrounds!
+		</h3>
 		{#if speakerPhotos.length}
 			<div class="ribbon-gallery speaker-ribbon">
 				<div class="ribbon-track">
-					{#each Array(3) as _}
-						{#each speakerPhotos as speaker, i}
+					{#each [0, 1, 2] as copy (copy)}
+						{#each speakerPhotos as speaker (speaker.fullName)}
 							<a href="{base}/speakers#speakers" class="ribbon-speaker-card">
 								<img
 									src={speaker.profilePicture}
@@ -275,7 +275,9 @@ END:VCALENDAR`;
 		</div>
 
 		<!-- Win Prizes -->
-		<h3 class="subsection-heading"><i class="bi bi-trophy-fill me-2"></i>Win Prizes while Learning and Testing new Skills!</h3>
+		<h3 class="subsection-heading">
+			<i class="bi bi-trophy-fill me-2"></i>Win Prizes while Learning and Testing new Skills!
+		</h3>
 		<div class="row justify-content-center gy-4">
 			<div class="col-lg-4 col-md-6">
 				<div class="card activity-card h-100">
@@ -332,8 +334,7 @@ END:VCALENDAR`;
 			</a>
 		</div>
 		<div class="alert alert-warning container-fluid text-center fw-bold" role="alert">
-			Our Call for Supporters is still open!
-			Supporter logos will be listed here as they sign!
+			Our Call for Supporters is still open! Supporter logos will be listed here as they sign!
 		</div>
 		{#each sponsorTiers as tier (tier.tierName)}
 			<div class="row no-gutters supporters-wrap clearfix gy-4 gx-4 mb-5">
@@ -378,7 +379,8 @@ END:VCALENDAR`;
 						<p>Our call for volunteers is closed for 2026, but thank you for your interest!</p>
 						<p class="mb-0">
 							<small class="text-muted-60">
-								<i class="bi bi-bell me-1"></i>Follow us on social media to be notified when volunteer applications open for future events.
+								<i class="bi bi-bell me-1"></i>Follow us on social media to be notified when
+								volunteer applications open for future events.
 							</small>
 						</p>
 					</div>
@@ -392,8 +394,8 @@ END:VCALENDAR`;
 							<i class="bi bi-mic-fill text-warning me-2"></i>Call for Presentations — CLOSED
 						</h3>
 						<p>
-							Our CFP is now <strong>closed</strong> and all talks have been selected. Thank you to
-							everyone who submitted a proposal!
+							Our CFP is now <strong>closed</strong> and all talks have been selected. Thank you to everyone
+							who submitted a proposal!
 						</p>
 						<p>
 							If you submitted a talk, please check your email for a message from
@@ -401,8 +403,13 @@ END:VCALENDAR`;
 						</p>
 						<p class="mb-0">
 							In the meantime, check out talks from previous events on our
-							<a href="https://www.youtube.com/channel/UCrCPvWW8z-_O8uUM8-ySz7g" target="_blank" rel="noopener">
-								<i class="bi bi-youtube me-1"></i>YouTube channel</a>.
+							<a
+								href="https://www.youtube.com/channel/UCrCPvWW8z-_O8uUM8-ySz7g"
+								target="_blank"
+								rel="noopener"
+							>
+								<i class="bi bi-youtube me-1"></i>YouTube channel</a
+							>.
 						</p>
 					</div>
 				</div>
@@ -410,7 +417,6 @@ END:VCALENDAR`;
 		</div>
 	</div>
 </section>
-
 
 <!-- sigint carrier -->
 <div class="signal-carrier" aria-hidden="true">
@@ -420,4 +426,3 @@ END:VCALENDAR`;
 	<span data-sig="3s" data-seq="2"></span>
 	<span data-sig="!" data-seq="5"></span>
 </div>
-

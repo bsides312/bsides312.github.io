@@ -18,9 +18,10 @@
 			authenticated = true;
 			error = '';
 		} else {
-			error = attempts >= 3
-				? 'Access Denied — Maximum attempts reached. Session logged.'
-				: 'Access Denied — Invalid Credentials';
+			error =
+				attempts >= 3
+					? 'Access Denied — Maximum attempts reached. Session logged.'
+					: 'Access Denied — Invalid Credentials';
 		}
 	}
 
@@ -75,9 +76,7 @@
 					<div class="error-msg">{error}</div>
 				{/if}
 
-				<button class="login-btn" on:click={handleLogin}>
-					AUTHENTICATE
-				</button>
+				<button class="login-btn" on:click={handleLogin}> AUTHENTICATE </button>
 			</div>
 
 			<div class="login-footer">
@@ -91,7 +90,9 @@
 		<div class="dash-header">
 			<span class="status-dot"></span>
 			<span>SECURE SESSION ACTIVE</span>
-			<span class="session-id">SID: {Math.random().toString(36).substring(2, 10).toUpperCase()}</span>
+			<span class="session-id"
+				>SID: {Math.random().toString(36).substring(2, 10).toUpperCase()}</span
+			>
 		</div>
 
 		<div class="dash-content">
@@ -138,7 +139,9 @@ KEY: Considering all the BSides,
 				<div class="log-entries">
 					<p><span class="log-time">[2026-05-10 08:42]</span> Admin login from 10.312.0.1</p>
 					<p><span class="log-time">[2026-05-09 23:15]</span> Backup completed — 0 errors</p>
-					<p><span class="log-time">[2026-05-09 18:30]</span> Certificate renewed — expires 2027-05-09</p>
+					<p>
+						<span class="log-time">[2026-05-09 18:30]</span> Certificate renewed — expires 2027-05-09
+					</p>
 					<p><span class="log-time">[2026-05-08 12:00]</span> Scheduled maintenance complete</p>
 				</div>
 			</div>

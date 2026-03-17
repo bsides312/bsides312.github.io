@@ -3,16 +3,6 @@ import { resolve } from 'path';
 import type { PageServerLoad } from './$types';
 
 function generateIcsContent(): string {
-	const eventStart = new Date('2026-05-16T09:00:00-05:00');
-	const eventEnd = new Date('2026-05-16T19:00:00-05:00');
-
-	const formatDate = (date: Date): string => {
-		return date
-			.toISOString()
-			.replace(/[-:]/g, '')
-			.replace(/\.\d{3}/, '');
-	};
-
 	const description = `BSides312 is a nonprofit one-day conference run by longtime members of Chicago's hacking and infosec community. Join us for talks, workshops, and networking with security professionals from around the world.`;
 
 	const icsContent = `BEGIN:VCALENDAR
