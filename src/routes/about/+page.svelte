@@ -1,9 +1,16 @@
 <script lang="ts">
 	import { boardMembers } from '$lib/stores/boardMembers';
+	import { faqItems } from '$lib/stores/faq';
 	import { base } from '$app/paths';
 	import type { PageData } from './$types';
 
 	export let data: PageData;
+
+	let activeFaq: string | null = null;
+
+	function toggleFaq(id: string) {
+		activeFaq = activeFaq === id ? null : id;
+	}
 
 	let lightboxSrc: string | null = null;
 
@@ -40,56 +47,50 @@
 <!-- About Section -->
 <section id="about" class="section section-with-bg">
 	<div class="container">
-		<div class="row">
-			<div class="col-lg-6 mb-4">
-				<div class="card h-100">
-					<div class="card-body">
-						<h2><i class="bi bi-terminal me-2"></i>About BSides312</h2>
-						<p>
-							BSides312 is a nonprofit one-day conference run by longtime members of Chicago's hacking
-							and infosec community. In fact, many of them founded the original BSides Chicago! It's
-							built as a collaborative venue; whether you hack hardware, excel at logistics, or just
-							bring curious friends, you help shape the conversation.
-						</p>
-						<p>
-							Like every BSides event, the conference follows a community-driven model built by and for
-							hackers. Its purpose is to widen the conversation beyond the usual boundaries, offering
-							space for people to both present and take part in an intimate, collaborative setting. The
-							result is an intense mix of discussions, demos, and interaction where new ideas take
-							shape.
-						</p>
-						<p>
-							If you and your organization are as passionate about the security community as we are and
-							would like to support our event, please reach out questions [@] bsides312.org. To show our
-							thanks, supporters will be welcome to chat about themselves and their organization,
-							fostering connections with the BSides312 community.
-						</p>
-					</div>
-				</div>
+		<div class="card mb-4">
+			<div class="card-body">
+				<h3 class="card-title"><i class="bi bi-calendar-event text-warning me-2"></i>When & Where</h3>
+				<p>
+					<strong>Date:</strong> May 16th, 2026<br />
+					<strong>Time:</strong> 9:00 AM - 7:00 PM CST<br />
+					<br />
+					<strong>Location:</strong><br />
+					Irish American Heritage Center<br />
+					4626 N Knox Ave<br />
+					Chicago, IL
+				</p>
+				<button
+					class="btn btn-outline-primary"
+					on:click={downloadCalendar}
+					type="button"
+					aria-label="Add BSides312 to calendar"
+				>
+					<i class="bi bi-calendar-plus me-2"></i>Add to Calendar
+				</button>
 			</div>
-			<div class="col-lg-6">
-				<div class="card h-100">
-					<div class="card-body">
-						<h3 class="card-title"><i class="bi bi-calendar-event text-warning me-2"></i>When & Where</h3>
-						<p>
-							<strong>Date:</strong> May 16th, 2026<br />
-							<strong>Time:</strong> 9:00 AM - 7:00 PM CST<br />
-							<br />
-							<strong>Location:</strong><br />
-							Irish American Heritage Center<br />
-							4626 N Knox Ave<br />
-							Chicago, IL
-						</p>
-						<button
-							class="btn btn-outline-primary"
-							on:click={downloadCalendar}
-							type="button"
-							aria-label="Add BSides312 to calendar"
-						>
-							<i class="bi bi-calendar-plus me-2"></i>Add to Calendar
-						</button>
-					</div>
-				</div>
+		</div>
+		<div class="card">
+			<div class="card-body">
+				<h2><i class="bi bi-terminal me-2"></i>About BSides312</h2>
+				<p>
+					BSides312 is a nonprofit one-day conference run by longtime members of Chicago's hacking
+					and infosec community. In fact, many of them founded the original BSides Chicago! It's
+					built as a collaborative venue; whether you hack hardware, excel at logistics, or just
+					bring curious friends, you help shape the conversation.
+				</p>
+				<p>
+					Like every BSides event, the conference follows a community-driven model built by and for
+					hackers. Its purpose is to widen the conversation beyond the usual boundaries, offering
+					space for people to both present and take part in an intimate, collaborative setting. The
+					result is an intense mix of discussions, demos, and interaction where new ideas take
+					shape.
+				</p>
+				<p>
+					If you and your organization are as passionate about the security community as we are and
+					would like to support our event, please reach out questions [@] bsides312.org. To show our
+					thanks, supporters will be welcome to chat about themselves and their organization,
+					fostering connections with the BSides312 community.
+				</p>
 			</div>
 		</div>
 	</div>
@@ -133,6 +134,48 @@
 		<img src={lightboxSrc} alt="BSides312 gallery photo full size" class="lightbox-img" />
 	</div>
 {/if}
+
+<!-- FAQ Section -->
+<section id="faq" class="section section-with-bg">
+	<div class="container">
+		<div class="section-header">
+			<h2>Frequently Asked Questions</h2>
+		</div>
+
+		<div class="row justify-content-center">
+			<div class="col-lg-9">
+				<ul class="faq-list">
+					{#each faqItems as faq (faq.id)}
+						<li>
+							<button
+								class="faq-question"
+								class:expanded={activeFaq === faq.id}
+								on:click={() => toggleFaq(faq.id)}
+								type="button"
+							>
+								{faq.question}
+								<i
+									class="bi"
+									class:bi-chevron-down={activeFaq !== faq.id}
+									class:bi-chevron-up={activeFaq === faq.id}
+								></i>
+							</button>
+							{#if activeFaq === faq.id}
+								<div class="faq-answer">
+									<!-- eslint-disable-next-line svelte/no-at-html-tags -->
+									{@html faq.answer
+										.replace(/\n\n/g, '</p><p>')
+										.replace(/^/, '<p>')
+										.replace(/$/, '</p>')}
+								</div>
+							{/if}
+						</li>
+					{/each}
+				</ul>
+			</div>
+		</div>
+	</div>
+</section>
 
 <!-- Board Member Details Section -->
 <section id="board" class="section section-with-bg">

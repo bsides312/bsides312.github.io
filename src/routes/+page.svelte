@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { getSponsorsByTier, sponsorTierImages } from '$lib/stores/sponsors';
-	import { faqItems } from '$lib/stores/faq';
 	import { base } from '$app/paths';
 	import { onMount } from 'svelte';
 	import type { PageData } from './$types';
@@ -37,13 +36,6 @@
 			tierImage: sponsorTierImages[tier]
 		}))
 		.filter((tier) => tier.tierSponsors.length > 0);
-
-	// FAQ state management
-	let activeFaq: string | null = null;
-
-	function toggleFaq(id: string) {
-		activeFaq = activeFaq === id ? null : id;
-	}
 
 	// Gallery lightbox
 	let lightboxSrc: string | null = null;
@@ -429,44 +421,3 @@ END:VCALENDAR`;
 	<span data-sig="!" data-seq="5"></span>
 </div>
 
-<!-- FAQ Section -->
-<section id="faq" class="section section-with-bg">
-	<div class="container">
-		<div class="section-header">
-			<h2>Frequently Asked Questions</h2>
-		</div>
-
-		<div class="row justify-content-center">
-			<div class="col-lg-9">
-				<ul class="faq-list">
-					{#each faqItems as faq (faq.id)}
-						<li>
-							<button
-								class="faq-question"
-								class:expanded={activeFaq === faq.id}
-								on:click={() => toggleFaq(faq.id)}
-								type="button"
-							>
-								{faq.question}
-								<i
-									class="bi"
-									class:bi-chevron-down={activeFaq !== faq.id}
-									class:bi-chevron-up={activeFaq === faq.id}
-								></i>
-							</button>
-							{#if activeFaq === faq.id}
-								<div class="faq-answer">
-									<!-- eslint-disable-next-line svelte/no-at-html-tags -->
-									{@html faq.answer
-										.replace(/\n\n/g, '</p><p>')
-										.replace(/^/, '<p>')
-										.replace(/$/, '</p>')}
-								</div>
-							{/if}
-						</li>
-					{/each}
-				</ul>
-			</div>
-		</div>
-	</div>
-</section>

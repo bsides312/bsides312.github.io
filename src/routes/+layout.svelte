@@ -100,7 +100,7 @@
 				</li>
 				<li class="dropdown" class:mobile-active={activeDropdown === 'sponsor'}>
 					<div class="dropdown-header">
-						<a class="nav-link" href="{base}/support#support" aria-haspopup="true">
+						<a class="nav-link" href="{base}/support#support" aria-haspopup="true" on:click={closeMobileMenu}>
 							<span>Support Us</span>
 							<i class="bi bi-chevron-down desktop-only"></i>
 						</a>
@@ -129,7 +129,7 @@
 				</li>
 				<li class="dropdown" class:mobile-active={activeDropdown === 'contribute'}>
 					<div class="dropdown-header">
-						<a class="nav-link" href="{base}/#contribute" aria-haspopup="true">
+						<a class="nav-link" href="{base}/#contribute" aria-haspopup="true" on:click={closeMobileMenu}>
 							<span>Contribute</span>
 							<i class="bi bi-chevron-down desktop-only"></i>
 						</a>
@@ -158,7 +158,7 @@
 				</li>
 				<li class="dropdown" class:mobile-active={activeDropdown === 'event'}>
 					<div class="dropdown-header">
-						<a class="nav-link" href="{base}/" aria-haspopup="true">
+						<a class="nav-link" href="{base}/" aria-haspopup="true" on:click={closeMobileMenu}>
 							<span>Event</span>
 							<i class="bi bi-chevron-down desktop-only"></i>
 						</a>
@@ -200,7 +200,7 @@
 				</li>
 				<li class="dropdown" class:mobile-active={activeDropdown === 'about'}>
 					<div class="dropdown-header">
-						<a class="nav-link" href="{base}/" aria-haspopup="true">
+						<a class="nav-link" href="{base}/about" aria-haspopup="true" on:click={closeMobileMenu}>
 							<span>About</span>
 							<i class="bi bi-chevron-down desktop-only"></i>
 						</a>
@@ -225,7 +225,7 @@
 						<li>
 							<a class="nav-link" href="{base}/about#board" on:click={closeMobileMenu}>Our Board</a>
 						</li>
-						<li><a class="nav-link" href="{base}/#faq" on:click={closeMobileMenu}>FAQ</a></li>
+						<li><a class="nav-link" href="{base}/about#faq" on:click={closeMobileMenu}>FAQ</a></li>
 						<li>
 							<a class="nav-link" href="{base}/privacy#privacy" on:click={closeMobileMenu}>Privacy Policy</a
 							>
