@@ -9,6 +9,7 @@
 	interface Session {
 		id: string;
 		title: string;
+		description?: string;
 		startsAt: string;
 		endsAt: string;
 		isServiceSession: boolean;
@@ -23,18 +24,36 @@
 		sessions: Session[];
 	}
 
+	interface FullSpeaker {
+		id: string;
+		fullName: string;
+		bio: string;
+		tagLine: string;
+		profilePicture: string;
+	}
+
 	let loading = true;
 	let error = false;
 	let allSessions: Session[] = [];
 	let timeSlots: string[] = [];
+	let speakerMap: Record<string, FullSpeaker> = {};
+	let talkModal: { title: string; description: string } | null = null;
+	let schedSpeakerModal: FullSpeaker | null = null;
 
 	onMount(async () => {
 		try {
-			const res = await fetch('https://sessionize.com/api/v2/v1trm5nf/view/Sessions');
-			if (!res.ok) throw new Error();
-			const groups: Group[] = await res.json();
+			const [sessRes, spRes] = await Promise.all([
+				fetch('https://sessionize.com/api/v2/v1trm5nf/view/Sessions'),
+				fetch('https://sessionize.com/api/v2/v1trm5nf/view/Speakers')
+			]);
+			if (!sessRes.ok || !spRes.ok) throw new Error();
+			const groups: Group[] = await sessRes.json();
+			const speakerList: FullSpeaker[] = await spRes.json();
 			allSessions = groups.flatMap((g) => g.sessions);
 			timeSlots = [...new Set(allSessions.map((s) => s.startsAt))].sort();
+			for (const sp of speakerList) {
+				speakerMap[sp.id] = sp;
+			}
 		} catch {
 			error = true;
 		} finally {
@@ -82,6 +101,17 @@
 
 	function cleanTitle(title: string): string {
 		return title.replace(/^\[Track \d+\]\s*/i, '');
+	}
+
+	function openTalkModal(session: Session) {
+		if (session.description?.trim()) {
+			talkModal = { title: cleanTitle(session.title), description: session.description };
+		}
+	}
+
+	function openSpeakerModal(sp: SessionSpeaker) {
+		const full = speakerMap[sp.id];
+		if (full?.bio) schedSpeakerModal = full;
 	}
 </script>
 
@@ -166,11 +196,29 @@
 						{:else}
 							<div class="sched-session sched-green" class:sched-empty={!green}>
 								{#if green}
-									<div class="sched-talk-title">{cleanTitle(green.title)}</div>
+									<div class="sched-talk-title">
+										{#if green.description?.trim()}
+											<button class="sched-talk-btn" on:click={() => openTalkModal(green)}>
+												{cleanTitle(green.title)}
+											</button>
+										{:else}
+											{cleanTitle(green.title)}
+										{/if}
+									</div>
 									{#if green.speakers.length}
 										<div class="sched-speaker">
 											<i class="bi bi-person-fill"></i>
-											{green.speakers.map((s) => s.name).join(', ')}
+											{#each green.speakers as sp, i (sp.id)}
+												{@const full = speakerMap[sp.id]}
+												{#if i > 0},{/if}
+												{#if full?.bio}
+													<button class="sched-speaker-btn" on:click={() => openSpeakerModal(sp)}>
+														{sp.name}
+													</button>
+												{:else}
+													{sp.name}
+												{/if}
+											{/each}
 										</div>
 									{/if}
 									<span class="sched-dur sched-dur-green"
@@ -182,11 +230,29 @@
 							</div>
 							<div class="sched-session sched-orange" class:sched-empty={!orange}>
 								{#if orange}
-									<div class="sched-talk-title">{cleanTitle(orange.title)}</div>
+									<div class="sched-talk-title">
+										{#if orange.description?.trim()}
+											<button class="sched-talk-btn" on:click={() => openTalkModal(orange)}>
+												{cleanTitle(orange.title)}
+											</button>
+										{:else}
+											{cleanTitle(orange.title)}
+										{/if}
+									</div>
 									{#if orange.speakers.length}
 										<div class="sched-speaker">
 											<i class="bi bi-person-fill"></i>
-											{orange.speakers.map((s) => s.name).join(', ')}
+											{#each orange.speakers as sp, i (sp.id)}
+												{@const full = speakerMap[sp.id]}
+												{#if i > 0},{/if}
+												{#if full?.bio}
+													<button class="sched-speaker-btn" on:click={() => openSpeakerModal(sp)}>
+														{sp.name}
+													</button>
+												{:else}
+													{sp.name}
+												{/if}
+											{/each}
 										</div>
 									{/if}
 									<span class="sched-dur sched-dur-orange"
@@ -207,3 +273,67 @@
 		{/if}
 	</div>
 </section>
+
+<!-- Talk / synopsis modal -->
+{#if talkModal}
+	<!-- svelte-ignore a11y-no-static-element-interactions a11y-click-events-have-key-events -->
+	<div
+		class="speaker-modal-overlay"
+		on:click={() => (talkModal = null)}
+		on:keydown={(e) => e.key === 'Escape' && (talkModal = null)}
+		role="dialog"
+		aria-modal="true"
+		aria-label={talkModal.title}
+		tabindex="-1"
+	>
+		<!-- svelte-ignore a11y-no-static-element-interactions a11y-click-events-have-key-events -->
+		<div class="speaker-modal" on:click|stopPropagation>
+			<button class="speaker-modal-close" on:click={() => (talkModal = null)} aria-label="Close"
+				>&times;</button
+			>
+			<h3 class="talk-modal-title">{talkModal.title}</h3>
+			<p class="talk-modal-description">{talkModal.description}</p>
+		</div>
+	</div>
+{/if}
+
+<!-- Speaker bio modal (from schedule page) -->
+{#if schedSpeakerModal}
+	<!-- svelte-ignore a11y-no-static-element-interactions a11y-click-events-have-key-events -->
+	<div
+		class="speaker-modal-overlay"
+		on:click={() => (schedSpeakerModal = null)}
+		on:keydown={(e) => e.key === 'Escape' && (schedSpeakerModal = null)}
+		role="dialog"
+		aria-modal="true"
+		aria-label="{schedSpeakerModal.fullName} bio"
+		tabindex="-1"
+	>
+		<!-- svelte-ignore a11y-no-static-element-interactions a11y-click-events-have-key-events -->
+		<div class="speaker-modal" on:click|stopPropagation>
+			<button
+				class="speaker-modal-close"
+				on:click={() => (schedSpeakerModal = null)}
+				aria-label="Close">&times;</button
+			>
+			<div class="speaker-modal-header">
+				{#if schedSpeakerModal.profilePicture}
+					<img
+						class="speaker-modal-photo"
+						src={schedSpeakerModal.profilePicture}
+						alt={schedSpeakerModal.fullName}
+					/>
+				{/if}
+				<div class="speaker-modal-info">
+					<h3 class="speaker-modal-name">{schedSpeakerModal.fullName}</h3>
+					{#if schedSpeakerModal.tagLine}
+						<div class="speaker-modal-tagline">{schedSpeakerModal.tagLine}</div>
+					{/if}
+				</div>
+			</div>
+			{#if schedSpeakerModal.bio}
+				<div class="speaker-modal-bio">{schedSpeakerModal.bio}</div>
+			{/if}
+		</div>
+	</div>
+{/if}

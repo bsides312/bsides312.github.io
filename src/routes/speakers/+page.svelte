@@ -28,6 +28,8 @@
 	}
 
 	interface GroupSession {
+		id: number;
+		description?: string;
 		speakers: SessionSpeaker[];
 	}
 
@@ -38,6 +40,7 @@
 
 	let speakers: Speaker[] = [];
 	let speakerTrack: Record<string, string> = {};
+	let sessionSynopsisMap: Record<string, string> = {};
 	let loading = true;
 	let error = false;
 
@@ -52,6 +55,9 @@
 			const groups: Group[] = await gRes.json();
 			for (const group of groups) {
 				for (const session of group.sessions) {
+					if (session.description?.trim()) {
+						sessionSynopsisMap[String(session.id)] = session.description;
+					}
 					for (const sp of session.speakers) {
 						speakerTrack[sp.id] = group.groupName;
 					}
@@ -104,6 +110,7 @@
 	}
 
 	let selectedSpeaker: Speaker | null = null;
+	let synopsisModal: { title: string; description: string } | null = null;
 
 	function openSpeakerModal(speaker: Speaker) {
 		selectedSpeaker = speaker;
@@ -111,6 +118,15 @@
 
 	function closeSpeakerModal() {
 		selectedSpeaker = null;
+		synopsisModal = null;
+	}
+
+	function openSynopsisModal(title: string, description: string) {
+		synopsisModal = { title, description };
+	}
+
+	function closeSynopsisModal() {
+		synopsisModal = null;
 	}
 </script>
 
@@ -232,9 +248,22 @@
 				</div>
 			</div>
 			{#if selectedSpeaker.sessions.length}
-				<div class="speaker-modal-talk">
-					<i class="bi bi-chat-quote-fill me-2"></i>{cleanTitle(selectedSpeaker.sessions[0].name)}
-				</div>
+				{@const sess = selectedSpeaker.sessions[0]}
+				{@const synopsis = sessionSynopsisMap[String(sess.id)]}
+				{#if synopsis}
+					<button
+						class="speaker-modal-talk speaker-modal-talk-btn"
+						on:click={() => openSynopsisModal(cleanTitle(sess.name), synopsis)}
+					>
+						<i class="bi bi-chat-quote-fill me-2"></i>{cleanTitle(sess.name)}<span
+							class="talk-click-hint">— view synopsis</span
+						>
+					</button>
+				{:else}
+					<div class="speaker-modal-talk">
+						<i class="bi bi-chat-quote-fill me-2"></i>{cleanTitle(sess.name)}
+					</div>
+				{/if}
 			{/if}
 			{#if selectedSpeaker.bio}
 				<div class="speaker-modal-bio">{selectedSpeaker.bio}</div>
@@ -253,6 +282,29 @@
 					{/each}
 				</div>
 			{/if}
+		</div>
+	</div>
+{/if}
+
+<!-- Synopsis modal (nested, higher z-index) -->
+{#if synopsisModal}
+	<!-- svelte-ignore a11y-no-static-element-interactions a11y-click-events-have-key-events -->
+	<div
+		class="synopsis-modal-overlay"
+		on:click={closeSynopsisModal}
+		on:keydown={(e) => e.key === 'Escape' && closeSynopsisModal()}
+		role="dialog"
+		aria-modal="true"
+		aria-label={synopsisModal.title}
+		tabindex="-1"
+	>
+		<!-- svelte-ignore a11y-no-static-element-interactions a11y-click-events-have-key-events -->
+		<div class="speaker-modal" on:click|stopPropagation>
+			<button class="speaker-modal-close" on:click={closeSynopsisModal} aria-label="Close"
+				>&times;</button
+			>
+			<h3 class="talk-modal-title">{synopsisModal.title}</h3>
+			<p class="talk-modal-description">{synopsisModal.description}</p>
 		</div>
 	</div>
 {/if}
