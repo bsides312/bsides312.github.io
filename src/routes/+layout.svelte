@@ -170,8 +170,8 @@
 							<a class="nav-link" href="{base}/#contribute" on:click={closeMobileMenu}>Volunteer</a>
 						</li>
 						<li>
-							<a class="nav-link" href="{base}/speakers#speakers" on:click={closeMobileMenu}
-								>Speakers</a
+							<a class="nav-link" href="{base}/#contribute" on:click={closeMobileMenu}
+								>Speak</a
 							>
 						</li>
 					</ul>

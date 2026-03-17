@@ -366,56 +366,8 @@ END:VCALENDAR`;
 			<h2>Donate your Time!</h2>
 		</div>
 		<div class="alert alert-success container-fluid text-center fw-bold" role="alert">
-			Here are some non-financial ways you can help support our cause:
+			We're full up on volunteers and speakers for 2026! <br>Grab a ticket and join us at the con!
 		</div>
-
-		<div class="row">
-			<div class="col-lg-6 mb-4" id="volunteer">
-				<div class="card h-100">
-					<div class="card-body">
-						<h3 class="card-title">
-							<i class="bi bi-people-fill text-info me-2"></i>Volunteer With Us
-						</h3>
-						<p>Our call for volunteers is closed for 2026, but thank you for your interest!</p>
-						<p class="mb-0">
-							<small class="text-muted-60">
-								<i class="bi bi-bell me-1"></i>Follow us on social media to be notified when
-								volunteer applications open for future events.
-							</small>
-						</p>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-lg-6 mb-4" id="cfp">
-				<div class="card h-100">
-					<div class="card-body">
-						<h3 class="card-title">
-							<i class="bi bi-mic-fill text-warning me-2"></i>Call for Presentations — CLOSED
-						</h3>
-						<p>
-							Our CFP is now <strong>closed</strong> and all talks have been selected. Thank you to everyone
-							who submitted a proposal!
-						</p>
-						<p>
-							If you submitted a talk, please check your email for a message from
-							<strong>bsides312@events.sessionize.com</strong> with your selection status.
-						</p>
-						<p class="mb-0">
-							In the meantime, check out talks from previous events on our
-							<a
-								href="https://www.youtube.com/channel/UCrCPvWW8z-_O8uUM8-ySz7g"
-								target="_blank"
-								rel="noopener"
-							>
-								<i class="bi bi-youtube me-1"></i>YouTube channel</a
-							>.
-						</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
 </section>
 
 <!-- sigint carrier -->
