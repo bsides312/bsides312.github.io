@@ -16,7 +16,7 @@
 			price: '$10,000',
 			description: 'Ultimate partnership experience',
 			benefits: [
-				'Platinum Level Plus',
+				'All other tier perks',
 				'(10) Additional event passes',
 				'Gold Level for 1 consecutive year'
 			],

@@ -28,6 +28,12 @@ html {
 	font-size: 125%;
 }
 
+@media (max-width: 480px) {
+	html {
+		font-size: 112%;
+	}
+}
+
 body {
 	margin: 0;
 	padding: 0;
@@ -1001,6 +1007,22 @@ div[id] {
 		align-items: center;
 		text-align: center;
 	}
+
+	.keynote-photo {
+		width: 220px;
+		height: 220px;
+	}
+
+	.keynote-name {
+		font-size: 1.8rem;
+	}
+}
+
+@media (max-width: 400px) {
+	.keynote-photo {
+		width: 180px;
+		height: 180px;
+	}
 }
 
 /* ============================================================
@@ -1875,6 +1897,20 @@ div[id] {
 	min-width: 560px;
 }
 
+@media (max-width: 600px) {
+	.schedule-grid {
+		grid-template-columns: 50px 1fr 1fr;
+		min-width: 420px;
+	}
+}
+
+@media (max-width: 440px) {
+	.schedule-grid {
+		grid-template-columns: 44px 1fr 1fr;
+		min-width: 340px;
+	}
+}
+
 .sched-header-time {
 	background: rgba(6, 12, 34, 0.85);
 	padding: 14px 10px;
@@ -2180,6 +2216,29 @@ div[id] {
 	overflow-y: auto;
 	position: relative;
 	box-shadow: 0 0 40px rgba(93, 189, 252, 0.2);
+}
+
+@media (max-width: 480px) {
+	.speaker-modal {
+		padding: 20px;
+		border-radius: 12px;
+		max-height: 85vh;
+	}
+
+	.speaker-modal-header {
+		flex-direction: column;
+		text-align: center;
+		gap: 12px;
+	}
+
+	.speaker-modal-photo {
+		width: 80px;
+		height: 80px;
+	}
+
+	.speaker-modal-name {
+		font-size: 1.2rem;
+	}
 }
 
 .speaker-modal-close {
