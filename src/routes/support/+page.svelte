@@ -73,10 +73,10 @@
 </script>
 
 <svelte:head>
-	<title>Support Us - BSides312</title>
+	<title>Support BSides312 2026 — Sponsor Chicago's Hacking Conference</title>
 	<meta
 		name="description"
-		content="Support BSides312 through corporate sponsorship or donations. Help us make Chicago's biggest little hacker conference possible."
+		content="Support BSides312 2026 through corporate sponsorship or donations. Help make Chicago's biggest little hacker conference possible on May 16."
 	/>
 </svelte:head>
 

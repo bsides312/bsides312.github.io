@@ -7,4 +7,4 @@ Disallow: /wwwdev/
 Disallow: /frequencies
 
 # Sitemap
-Sitemap: https://bsides312.github.io/sitemap.xml
+Sitemap: https://bsides312.org/sitemap.xml

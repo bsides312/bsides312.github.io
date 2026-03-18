@@ -141,10 +141,10 @@ END:VCALENDAR`;
 </script>
 
 <svelte:head>
-	<title>BSides312 - Chicago's Biggest Little Non-Profit Hacking Conference</title>
+	<title>BSides312 2026 — Chicago's Biggest Little Non-Profit Hacking Conference | May 16</title>
 	<meta
 		name="description"
-		content="BSides312 is Chicago's biggest little non-profit hacking & information security conference. Join us for talks, workshops, and networking with security professionals from around the world."
+		content="BSides312 2026 — May 16 at the Irish American Heritage Center, Chicago. A nonprofit one-day hacking & infosec conference featuring talks, workshops, and networking with security professionals."
 	/>
 </svelte:head>
 

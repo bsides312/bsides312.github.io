@@ -37,10 +37,10 @@
 </script>
 
 <svelte:head>
-	<title>About BSides312 - Chicago's Biggest Little Non-Profit Hacking Conference</title>
+	<title>About BSides312 2026 — Chicago's Biggest Little Non-Profit Hacking Conference</title>
 	<meta
 		name="description"
-		content="Learn about BSides312, a nonprofit one-day security conference run by and for Chicago's hacking and infosec community."
+		content="Learn about BSides312 2026, a nonprofit one-day security conference on May 16 at the Irish American Heritage Center. Run by and for Chicago's hacking and infosec community."
 	/>
 </svelte:head>
 
