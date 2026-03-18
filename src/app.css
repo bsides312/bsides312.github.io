@@ -93,7 +93,9 @@ header {
 }
 
 #logo img {
-	max-height: 60px;
+	height: 90px;
+	margin: -15px 0;
+	object-fit: contain;
 }
 
 .navbar ul {
@@ -315,7 +317,7 @@ footer {
 }
 
 .hero h1 {
-	font-size: 3.5rem;
+	font-size: 2.975rem;
 	line-height: 1.1;
 	margin-top: 0;
 	margin-bottom: 30px;
@@ -326,11 +328,12 @@ footer {
 	position: absolute;
 	bottom: 28px;
 	right: 28px;
-	color: rgba(255, 255, 255, 0.45);
-	font-size: 1.6rem;
+	color: var(--primary-color);
+	font-size: 2.2rem;
 	z-index: 1;
 	animation: scrollBounce 1.8s ease-in-out infinite;
 	pointer-events: none;
+	filter: drop-shadow(0 0 6px rgba(93, 189, 252, 0.6));
 }
 
 @keyframes scrollBounce {
@@ -341,7 +344,8 @@ footer {
 	}
 	50% {
 		transform: translateY(10px);
-		opacity: 0.9;
+		opacity: 1;
+		filter: drop-shadow(0 0 12px rgba(93, 189, 252, 0.9));
 	}
 }
 
@@ -1656,7 +1660,7 @@ div[id] {
 
 	/* Typography */
 	.hero h1 {
-		font-size: 2.5rem;
+		font-size: 2.125rem;
 	}
 
 	.hero-logo {
@@ -1717,12 +1721,13 @@ div[id] {
 @media (max-width: 576px) {
 	/* Navigation */
 	#logo img {
-		max-height: 50px;
+		height: 70px;
+		margin: -10px 0;
 	}
 
 	/* Hero */
 	.hero h1 {
-		font-size: 2rem;
+		font-size: 1.7rem;
 	}
 
 	.hero-logo {

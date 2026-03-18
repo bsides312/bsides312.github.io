@@ -152,13 +152,13 @@ END:VCALENDAR`;
 <section class="hero">
 	<div class="hero-content">
 		<img src="{base}/assets/img/about_logo.png" alt="BSides312 Logo" class="img-fluid hero-logo" />
-		<h1 class="text-center mb-4">Non-Profit Hacking Conference</h1>
+		<h1 class="text-center mb-4">Chicago's Biggest Little <br>Non-Profit <br>InfoSec Conference</h1>
 		<p class="lead text-center mb-4">
 			BSides312 brings together security professionals, researchers, and enthusiasts for an
 			unforgettable day of learning and networking.
 		</p>
 		<div class="text-center">
-			<p class="mb-3"><strong>We'll be back May 16TH, 2026!!</strong></p>
+			<p class="mb-3"><strong>Join us May 16TH, 2026!!</strong></p>
 			<div class="hero-buttons">
 				<div class="hero-buttons-row">
 					<a
