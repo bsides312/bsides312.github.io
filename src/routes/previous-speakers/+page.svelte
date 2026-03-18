@@ -143,7 +143,7 @@
 					href="https://www.youtube.com/channel/UCrCPvWW8z-_O8uUM8-ySz7g"
 					target="_blank"
 					rel="noopener"
-					class="btn btn-outline-primary"
+					class="btn-primary"
 				>
 					<i class="bi bi-youtube me-2"></i>Visit Our YouTube Channel
 				</a>

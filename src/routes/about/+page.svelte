@@ -62,7 +62,7 @@
 					Chicago, IL
 				</p>
 				<button
-					class="btn btn-outline-primary"
+					class="btn-primary"
 					on:click={downloadCalendar}
 					type="button"
 					aria-label="Add BSides312 to calendar"

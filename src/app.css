@@ -362,59 +362,30 @@ footer {
    ============================================================ */
 .btn-primary {
 	background: transparent;
-	border: 2px solid #5dbdfc;
-	color: #5dbdfc;
-	padding: 15px 40px;
+	border: 1.5px solid #bf40bf;
+	color: #bf40bf;
+	padding: 8px 18px;
 	border-radius: 50px;
 	font-weight: 600;
-	text-decoration: none;
-	display: inline-block;
-	transition: all 0.3s ease;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-}
-
-.btn-primary:hover {
-	transform: translateY(-3px);
-	background: rgba(93, 189, 252, 0.2);
-	color: #5dbdfc;
-}
-
-.btn-primary:active {
-	background: #5dbdfc;
-	color: white;
-}
-
-.btn.btn-outline-primary {
-	border-radius: 50px;
-}
-
-.btn-sponsor-cta {
-	background: transparent;
-	border: 2px solid #5dbdfc;
-	color: #5dbdfc;
-	padding: 15px 40px;
-	border-radius: 50px;
-	font-weight: 700;
+	font-size: 0.9rem;
 	text-decoration: none;
 	display: inline-flex;
 	align-items: center;
+	gap: 6px;
 	transition: all 0.3s ease;
-	text-transform: uppercase;
-	letter-spacing: 1.5px;
-	font-size: 1.1rem;
 }
 
-.btn-sponsor-cta:hover {
-	transform: translateY(-3px);
-	background: rgba(93, 189, 252, 0.2);
-	color: #5dbdfc;
+.btn-primary:hover {
+	transform: translateY(-2px);
+	background: rgba(191, 64, 191, 0.15);
+	color: #bf40bf;
+	box-shadow: 0 0 18px rgba(191, 64, 191, 0.55);
 }
 
-.btn-sponsor-cta:active {
-	background: #5dbdfc;
-	color: white;
-	transform: translateY(-1px);
+.btn-primary:active {
+	background: #bf40bf;
+	color: #000000;
+	box-shadow: none;
 }
 
 /* Hero button layout */
@@ -428,49 +399,6 @@ footer {
 	flex-wrap: wrap;
 	gap: 15px;
 	justify-content: center;
-}
-
-/* Transparent button variant */
-.btn-transparent {
-	background: transparent;
-	border: 2px solid #5dbdfc;
-	color: #5dbdfc;
-	padding: 15px 40px;
-	border-radius: 50px;
-	font-weight: 600;
-	text-decoration: none;
-	display: inline-block;
-	transition: all 0.3s ease;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-}
-
-.btn-transparent:hover {
-	background: rgba(93, 189, 252, 0.2);
-	color: #5dbdfc;
-	transform: translateY(-3px);
-}
-
-/* Map link button */
-.map-link-btn {
-	display: inline-flex;
-	align-items: center;
-	gap: 6px;
-	margin-top: 10px;
-	padding: 8px 18px;
-	border: 1.5px solid #5dbdfc;
-	border-radius: 50px;
-	color: #5dbdfc;
-	text-decoration: none;
-	font-size: 0.9rem;
-	font-weight: 600;
-	transition: all 0.3s ease;
-}
-
-.map-link-btn:hover {
-	background: rgba(93, 189, 252, 0.15);
-	color: #5dbdfc;
-	transform: translateY(-2px);
 }
 
 /* ============================================================
@@ -685,6 +613,37 @@ div[id] {
 	border-radius: 8px;
 }
 
+.when-where-body {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	padding: 16px !important;
+}
+
+.when-where-top {
+	display: flex;
+	gap: 32px;
+}
+
+.when-where-datetime,
+.when-where-address {
+	flex: 1;
+}
+
+.when-where-btns {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	justify-content: center;
+}
+
+@media (max-width: 576px) {
+	.when-where-top {
+		flex-direction: column;
+		gap: 8px;
+	}
+}
+
 .text-muted-60 {
 	color: rgba(255, 255, 255, 0.6);
 }
@@ -830,26 +789,6 @@ div[id] {
 	border-top: 2px solid #5dbdfc;
 }
 
-.sponsorship-card .card-footer .btn-donate {
-	display: inline-block;
-	padding: 12px 40px;
-	background: #5dbdfc;
-	color: #ffffff;
-	border-radius: 50px;
-	font-weight: 700;
-	font-size: 16px;
-	text-decoration: none;
-	transition: all 0.3s ease;
-	text-transform: uppercase;
-	letter-spacing: 0.5px;
-	border: none;
-}
-
-.sponsorship-card .card-footer .btn-donate:hover {
-	background: #4a9fd8;
-	transform: scale(1.05);
-	box-shadow: 0 4px 12px rgba(93, 189, 252, 0.4);
-}
 
 .sponsorship-card .card-footer .contact-note {
 	font-size: 14px;
@@ -2309,6 +2248,20 @@ div[id] {
 	margin: 0 0 16px;
 	padding-right: 24px;
 	line-height: 1.4;
+}
+
+.talk-modal-meta {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	font-size: 0.82rem;
+	color: rgba(255, 255, 255, 0.55);
+	margin-bottom: 16px;
+	flex-wrap: wrap;
+}
+
+.talk-modal-meta-sep {
+	opacity: 0.4;
 }
 
 .talk-modal-description {

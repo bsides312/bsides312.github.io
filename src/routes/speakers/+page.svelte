@@ -30,6 +30,7 @@
 	interface GroupSession {
 		id: number;
 		description?: string;
+		startsAt?: string;
 		speakers: SessionSpeaker[];
 	}
 
@@ -40,7 +41,12 @@
 
 	let speakers: Speaker[] = [];
 	let speakerTrack: Record<string, string> = {};
-	let sessionSynopsisMap: Record<string, string> = {};
+	interface SessionInfo {
+		description: string;
+		startsAt: string;
+		track: string;
+	}
+	let sessionSynopsisMap: Record<string, SessionInfo> = {};
 	let loading = true;
 	let error = false;
 
@@ -56,7 +62,16 @@
 			for (const group of groups) {
 				for (const session of group.sessions) {
 					if (session.description?.trim()) {
-						sessionSynopsisMap[String(session.id)] = session.description;
+						const track = group.groupName.includes('GREEN')
+							? 'Green Line'
+							: group.groupName.includes('ORANGE')
+								? 'Orange Line'
+								: '';
+						sessionSynopsisMap[String(session.id)] = {
+							description: session.description,
+							startsAt: session.startsAt ?? '',
+							track
+						};
 					}
 					for (const sp of session.speakers) {
 						speakerTrack[sp.id] = group.groupName;
@@ -110,7 +125,8 @@
 	}
 
 	let selectedSpeaker: Speaker | null = null;
-	let synopsisModal: { title: string; description: string } | null = null;
+	let synopsisModal: { title: string; description: string; time: string; track: string } | null =
+		null;
 
 	function openSpeakerModal(speaker: Speaker) {
 		selectedSpeaker = speaker;
@@ -121,8 +137,16 @@
 		synopsisModal = null;
 	}
 
-	function openSynopsisModal(title: string, description: string) {
-		synopsisModal = { title, description };
+	function formatTime(dt: string): string {
+		if (!dt) return '';
+		const [h, m] = dt.split('T')[1].split(':').map(Number);
+		const ampm = h >= 12 ? 'PM' : 'AM';
+		const hr = h > 12 ? h - 12 : h === 0 ? 12 : h;
+		return `${hr}:${m.toString().padStart(2, '0')} ${ampm}`;
+	}
+
+	function openSynopsisModal(title: string, info: SessionInfo) {
+		synopsisModal = { title, description: info.description, time: info.startsAt, track: info.track };
 	}
 
 	function closeSynopsisModal() {
@@ -204,10 +228,10 @@
 				class="text-center mt-5"
 				style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;"
 			>
-				<a href="/schedule#schedule" class="btn btn-outline-primary">
+				<a href="/schedule#schedule" class="btn-primary">
 					<i class="bi bi-calendar3 me-2"></i>View Full Schedule
 				</a>
-				<a href="/previous-speakers#previous-speakers" class="btn btn-outline-primary">
+				<a href="/previous-speakers#previous-speakers" class="btn-primary">
 					<i class="bi bi-clock-history me-2"></i>Previous Speakers
 				</a>
 			</div>
@@ -249,11 +273,11 @@
 			</div>
 			{#if selectedSpeaker.sessions.length}
 				{@const sess = selectedSpeaker.sessions[0]}
-				{@const synopsis = sessionSynopsisMap[String(sess.id)]}
-				{#if synopsis}
+				{@const sessData = sessionSynopsisMap[String(sess.id)]}
+				{#if sessData}
 					<button
 						class="speaker-modal-talk speaker-modal-talk-btn"
-						on:click={() => openSynopsisModal(cleanTitle(sess.name), synopsis)}
+						on:click={() => openSynopsisModal(cleanTitle(sess.name), sessData)}
 					>
 						<i class="bi bi-chat-quote-fill me-2"></i>{cleanTitle(sess.name)}<span
 							class="talk-click-hint">— view synopsis</span
@@ -304,6 +328,25 @@
 				>&times;</button
 			>
 			<h3 class="talk-modal-title">{synopsisModal.title}</h3>
+			{#if synopsisModal.time || synopsisModal.track}
+				<div class="talk-modal-meta">
+					{#if synopsisModal.time}
+						<span><i class="bi bi-clock me-1"></i>{formatTime(synopsisModal.time)}</span>
+					{/if}
+					{#if synopsisModal.time && synopsisModal.track}
+						<span class="talk-modal-meta-sep">&bull;</span>
+					{/if}
+					{#if synopsisModal.track}
+						<span>
+							<span
+								class="cta-badge {synopsisModal.track.includes('Green') ? 'green' : 'orange'}-badge mini"
+								>L</span
+							>
+							{synopsisModal.track}
+						</span>
+					{/if}
+				</div>
+			{/if}
 			<p class="talk-modal-description">{synopsisModal.description}</p>
 		</div>
 	</div>

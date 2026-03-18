@@ -118,7 +118,7 @@ END:VCALENDAR`;
 						href="https://www.simpletix.com/e/security-bsides312-2026-tickets-247316"
 						target="_blank"
 						rel="noopener"
-						class="btn-primary btn-transparent"
+						class="btn-primary"
 					>
 						<i class="bi bi-ticket-perforated me-2"></i>Get Tickets
 					</a>
@@ -126,11 +126,11 @@ END:VCALENDAR`;
 						href="https://tinyurl.com/bsides312"
 						target="_blank"
 						rel="noopener"
-						class="btn-primary btn-transparent"
+						class="btn-primary"
 					>
 						<i class="bi bi-discord me-2"></i>Join our Discord!
 					</a>
-					<a href="{base}/support" class="btn-primary btn-transparent">
+					<a href="{base}/support" class="btn-primary">
 						<i class="bi bi-heart-fill me-2"></i>Support Us!
 					</a>
 				</div>
@@ -148,20 +148,21 @@ END:VCALENDAR`;
 		<div class="row">
 			<div class="col-12">
 				<div class="card mb-3">
-					<div class="card-body">
+					<div class="card-body when-where-body">
 						<h3 class="card-title">
 							<i class="bi bi-geo-alt-fill text-danger me-2"></i>When and Where
 						</h3>
-						<p>
-							<strong>Date:</strong> May 16th, 2026<br />
-							<strong>Time:</strong> 9:00 AM - 7:00 PM CST<br />
-							<br />
-							Irish American Heritage Center<br />
-							4626 N Knox Ave<br />
-							Chicago, IL<br />
-							<br />
-							<small>TONS of parking!</small>
-						</p>
+						<div class="when-where-top">
+							<div class="when-where-datetime">
+								<p class="mb-1"><strong>Date:</strong> May 16th, 2026</p>
+								<p class="mb-0"><strong>Time:</strong> 9:00 AM - 7:00 PM CST</p>
+							</div>
+							<div class="when-where-address">
+								<p class="mb-1">Irish American Heritage Center</p>
+								<p class="mb-1">4626 N Knox Ave, Chicago, IL</p>
+								<p class="mb-0"><small>TONS of parking!</small></p>
+							</div>
+						</div>
 						<iframe
 							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2967.8!2d-87.7425!3d41.9645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fcc7f9c0f0f0f%3A0x0!2s4626%20N%20Knox%20Ave%2C%20Chicago%2C%20IL!5e0!3m2!1sen!2sus!4v1234567890"
 							width="100%"
@@ -172,22 +173,24 @@ END:VCALENDAR`;
 							referrerpolicy="no-referrer-when-downgrade"
 							title="Irish American Heritage Center Location"
 						></iframe>
-						<a
-							href="https://maps.app.goo.gl/RuApEvazVQGJAXHi7"
-							target="_blank"
-							rel="noopener"
-							class="map-link-btn"
-						>
-							<i class="bi bi-box-arrow-up-right me-1"></i>Open in Google Maps
-						</a>
-						<button
-							class="btn btn-outline-primary btn-sm ms-2"
-							on:click={downloadCalendar}
-							type="button"
-							aria-label="Add BSides312 to calendar"
-						>
-							<i class="bi bi-calendar-plus me-1"></i>Add to Calendar
-						</button>
+						<div class="when-where-btns">
+							<a
+								href="https://maps.app.goo.gl/RuApEvazVQGJAXHi7"
+								target="_blank"
+								rel="noopener"
+								class="btn-primary"
+							>
+								<i class="bi bi-box-arrow-up-right"></i>Open in Google Maps
+							</a>
+							<button
+								class="btn-primary"
+								on:click={downloadCalendar}
+								type="button"
+								aria-label="Add BSides312 to calendar"
+							>
+								<i class="bi bi-calendar-plus"></i>Add to Calendar
+							</button>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -269,7 +272,7 @@ END:VCALENDAR`;
 			</div>
 		{/if}
 		<div class="text-center mt-3 mb-5">
-			<a href="{base}/speakers#speakers" class="btn btn-outline-primary">
+			<a href="{base}/speakers#speakers" class="btn-primary">
 				<i class="bi bi-people-fill me-2"></i>Meet All the Speakers
 			</a>
 		</div>
@@ -329,7 +332,7 @@ END:VCALENDAR`;
 			<h2>Supporters</h2>
 		</div>
 		<div class="text-center mb-4">
-			<a href="{base}/support#support" class="btn-sponsor-cta">
+			<a href="{base}/support#support" class="btn-primary">
 				<i class="bi bi-heart-fill me-2"></i>Click for Sponsorship info!
 			</a>
 		</div>

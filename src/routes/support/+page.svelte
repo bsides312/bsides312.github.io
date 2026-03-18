@@ -138,7 +138,7 @@
 						</div>
 						<div class="card-footer">
 							{#if tier.donateUrl}
-								<a href={tier.donateUrl} target="_blank" rel="noopener" class="btn btn-donate">
+								<a href={tier.donateUrl} target="_blank" rel="noopener" class="btn-primary">
 									Donate Now
 								</a>
 							{:else}
