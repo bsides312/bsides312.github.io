@@ -248,33 +248,36 @@ END:VCALENDAR`;
 		</div>
 
 		<!-- 2 Talk Tracks -->
-		<h3 class="subsection-heading">
-			<i class="bi bi-mic-fill me-2"></i>2 Talk Tracks with 15 Presenters from a Variety of
-			Backgrounds!
-		</h3>
-		{#if speakerPhotos.length}
-			<div class="ribbon-gallery speaker-ribbon">
-				<div class="ribbon-track">
-					{#each [0, 1, 2] as copy (copy)}
-						{#each speakerPhotos as speaker (speaker.fullName)}
-							<a href="{base}/speakers#speakers" class="ribbon-speaker-card">
-								<img
-									src={speaker.profilePicture}
-									alt={speaker.fullName}
-									class="ribbon-speaker-img"
-									loading="lazy"
-								/>
-								<div class="ribbon-speaker-name">{speaker.fullName}</div>
-							</a>
-						{/each}
-					{/each}
+		<div class="card mb-5">
+			<div class="card-body text-center">
+				<h3 class="card-title">
+					<i class="bi bi-mic-fill me-2"></i>2 Talk Tracks with 15 Diverse Presenters!!
+				</h3>
+				{#if speakerPhotos.length}
+					<div class="ribbon-gallery speaker-ribbon">
+						<div class="ribbon-track">
+							{#each [0, 1, 2] as copy (copy)}
+								{#each speakerPhotos as speaker (speaker.fullName)}
+									<a href="{base}/speakers#speakers" class="ribbon-speaker-card">
+										<img
+											src={speaker.profilePicture}
+											alt={speaker.fullName}
+											class="ribbon-speaker-img"
+											loading="lazy"
+										/>
+										<div class="ribbon-speaker-name">{speaker.fullName}</div>
+									</a>
+								{/each}
+							{/each}
+						</div>
+					</div>
+				{/if}
+				<div class="text-center mt-3">
+					<a href="{base}/speakers#speakers" class="btn-primary">
+						<i class="bi bi-people-fill me-2"></i>Meet All the Speakers!
+					</a>
 				</div>
 			</div>
-		{/if}
-		<div class="text-center mt-3 mb-5">
-			<a href="{base}/speakers#speakers" class="btn-primary">
-				<i class="bi bi-people-fill me-2"></i>Meet All the Speakers
-			</a>
 		</div>
 
 		<!-- Win Prizes -->
