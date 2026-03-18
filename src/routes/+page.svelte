@@ -13,13 +13,60 @@
 		profilePicture: string;
 		fullName: string;
 	}
+
+	interface ApiSpeaker {
+		fullName: string;
+		tagLine: string;
+		bio: string;
+		profilePicture: string;
+		sessions: { id: number; name: string }[];
+	}
+
+	interface KeynoteSpeaker {
+		fullName: string;
+		tagLine: string;
+		bio: string;
+		profilePicture: string;
+		talkTitle: string;
+		talkDescription: string;
+	}
+
 	let speakerPhotos: SpeakerPhoto[] = [];
+	let keynote: KeynoteSpeaker | null = null;
+
+	const KEYNOTE_NAME = 'Heidi Potter';
+	const KEYNOTE_SESSION_ID = 1186139;
 
 	onMount(async () => {
 		try {
-			const res = await fetch('https://sessionize.com/api/v2/v1trm5nf/view/Speakers');
-			if (res.ok) {
-				speakerPhotos = await res.json();
+			const [sRes, sessRes] = await Promise.all([
+				fetch('https://sessionize.com/api/v2/v1trm5nf/view/Speakers'),
+				fetch('https://sessionize.com/api/v2/v1trm5nf/view/Sessions')
+			]);
+			if (sRes.ok) {
+				const allSpeakers = await sRes.json();
+				speakerPhotos = allSpeakers;
+				const heidi = (allSpeakers as ApiSpeaker[]).find((s) => s.fullName === KEYNOTE_NAME);
+				if (heidi && sessRes.ok) {
+					const groups = await sessRes.json();
+					const talkTitle = heidi.sessions[0]?.name ?? '';
+					let talkDescription = '';
+					for (const group of groups) {
+						for (const session of group.sessions) {
+							if (session.id === KEYNOTE_SESSION_ID) {
+								talkDescription = session.description ?? '';
+							}
+						}
+					}
+					keynote = {
+						fullName: heidi.fullName,
+						tagLine: heidi.tagLine,
+						bio: heidi.bio,
+						profilePicture: heidi.profilePicture,
+						talkTitle,
+						talkDescription
+					};
+				}
 			}
 		} catch {
 			// silently fail — gallery just won't show
@@ -246,6 +293,37 @@ END:VCALENDAR`;
 			<h2>Ride the L with Us!</h2>
 			<p>Check out all our 1337 neighborhoods you can explore!</p>
 		</div>
+
+		<!-- Keynote Speaker -->
+		{#if keynote}
+			<div class="card mb-5 keynote-card">
+				<div class="card-body">
+					<h3 class="card-title text-center mb-4">
+						<i class="bi bi-star-fill me-2"></i>Keynote Speaker<i class="bi bi-star-fill ms-2"></i>
+					</h3>
+					<div class="keynote-layout">
+						<img
+							src={keynote.profilePicture}
+							alt={keynote.fullName}
+							class="keynote-photo"
+						/>
+						<div class="keynote-info">
+							<h4 class="keynote-name">{keynote.fullName}</h4>
+							<div class="keynote-tagline">{keynote.tagLine}</div>
+							<div class="keynote-talk">
+								<i class="bi bi-mic-fill me-2"></i><em>{keynote.talkTitle}</em>
+							</div>
+							{#if keynote.talkDescription}
+								<p class="keynote-synopsis">{keynote.talkDescription}</p>
+							{/if}
+							{#if keynote.bio}
+								<p class="keynote-bio">{keynote.bio}</p>
+							{/if}
+						</div>
+					</div>
+				</div>
+			</div>
+		{/if}
 
 		<!-- 2 Talk Tracks -->
 		<div class="card mb-5">

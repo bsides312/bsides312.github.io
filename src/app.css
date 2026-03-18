@@ -922,6 +922,88 @@ div[id] {
 }
 
 /* ============================================================
+   Keynote Speaker Card
+   ============================================================ */
+.keynote-card {
+	border-color: var(--primary-color);
+	box-shadow: 0 0 20px rgba(93, 189, 252, 0.15);
+}
+
+.keynote-card .card-title {
+	color: #bf40bf;
+	text-shadow: none;
+	transition: text-shadow 0.3s ease;
+}
+
+.keynote-card:hover .card-title {
+	text-shadow: 0 0 8px rgba(191, 64, 191, 0.8), 0 0 20px rgba(191, 64, 191, 0.5);
+}
+
+.keynote-layout {
+	display: flex;
+	gap: 2rem;
+	align-items: center;
+}
+
+.keynote-photo {
+	width: 320px;
+	height: 320px;
+	border-radius: 50%;
+	object-fit: cover;
+	border: 3px solid var(--primary-color);
+	flex-shrink: 0;
+	transition: box-shadow 0.3s ease;
+}
+
+.keynote-card:hover .keynote-photo {
+	box-shadow: 0 0 12px rgba(191, 64, 191, 0.8), 0 0 28px rgba(191, 64, 191, 0.5);
+}
+
+.keynote-info {
+	flex: 1;
+}
+
+.keynote-name {
+	color: var(--text-light);
+	font-size: 2.4rem;
+	margin-bottom: 0.25rem;
+}
+
+.keynote-tagline {
+	color: var(--primary-color);
+	font-size: 0.95rem;
+	margin-bottom: 0.75rem;
+}
+
+.keynote-talk {
+	color: var(--text-dark-contrast);
+	font-size: 1rem;
+	margin-bottom: 0.75rem;
+}
+
+.keynote-synopsis {
+	color: var(--text-muted);
+	font-size: 0.92rem;
+	margin-bottom: 0.75rem;
+	line-height: 1.6;
+}
+
+.keynote-bio {
+	color: rgba(255, 255, 255, 0.6);
+	font-size: 0.88rem;
+	line-height: 1.6;
+	margin-bottom: 0;
+}
+
+@media (max-width: 600px) {
+	.keynote-layout {
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	}
+}
+
+/* ============================================================
    Activity Cards
    ============================================================ */
 .activity-card {
