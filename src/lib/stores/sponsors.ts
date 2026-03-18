@@ -8,6 +8,7 @@ export interface Sponsor {
 }
 
 export const sponsors: Sponsor[] = [
+	// Gold Sponsors
 	{
 		name: 'Material Security',
 		logo: `${base}/assets/img/supporters/material.jpg`,
@@ -19,6 +20,54 @@ export const sponsors: Sponsor[] = [
 		logo: `${base}/assets/img/supporters/picus.jpg`,
 		url: 'https://www.picussecurity.com/',
 		tier: 'gold'
+	},
+
+	// Silver Sponsors
+	{
+		name: 'Stellar Cyber',
+		logo: `${base}/assets/img/supporters/stellar_cyber.jpg`,
+		url: 'https://stellarcyber.ai',
+		tier: 'silver'
+	},
+
+	// Founding Sponsors
+	{
+		name: 'Binalyze',
+		logo: `${base}/assets/img/supporters/binalyze.jpg`,
+		url: 'https://www.binalyze.com/',
+		tier: 'founding'
+	},
+	{
+		name: 'Cobalt',
+		logo: `${base}/assets/img/supporters/cobalt.jpg`,
+		url: 'https://www.cobalt.io/',
+		tier: 'founding'
+	},
+
+	// Community Supporters
+	{
+		name: 'Modest Merch',
+		logo: `${base}/assets/img/supporters/modest_merch.jpg`,
+		url: 'https://modestmerch.bigcartel.com',
+		tier: 'community'
+	},
+	{
+		name: 'Hak4Kidz',
+		logo: `${base}/assets/img/supporters/hak4kidz.jpg`,
+		url: 'https://www.hak4kidz.com',
+		tier: 'community'
+	},
+	{
+		name: 'BSides MKE',
+		logo: `${base}/assets/img/supporters/bsidesmke.jpg`,
+		url: 'https://www.bsidesmke.org',
+		tier: 'community'
+	},
+	{
+		name: 'WiCyS',
+		logo: `${base}/assets/img/supporters/wicys.jpg`,
+		url: 'https://www.wicys.org',
+		tier: 'community'
 	},
 	{
 		name: 'BurbSec',
