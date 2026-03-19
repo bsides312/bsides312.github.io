@@ -50,7 +50,27 @@
 			const groups: Group[] = await sessRes.json();
 			const speakerList: FullSpeaker[] = await spRes.json();
 			allSessions = groups.flatMap((g) => g.sessions);
-			timeSlots = [...new Set(allSessions.map((s) => s.startsAt))].sort();
+			// Build 30-minute time slots spanning the full schedule
+			const allTimes = allSessions
+				.flatMap((s) => [s.startsAt, s.endsAt])
+				.sort();
+			const datePrefix = allTimes[0].split('T')[0];
+			const toMins = (dt: string) => {
+				const [h, m] = dt.split('T')[1].split(':').map(Number);
+				return h * 60 + m;
+			};
+			const minMin = toMins(allTimes[0]);
+			const maxMin = toMins(allTimes[allTimes.length - 1]);
+			// Round start down to nearest 30, end up to nearest 30
+			const startMin = Math.floor(minMin / 30) * 30;
+			const endMin = Math.ceil(maxMin / 30) * 30;
+			const slots: string[] = [];
+			for (let m = startMin; m < endMin; m += 30) {
+				const hh = String(Math.floor(m / 60)).padStart(2, '0');
+				const mm = String(m % 60).padStart(2, '0');
+				slots.push(`${datePrefix}T${hh}:${mm}:00`);
+			}
+			timeSlots = slots;
 			for (const sp of speakerList) {
 				speakerMap[sp.id] = sp;
 			}
@@ -76,17 +96,68 @@
 		return `${mins} min`;
 	}
 
+	function toMinsGlobal(dt: string): number {
+		const [h, m] = dt.split('T')[1].split(':').map(Number);
+		return h * 60 + m;
+	}
+
+	// Map each session to its nearest 30-min slot
+	function sessionSlot(startsAt: string): string {
+		const total = toMinsGlobal(startsAt);
+		const rounded = Math.floor(total / 30) * 30;
+		const hh = String(Math.floor(rounded / 60)).padStart(2, '0');
+		const mm = String(rounded % 60).padStart(2, '0');
+		return startsAt.split('T')[0] + `T${hh}:${mm}:00`;
+	}
+
+	// How many 30-min slots a session spans (min 1)
+	function slotSpan(session: Session): number {
+		const startMin = toMinsGlobal(session.startsAt);
+		const endMin = toMinsGlobal(session.endsAt);
+		return Math.max(1, Math.ceil((endMin - startMin) / 30));
+	}
+
 	// Plenum + service sessions both span full width
 	function getSpanning(time: string): Session | undefined {
 		return allSessions.find(
-			(s) => s.startsAt === time && (s.isPlenumSession || s.isServiceSession)
+			(s) => sessionSlot(s.startsAt) === time && (s.isPlenumSession || s.isServiceSession)
 		);
 	}
 
 	function getTrack(time: string, room: string): Session | undefined {
 		return allSessions.find(
-			(s) => s.startsAt === time && s.room === room && !s.isPlenumSession && !s.isServiceSession
+			(s) =>
+				sessionSlot(s.startsAt) === time &&
+				s.room === room &&
+				!s.isPlenumSession &&
+				!s.isServiceSession
 		);
+	}
+
+	// Check if a slot is already covered by a multi-row session from an earlier slot
+	function isOccupied(time: string, column: 'spanning' | 'green' | 'orange'): boolean {
+		const slotIdx = timeSlots.indexOf(time);
+		if (slotIdx <= 0) return false;
+		for (let i = slotIdx - 1; i >= 0; i--) {
+			const prevTime = timeSlots[i];
+			let session: Session | undefined;
+			if (column === 'spanning') {
+				session = getSpanning(prevTime);
+			} else if (column === 'green') {
+				session = getTrack(prevTime, 'GREEN LINE');
+			} else {
+				session = getTrack(prevTime, 'ORANGE LINE');
+			}
+			if (session && i + slotSpan(session) > slotIdx) return true;
+			if (session) break;
+			// Spanning sessions also block track columns
+			if (column !== 'spanning') {
+				const prevSpanning = getSpanning(prevTime);
+				if (prevSpanning && i + slotSpan(prevSpanning) > slotIdx) return true;
+				if (prevSpanning) break;
+			}
+		}
+		return false;
 	}
 
 	function spanningIcon(title: string): string {
@@ -100,7 +171,11 @@
 	}
 
 	function cleanTitle(title: string): string {
-		return title.replace(/^\[Track \d+\]\s*/i, '');
+		return title.replace(/^\[Track \d+\]\s*/i, '').replace(/^KEYNOTE:\s*/i, '');
+	}
+
+	function isKeynote(session: Session): boolean {
+		return /KEYNOTE:/i.test(session.title);
 	}
 
 	function openTalkModal(session: Session) {
@@ -176,15 +251,34 @@
 						<span>Orange Line</span>
 					</div>
 
-					{#each timeSlots as time (time)}
+					{#each timeSlots as time, idx (time)}
+						{@const row = idx + 2}
 						{@const spanning = getSpanning(time)}
 						{@const green = getTrack(time, 'GREEN LINE')}
 						{@const orange = getTrack(time, 'ORANGE LINE')}
+						{@const spanOcc = isOccupied(time, 'spanning')}
+						{@const greenOcc = isOccupied(time, 'green')}
+						{@const orangeOcc = isOccupied(time, 'orange')}
 
-						<div class="sched-time">{@html formatTime(time).replace(' ', '<br />')}</div>
+						<!-- Time column: only emit if not fully covered -->
+						{#if !spanOcc && !greenOcc && !orangeOcc}
+							<div
+								class="sched-time"
+								style="grid-row: {row} / span {spanning ? slotSpan(spanning) : 1}; grid-column: 1"
+							>{@html formatTime(time).replace(' ', '<br />')}</div>
+						{:else if !spanOcc && (!greenOcc || !orangeOcc)}
+							<div
+								class="sched-time"
+								style="grid-row: {row}; grid-column: 1"
+							>{@html formatTime(time).replace(' ', '<br />')}</div>
+						{/if}
 
+						<!-- Content columns -->
 						{#if spanning}
-							<div class="sched-session sched-spanning">
+							<div
+								class="sched-session sched-spanning"
+								style="grid-row: {row} / span {slotSpan(spanning)}; grid-column: 2 / 4"
+							>
 								<i class="bi {spanningIcon(spanning.title)} sched-spanning-icon"></i>
 								<div>
 									<span class="sched-spanning-title">{spanning.title}</span>
@@ -193,75 +287,89 @@
 									>
 								</div>
 							</div>
-						{:else}
-							<div class="sched-session sched-green" class:sched-empty={!green}>
-								{#if green}
-									<div class="sched-talk-title">
-										{#if green.description?.trim()}
-											<button class="sched-talk-btn" on:click={() => openTalkModal(green)}>
+						{:else if !spanOcc}
+							{#if !greenOcc}
+								<div
+									class="sched-session sched-green"
+									class:sched-empty={!green}
+									class:sched-keynote={green && isKeynote(green)}
+									style="grid-row: {row} / span {green ? slotSpan(green) : 1}; grid-column: 2"
+								>
+									{#if green}
+										<div class="sched-talk-title">
+											{#if green.description?.trim()}
+												<button class="sched-talk-btn" on:click={() => openTalkModal(green)}>
+													{cleanTitle(green.title)}
+												</button>
+											{:else}
 												{cleanTitle(green.title)}
-											</button>
-										{:else}
-											{cleanTitle(green.title)}
-										{/if}
-									</div>
-									{#if green.speakers.length}
-										<div class="sched-speaker">
-											<i class="bi bi-person-fill"></i>
-											{#each green.speakers as sp, i (sp.id)}
-												{@const full = speakerMap[sp.id]}
-												{#if i > 0},{/if}
-												{#if full?.bio}
-													<button class="sched-speaker-btn" on:click={() => openSpeakerModal(sp)}>
-														{sp.name}
-													</button>
-												{:else}
-													{sp.name}
-												{/if}
-											{/each}
+											{/if}
 										</div>
+										{#if green.speakers.length}
+											<div class="sched-speaker">
+												<i class="bi bi-person-fill"></i>
+												{#each green.speakers as sp, i (sp.id)}
+													{@const full = speakerMap[sp.id]}
+													{#if i > 0},{/if}
+													{#if full?.bio}
+														<button class="sched-speaker-btn" on:click={() => openSpeakerModal(sp)}>
+															{sp.name}
+														</button>
+													{:else}
+														{sp.name}
+													{/if}
+												{/each}
+											</div>
+										{/if}
+										<span class="sched-dur sched-dur-green"
+											>{formatDuration(green.startsAt, green.endsAt)}</span
+										>
+									{:else}
+										<span class="sched-empty-marker">—</span>
 									{/if}
-									<span class="sched-dur sched-dur-green"
-										>{formatDuration(green.startsAt, green.endsAt)}</span
-									>
-								{:else}
-									<span class="sched-empty-marker">—</span>
-								{/if}
-							</div>
-							<div class="sched-session sched-orange" class:sched-empty={!orange}>
-								{#if orange}
-									<div class="sched-talk-title">
-										{#if orange.description?.trim()}
-											<button class="sched-talk-btn" on:click={() => openTalkModal(orange)}>
+								</div>
+							{/if}
+							{#if !orangeOcc}
+								<div
+									class="sched-session sched-orange"
+									class:sched-empty={!orange}
+									class:sched-keynote={orange && isKeynote(orange)}
+									style="grid-row: {row} / span {orange ? slotSpan(orange) : 1}; grid-column: 3"
+								>
+									{#if orange}
+										<div class="sched-talk-title">
+											{#if orange.description?.trim()}
+												<button class="sched-talk-btn" on:click={() => openTalkModal(orange)}>
+													{cleanTitle(orange.title)}
+												</button>
+											{:else}
 												{cleanTitle(orange.title)}
-											</button>
-										{:else}
-											{cleanTitle(orange.title)}
-										{/if}
-									</div>
-									{#if orange.speakers.length}
-										<div class="sched-speaker">
-											<i class="bi bi-person-fill"></i>
-											{#each orange.speakers as sp, i (sp.id)}
-												{@const full = speakerMap[sp.id]}
-												{#if i > 0},{/if}
-												{#if full?.bio}
-													<button class="sched-speaker-btn" on:click={() => openSpeakerModal(sp)}>
-														{sp.name}
-													</button>
-												{:else}
-													{sp.name}
-												{/if}
-											{/each}
+											{/if}
 										</div>
+										{#if orange.speakers.length}
+											<div class="sched-speaker">
+												<i class="bi bi-person-fill"></i>
+												{#each orange.speakers as sp, i (sp.id)}
+													{@const full = speakerMap[sp.id]}
+													{#if i > 0},{/if}
+													{#if full?.bio}
+														<button class="sched-speaker-btn" on:click={() => openSpeakerModal(sp)}>
+															{sp.name}
+														</button>
+													{:else}
+														{sp.name}
+													{/if}
+												{/each}
+											</div>
+										{/if}
+										<span class="sched-dur sched-dur-orange"
+											>{formatDuration(orange.startsAt, orange.endsAt)}</span
+										>
+									{:else}
+										<span class="sched-empty-marker">—</span>
 									{/if}
-									<span class="sched-dur sched-dur-orange"
-										>{formatDuration(orange.startsAt, orange.endsAt)}</span
-									>
-								{:else}
-									<span class="sched-empty-marker">—</span>
-								{/if}
-							</div>
+								</div>
+							{/if}
 						{/if}
 					{/each}
 				</div>
