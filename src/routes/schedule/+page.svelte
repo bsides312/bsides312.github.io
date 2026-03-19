@@ -171,7 +171,7 @@
 	}
 
 	function cleanTitle(title: string): string {
-		return title.replace(/^\[Track \d+\]\s*/i, '').replace(/^KEYNOTE:\s*/i, '');
+		return title.replace(/^\[Track \d+\]\s*/i, '');
 	}
 
 	function isKeynote(session: Session): boolean {
