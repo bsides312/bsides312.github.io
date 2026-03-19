@@ -1966,6 +1966,7 @@ div[id] {
 	line-height: 1.3;
 	border-top: 1px solid rgba(255, 255, 255, 0.05);
 	background: rgba(6, 12, 34, 0.5);
+	z-index: 2;
 }
 
 .sched-session {
@@ -1973,23 +1974,21 @@ div[id] {
 	border-top: 1px solid rgba(255, 255, 255, 0.05);
 	border-left: 1px solid rgba(255, 255, 255, 0.05);
 	min-height: 70px;
-	transition: box-shadow 0.2s ease, background 0.2s ease;
-}
-
-.sched-session:not(.sched-empty):hover {
-	box-shadow: 0 0 12px rgba(255, 255, 255, 0.15);
-}
-
-/* Full-width spanning row (opening, keynote, lunch, closing, afterparty) */
-.sched-spanning {
-	grid-column: 2 / 4;
 	display: flex;
-	align-items: center;
+	flex-direction: column;
+	align-items: flex-start;
+	transition: box-shadow 0.2s ease;
+}
+
+/* Full-width spanning background (opening, keynote, lunch, closing, afterparty) */
+.sched-spanning {
+	flex-direction: row;
 	gap: 14px;
 	background: rgba(93, 189, 252, 0.4);
-	border-left: 3px solid rgba(93, 189, 252, 0.5) !important;
+	border-left: 3px solid rgba(93, 189, 252, 0.4) !important;
 	min-height: auto;
 	padding: 12px 20px;
+	z-index: 1;
 }
 
 .sched-spanning:hover {
@@ -2013,6 +2012,7 @@ div[id] {
 .sched-green {
 	background: rgba(0, 204, 85, 0.4);
 	border-left: 3px solid rgba(0, 204, 85, 0.25) !important;
+	z-index: 2;
 }
 
 .sched-green:not(.sched-empty):hover {
@@ -2022,6 +2022,7 @@ div[id] {
 .sched-orange {
 	background: rgba(255, 102, 36, 0.4);
 	border-left: 3px solid rgba(255, 102, 36, 0.25) !important;
+	z-index: 2;
 }
 
 .sched-orange:not(.sched-empty):hover {
@@ -2038,10 +2039,19 @@ div[id] {
 	box-shadow: 0 0 14px rgba(191, 64, 191, 0.5) !important;
 }
 
-.sched-empty {
+.sched-keynote-pointer {
 	display: flex;
 	align-items: center;
+	gap: 6px;
+	color: rgba(191, 64, 191, 0.9);
+	font-style: italic;
+	text-transform: uppercase;
+}
+
+.sched-empty {
+	align-items: center;
 	justify-content: center;
+	text-align: center;
 	opacity: 0.25;
 }
 
