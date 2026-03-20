@@ -281,10 +281,10 @@
 												{#if i > 0},{/if}
 												{#if full?.bio}
 													<button class="sched-speaker-btn" on:click={() => openSpeakerModal(sp)}>
-														{sp.name}
+														{full?.fullName ?? sp.name}
 													</button>
 												{:else}
-													{sp.name}
+													{full?.fullName ?? sp.name}
 												{/if}
 											{/each}
 										</div>
@@ -327,10 +327,10 @@
 												{#if i > 0},{/if}
 												{#if full?.bio}
 													<button class="sched-speaker-btn" on:click={() => openSpeakerModal(sp)}>
-														{sp.name}
+														{full?.fullName ?? sp.name}
 													</button>
 												{:else}
-													{sp.name}
+													{full?.fullName ?? sp.name}
 												{/if}
 											{/each}
 										</div>
