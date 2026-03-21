@@ -281,6 +281,9 @@
 </header>
 
 <main>
+	<div class="scroll-indicator" aria-hidden="true">
+		<i class="bi bi-chevron-double-down"></i>
+	</div>
 	<slot />
 </main>
 

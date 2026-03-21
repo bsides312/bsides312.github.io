@@ -50,6 +50,16 @@
 	let loading = true;
 	let error = false;
 
+	const KEYNOTE_NAME = 'Heidi Potter';
+	const KEYNOTE_SESSION_ID = 1186139;
+
+	interface KeynoteSpeaker {
+		speaker: Speaker;
+		talkTitle: string;
+		talkDescription: string;
+	}
+	let keynote: KeynoteSpeaker | null = null;
+
 	onMount(async () => {
 		try {
 			const [sRes, gRes] = await Promise.all([
@@ -57,8 +67,9 @@
 				fetch('https://sessionize.com/api/v2/v1trm5nf/view/Sessions')
 			]);
 			if (!sRes.ok || !gRes.ok) throw new Error();
-			speakers = await sRes.json();
+			const allSpeakers: Speaker[] = await sRes.json();
 			const groups: Group[] = await gRes.json();
+			let keynoteDescription = '';
 			for (const group of groups) {
 				for (const session of group.sessions) {
 					if (session.description?.trim()) {
@@ -73,10 +84,24 @@
 							track
 						};
 					}
+					if (session.id === KEYNOTE_SESSION_ID) {
+						keynoteDescription = session.description ?? '';
+					}
 					for (const sp of session.speakers) {
 						speakerTrack[sp.id] = group.groupName;
 					}
 				}
+			}
+			const keynoteSpeaker = allSpeakers.find((s) => s.fullName === KEYNOTE_NAME);
+			if (keynoteSpeaker) {
+				keynote = {
+					speaker: keynoteSpeaker,
+					talkTitle: keynoteSpeaker.sessions[0]?.name ?? '',
+					talkDescription: keynoteDescription
+				};
+				speakers = allSpeakers.filter((s) => s.fullName !== KEYNOTE_NAME);
+			} else {
+				speakers = allSpeakers;
 			}
 		} catch {
 			error = true;
@@ -168,7 +193,6 @@
 			<h2>Speakers</h2>
 			<p>
 				Meet the experts presenting at BSides312 2026!
-				<br />New speakers are added automatically as they confirm their attendance.
 			</p>
 		</div>
 
@@ -185,6 +209,36 @@
 				later.
 			</div>
 		{:else}
+			{#if keynote}
+				<div class="card mb-5 keynote-card">
+					<div class="card-body">
+						<h3 class="card-title text-center mb-4">
+							<i class="bi bi-star-fill me-2"></i>Keynote Speaker<i class="bi bi-star-fill ms-2"></i>
+						</h3>
+						<div class="keynote-layout">
+							<img
+								src={keynote.speaker.profilePicture}
+								alt={keynote.speaker.fullName}
+								class="keynote-photo"
+							/>
+							<div class="keynote-info">
+								<h4 class="keynote-name">{keynote.speaker.fullName}</h4>
+								<div class="keynote-tagline">{keynote.speaker.tagLine}</div>
+								<div class="keynote-talk">
+									<i class="bi bi-mic-fill me-2"></i><em>{keynote.talkTitle}</em>
+								</div>
+								{#if keynote.talkDescription}
+									<p class="keynote-synopsis">{keynote.talkDescription}</p>
+								{/if}
+								{#if keynote.speaker.bio}
+									<p class="keynote-bio">{keynote.speaker.bio}</p>
+								{/if}
+							</div>
+						</div>
+					</div>
+				</div>
+			{/if}
+
 			<div class="speakers-grid">
 				{#each speakers as speaker (speaker.id)}
 					<button class="speaker-card" type="button" on:click={() => openSpeakerModal(speaker)}>

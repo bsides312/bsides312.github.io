@@ -209,6 +209,7 @@ header {
    Main Content Area
    ============================================================ */
 main {
+	position: relative;
 	margin-top: 80px;
 	min-height: calc(100vh - 80px);
 }
@@ -325,7 +326,7 @@ footer {
 }
 
 .scroll-indicator {
-	position: absolute;
+	position: fixed;
 	bottom: 28px;
 	right: 28px;
 	color: var(--primary-color);

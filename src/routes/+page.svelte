@@ -169,6 +169,12 @@ END:VCALENDAR`;
 					>
 						<i class="bi bi-ticket-perforated me-2"></i>Get Tickets
 					</a>
+					<a href="{base}/speakers" class="btn-primary">
+						<i class="bi bi-mic-fill me-2"></i>Meet Our Speakers
+					</a>
+					<a href="{base}/support" class="btn-primary">
+						<i class="bi bi-heart-fill me-2"></i>Support Us!
+					</a>
 					<a
 						href="https://tinyurl.com/bsides312"
 						target="_blank"
@@ -176,9 +182,6 @@ END:VCALENDAR`;
 						class="btn-primary"
 					>
 						<i class="bi bi-discord me-2"></i>Join our Discord!
-					</a>
-					<a href="{base}/support" class="btn-primary">
-						<i class="bi bi-heart-fill me-2"></i>Support Us!
 					</a>
 				</div>
 			</div>
