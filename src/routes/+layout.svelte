@@ -293,7 +293,7 @@
 					<div class="footer-info mb-4">
 						<img src="{base}/assets/img/logo.png" alt="BSides312 Logo" class="mb-3" />
 						<p>
-							BSides312 is Chicago's biggest little non-profit hacking & information security
+							BSides312 is Chicago's biggest little non-profit Cybersecurity
 							conference, run by and for the local community.
 						</p>
 					</div>

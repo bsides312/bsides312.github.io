@@ -1,6 +1,6 @@
 {
 	"name": "bsides312-website",
-	"description": "BSides312 - Chicago's Biggest Little Non-Profit Hacking & Information Security Conference",
+	"description": "BSides312 - Chicago's Biggest Little Non-Profit Cybersecurity Conference",
 	"version": "1.0.0",
 	"private": true,
 	"type": "module",
@@ -43,7 +43,7 @@
 		"conference",
 		"chicago",
 		"hacking",
-		"infosec"
+		"Cybersecurity"
 	],
 	"author": "BSides312 Team",
 	"license": "MIT",

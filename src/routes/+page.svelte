@@ -124,7 +124,7 @@ DTSTART;TZID=America/Chicago:20260516T090000
 DTEND;TZID=America/Chicago:20260516T190000
 SUMMARY:BSides312 2026
 LOCATION:Irish American Heritage Center\\, 4626 N Knox Ave\\, Chicago\\, IL 60641
-DESCRIPTION:BSides312 is a nonprofit one-day conference run by longtime members of Chicago's hacking and infosec community. Join us for talks, workshops, and networking with security professionals from around the world.
+DESCRIPTION:BSides312 is a nonprofit one-day conference run by longtime members of Chicago's hacking and Cybersecurity community. Join us for talks, workshops, and networking with security professionals from around the world.
 URL:https://bsides312.org
 END:VEVENT
 END:VCALENDAR`;
@@ -144,7 +144,7 @@ END:VCALENDAR`;
 	<title>BSides312 2026 — Chicago's Biggest Little Non-Profit Hacking Conference | May 16</title>
 	<meta
 		name="description"
-		content="BSides312 2026 — May 16 at the Irish American Heritage Center, Chicago. A nonprofit one-day hacking & infosec conference featuring talks, workshops, and networking with security professionals."
+		content="BSides312 2026 — May 16 at the Irish American Heritage Center, Chicago. A nonprofit one-day hacking & Cybersecurity conference featuring talks, workshops, and networking with security professionals."
 	/>
 </svelte:head>
 
@@ -152,7 +152,7 @@ END:VCALENDAR`;
 <section class="hero">
 	<div class="hero-content">
 		<img src="{base}/assets/img/about_logo.png" alt="BSides312 Logo" class="img-fluid hero-logo" />
-		<h1 class="text-center mb-4">Chicago's Biggest Little <br>Non-Profit <br>InfoSec Conference</h1>
+		<h1 class="text-center mb-4">Chicago's Biggest Little <br>Non-Profit <br>Cybersecurity Conference</h1>
 		<p class="lead text-center mb-4">
 			BSides312 brings together security professionals, researchers, and enthusiasts for an
 			unforgettable day of learning and networking.

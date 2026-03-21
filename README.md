@@ -1,6 +1,6 @@
 # BSides312 Website
 
-BSides312 is Chicago's Biggest Little Non-Profit Hacking & Information Security Conference.
+BSides312 is Chicago's Biggest Little Non-Profit Cybersecurity Conference.
 
 ## Built with SvelteKit
 

@@ -3,7 +3,7 @@ import { resolve } from 'path';
 import type { PageServerLoad } from './$types';
 
 function generateIcsContent(): string {
-	const description = `BSides312 is a nonprofit one-day conference run by longtime members of Chicago's hacking and infosec community. Join us for talks, workshops, and networking with security professionals from around the world.`;
+	const description = `BSides312 is a nonprofit one-day conference run by longtime members of Chicago's hacking and Cybersecurity community. Join us for talks, workshops, and networking with security professionals from around the world.`;
 
 	const icsContent = `BEGIN:VCALENDAR
 VERSION:2.0

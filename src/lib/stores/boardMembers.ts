@@ -36,7 +36,7 @@ Utilizing his 6+ years of accounting experience combined with 28 years of Inform
 		name: 'Johnny Xmas',
 		title: 'Chief Marketing Officer',
 		image: `${base}/assets/img/about/jxmas.jpg`,
-		bio: `Johnny is a highly respected figure in the U.S. hacking community and the most punk rock Eagle Scout you've ever met. He is frequently found volunteering at events or presenting on topics ranging from his cutting-edge security research to his journey through the InfoSec career landscape, both as an engineer and a hiring manager.
+		bio: `Johnny is a highly respected figure in the U.S. hacking community and the most punk rock Eagle Scout you've ever met. He is frequently found volunteering at events or presenting on topics ranging from his cutting-edge security research to his journey through the Cybersecurity career landscape, both as an engineer and a hiring manager.
 
 As a Leadership member of the renowned BurbSec community meetup network, Johnny has been deeply involved with the group since 2011, fostering collaboration and mentorship within the industry. His contributions extend beyond BurbSec, as he partners with higher education institutions across the U.S., offering curriculum development and guest lectures.
 
