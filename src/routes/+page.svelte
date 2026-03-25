@@ -95,6 +95,40 @@
 		lightboxSrc = null;
 	}
 
+	// Activity modals
+	let activeActivity: string | null = null;
+
+	const activityInfo: Record<string, { title: string; description: string }> = {
+		ctf: {
+			title: 'CTF Hacking Challenge!',
+			description:
+				'Get your team together and learn new hacking and problem-solving skills inside of real computers, and maybe even win some prizes like A LIFETIME BADGE!'
+		},
+		lockpicking: {
+			title: 'Lockpicking!',
+			description:
+				"Join The Open Organisation Of Lockpickers' Chicago chapter to not only learn how picking locks works, but try it out yourself on tons of practice locks!"
+		},
+		gameshows: {
+			title: 'Game Shows with Lintile!',
+			description:
+				"Which game shows? Who knows! Which Lintile? The host of Defcon's HACKER JEOPARDY!"
+		},
+		linux: {
+			title: 'Linux Village!',
+			description:
+				'Learn about using Linux as your "Daily Driver!" Bonus: bring in an old laptop you don\'t want to pay for an OS upgrade on, and we\'ll put Linux Mint on it for free, and show you how to use it (you can also bring a new laptop if you really want)!'
+		}
+	};
+
+	function openActivity(id: string) {
+		activeActivity = id;
+	}
+
+	function closeActivity() {
+		activeActivity = null;
+	}
+
 	function downloadCalendar() {
 		const icsContent = `BEGIN:VCALENDAR
 VERSION:2.0
@@ -366,8 +400,8 @@ END:VCALENDAR`;
 			<i class="bi bi-trophy-fill me-2"></i>Win Prizes while Learning and Testing new Skills!
 		</h3>
 		<div class="row justify-content-center gy-4">
-			<div class="col-lg-4 col-md-6">
-				<div class="card activity-card h-100">
+			<div class="col-lg-3 col-md-6">
+				<button class="card activity-card h-100" on:click={() => openActivity('ctf')}>
 					<img
 						src="{base}/assets/img/activities/ctf.jpg"
 						alt="CTF Hacking Challenge"
@@ -377,10 +411,10 @@ END:VCALENDAR`;
 					<div class="card-body text-center">
 						<h4 class="card-title">CTF Hacking Challenge!</h4>
 					</div>
-				</div>
+				</button>
 			</div>
-			<div class="col-lg-4 col-md-6">
-				<div class="card activity-card h-100">
+			<div class="col-lg-3 col-md-6">
+				<button class="card activity-card h-100" on:click={() => openActivity('lockpicking')}>
 					<img
 						src="{base}/assets/img/activities/toool.jpg"
 						alt="Lockpicking"
@@ -390,10 +424,10 @@ END:VCALENDAR`;
 					<div class="card-body text-center">
 						<h4 class="card-title">Lockpicking!</h4>
 					</div>
-				</div>
+				</button>
 			</div>
-			<div class="col-lg-4 col-md-6">
-				<div class="card activity-card h-100">
+			<div class="col-lg-3 col-md-6">
+				<button class="card activity-card h-100" on:click={() => openActivity('gameshows')}>
 					<img
 						src="{base}/assets/img/activities/lintile.jpg"
 						alt="Game Shows with Lintile"
@@ -403,11 +437,44 @@ END:VCALENDAR`;
 					<div class="card-body text-center">
 						<h4 class="card-title">Game Shows with Lintile!</h4>
 					</div>
-				</div>
+				</button>
+			</div>
+			<div class="col-lg-3 col-md-6">
+				<button class="card activity-card h-100" on:click={() => openActivity('linux')}>
+					<img
+						src="{base}/assets/img/activities/linux.jpg"
+						alt="Linux Village"
+						class="activity-card-img"
+						loading="lazy"
+					/>
+					<div class="card-body text-center">
+						<h4 class="card-title">Linux Village!</h4>
+					</div>
+				</button>
 			</div>
 		</div>
 	</div>
 </section>
+
+<!-- Activity Modal -->
+{#if activeActivity && activityInfo[activeActivity]}
+	<div
+		class="lightbox-overlay"
+		on:click={closeActivity}
+		on:keydown={(e) => e.key === 'Escape' && closeActivity()}
+		role="dialog"
+		aria-modal="true"
+		aria-label={activityInfo[activeActivity].title}
+		tabindex="-1"
+	>
+		<!-- svelte-ignore a11y_click_events_have_key_events a11y_no_static_element_interactions -->
+		<div class="activity-modal" on:click|stopPropagation>
+			<button class="lightbox-close" on:click={closeActivity} aria-label="Close">&times;</button>
+			<h3>{activityInfo[activeActivity].title}</h3>
+			<p>{activityInfo[activeActivity].description}</p>
+		</div>
+	</div>
+{/if}
 
 <!-- Supporters Section -->
 <section id="supporters" class="section section-with-bg">
@@ -455,6 +522,7 @@ END:VCALENDAR`;
 		<div class="alert alert-success container-fluid text-center fw-bold" role="alert">
 			We're full up on volunteers and speakers for 2026! <br>Grab a ticket and join us at the con!
 		</div>
+	</div>
 </section>
 
 <!-- sigint carrier -->

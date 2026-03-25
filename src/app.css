@@ -1042,7 +1042,6 @@ div[id] {
 
 .activity-card:hover {
 	transform: translateY(-5px);
-	box-shadow: 0 8px 25px rgba(93, 189, 252, 0.15);
 }
 
 .activity-card-img {
@@ -1054,6 +1053,51 @@ div[id] {
 
 .activity-card .card-title {
 	font-size: 1.15rem;
+	margin-bottom: 0;
+}
+
+button.activity-card {
+	border: 1px solid var(--border-light);
+	padding: 0;
+	text-align: left;
+	cursor: pointer;
+	width: 100%;
+	background: rgba(6, 12, 34, 0.5);
+	-webkit-backdrop-filter: blur(10px);
+	backdrop-filter: blur(10px);
+	color: var(--text-dark-contrast);
+	box-shadow: 0 0 20px rgba(93, 189, 252, 0.15);
+	border-radius: 15px;
+}
+
+button.activity-card:hover {
+	box-shadow:
+		0 0 35px rgba(93, 189, 252, 0.4),
+		0 20px 40px rgba(0, 0, 0, 0.3);
+	border-color: var(--primary-color);
+	background: rgba(6, 12, 34, 0.7);
+}
+
+.activity-modal {
+	background: #1a1a2e;
+	border: 1px solid rgba(93, 189, 252, 0.3);
+	border-radius: 12px;
+	padding: 2rem 2.5rem;
+	max-width: 550px;
+	width: 90%;
+	position: relative;
+	animation: lightboxZoomIn 0.25s ease-out;
+}
+
+.activity-modal h3 {
+	color: #5dbdfc;
+	margin-bottom: 1rem;
+}
+
+.activity-modal p {
+	color: #ccc;
+	font-size: 1.05rem;
+	line-height: 1.6;
 	margin-bottom: 0;
 }
 
