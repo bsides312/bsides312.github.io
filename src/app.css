@@ -1101,6 +1101,13 @@ button.activity-card:hover {
 	margin-bottom: 0;
 }
 
+.activity-modal p.modal-heading {
+	color: #5dbdfc;
+	font-size: 1.15rem;
+	font-weight: 700;
+	margin-bottom: 0.5rem;
+}
+
 /* ============================================================
    Gallery Lightbox Modal
    ============================================================ */

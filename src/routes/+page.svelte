@@ -117,7 +117,7 @@
 		linux: {
 			title: 'Linux Village!',
 			description:
-				'Learn about using Linux as your "Daily Driver!" Bonus: bring in an old laptop you don\'t want to pay for an OS upgrade on, and we\'ll put Linux Mint on it for free, and show you how to use it (you can also bring a new laptop if you really want)!'
+				'<p class="modal-heading">Are you Linux Curious?</p><p class="modal-heading">Got an older Windows computer that can\'t really support Windows 11 but aren\'t ready to spend on an upgrade?</p><p class="modal-heading">Just done with Microsoft\'s "Agentic OS?"</p><p>Our Linux village is here for you with computers to test out Linux on, experts to answer your questions, and we will even install Linux Mint on your computer for you - the OS is free and so is our help! Our mission is to help you explore Linux as your "daily driver" OS, and show you just what you can do in a modern Linux environment. So if you\'ve ever wondered what all the talk is about, if you\'re ready to take the Linux plunge, or if you\'re anywhere in between, stop by and talk with us, we\'re here to help you on your Linux journey!</p>'
 		}
 	};
 
@@ -471,7 +471,7 @@ END:VCALENDAR`;
 		<div class="activity-modal" on:click|stopPropagation>
 			<button class="lightbox-close" on:click={closeActivity} aria-label="Close">&times;</button>
 			<h3>{activityInfo[activeActivity].title}</h3>
-			<p>{activityInfo[activeActivity].description}</p>
+			{@html activityInfo[activeActivity].description}
 		</div>
 	</div>
 {/if}
