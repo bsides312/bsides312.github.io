@@ -186,7 +186,9 @@ END:VCALENDAR`;
 <section class="hero">
 	<div class="hero-content">
 		<img src="{base}/assets/img/about_logo.png" alt="BSides312 Logo" class="img-fluid hero-logo" />
-		<h1 class="text-center mb-4">Chicago's Biggest Little <br>Non-Profit <br>Cybersecurity Conference</h1>
+		<h1 class="text-center mb-4">
+			Chicago's Biggest Little <br />Non-Profit <br />Cybersecurity Conference
+		</h1>
 		<p class="lead text-center mb-4">
 			BSides312 brings together security professionals, researchers, and enthusiasts for an
 			unforgettable day of learning and networking.
@@ -339,11 +341,7 @@ END:VCALENDAR`;
 						<i class="bi bi-star-fill me-2"></i>Keynote Speaker<i class="bi bi-star-fill ms-2"></i>
 					</h3>
 					<div class="keynote-layout">
-						<img
-							src={keynote.profilePicture}
-							alt={keynote.fullName}
-							class="keynote-photo"
-						/>
+						<img src={keynote.profilePicture} alt={keynote.fullName} class="keynote-photo" />
 						<div class="keynote-info">
 							<h4 class="keynote-name">{keynote.fullName}</h4>
 							<div class="keynote-tagline">{keynote.tagLine}</div>
@@ -520,7 +518,7 @@ END:VCALENDAR`;
 			<h2>Donate your Time!</h2>
 		</div>
 		<div class="alert alert-success container-fluid text-center fw-bold" role="alert">
-			We're full up on volunteers and speakers for 2026! <br>Grab a ticket and join us at the con!
+			We're full up on volunteers and speakers for 2026! <br />Grab a ticket and join us at the con!
 		</div>
 	</div>
 </section>

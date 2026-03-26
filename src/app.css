@@ -800,7 +800,6 @@ div[id] {
 	border-top: 2px solid #5dbdfc;
 }
 
-
 .sponsorship-card .card-footer .contact-note {
 	font-size: 14px;
 	font-style: italic;
@@ -947,7 +946,9 @@ div[id] {
 }
 
 .keynote-card:hover .card-title {
-	text-shadow: 0 0 8px rgba(191, 64, 191, 0.8), 0 0 20px rgba(191, 64, 191, 0.5);
+	text-shadow:
+		0 0 8px rgba(191, 64, 191, 0.8),
+		0 0 20px rgba(191, 64, 191, 0.5);
 }
 
 .keynote-layout {
@@ -967,7 +968,9 @@ div[id] {
 }
 
 .keynote-card:hover .keynote-photo {
-	box-shadow: 0 0 12px rgba(191, 64, 191, 0.8), 0 0 28px rgba(191, 64, 191, 0.5);
+	box-shadow:
+		0 0 12px rgba(191, 64, 191, 0.8),
+		0 0 28px rgba(191, 64, 191, 0.5);
 }
 
 .keynote-info {

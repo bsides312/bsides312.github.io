@@ -76,9 +76,9 @@
 				<h2><i class="bi bi-terminal me-2"></i>About BSides312</h2>
 				<p>
 					BSides312 is a nonprofit one-day conference run by longtime members of Chicago's hacking
-					and Cybersecurity community. In fact, many of them founded the original BSides Chicago! It's
-					built as a collaborative venue; whether you hack hardware, excel at logistics, or just
-					bring curious friends, you help shape the conversation.
+					and Cybersecurity community. In fact, many of them founded the original BSides Chicago!
+					It's built as a collaborative venue; whether you hack hardware, excel at logistics, or
+					just bring curious friends, you help shape the conversation.
 				</p>
 				<p>
 					Like every BSides event, the conference follows a community-driven model built by and for

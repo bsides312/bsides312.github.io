@@ -101,7 +101,7 @@
 	}
 
 	function formatDuration(start: string, end: string): string {
-		const mins = (toMins(end) - toMins(start));
+		const mins = toMins(end) - toMins(start);
 		return `${mins} min`;
 	}
 
@@ -250,10 +250,9 @@
 						{/if}
 
 						<!-- Time column: always shown for every 30-min slot -->
-						<div
-							class="sched-time"
-							style="grid-row: {row}; grid-column: 1"
-						>{@html formatTime(time).replace(' ', '<br />')}</div>
+						<div class="sched-time" style="grid-row: {row}; grid-column: 1">
+							{@html formatTime(time).replace(' ', '<br />')}
+						</div>
 
 						<!-- Track columns: always render on top -->
 						{#if !greenOcc}
@@ -261,7 +260,11 @@
 								class="sched-session sched-green"
 								class:sched-empty={!green && !(orange && isKeynote(orange))}
 								class:sched-keynote={green ? isKeynote(green) : orange && isKeynote(orange)}
-								style="grid-row: {row} / span {green ? slotSpan(green) : orange && isKeynote(orange) ? slotSpan(orange) : 1}; grid-column: 2"
+								style="grid-row: {row} / span {green
+									? slotSpan(green)
+									: orange && isKeynote(orange)
+										? slotSpan(orange)
+										: 1}; grid-column: 2"
 							>
 								{#if green}
 									<div class="sched-talk-title">
@@ -307,7 +310,11 @@
 								class="sched-session sched-orange"
 								class:sched-empty={!orange && !(green && isKeynote(green))}
 								class:sched-keynote={orange ? isKeynote(orange) : green && isKeynote(green)}
-								style="grid-row: {row} / span {orange ? slotSpan(orange) : green && isKeynote(green) ? slotSpan(green) : 1}; grid-column: 3"
+								style="grid-row: {row} / span {orange
+									? slotSpan(orange)
+									: green && isKeynote(green)
+										? slotSpan(green)
+										: 1}; grid-column: 3"
 							>
 								{#if orange}
 									<div class="sched-talk-title">

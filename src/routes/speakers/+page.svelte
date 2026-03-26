@@ -171,7 +171,12 @@
 	}
 
 	function openSynopsisModal(title: string, info: SessionInfo) {
-		synopsisModal = { title, description: info.description, time: info.startsAt, track: info.track };
+		synopsisModal = {
+			title,
+			description: info.description,
+			time: info.startsAt,
+			track: info.track
+		};
 	}
 
 	function closeSynopsisModal() {
@@ -191,9 +196,7 @@
 	<div class="container">
 		<div class="section-header">
 			<h2>Speakers</h2>
-			<p>
-				Meet the experts presenting at BSides312 2026!
-			</p>
+			<p>Meet the experts presenting at BSides312 2026!</p>
 		</div>
 
 		{#if loading}
@@ -213,7 +216,8 @@
 				<div class="card mb-5 keynote-card">
 					<div class="card-body">
 						<h3 class="card-title text-center mb-4">
-							<i class="bi bi-star-fill me-2"></i>Keynote Speaker<i class="bi bi-star-fill ms-2"></i>
+							<i class="bi bi-star-fill me-2"></i>Keynote Speaker<i class="bi bi-star-fill ms-2"
+							></i>
 						</h3>
 						<div class="keynote-layout">
 							<img
@@ -393,8 +397,9 @@
 					{#if synopsisModal.track}
 						<span>
 							<span
-								class="cta-badge {synopsisModal.track.includes('Green') ? 'green' : 'orange'}-badge mini"
-								>L</span
+								class="cta-badge {synopsisModal.track.includes('Green')
+									? 'green'
+									: 'orange'}-badge mini">L</span
 							>
 							{synopsisModal.track}
 						</span>

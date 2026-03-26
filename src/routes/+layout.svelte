@@ -170,9 +170,7 @@
 							<a class="nav-link" href="{base}/#contribute" on:click={closeMobileMenu}>Volunteer</a>
 						</li>
 						<li>
-							<a class="nav-link" href="{base}/#contribute" on:click={closeMobileMenu}
-								>Speak</a
-							>
+							<a class="nav-link" href="{base}/#contribute" on:click={closeMobileMenu}>Speak</a>
 						</li>
 					</ul>
 				</li>
@@ -296,8 +294,8 @@
 					<div class="footer-info mb-4">
 						<img src="{base}/assets/img/logo.png" alt="BSides312 Logo" class="mb-3" />
 						<p>
-							BSides312 is Chicago's biggest little non-profit Cybersecurity
-							conference, run by and for the local community.
+							BSides312 is Chicago's biggest little non-profit Cybersecurity conference, run by and
+							for the local community.
 						</p>
 					</div>
 				</div>
