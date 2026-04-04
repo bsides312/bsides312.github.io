@@ -10,6 +10,12 @@ export interface Sponsor {
 export const sponsors: Sponsor[] = [
 	// Gold Sponsors
 	{
+		name: 'CardinalOps',
+		logo: `${base}/assets/img/supporters/cardinalops.jpg`,
+		url: 'https://cardinalops.com',
+		tier: 'gold'
+	},
+	{
 		name: 'Material Security',
 		logo: `${base}/assets/img/supporters/material.jpg`,
 		url: 'https://material.security',
@@ -19,6 +25,18 @@ export const sponsors: Sponsor[] = [
 		name: 'Picus Security',
 		logo: `${base}/assets/img/supporters/picus.jpg`,
 		url: 'https://www.picussecurity.com/',
+		tier: 'gold'
+	},
+	{
+		name: 'Vorlon',
+		logo: `${base}/assets/img/supporters/vorlon.jpg`,
+		url: 'https://vorlon.io',
+		tier: 'gold'
+	},
+	{
+		name: 'Push Security',
+		logo: `${base}/assets/img/supporters/push_security.jpg`,
+		url: 'https://pushsecurity.com',
 		tier: 'gold'
 	},
 
