@@ -173,7 +173,7 @@ npm run build
 │       ├── speakers/              # Current speakers page
 │       └── support/               # Support/sponsorship page
 ├── static/                        # Static assets (served as-is)
-│   ├── favicon.svg                # Site favicon
+│   ├── favicon.png                # Site favicon
 │   └── assets/                    # Images, CSS, JS, documents
 │       ├── css/style.css          # Main stylesheet
 │       ├── js/main.js             # Main JavaScript
