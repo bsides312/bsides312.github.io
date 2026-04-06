@@ -34,7 +34,7 @@ Utilizing his 6+ years of accounting experience combined with 28 years of Inform
 	{
 		id: 'jxmas',
 		name: 'Johnny Xmas',
-		title: 'Chief Marketing Officer',
+		title: 'Chief Vibes Officer',
 		image: `${base}/assets/img/about/jxmas.jpg`,
 		bio: `Johnny is a highly respected figure in the U.S. hacking community and the most punk rock Eagle Scout you've ever met. He is frequently found volunteering at events or presenting on topics ranging from his cutting-edge security research to his journey through the Cybersecurity career landscape, both as an engineer and a hiring manager.
 
