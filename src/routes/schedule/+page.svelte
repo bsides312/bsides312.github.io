@@ -1,5 +1,8 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import type { PageData } from './$types';
+
+	export let data: PageData;
 
 	interface SessionSpeaker {
 		id: string;
@@ -165,11 +168,12 @@
 </script>
 
 <svelte:head>
-	<title>Schedule - BSides312</title>
+	<title>Schedule — BSides312 2026 | Chicago Security BSides Conference</title>
 	<meta
 		name="description"
-		content="BSides312 2026 Conference Schedule — May 16th, Irish American Heritage Center, Chicago"
+		content="Full schedule for BSides312 2026, the Security BSides hacker & cybersecurity conference in Chicago — talks, workshops, villages, and CTFs on May 16, 2026 at the Irish American Heritage Center."
 	/>
+	{@html `<script type="application/ld+json">${JSON.stringify(data.eventSchema)}</` + `script>`}
 </svelte:head>
 
 <section id="schedule" class="section section-with-bg">

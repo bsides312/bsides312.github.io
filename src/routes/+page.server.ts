@@ -1,8 +1,9 @@
 import { readdirSync } from 'fs';
 import { resolve } from 'path';
 import type { PageServerLoad } from './$types';
+import { buildEventSchema } from '$lib/server/eventSchema';
 
-export const load: PageServerLoad = async () => {
+export const load: PageServerLoad = async ({ fetch }) => {
 	const galleryDir = resolve('static/assets/img/gallery');
 	const files = readdirSync(galleryDir)
 		.filter((f: string) => /\.(webp|jpg|jpeg|png|gif)$/i.test(f))
@@ -14,7 +15,10 @@ export const load: PageServerLoad = async () => {
 			return a.localeCompare(b);
 		});
 
+	const eventSchema = await buildEventSchema(fetch);
+
 	return {
-		galleryImages: files.map((f: string) => `/assets/img/gallery/${f}`)
+		galleryImages: files.map((f: string) => `/assets/img/gallery/${f}`),
+		eventSchema
 	};
 };

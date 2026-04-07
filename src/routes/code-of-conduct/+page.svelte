@@ -3,10 +3,10 @@
 </script>
 
 <svelte:head>
-	<title>Code of Conduct - BSides312</title>
+	<title>Code of Conduct — BSides312 | Chicago Security BSides Conference</title>
 	<meta
 		name="description"
-		content="BSides312 Code of Conduct - ensuring a harassment-free, inclusive conference experience for all attendees."
+		content="Code of Conduct for BSides312, the Security BSides hacker & cybersecurity conference in Chicago — ensuring a harassment-free, inclusive experience for all attendees."
 	/>
 </svelte:head>
 

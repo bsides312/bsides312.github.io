@@ -97,8 +97,11 @@
 </script>
 
 <svelte:head>
-	<title>Previous Speakers - BSides312</title>
-	<meta name="description" content="View our talented speakers from past BSides312 conferences" />
+	<title>Previous Speakers — BSides312 | Chicago Security BSides Conference</title>
+	<meta
+		name="description"
+		content="Browse past speakers from BSides312, the Security BSides hacker & cybersecurity conference in Chicago."
+	/>
 </svelte:head>
 
 <!-- Previous Speakers Section -->

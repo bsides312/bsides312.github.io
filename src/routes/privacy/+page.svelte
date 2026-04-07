@@ -3,10 +3,10 @@
 </script>
 
 <svelte:head>
-	<title>Privacy Policy - BSides312</title>
+	<title>Privacy Policy — BSides312 | Chicago Security BSides Conference</title>
 	<meta
 		name="description"
-		content="BSides312 Privacy Policy - how we handle and protect your personal information."
+		content="Privacy Policy for BSides312, the Security BSides hacker & cybersecurity conference in Chicago — how we handle and protect your personal information."
 	/>
 </svelte:head>
 

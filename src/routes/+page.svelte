@@ -175,11 +175,16 @@ END:VCALENDAR`;
 </script>
 
 <svelte:head>
-	<title>BSides312 2026 — Chicago's Biggest Little Non-Profit Hacking Conference | May 16</title>
+	<title>BSides312 2026 — Chicago's Security BSides Hacking Conference | May 16</title>
 	<meta
 		name="description"
-		content="BSides312 2026 — May 16 at the Irish American Heritage Center, Chicago. A nonprofit one-day hacking & Cybersecurity conference featuring talks, workshops, and networking with security professionals."
+		content="BSides312 is the Security BSides conference in Chicago — a non-profit, one-day hacker & cybersecurity event on May 16, 2026 at the Irish American Heritage Center. Talks, workshops, villages, CTFs, and networking with Chicago's infosec community."
 	/>
+	<meta
+		name="keywords"
+		content="BSides312, Security BSides, hacker conference Chicago, cybersecurity conference Chicago, infosec Chicago, Chicago hacking conference, CTF Chicago"
+	/>
+	{@html `<script type="application/ld+json">${JSON.stringify(data.eventSchema)}</` + `script>`}
 </svelte:head>
 
 <!-- Hero Section -->

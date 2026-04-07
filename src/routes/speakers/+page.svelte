@@ -185,10 +185,10 @@
 </script>
 
 <svelte:head>
-	<title>Speakers - BSides312</title>
+	<title>Speakers — BSides312 2026 | Chicago Security BSides Conference</title>
 	<meta
 		name="description"
-		content="Meet the expert speakers presenting at BSides312 2026 — Chicago's biggest little cybersecurity conference."
+		content="Meet the expert speakers presenting at BSides312 2026, the Security BSides hacker & cybersecurity conference in Chicago. May 16, 2026 at the Irish American Heritage Center."
 	/>
 </svelte:head>
 
