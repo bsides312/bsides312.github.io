@@ -366,6 +366,12 @@ footer {
 	display: block;
 	margin: 0 auto;
 	margin-bottom: 0;
+	animation: logoPulse 3s ease-in-out infinite;
+}
+
+@keyframes logoPulse {
+	0%, 100% { filter: drop-shadow(0 0 6px rgba(59, 130, 246, 0.4)); }
+	50%       { filter: drop-shadow(0 0 22px rgba(59, 130, 246, 0.85)); }
 }
 
 /* ============================================================
