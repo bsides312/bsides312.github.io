@@ -370,8 +370,8 @@ footer {
 }
 
 @keyframes logoPulse {
-	0%, 100% { filter: drop-shadow(0 0 6px rgba(59, 130, 246, 0.4)); }
-	50%       { filter: drop-shadow(0 0 22px rgba(59, 130, 246, 0.85)); }
+	0%, 100% { filter: drop-shadow(0 0 6px rgba(191, 64, 191, 0.4)); }
+	50%       { filter: drop-shadow(0 0 22px rgba(191, 64, 191, 0.85)); }
 }
 
 /* ============================================================
