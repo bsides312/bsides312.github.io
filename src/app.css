@@ -2368,6 +2368,10 @@ button.activity-card:hover {
 	margin-bottom: 20px;
 }
 
+.speaker-modal-header + .speaker-modal-header {
+	margin-top: 24px;
+}
+
 .speaker-modal-photo {
 	width: 100px;
 	height: 100px;
@@ -2506,6 +2510,26 @@ button.activity-card:hover {
 
 .talk-modal-meta-sep {
 	opacity: 0.4;
+}
+
+.modal-about-divider {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	color: rgba(255, 255, 255, 0.4);
+	font-size: 0.78rem;
+	font-weight: 600;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	margin: 22px 0 16px;
+}
+
+.modal-about-divider::before,
+.modal-about-divider::after {
+	content: '';
+	flex: 1;
+	height: 1px;
+	background: rgba(255, 255, 255, 0.12);
 }
 
 .talk-modal-description {

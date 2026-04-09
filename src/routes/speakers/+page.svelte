@@ -149,17 +149,20 @@
 		return links.filter((l) => l.linkType !== 'Sessionize' && l.linkType !== 'Company_Website');
 	}
 
-	let selectedSpeaker: Speaker | null = null;
-	let synopsisModal: { title: string; description: string; time: string; track: string } | null =
-		null;
+	interface SpeakerModal {
+		speaker: Speaker;
+		talkTitle?: string;
+		sessInfo?: SessionInfo;
+	}
+	let speakerModal: SpeakerModal | null = null;
 
 	function openSpeakerModal(speaker: Speaker) {
-		selectedSpeaker = speaker;
-	}
-
-	function closeSpeakerModal() {
-		selectedSpeaker = null;
-		synopsisModal = null;
+		const sess = speaker.sessions[0];
+		speakerModal = {
+			speaker,
+			talkTitle: sess ? cleanTitle(sess.name) : undefined,
+			sessInfo: sess ? sessionSynopsisMap[String(sess.id)] : undefined
+		};
 	}
 
 	function formatTime(dt: string): string {
@@ -168,19 +171,6 @@
 		const ampm = h >= 12 ? 'PM' : 'AM';
 		const hr = h > 12 ? h - 12 : h === 0 ? 12 : h;
 		return `${hr}:${m.toString().padStart(2, '0')} ${ampm}`;
-	}
-
-	function openSynopsisModal(title: string, info: SessionInfo) {
-		synopsisModal = {
-			title,
-			description: info.description,
-			time: info.startsAt,
-			track: info.track
-		};
-	}
-
-	function closeSynopsisModal() {
-		synopsisModal = null;
 	}
 </script>
 
@@ -297,116 +287,85 @@
 	</div>
 </section>
 
-{#if selectedSpeaker}
+{#if speakerModal}
+	<!-- svelte-ignore a11y-no-static-element-interactions a11y-click-events-have-key-events -->
 	<div
 		class="speaker-modal-overlay"
-		on:click={closeSpeakerModal}
-		on:keydown={(e) => e.key === 'Escape' && closeSpeakerModal()}
+		on:click={() => (speakerModal = null)}
+		on:keydown={(e) => e.key === 'Escape' && (speakerModal = null)}
 		role="dialog"
 		aria-modal="true"
-		aria-label="{selectedSpeaker.fullName} bio"
+		aria-label="{speakerModal.speaker.fullName} bio"
 		tabindex="-1"
 	>
 		<!-- svelte-ignore a11y-no-static-element-interactions a11y-click-events-have-key-events -->
 		<div class="speaker-modal" on:click|stopPropagation>
-			<button class="speaker-modal-close" on:click={closeSpeakerModal} aria-label="Close"
+			<button class="speaker-modal-close" on:click={() => (speakerModal = null)} aria-label="Close"
 				>&times;</button
 			>
+			<!-- Speaker at top -->
 			<div class="speaker-modal-header">
 				<img
 					class="speaker-modal-photo"
-					src={selectedSpeaker.profilePicture}
-					alt={selectedSpeaker.fullName}
+					src={speakerModal.speaker.profilePicture}
+					alt={speakerModal.speaker.fullName}
 				/>
 				<div class="speaker-modal-info">
-					<h3 class="speaker-modal-name">{selectedSpeaker.fullName}</h3>
-					<div class="speaker-modal-tagline">{selectedSpeaker.tagLine}</div>
-					{#if trackClass(selectedSpeaker.id)}
-						<div class="speaker-track-badge {trackClass(selectedSpeaker.id)}">
-							<span class="cta-badge {trackClass(selectedSpeaker.id)}-badge mini">L</span>
-							{trackLabel(selectedSpeaker.id)}
+					<h3 class="speaker-modal-name">{speakerModal.speaker.fullName}</h3>
+					<div class="speaker-modal-tagline">{speakerModal.speaker.tagLine}</div>
+					{#if trackClass(speakerModal.speaker.id)}
+						<div class="speaker-track-badge {trackClass(speakerModal.speaker.id)}">
+							<span class="cta-badge {trackClass(speakerModal.speaker.id)}-badge mini">L</span>
+							{trackLabel(speakerModal.speaker.id)}
 						</div>
 					{/if}
 				</div>
 			</div>
-			{#if selectedSpeaker.sessions.length}
-				{@const sess = selectedSpeaker.sessions[0]}
-				{@const sessData = sessionSynopsisMap[String(sess.id)]}
-				{#if sessData}
-					<button
-						class="speaker-modal-talk speaker-modal-talk-btn"
-						on:click={() => openSynopsisModal(cleanTitle(sess.name), sessData)}
-					>
-						<i class="bi bi-chat-quote-fill me-2"></i>{cleanTitle(sess.name)}<span
-							class="talk-click-hint">— view synopsis</span
-						>
-					</button>
-				{:else}
-					<div class="speaker-modal-talk">
-						<i class="bi bi-chat-quote-fill me-2"></i>{cleanTitle(sess.name)}
-					</div>
-				{/if}
+			{#if speakerModal.speaker.bio}
+				<div class="speaker-modal-bio">{speakerModal.speaker.bio}</div>
 			{/if}
-			{#if selectedSpeaker.bio}
-				<div class="speaker-modal-bio">{selectedSpeaker.bio}</div>
-			{/if}
-			{#if visibleLinks(selectedSpeaker.links).length}
+			{#if visibleLinks(speakerModal.speaker.links).length}
 				<div class="speaker-modal-links">
-					{#each visibleLinks(selectedSpeaker.links) as link (link.url)}
+					{#each visibleLinks(speakerModal.speaker.links) as link (link.url)}
 						<a
 							href={link.url}
 							target="_blank"
 							rel="noopener"
-							aria-label="{selectedSpeaker.fullName} {link.title}"
+							aria-label="{speakerModal.speaker.fullName} {link.title}"
 						>
 							<i class="bi {linkIcon(link.linkType)}"></i>
 						</a>
 					{/each}
 				</div>
 			{/if}
-		</div>
-	</div>
-{/if}
-
-<!-- Synopsis modal (nested, higher z-index) -->
-{#if synopsisModal}
-	<!-- svelte-ignore a11y-no-static-element-interactions a11y-click-events-have-key-events -->
-	<div
-		class="synopsis-modal-overlay"
-		on:click={closeSynopsisModal}
-		on:keydown={(e) => e.key === 'Escape' && closeSynopsisModal()}
-		role="dialog"
-		aria-modal="true"
-		aria-label={synopsisModal.title}
-		tabindex="-1"
-	>
-		<!-- svelte-ignore a11y-no-static-element-interactions a11y-click-events-have-key-events -->
-		<div class="speaker-modal" on:click|stopPropagation>
-			<button class="speaker-modal-close" on:click={closeSynopsisModal} aria-label="Close"
-				>&times;</button
-			>
-			<h3 class="talk-modal-title">{synopsisModal.title}</h3>
-			{#if synopsisModal.time || synopsisModal.track}
-				<div class="talk-modal-meta">
-					{#if synopsisModal.time}
-						<span><i class="bi bi-clock me-1"></i>{formatTime(synopsisModal.time)}</span>
+			<!-- Presentation at bottom -->
+			{#if speakerModal.talkTitle}
+				<div class="modal-about-divider">Presentation</div>
+				<h4 class="talk-modal-title">{speakerModal.talkTitle}</h4>
+				{#if speakerModal.sessInfo}
+					<div class="talk-modal-meta">
+						{#if speakerModal.sessInfo.track}
+							<span>
+								<span
+									class="cta-badge {speakerModal.sessInfo.track.includes('Green')
+										? 'green'
+										: 'orange'}-badge mini">L</span
+								>
+								{speakerModal.sessInfo.track}
+							</span>
+						{/if}
+						{#if speakerModal.sessInfo.track && speakerModal.sessInfo.startsAt}
+							<span class="talk-modal-meta-sep">•</span>
+						{/if}
+						{#if speakerModal.sessInfo.startsAt}
+							<span>{formatTime(speakerModal.sessInfo.startsAt)}</span>
+						{/if}
+					</div>
+					{#if speakerModal.sessInfo.description}
+						<p class="talk-modal-description">{speakerModal.sessInfo.description}</p>
 					{/if}
-					{#if synopsisModal.time && synopsisModal.track}
-						<span class="talk-modal-meta-sep">&bull;</span>
-					{/if}
-					{#if synopsisModal.track}
-						<span>
-							<span
-								class="cta-badge {synopsisModal.track.includes('Green')
-									? 'green'
-									: 'orange'}-badge mini">L</span
-							>
-							{synopsisModal.track}
-						</span>
-					{/if}
-				</div>
+				{/if}
 			{/if}
-			<p class="talk-modal-description">{synopsisModal.description}</p>
 		</div>
 	</div>
 {/if}

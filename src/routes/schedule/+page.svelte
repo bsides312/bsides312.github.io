@@ -40,8 +40,11 @@
 	let allSessions: Session[] = [];
 	let timeSlots: string[] = [];
 	let speakerMap: Record<string, FullSpeaker> = {};
-	let talkModal: { title: string; description: string } | null = null;
-	let schedSpeakerModal: FullSpeaker | null = null;
+	interface SessionModal {
+		session: Session;
+		speakers: FullSpeaker[];
+	}
+	let sessionModal: SessionModal | null = null;
 
 	// Parse "HH:MM" from an ISO-ish datetime string into total minutes
 	function toMins(dt: string): number {
@@ -155,15 +158,28 @@
 		return /KEYNOTE:/i.test(session.title);
 	}
 
-	function openTalkModal(session: Session) {
-		if (session.description?.trim()) {
-			talkModal = { title: cleanTitle(session.title), description: session.description };
-		}
+	function hasModalContent(session: Session): boolean {
+		return (
+			!!session.description?.trim() ||
+			session.speakers.some((sp) => {
+				const full = speakerMap[sp.id];
+				return !!(full?.bio || full?.profilePicture);
+			})
+		);
 	}
 
-	function openSpeakerModal(sp: SessionSpeaker) {
-		const full = speakerMap[sp.id];
-		if (full?.bio) schedSpeakerModal = full;
+	function formatTrack(room: string): string {
+		if (room.toUpperCase() === 'GREEN LINE') return 'Green Line';
+		if (room.toUpperCase() === 'ORANGE LINE') return 'Orange Line';
+		return room;
+	}
+
+	function openSessionModal(session: Session) {
+		if (!hasModalContent(session)) return;
+		sessionModal = {
+			session,
+			speakers: session.speakers.map((sp) => speakerMap[sp.id]).filter(Boolean)
+		};
 	}
 </script>
 
@@ -272,8 +288,8 @@
 							>
 								{#if green}
 									<div class="sched-talk-title">
-										{#if green.description?.trim()}
-											<button class="sched-talk-btn" on:click={() => openTalkModal(green)}>
+										{#if hasModalContent(green)}
+											<button class="sched-talk-btn" on:click={() => openSessionModal(green)}>
 												{cleanTitle(green.title)}
 											</button>
 										{:else}
@@ -286,8 +302,8 @@
 											{#each green.speakers as sp, i (sp.id)}
 												{@const full = speakerMap[sp.id]}
 												{#if i > 0},{/if}
-												{#if full?.bio}
-													<button class="sched-speaker-btn" on:click={() => openSpeakerModal(sp)}>
+												{#if hasModalContent(green)}
+													<button class="sched-speaker-btn" on:click={() => openSessionModal(green)}>
 														{full?.fullName ?? sp.name}
 													</button>
 												{:else}
@@ -322,8 +338,8 @@
 							>
 								{#if orange}
 									<div class="sched-talk-title">
-										{#if orange.description?.trim()}
-											<button class="sched-talk-btn" on:click={() => openTalkModal(orange)}>
+										{#if hasModalContent(orange)}
+											<button class="sched-talk-btn" on:click={() => openSessionModal(orange)}>
 												{cleanTitle(orange.title)}
 											</button>
 										{:else}
@@ -336,8 +352,8 @@
 											{#each orange.speakers as sp, i (sp.id)}
 												{@const full = speakerMap[sp.id]}
 												{#if i > 0},{/if}
-												{#if full?.bio}
-													<button class="sched-speaker-btn" on:click={() => openSpeakerModal(sp)}>
+												{#if hasModalContent(orange)}
+													<button class="sched-speaker-btn" on:click={() => openSessionModal(orange)}>
 														{full?.fullName ?? sp.name}
 													</button>
 												{:else}
@@ -369,65 +385,52 @@
 	</div>
 </section>
 
-<!-- Talk / synopsis modal -->
-{#if talkModal}
+<!-- Combined session modal -->
+{#if sessionModal}
 	<!-- svelte-ignore a11y-no-static-element-interactions a11y-click-events-have-key-events -->
 	<div
 		class="speaker-modal-overlay"
-		on:click={() => (talkModal = null)}
-		on:keydown={(e) => e.key === 'Escape' && (talkModal = null)}
+		on:click={() => (sessionModal = null)}
+		on:keydown={(e) => e.key === 'Escape' && (sessionModal = null)}
 		role="dialog"
 		aria-modal="true"
-		aria-label={talkModal.title}
+		aria-label={cleanTitle(sessionModal.session.title)}
 		tabindex="-1"
 	>
 		<!-- svelte-ignore a11y-no-static-element-interactions a11y-click-events-have-key-events -->
 		<div class="speaker-modal" on:click|stopPropagation>
-			<button class="speaker-modal-close" on:click={() => (talkModal = null)} aria-label="Close"
+			<button class="speaker-modal-close" on:click={() => (sessionModal = null)} aria-label="Close"
 				>&times;</button
 			>
-			<h3 class="talk-modal-title">{talkModal.title}</h3>
-			<p class="talk-modal-description">{talkModal.description}</p>
-		</div>
-	</div>
-{/if}
-
-<!-- Speaker bio modal (from schedule page) -->
-{#if schedSpeakerModal}
-	<!-- svelte-ignore a11y-no-static-element-interactions a11y-click-events-have-key-events -->
-	<div
-		class="speaker-modal-overlay"
-		on:click={() => (schedSpeakerModal = null)}
-		on:keydown={(e) => e.key === 'Escape' && (schedSpeakerModal = null)}
-		role="dialog"
-		aria-modal="true"
-		aria-label="{schedSpeakerModal.fullName} bio"
-		tabindex="-1"
-	>
-		<!-- svelte-ignore a11y-no-static-element-interactions a11y-click-events-have-key-events -->
-		<div class="speaker-modal" on:click|stopPropagation>
-			<button
-				class="speaker-modal-close"
-				on:click={() => (schedSpeakerModal = null)}
-				aria-label="Close">&times;</button
-			>
-			<div class="speaker-modal-header">
-				{#if schedSpeakerModal.profilePicture}
-					<img
-						class="speaker-modal-photo"
-						src={schedSpeakerModal.profilePicture}
-						alt={schedSpeakerModal.fullName}
-					/>
-				{/if}
-				<div class="speaker-modal-info">
-					<h3 class="speaker-modal-name">{schedSpeakerModal.fullName}</h3>
-					{#if schedSpeakerModal.tagLine}
-						<div class="speaker-modal-tagline">{schedSpeakerModal.tagLine}</div>
-					{/if}
-				</div>
+			<h3 class="talk-modal-title">{cleanTitle(sessionModal.session.title)}</h3>
+			<div class="talk-modal-meta">
+				<span>{formatTrack(sessionModal.session.room)}</span>
+				<span class="talk-modal-meta-sep">•</span>
+				<span>{formatTime(sessionModal.session.startsAt)}</span>
+				<span class="talk-modal-meta-sep">•</span>
+				<span>{formatDuration(sessionModal.session.startsAt, sessionModal.session.endsAt)}</span>
 			</div>
-			{#if schedSpeakerModal.bio}
-				<div class="speaker-modal-bio">{schedSpeakerModal.bio}</div>
+			{#if sessionModal.session.description?.trim()}
+				<p class="talk-modal-description">{sessionModal.session.description}</p>
+			{/if}
+			{#if sessionModal.speakers.length}
+				<div class="modal-about-divider">About</div>
+				{#each sessionModal.speakers as sp (sp.id)}
+					<div class="speaker-modal-header">
+						{#if sp.profilePicture}
+							<img class="speaker-modal-photo" src={sp.profilePicture} alt={sp.fullName} />
+						{/if}
+						<div class="speaker-modal-info">
+							<h4 class="speaker-modal-name">{sp.fullName}</h4>
+							{#if sp.tagLine}
+								<div class="speaker-modal-tagline">{sp.tagLine}</div>
+							{/if}
+						</div>
+					</div>
+					{#if sp.bio}
+						<div class="speaker-modal-bio">{sp.bio}</div>
+					{/if}
+				{/each}
 			{/if}
 		</div>
 	</div>
