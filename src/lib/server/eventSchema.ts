@@ -25,6 +25,33 @@ interface SessionizeGroup {
 
 const SESSIONS_URL = 'https://sessionize.com/api/v2/v1trm5nf/view/Sessions';
 
+const EVENT_IMAGE = 'https://bsides312.org/assets/img/opengraph_logo.jpg';
+const EVENT_ORGANIZER = {
+	'@type': 'Organization',
+	name: 'BSides312',
+	url: 'https://bsides312.org/'
+};
+const EVENT_OFFERS = [
+	{
+		'@type': 'Offer',
+		name: 'Student',
+		price: 27.38,
+		priceCurrency: 'USD',
+		url: 'https://www.simpletix.com/e/security-bsides312-2026-tickets-247316',
+		availability: 'https://schema.org/InStock',
+		category: 'Conference Ticket'
+	},
+	{
+		'@type': 'Offer',
+		name: 'Standard',
+		price: 53.65,
+		priceCurrency: 'USD',
+		url: 'https://www.simpletix.com/e/security-bsides312-2026-tickets-247316',
+		availability: 'https://schema.org/InStock',
+		category: 'Conference Ticket'
+	}
+];
+
 // Chicago is UTC-5 (CDT) on May 16
 const TZ_OFFSET = '-05:00';
 
@@ -61,6 +88,9 @@ async function fetchSubEvents(fetchFn: typeof fetch): Promise<object[]> {
 					endDate: withTz(s.endsAt),
 					eventStatus: 'https://schema.org/EventScheduled',
 					eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+					image: EVENT_IMAGE,
+					organizer: EVENT_ORGANIZER,
+					offers: EVENT_OFFERS,
 					location: {
 						'@type': 'Place',
 						name: `Irish American Heritage Center${s.room ? ` — ${s.room}` : ''}`,
@@ -119,19 +149,10 @@ export async function buildEventSchema(fetchFn: typeof fetch): Promise<object> {
 				addressCountry: 'US'
 			}
 		},
-		image: 'https://bsides312.org/assets/img/opengraph_logo.jpg',
+		image: EVENT_IMAGE,
 		url: 'https://bsides312.org/',
-		organizer: {
-			'@type': 'Organization',
-			name: 'Hak4Kidz NFP',
-			url: 'https://bsides312.org/'
-		},
-		offers: {
-			'@type': 'Offer',
-			url: 'https://www.simpletix.com/e/security-bsides312-2026-tickets-247316',
-			availability: 'https://schema.org/InStock',
-			category: 'Conference Ticket'
-		},
+		organizer: EVENT_ORGANIZER,
+		offers: EVENT_OFFERS,
 		...(subEvents.length > 0 ? { subEvent: subEvents } : {})
 	};
 }
