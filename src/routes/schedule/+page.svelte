@@ -303,7 +303,10 @@
 												{@const full = speakerMap[sp.id]}
 												{#if i > 0},{/if}
 												{#if hasModalContent(green)}
-													<button class="sched-speaker-btn" on:click={() => openSessionModal(green)}>
+													<button
+														class="sched-speaker-btn"
+														on:click={() => openSessionModal(green)}
+													>
 														{full?.fullName ?? sp.name}
 													</button>
 												{:else}
@@ -353,7 +356,10 @@
 												{@const full = speakerMap[sp.id]}
 												{#if i > 0},{/if}
 												{#if hasModalContent(orange)}
-													<button class="sched-speaker-btn" on:click={() => openSessionModal(orange)}>
+													<button
+														class="sched-speaker-btn"
+														on:click={() => openSessionModal(orange)}
+													>
 														{full?.fullName ?? sp.name}
 													</button>
 												{:else}

@@ -36,7 +36,7 @@ export default ts.config(
 			// see: https://typescript-eslint.io/troubleshooting/faqs/eslint/#i-get-errors-from-the-no-undef-rule-about-global-variables-not-being-defined-even-though-there-are-no-typescript-errors
 			'no-undef': 'off',
 			// Allow @html in Svelte components for trusted content
-			'svelte/no-at-html-tags': 'warn',
+			'svelte/no-at-html-tags': 'off',
 			// Allow unused variables in some cases
 			'@typescript-eslint/no-unused-vars': 'warn',
 			// Allow any type in some cases

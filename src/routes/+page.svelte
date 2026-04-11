@@ -100,9 +100,9 @@
 
 	const activityInfo: Record<string, { title: string; description: string }> = {
 		ctf: {
-			title: 'CTF Hacking Challenge!',
-			description:
-				'Get your team together and learn new hacking and problem-solving skills inside of real computers, and maybe even win some prizes like A LIFETIME BADGE!'
+			title: 'CTF Solo Hacking Challenge!',
+			description: `Learn new hacking and problem-solving skills, and maybe even win some prizes like A LIFETIME BADGE! 
+			<br><br>This competition is built for individuals, <strong>NOT TEAMS</strong>, and isn't entirely <em>inside real computers.</em>`
 		},
 		lockpicking: {
 			title: 'Lockpicking!',
@@ -406,7 +406,7 @@ END:VCALENDAR`;
 			<div class="col-lg-3 col-md-6">
 				<button class="card activity-card h-100" on:click={() => openActivity('ctf')}>
 					<img
-						src="{base}/assets/img/activities/ctf.jpg"
+						src="{base}/assets/img/activities/boompappow.gif"
 						alt="CTF Hacking Challenge"
 						class="activity-card-img"
 						loading="lazy"
