@@ -419,7 +419,7 @@ END:VCALENDAR`;
 			<div class="col-lg-3 col-md-6">
 				<button class="card activity-card h-100" on:click={() => openActivity('lockpicking')}>
 					<img
-						src="{base}/assets/img/activities/toool.jpg"
+						src="{base}/assets/img/activities/toool.gif"
 						alt="Lockpicking"
 						class="activity-card-img"
 						loading="lazy"
