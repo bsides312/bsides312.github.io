@@ -1092,6 +1092,21 @@ button.activity-card:hover {
 	background: rgba(6, 12, 34, 0.7);
 }
 
+.afterparty-sponsors {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 2rem;
+	padding: 1rem 0 0.25rem;
+	flex-wrap: wrap;
+}
+
+.afterparty-sponsor-img {
+	height: 60px;
+	width: auto;
+	object-fit: contain;
+}
+
 .activity-modal {
 	background: #1a1a2e;
 	border: 1px solid rgba(93, 189, 252, 0.3);

@@ -118,6 +118,10 @@
 			title: 'Linux Village!',
 			description:
 				'<p class="modal-heading">Are you Linux Curious?</p><p class="modal-heading">Got an older Windows computer that can\'t really support Windows 11 but aren\'t ready to spend on an upgrade?</p><p class="modal-heading">Just done with Microsoft\'s "Agentic OS?"</p><p>Our Linux village is here for you with computers to test out Linux on, experts to answer your questions, and we will even install Linux Mint on your computer for you - the OS is free and so is our help! Our mission is to help you explore Linux as your "daily driver" OS, and show you just what you can do in a modern Linux environment. So if you\'ve ever wondered what all the talk is about, if you\'re ready to take the Linux plunge, or if you\'re anywhere in between, stop by and talk with us, we\'re here to help you on your Linux journey!</p>'
+		},
+		afterparty: {
+			title: 'After Party!',
+			description: 'Details coming soon — stay tuned!'
 		}
 	};
 
@@ -452,6 +456,21 @@ END:VCALENDAR`;
 					/>
 					<div class="card-body text-center">
 						<h4 class="card-title">Linux Village!</h4>
+					</div>
+				</button>
+			</div>
+			<div class="col-12">
+				<button class="card activity-card h-100 w-100" on:click={() => openActivity('afterparty')}>
+					<div class="card-body text-center">
+						<h4 class="card-title">After Party Brought to You By</h4>
+						<div class="afterparty-sponsors">
+							<a href="https://www.zafran.io/" target="_blank" rel="noopener" on:click|stopPropagation>
+								<img src="{base}/assets/img/supporters/zafran.jpg" alt="Zafran" class="afterparty-sponsor-img" />
+							</a>
+							<a href="https://www.evolvesecurity.com/" target="_blank" rel="noopener" on:click|stopPropagation>
+								<img src="{base}/assets/img/supporters/evolve.jpg" alt="Evolve Security" class="afterparty-sponsor-img" />
+							</a>
+						</div>
 					</div>
 				</button>
 			</div>
