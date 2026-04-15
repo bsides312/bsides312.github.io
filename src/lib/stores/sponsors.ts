@@ -51,6 +51,12 @@ export const sponsors: Sponsor[] = [
 		url: 'https://scanner.dev',
 		tier: 'gold'
 	},
+	{
+		name: 'SpecterOps',
+		logo: `${base}/assets/img/supporters/specter-ops.jpg`,
+		url: 'https://www.specterops.io/',
+		tier: 'gold'
+	},
 	// Silver Sponsors
 
 	// Founding Sponsors
