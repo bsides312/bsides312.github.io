@@ -45,6 +45,12 @@ export const sponsors: Sponsor[] = [
 		url: 'https://stellarcyber.ai',
 		tier: 'gold'
 	},
+	{
+		name: 'Scanner',
+		logo: `${base}/assets/img/supporters/scanner.jpg`,
+		url: 'https://scanner.dev',
+		tier: 'gold'
+	},
 	// Silver Sponsors
 
 	// Founding Sponsors
