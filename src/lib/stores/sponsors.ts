@@ -39,14 +39,13 @@ export const sponsors: Sponsor[] = [
 		url: 'https://pushsecurity.com',
 		tier: 'gold'
 	},
-
-	// Silver Sponsors
 	{
 		name: 'Stellar Cyber',
 		logo: `${base}/assets/img/supporters/stellar_cyber.jpg`,
 		url: 'https://stellarcyber.ai',
-		tier: 'silver'
+		tier: 'gold'
 	},
+	// Silver Sponsors
 
 	// Founding Sponsors
 	{
