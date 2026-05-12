@@ -285,6 +285,9 @@ END:VCALENDAR`;
 							>
 								<i class="bi bi-calendar-plus"></i>Add to Calendar
 							</button>
+							<a href="{base}/about#faq" class="btn-primary">
+								<i class="bi bi-question-circle-fill"></i>FAQs
+							</a>
 						</div>
 					</div>
 				</div>
