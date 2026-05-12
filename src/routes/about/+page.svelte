@@ -3,6 +3,7 @@
 	import { faqItems } from '$lib/stores/faq';
 	import { base } from '$app/paths';
 	import type { PageData } from './$types';
+	import WhenWhere from '$lib/components/WhenWhere.svelte';
 
 	export let data: PageData;
 
@@ -21,19 +22,6 @@
 	function closeLightbox() {
 		lightboxSrc = null;
 	}
-
-	function downloadCalendar() {
-		const icsContent = data.icsContent;
-		const blob = new Blob([icsContent], { type: 'text/calendar' });
-		const url = URL.createObjectURL(blob);
-		const a = document.createElement('a');
-		a.href = url;
-		a.download = 'BSides312-2026.ics';
-		document.body.appendChild(a);
-		a.click();
-		document.body.removeChild(a);
-		URL.revokeObjectURL(url);
-	}
 </script>
 
 <svelte:head>
@@ -47,28 +35,9 @@
 <!-- About Section -->
 <section id="about" class="section section-with-bg">
 	<div class="container">
-		<div class="card mb-4">
-			<div class="card-body">
-				<h3 class="card-title">
-					<i class="bi bi-calendar-event text-warning me-2"></i>When & Where
-				</h3>
-				<p>
-					<strong>Date:</strong> May 16th, 2026<br />
-					<strong>Time:</strong> 9:00 AM - 7:00 PM CST<br />
-					<br />
-					<strong>Location:</strong><br />
-					Irish American Heritage Center<br />
-					4626 N Knox Ave<br />
-					Chicago, IL
-				</p>
-				<button
-					class="btn-primary"
-					on:click={downloadCalendar}
-					type="button"
-					aria-label="Add BSides312 to calendar"
-				>
-					<i class="bi bi-calendar-plus me-2"></i>Add to Calendar
-				</button>
+		<div class="row">
+			<div class="col-12">
+				<WhenWhere />
 			</div>
 		</div>
 		<div class="card">
