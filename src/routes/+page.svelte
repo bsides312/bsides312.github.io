@@ -322,7 +322,7 @@
 		</h3>
 		<div class="row justify-content-center gy-4">
 			<div class="col-lg-3 col-md-6">
-				<button class="card activity-card h-100" on:click={() => openActivity('ctf')}>
+				<a href="http://3.236.149.102/intro" target="_blank" rel="noopener" class="card activity-card h-100">
 					<img
 						src="{base}/assets/img/activities/boompappow.gif"
 						alt="CTF Hacking Challenge"
@@ -332,7 +332,7 @@
 					<div class="card-body text-center">
 						<h4 class="card-title">CTF Hacking Challenge!</h4>
 					</div>
-				</button>
+				</a>
 			</div>
 			<div class="col-lg-3 col-md-6">
 				<button class="card activity-card h-100" on:click={() => openActivity('lockpicking')}>
