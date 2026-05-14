@@ -1107,6 +1107,44 @@ button.activity-card:hover {
 	object-fit: contain;
 }
 
+/* Cards with side images (center-cropped 9:16) */
+.card-with-sides {
+	display: flex;
+	flex-direction: row;
+	align-items: stretch;
+	padding: 0;
+	overflow: hidden;
+}
+
+.card-with-sides .card-body {
+	flex: 1 1 auto;
+	padding: 30px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.activity-card.card-with-sides .card-title {
+	font-size: 2rem;
+}
+
+.card-side-img {
+	width: clamp(120px, 18%, 220px);
+	aspect-ratio: 9 / 16;
+	object-fit: cover;
+	object-position: center;
+	flex-shrink: 0;
+	align-self: stretch;
+	height: auto;
+}
+
+@media (max-width: 768px) {
+	.card-with-sides .card-side-img {
+		display: none;
+	}
+}
+
 .activity-modal {
 	background: #1a1a2e;
 	border: 1px solid rgba(93, 189, 252, 0.3);

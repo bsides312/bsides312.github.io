@@ -122,7 +122,8 @@
 		},
 		afterparty: {
 			title: 'After-Party!',
-			description: 'Join us in the conference bar area for 2 hours of hangsout, game shoews with Lintile, and drinks on our awesome sponsors!'
+			description:
+				'Join us in the conference bar area for 2 hours of hangsout, game shoews with Lintile, and drinks on our awesome sponsors!'
 		}
 	};
 
@@ -133,8 +134,6 @@
 	function closeActivity() {
 		activeActivity = null;
 	}
-
-	
 </script>
 
 <svelte:head>
@@ -173,8 +172,8 @@
 					>
 						<i class="bi bi-ticket-perforated me-2"></i>Get Tickets
 					</a>
-					<a href="{base}/speakers" class="btn-primary">
-						<i class="bi bi-mic-fill me-2"></i>Meet Our Speakers
+					<a href="{base}/schedule" class="btn-primary">
+						<i class="bi bi-calendar3 me-2"></i>Schedule
 					</a>
 					<a href="{base}/support" class="btn-primary">
 						<i class="bi bi-heart-fill me-2"></i>Support Us!
@@ -247,6 +246,44 @@
 		<img src={lightboxSrc} alt="BSides312 gallery full size" class="lightbox-img" />
 	</div>
 {/if}
+
+<!-- Friday Night Pre-Game -->
+<section class="section section-with-bg">
+	<div class="container">
+		<div class="card activity-card card-with-sides">
+			<img
+				src="https://burbsec.com/images/irl/east/IMG_6585.webp"
+				alt=""
+				class="card-side-img card-side-img-left"
+				loading="lazy"
+				aria-hidden="true"
+			/>
+			<div class="card-body text-center">
+				<h3 class="card-title">Friday Night Old Town Rooftop Pre-Game 5pm-8pm Sponsored By:</h3>
+				<div class="afterparty-sponsors">
+					<a href="https://scanner.com/" target="_blank" rel="noopener" on:click|stopPropagation>
+						<img
+							src="{base}/assets/img/supporters/scanner.jpg"
+							alt="Scanner"
+							class="afterparty-sponsor-img"
+						/>
+					</a>
+				</div>
+				<p class="mt-3">Registration Required</p>
+				<a href="https://luma.com/3hlu6uw1" target="_blank" rel="noopener" class="btn-primary">
+					<i class="bi bi-ticket-perforated me-2"></i>Click Here
+				</a>
+			</div>
+			<img
+				src="https://burbsec.com/images/irl/east/IMG_6590.webp"
+				alt=""
+				class="card-side-img card-side-img-right"
+				loading="lazy"
+				aria-hidden="true"
+			/>
+		</div>
+	</div>
+</section>
 
 <!-- Ride the L Section -->
 <section id="ride-the-l" class="section section-with-bg">
@@ -374,18 +411,53 @@
 				</button>
 			</div>
 			<div class="col-12">
-				<button class="card activity-card h-100 w-100" on:click={() => openActivity('afterparty')}>
+				<button
+					class="card activity-card card-with-sides h-100 w-100"
+					on:click={() => openActivity('afterparty')}
+				>
+					<img
+						src="https://burbsec.com/images/irl/east/IMG_6585.webp"
+						alt=""
+						class="card-side-img card-side-img-left"
+						loading="lazy"
+						aria-hidden="true"
+					/>
 					<div class="card-body text-center">
 						<h4 class="card-title">In-House After-Party from 6-8!!</h4>
 						<div class="afterparty-sponsors">
-							<a href="https://www.zafran.io/" target="_blank" rel="noopener" on:click|stopPropagation>
-								<img src="{base}/assets/img/supporters/zafran.jpg" alt="Zafran" class="afterparty-sponsor-img" />
+							<a
+								href="https://www.zafran.io/"
+								target="_blank"
+								rel="noopener"
+								on:click|stopPropagation
+							>
+								<img
+									src="{base}/assets/img/supporters/zafran.jpg"
+									alt="Zafran"
+									class="afterparty-sponsor-img"
+								/>
 							</a>
-							<a href="https://www.evolvesecurity.com/" target="_blank" rel="noopener" on:click|stopPropagation>
-								<img src="{base}/assets/img/supporters/evolve.jpg" alt="Evolve Security" class="afterparty-sponsor-img" />
+							<a
+								href="https://www.evolvesecurity.com/"
+								target="_blank"
+								rel="noopener"
+								on:click|stopPropagation
+							>
+								<img
+									src="{base}/assets/img/supporters/evolve.jpg"
+									alt="Evolve Security"
+									class="afterparty-sponsor-img"
+								/>
 							</a>
 						</div>
 					</div>
+					<img
+						src="https://burbsec.com/images/irl/east/IMG_6590.webp"
+						alt=""
+						class="card-side-img card-side-img-right"
+						loading="lazy"
+						aria-hidden="true"
+					/>
 				</button>
 			</div>
 		</div>
