@@ -4,6 +4,7 @@
 	import { onMount } from 'svelte';
 	import { afterNavigate } from '$app/navigation';
 	import { tick } from 'svelte';
+	import LaserGrid from '$lib/components/LaserGrid.svelte';
 
 	afterNavigate(async ({ to }) => {
 		if (to?.url.hash) {
@@ -81,6 +82,8 @@
 		};
 	});
 </script>
+
+<LaserGrid />
 
 <header id="header" class="d-flex align-items-center">
 	<div class="container-fluid container-xxl d-flex align-items-center">

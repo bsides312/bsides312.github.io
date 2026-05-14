@@ -210,6 +210,7 @@ header {
    ============================================================ */
 main {
 	position: relative;
+	z-index: 1;
 	margin-top: 80px;
 	min-height: calc(100vh - 80px);
 }
@@ -218,6 +219,8 @@ main {
    Footer
    ============================================================ */
 footer {
+	position: relative;
+	z-index: 1;
 	background: #060c22;
 	color: #fff;
 	padding: 40px 0 0 0;
