@@ -322,7 +322,7 @@
 		</h3>
 		<div class="row justify-content-center gy-4">
 			<div class="col-lg-3 col-md-6">
-				<a href="http://3.236.149.102/intro" target="_blank" rel="noopener" class="card activity-card h-100">
+				<a href="https://ctf.bsides312.org/" target="_blank" rel="noopener" class="card activity-card h-100">
 					<img
 						src="{base}/assets/img/activities/boompappow.gif"
 						alt="CTF Hacking Challenge"
