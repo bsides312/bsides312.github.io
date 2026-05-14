@@ -1070,7 +1070,8 @@ div[id] {
 	margin-bottom: 0;
 }
 
-button.activity-card {
+button.activity-card,
+.activity-card.card-with-sides {
 	border: 1px solid var(--border-light);
 	padding: 0;
 	text-align: left;
@@ -1084,12 +1085,33 @@ button.activity-card {
 	border-radius: 15px;
 }
 
-button.activity-card:hover {
+button.activity-card:hover,
+.activity-card.card-with-sides:hover {
 	box-shadow:
 		0 0 35px rgba(93, 189, 252, 0.4),
 		0 20px 40px rgba(0, 0, 0, 0.3);
 	border-color: var(--primary-color);
 	background: rgba(6, 12, 34, 0.7);
+}
+
+/* Trigger button inside a card-with-sides activity card — looks like the title,
+   but is the real keyboard/click target so we don't nest <a> inside <button>. */
+.activity-card-trigger {
+	background: transparent;
+	border: none;
+	padding: 0;
+	margin: 0;
+	color: inherit;
+	font: inherit;
+	cursor: pointer;
+	display: block;
+	width: 100%;
+}
+
+.activity-card-trigger:focus-visible {
+	outline: 2px solid var(--primary-color);
+	outline-offset: 4px;
+	border-radius: 6px;
 }
 
 .afterparty-sponsors {

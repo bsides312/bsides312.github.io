@@ -123,7 +123,7 @@
 		afterparty: {
 			title: 'After-Party!',
 			description:
-				'Join us in the conference bar area for 2 hours of hangsout, game shoews with Lintile, and drinks on our awesome sponsors!'
+				'Join us in the conference bar area for 2 hours of hangouts, game shows with Lintile, and drinks on our awesome sponsors!'
 		}
 	};
 
@@ -161,7 +161,7 @@
 			unforgettable day of learning and networking.
 		</p>
 		<div class="text-center">
-			<p class="mb-3"><strong>Join us May 16TH, 2026!!</strong></p>
+			<p class="mb-3"><strong>Join us Saturday, May 16TH, 2026 at 8am!!</strong></p>
 			<div class="hero-buttons">
 				<div class="hero-buttons-row">
 					<a
@@ -261,7 +261,7 @@
 			<div class="card-body text-center">
 				<h3 class="card-title">Friday Night Old Town Rooftop Pre-Game 5pm-8pm Sponsored By:</h3>
 				<div class="afterparty-sponsors">
-					<a href="https://scanner.com/" target="_blank" rel="noopener" on:click|stopPropagation>
+					<a href="https://scanner.dev/" target="_blank" rel="noopener" on:click|stopPropagation>
 						<img
 							src="{base}/assets/img/supporters/scanner.jpg"
 							alt="Scanner"
@@ -359,7 +359,12 @@
 		</h3>
 		<div class="row justify-content-center gy-4">
 			<div class="col-lg-3 col-md-6">
-				<a href="https://ctf.bsides312.org/" target="_blank" rel="noopener" class="card activity-card h-100">
+				<a
+					href="https://ctf.bsides312.org/"
+					target="_blank"
+					rel="noopener"
+					class="card activity-card h-100"
+				>
 					<img
 						src="{base}/assets/img/activities/boompappow.gif"
 						alt="CTF Hacking Challenge"
@@ -411,10 +416,7 @@
 				</button>
 			</div>
 			<div class="col-12">
-				<button
-					class="card activity-card card-with-sides h-100 w-100"
-					on:click={() => openActivity('afterparty')}
-				>
+				<div class="card activity-card card-with-sides h-100 w-100">
 					<img
 						src="https://burbsec.com/images/irl/east/IMG_6585.webp"
 						alt=""
@@ -423,26 +425,22 @@
 						aria-hidden="true"
 					/>
 					<div class="card-body text-center">
-						<h4 class="card-title">In-House After-Party from 6-8!!</h4>
+						<button
+							class="activity-card-trigger"
+							type="button"
+							on:click={() => openActivity('afterparty')}
+						>
+							<h4 class="card-title">In-House After-Party from 6-8!!</h4>
+						</button>
 						<div class="afterparty-sponsors">
-							<a
-								href="https://www.zafran.io/"
-								target="_blank"
-								rel="noopener"
-								on:click|stopPropagation
-							>
+							<a href="https://www.zafran.io/" target="_blank" rel="noopener">
 								<img
 									src="{base}/assets/img/supporters/zafran.jpg"
 									alt="Zafran"
 									class="afterparty-sponsor-img"
 								/>
 							</a>
-							<a
-								href="https://www.evolvesecurity.com/"
-								target="_blank"
-								rel="noopener"
-								on:click|stopPropagation
-							>
+							<a href="https://www.evolvesecurity.com/" target="_blank" rel="noopener">
 								<img
 									src="{base}/assets/img/supporters/evolve.jpg"
 									alt="Evolve Security"
@@ -458,7 +456,7 @@
 						loading="lazy"
 						aria-hidden="true"
 					/>
-				</button>
+				</div>
 			</div>
 		</div>
 	</div>

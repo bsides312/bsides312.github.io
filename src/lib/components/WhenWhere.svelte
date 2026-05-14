@@ -26,10 +26,10 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:bsides312-2026@bsides312.org
-DTSTART;TZID=America/Chicago:20260516T090000
-DTEND;TZID=America/Chicago:20260516T190000
+DTSTART;TZID=America/Chicago:20260516T080000
+DTEND;TZID=America/Chicago:20260516T200000
 SUMMARY:BSides312 2026
-LOCATION:Irish American Heritage Center\\, 4626 N Knox Ave\\, Chicago\\, IL 60641
+LOCATION:Irish American Heritage Center\\, 4626 N Knox Ave\\, Chicago\\, IL 60630
 DESCRIPTION:BSides312 is a nonprofit one-day conference run by longtime members of Chicago's hacking and Cybersecurity community. Join us for talks, workshops, and networking with security professionals from around the world.
 URL:https://bsides312.org
 END:VEVENT
@@ -54,7 +54,9 @@ END:VCALENDAR`;
 		<div class="when-where-top">
 			<div class="when-where-datetime">
 				<p class="mb-1"><strong>Date:</strong> May 16th, 2026</p>
-				<p class="mb-0"><strong>Time:</strong> 9:00 AM - 7:00 PM CST</p>
+				<p class="mb-1"><strong>Doors:</strong> 8am</p>
+				<p class="mb-1"><strong>Talks:</strong> 9am&ndash;6PM</p>
+				<p class="mb-0"><strong>After-Party:</strong> 6PM&ndash;8PM</p>
 			</div>
 			<div class="when-where-address">
 				<p class="mb-1">Irish American Heritage Center</p>

@@ -131,8 +131,8 @@ export async function buildEventSchema(fetchFn: typeof fetch): Promise<object> {
 		alternateName: 'Security BSides 312',
 		description:
 			'BSides312 is Chicago\u2019s Security BSides event \u2014 a non-profit hacker and cybersecurity conference featuring talks, workshops, villages, and CTFs.',
-		startDate: `2026-05-16T09:00:00${TZ_OFFSET}`,
-		endDate: `2026-05-16T18:00:00${TZ_OFFSET}`,
+		startDate: `2026-05-16T08:00:00${TZ_OFFSET}`,
+		endDate: `2026-05-16T20:00:00${TZ_OFFSET}`,
 		eventStatus: 'https://schema.org/EventScheduled',
 		eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
 		keywords:

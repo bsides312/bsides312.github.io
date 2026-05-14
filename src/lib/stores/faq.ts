@@ -72,6 +72,7 @@ If you really love wearing a suit, please go for it. If you love being goth, que
 	{
 		id: 'roof-pool',
 		question: 'Will the pool on the roof be open?',
-		answer: 'The pool is currently undergoing repairs due to a major leak, but may be ready in time for the conference. Please bring a swimsuit, as the venue took great exception to those who opted for a more "European" swimming experience last year.'
+		answer:
+			'The pool is currently undergoing repairs due to a major leak, but may be ready in time for the conference. Please bring a swimsuit, as the venue took great exception to those who opted for a more "European" swimming experience last year.'
 	}
 ];
