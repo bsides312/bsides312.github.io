@@ -57,6 +57,12 @@ export const sponsors: Sponsor[] = [
 		url: 'https://www.specterops.io/',
 		tier: 'gold'
 	},
+	{
+		name: 'Aikido',
+		logo: `${base}/assets/img/supporters/aikido.jpg`,
+		url: 'https://www.aikido.dev/',
+		tier: 'gold'
+	},
 	// Silver Sponsors
 
 	// Founding Sponsors
