@@ -161,23 +161,9 @@
 			unforgettable day of learning and networking.
 		</p>
 		<div class="text-center">
-			<p class="mb-3"><strong>Join us Saturday, May 16TH, 2026 at 8am!!</strong></p>
+			<p class="mb-3"><strong>Join us in 2027! Check back in November!</strong></p>
 			<div class="hero-buttons">
 				<div class="hero-buttons-row">
-					<a
-						href="https://www.simpletix.com/e/security-bsides312-2026-tickets-247316"
-						target="_blank"
-						rel="noopener"
-						class="btn-primary"
-					>
-						<i class="bi bi-ticket-perforated me-2"></i>Get Tickets
-					</a>
-					<a href="{base}/schedule" class="btn-primary">
-						<i class="bi bi-calendar3 me-2"></i>Schedule
-					</a>
-					<a href="{base}/support" class="btn-primary">
-						<i class="bi bi-heart-fill me-2"></i>Support Us!
-					</a>
 					<a
 						href="https://tinyurl.com/bsides312"
 						target="_blank"
@@ -289,8 +275,8 @@
 <section id="ride-the-l" class="section section-with-bg">
 	<div class="container">
 		<div class="section-header">
-			<h2>Ride the L with Us!</h2>
-			<p>Check out all our 1337 neighborhoods you can explore!</p>
+			<h2>Here's what you missed in 2026!</h2>
+			<p>Stay Tuned for 2027 info - Coming in November!</p>
 		</div>
 
 		<!-- Keynote Speaker -->
@@ -486,15 +472,7 @@
 <section id="supporters" class="section section-with-bg">
 	<div class="container">
 		<div class="section-header">
-			<h2>Supporters</h2>
-		</div>
-		<div class="text-center mb-4">
-			<a href="{base}/support#support" class="btn-primary">
-				<i class="bi bi-heart-fill me-2"></i>Click for Sponsorship info!
-			</a>
-		</div>
-		<div class="alert alert-warning container-fluid text-center fw-bold" role="alert">
-			Our Call for Supporters is still open! Supporter logos will be listed here as they sign!
+			<h2>2026 Supporters</h2>
 		</div>
 		{#each sponsorTiers as tier (tier.tierName)}
 			<div class="row no-gutters supporters-wrap clearfix gy-4 gx-4 mb-5">
@@ -526,7 +504,7 @@
 			<h2>Donate your Time!</h2>
 		</div>
 		<div class="alert alert-success container-fluid text-center fw-bold" role="alert">
-			We're full up on volunteers and speakers for 2026! <br />Grab a ticket and join us at the con!
+			CFV Opens in November!
 		</div>
 	</div>
 </section>

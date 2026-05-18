@@ -53,7 +53,7 @@ END:VCALENDAR`;
 		</h3>
 		<div class="when-where-top">
 			<div class="when-where-datetime">
-				<p class="mb-1"><strong>Date:</strong> May 16th, 2026</p>
+				<p class="mb-1"><strong>Date:</strong> TBD, 2027</p>
 				<p class="mb-1"><strong>Doors:</strong> 8am</p>
 				<p class="mb-1"><strong>Talks:</strong> 9am&ndash;6PM</p>
 				<p class="mb-0"><strong>After-Party:</strong> 6PM&ndash;8PM</p>
@@ -83,14 +83,6 @@ END:VCALENDAR`;
 			>
 				<i class="bi bi-box-arrow-up-right"></i>Open in Google Maps
 			</a>
-			<button
-				class="btn-primary"
-				on:click={downloadCalendar}
-				type="button"
-				aria-label="Add BSides312 to calendar"
-			>
-				<i class="bi bi-calendar-plus"></i>Add to Calendar
-			</button>
 			<a href="{base}/about#faq" class="btn-primary">
 				<i class="bi bi-question-circle-fill"></i>FAQs
 			</a>

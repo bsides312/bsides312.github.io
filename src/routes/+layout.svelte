@@ -96,53 +96,6 @@
 		<nav id="navbar" class="navbar order-last order-lg-0">
 			<ul class:active={mobileMenuActive}>
 				<li><a class="nav-link" href="{base}/" on:click={closeMobileMenu}>Home</a></li>
-				<li>
-					<a
-						class="nav-link"
-						href="https://www.simpletix.com/e/security-bsides312-2026-tickets-247316"
-						target="_blank"
-						rel="noopener"
-						on:click={closeMobileMenu}>Get Tickets</a
-					>
-				</li>
-				<li class="dropdown" class:mobile-active={activeDropdown === 'sponsor'}>
-					<div class="dropdown-header">
-						<a
-							class="nav-link"
-							href="{base}/support#support"
-							aria-haspopup="true"
-							on:click={closeMobileMenu}
-						>
-							<span>Support Us</span>
-							<i class="bi bi-chevron-down desktop-only"></i>
-						</a>
-						<button
-							class="mobile-dropdown-toggle"
-							type="button"
-							aria-expanded={activeDropdown === 'sponsor'}
-							aria-label="Toggle support menu"
-							on:click={() => toggleDropdown('sponsor')}
-						>
-							<i
-								class="bi"
-								class:bi-chevron-down={activeDropdown !== 'sponsor'}
-								class:bi-chevron-up={activeDropdown === 'sponsor'}
-							></i>
-						</button>
-					</div>
-					<ul class:mobile-show={activeDropdown === 'sponsor'}>
-						<li>
-							<a class="nav-link" href="{base}/support#supporters" on:click={closeMobileMenu}
-								>Corporate Sponsorship</a
-							>
-						</li>
-						<li>
-							<a class="nav-link" href="{base}/#supporters" on:click={closeMobileMenu}
-								>Current Supporters</a
-							>
-						</li>
-					</ul>
-				</li>
 				<li class="dropdown" class:mobile-active={activeDropdown === 'contribute'}>
 					<div class="dropdown-header">
 						<a
@@ -199,13 +152,10 @@
 					</div>
 					<ul class:mobile-show={activeDropdown === 'event'}>
 						<li>
-							<a class="nav-link" href="{base}/schedule#schedule" on:click={closeMobileMenu}
-								>Schedule</a
-							>
-						</li>
-						<li>
-							<a class="nav-link" href="{base}/speakers#speakers" on:click={closeMobileMenu}
-								>Speakers</a
+							<a
+								class="nav-link"
+								href="{base}/previous-speakers#previous-speakers"
+								on:click={closeMobileMenu}>Past Speakers</a
 							>
 						</li>
 						<li>

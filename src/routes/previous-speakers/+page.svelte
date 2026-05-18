@@ -11,6 +11,71 @@
 
 	const previousSpeakers: YearSpeakers[] = [
 		{
+			year: 2026,
+			speakers: [
+				{ name: '4dw@r3', topic: 'OpenSource Poison: A Long Ignored Risk' },
+				{ name: 'Admford', topic: 'You Did the Work — Now Get the Title' },
+				{
+					name: 'Amanda Kollmorgan',
+					topic: 'Ctrl + Alt + Lead: Rebooting Cyber Culture with Human Skills'
+				},
+				{ name: 'Catherine Ullman', topic: 'So, You Want to be a Forensicator...' },
+				{
+					name: 'Heidi Potter',
+					topic: '(Keynote) Community Doesn’t Start With a Conference'
+				},
+				{
+					name: 'HelpMeRob',
+					topic:
+						'We Need to Talk About Signal: Security Assumptions, Threat Models, and Activist Community Risk'
+				},
+				{
+					name: 'John Mathot',
+					topic: 'The Subliminal Handshake: secret communication using the TLS handshake'
+				},
+				{
+					name: 'Kyprianos Vasilopoulos',
+					topic:
+						'The Walking Dead of AD: Uncovering rare DACL-led escalation and a BloodHound-integrated tool'
+				},
+				{
+					name: 'Larry Trowell',
+					topic:
+						'Laser Beams & Light Streams: Letting Hackers Go Pew Pew, Building Affordable Light-Based Hardware'
+				},
+				{ name: 'Matt Scheurer', topic: 'Definitely Not Secure (DNS)' },
+				{
+					name: 'mcdwayne',
+					topic: 'From Pets To Cattle To Agents: Evolving Identity And Security For Workloads'
+				},
+				{ name: 'Mr. Sprawl', topic: 'Bullying your co-workers with Phishing emails' },
+				{
+					name: 'Nikos Vourdas',
+					topic:
+						'The Walking Dead of AD: Uncovering rare DACL-led escalation and a BloodHound-integrated tool'
+				},
+				{
+					name: 'PANTH13R',
+					topic:
+						'Laser Beams & Light Streams: Letting Hackers Go Pew Pew, Building Affordable Light-Based Hardware'
+				},
+				{
+					name: 'Paul Petefish',
+					topic: 'Penetration Testing Is Busted: Introducing a Continuous Testing Methodology'
+				},
+				{
+					name: 'rand0h',
+					topic:
+						'Countdown To ZeroPay- When the fall is all that’s left, it matters a great deal.'
+				},
+				{
+					name: 'Tib3rius',
+					topic: 'Vibe Hacking: Building Autonomous Offensive Security Tools with Claude Code'
+				},
+				{ name: 'ギンジ🐾ターラノー', topic: 'Beyond the Self Check-Out' }
+			]
+		},
+		{
 			year: 2025,
 			speakers: [
 				{ name: 'Cathy Ullman', topic: 'Defending Beyond Defense' },
@@ -110,6 +175,14 @@
 		<div class="section-header">
 			<h2>Previous Speakers</h2>
 			<p>View our talented speakers from past BSides312 conferences</p>
+			<a
+				href="https://www.youtube.com/channel/UCrCPvWW8z-_O8uUM8-ySz7g"
+				target="_blank"
+				rel="noopener"
+				class="btn-primary mt-3"
+			>
+				<i class="bi bi-youtube me-2"></i>Watch Many Past Talks on YouTube
+			</a>
 		</div>
 
 		{#each previousSpeakers as yearGroup (yearGroup.year)}
@@ -136,21 +209,5 @@
 				</div>
 			</div>
 		{/each}
-
-		<div class="card text-center p-4 mt-3">
-			<div class="card-body">
-				<i class="bi bi-youtube display-1 text-danger mb-3"></i>
-				<h3 class="mb-3">Want to see these talks?</h3>
-				<p class="mb-4">Check out our YouTube channel for recordings of many past presentations!</p>
-				<a
-					href="https://www.youtube.com/channel/UCrCPvWW8z-_O8uUM8-ySz7g"
-					target="_blank"
-					rel="noopener"
-					class="btn-primary"
-				>
-					<i class="bi bi-youtube me-2"></i>Visit Our YouTube Channel
-				</a>
-			</div>
-		</div>
 	</div>
 </section>
