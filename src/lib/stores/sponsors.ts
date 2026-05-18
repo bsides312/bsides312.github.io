@@ -115,6 +115,12 @@ export const sponsors: Sponsor[] = [
 		logo: `${base}/assets/img/supporters/ozcon.jpg`,
 		url: 'https://theozcon.com/',
 		tier: 'community'
+	},
+	{
+		name: 'GCSI',
+		logo: `${base}/assets/img/supporters/gcsi.jpg`,
+		url: 'https://gcsichicago.org',
+		tier: 'community'
 	}
 ];
 
