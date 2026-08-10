@@ -40,6 +40,9 @@
 		"typescript-eslint": "^8.55.0",
 		"vite": "^8.0.8"
 	},
+	"overrides": {
+		"cookie": "^0.7.2"
+	},
 	"keywords": [
 		"bsides",
 		"cybersecurity",
