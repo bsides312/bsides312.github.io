@@ -413,6 +413,22 @@ footer {
 	box-shadow: none;
 }
 
+.btn-youtube {
+	border-color: #ff0000;
+	color: #ff0000;
+}
+
+.btn-youtube:hover {
+	background: rgba(255, 0, 0, 0.15);
+	color: #ff0000;
+	box-shadow: 0 0 18px rgba(255, 0, 0, 0.55);
+}
+
+.btn-youtube:active {
+	background: #ff0000;
+	color: #000000;
+}
+
 /* Hero button layout */
 .hero-buttons {
 	display: flex;
@@ -1073,8 +1089,7 @@ div[id] {
 	margin-bottom: 0;
 }
 
-button.activity-card,
-.activity-card.card-with-sides {
+button.activity-card {
 	border: 1px solid var(--border-light);
 	padding: 0;
 	text-align: left;
@@ -1088,86 +1103,12 @@ button.activity-card,
 	border-radius: 15px;
 }
 
-button.activity-card:hover,
-.activity-card.card-with-sides:hover {
+button.activity-card:hover {
 	box-shadow:
 		0 0 35px rgba(93, 189, 252, 0.4),
 		0 20px 40px rgba(0, 0, 0, 0.3);
 	border-color: var(--primary-color);
 	background: rgba(6, 12, 34, 0.7);
-}
-
-/* Trigger button inside a card-with-sides activity card — looks like the title,
-   but is the real keyboard/click target so we don't nest <a> inside <button>. */
-.activity-card-trigger {
-	background: transparent;
-	border: none;
-	padding: 0;
-	margin: 0;
-	color: inherit;
-	font: inherit;
-	cursor: pointer;
-	display: block;
-	width: 100%;
-}
-
-.activity-card-trigger:focus-visible {
-	outline: 2px solid var(--primary-color);
-	outline-offset: 4px;
-	border-radius: 6px;
-}
-
-.afterparty-sponsors {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	gap: 2rem;
-	padding: 1rem 0 0.25rem;
-	flex-wrap: wrap;
-}
-
-.afterparty-sponsor-img {
-	height: 60px;
-	width: auto;
-	object-fit: contain;
-}
-
-/* Cards with side images (center-cropped 9:16) */
-.card-with-sides {
-	display: flex;
-	flex-direction: row;
-	align-items: stretch;
-	padding: 0;
-	overflow: hidden;
-}
-
-.card-with-sides .card-body {
-	flex: 1 1 auto;
-	padding: 30px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-}
-
-.activity-card.card-with-sides .card-title {
-	font-size: 2rem;
-}
-
-.card-side-img {
-	width: clamp(120px, 18%, 220px);
-	aspect-ratio: 9 / 16;
-	object-fit: cover;
-	object-position: center;
-	flex-shrink: 0;
-	align-self: stretch;
-	height: auto;
-}
-
-@media (max-width: 768px) {
-	.card-with-sides .card-side-img {
-		display: none;
-	}
 }
 
 .activity-modal {

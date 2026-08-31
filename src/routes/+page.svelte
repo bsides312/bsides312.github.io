@@ -119,11 +119,6 @@
 			title: 'Linux Village!',
 			description:
 				'<p class="modal-heading">Are you Linux Curious?</p><p class="modal-heading">Got an older Windows computer that can\'t really support Windows 11 but aren\'t ready to spend on an upgrade?</p><p class="modal-heading">Just done with Microsoft\'s "Agentic OS?"</p><p>Our Linux village is here for you with computers to test out Linux on, experts to answer your questions, and we will even install Linux Mint on your computer for you - the OS is free and so is our help! Our mission is to help you explore Linux as your "daily driver" OS, and show you just what you can do in a modern Linux environment. So if you\'ve ever wondered what all the talk is about, if you\'re ready to take the Linux plunge, or if you\'re anywhere in between, stop by and talk with us, we\'re here to help you on your Linux journey!</p>'
-		},
-		afterparty: {
-			title: 'After-Party!',
-			description:
-				'Join us in the conference bar area for 2 hours of hangouts, game shows with Lintile, and drinks on our awesome sponsors!'
 		}
 	};
 
@@ -176,7 +171,7 @@
 						href="https://www.youtube.com/channel/UCrCPvWW8z-_O8uUM8-ySz7g"
 						target="_blank"
 						rel="noopener"
-						class="btn-primary"
+						class="btn-primary btn-youtube"
 					>
 						<i class="bi bi-youtube me-2"></i>Watch Past Talks!
 					</a>
@@ -240,44 +235,6 @@
 		<img src={lightboxSrc} alt="BSides312 gallery full size" class="lightbox-img" />
 	</div>
 {/if}
-
-<!-- Friday Night Pre-Game -->
-<section class="section section-with-bg">
-	<div class="container">
-		<div class="card activity-card card-with-sides">
-			<img
-				src="https://burbsec.com/images/irl/east/IMG_6585.webp"
-				alt=""
-				class="card-side-img card-side-img-left"
-				loading="lazy"
-				aria-hidden="true"
-			/>
-			<div class="card-body text-center">
-				<h3 class="card-title">Friday Night Old Town Rooftop Pre-Game 5pm-8pm Sponsored By:</h3>
-				<div class="afterparty-sponsors">
-					<a href="https://scanner.dev/" target="_blank" rel="noopener" on:click|stopPropagation>
-						<img
-							src="{base}/assets/img/supporters/scanner.jpg"
-							alt="Scanner"
-							class="afterparty-sponsor-img"
-						/>
-					</a>
-				</div>
-				<p class="mt-3">Registration Required</p>
-				<a href="https://luma.com/3hlu6uw1" target="_blank" rel="noopener" class="btn-primary">
-					<i class="bi bi-ticket-perforated me-2"></i>Click Here
-				</a>
-			</div>
-			<img
-				src="https://burbsec.com/images/irl/east/IMG_6590.webp"
-				alt=""
-				class="card-side-img card-side-img-right"
-				loading="lazy"
-				aria-hidden="true"
-			/>
-		</div>
-	</div>
-</section>
 
 <!-- Ride the L Section -->
 <section id="ride-the-l" class="section section-with-bg">
@@ -408,49 +365,6 @@
 						<h4 class="card-title">Linux Village!</h4>
 					</div>
 				</button>
-			</div>
-			<div class="col-12">
-				<div class="card activity-card card-with-sides h-100 w-100">
-					<img
-						src="https://burbsec.com/images/irl/east/IMG_6585.webp"
-						alt=""
-						class="card-side-img card-side-img-left"
-						loading="lazy"
-						aria-hidden="true"
-					/>
-					<div class="card-body text-center">
-						<button
-							class="activity-card-trigger"
-							type="button"
-							on:click={() => openActivity('afterparty')}
-						>
-							<h4 class="card-title">In-House After-Party from 6-8!!</h4>
-						</button>
-						<div class="afterparty-sponsors">
-							<a href="https://www.zafran.io/" target="_blank" rel="noopener">
-								<img
-									src="{base}/assets/img/supporters/zafran.jpg"
-									alt="Zafran"
-									class="afterparty-sponsor-img"
-								/>
-							</a>
-							<a href="https://www.evolvesecurity.com/" target="_blank" rel="noopener">
-								<img
-									src="{base}/assets/img/supporters/evolve.jpg"
-									alt="Evolve Security"
-									class="afterparty-sponsor-img"
-								/>
-							</a>
-						</div>
-					</div>
-					<img
-						src="https://burbsec.com/images/irl/east/IMG_6590.webp"
-						alt=""
-						class="card-side-img card-side-img-right"
-						loading="lazy"
-						aria-hidden="true"
-					/>
-				</div>
 			</div>
 		</div>
 	</div>
