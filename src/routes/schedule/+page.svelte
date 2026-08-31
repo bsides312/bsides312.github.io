@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import type { PageData } from './$types';
+	import SeoHead from '$lib/components/SeoHead.svelte';
 
 	export let data: PageData;
 
@@ -183,19 +184,19 @@
 	}
 </script>
 
+<SeoHead
+	title="Schedule — BSides312 2026 | Chicago Security BSides Conference"
+	description="Full schedule for BSides312 2026, the Security BSides hacker & cybersecurity conference in Chicago — talks, workshops, villages, and CTFs on May 16, 2026 at the Irish American Heritage Center."
+	path="/schedule"
+/>
 <svelte:head>
-	<title>Schedule — BSides312 2026 | Chicago Security BSides Conference</title>
-	<meta
-		name="description"
-		content="Full schedule for BSides312 2026, the Security BSides hacker & cybersecurity conference in Chicago — talks, workshops, villages, and CTFs on May 16, 2026 at the Irish American Heritage Center."
-	/>
 	{@html `<script type="application/ld+json">${JSON.stringify(data.eventSchema)}</` + `script>`}
 </svelte:head>
 
 <section id="schedule" class="section section-with-bg">
 	<div class="container">
 		<div class="section-header">
-			<h2>Event Schedule</h2>
+			<h1>Event Schedule</h1>
 			<p>May 16th, 2026 &mdash; Irish American Heritage Center, Chicago</p>
 			<br />Presentations are added automatically as speakers confirm their attendance.
 		</div>

@@ -1,4 +1,6 @@
 <script lang="ts">
+	import SeoHead from '$lib/components/SeoHead.svelte';
+
 	interface Speaker {
 		name: string;
 		topic?: string;
@@ -160,19 +162,17 @@
 	];
 </script>
 
-<svelte:head>
-	<title>Previous Speakers — BSides312 | Chicago Security BSides Conference</title>
-	<meta
-		name="description"
-		content="Browse past speakers from BSides312, the Security BSides hacker & cybersecurity conference in Chicago."
-	/>
-</svelte:head>
+<SeoHead
+	title="Previous Speakers — BSides312 | Chicago Security BSides Conference"
+	description="Browse past speakers from BSides312, the Security BSides hacker & cybersecurity conference in Chicago."
+	path="/previous-speakers"
+/>
 
 <!-- Previous Speakers Section -->
 <section id="previous-speakers" class="section section-with-bg">
 	<div class="container">
 		<div class="section-header">
-			<h2>Previous Speakers</h2>
+			<h1>Previous Speakers</h1>
 			<p>View our talented speakers from past BSides312 conferences</p>
 			<a
 				href="https://www.youtube.com/channel/UCrCPvWW8z-_O8uUM8-ySz7g"

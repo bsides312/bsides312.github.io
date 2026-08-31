@@ -1,20 +1,18 @@
 <script lang="ts">
-	// No special logic needed for this static page
+	import SeoHead from '$lib/components/SeoHead.svelte';
 </script>
 
-<svelte:head>
-	<title>Privacy Policy — BSides312 | Chicago Security BSides Conference</title>
-	<meta
-		name="description"
-		content="Privacy Policy for BSides312, the Security BSides hacker & cybersecurity conference in Chicago — how we handle and protect your personal information."
-	/>
-</svelte:head>
+<SeoHead
+	title="Privacy Policy — BSides312 | Chicago Security BSides Conference"
+	description="Privacy Policy for BSides312, the Security BSides hacker & cybersecurity conference in Chicago — how we handle and protect your personal information."
+	path="/privacy"
+/>
 
 <!-- Privacy Policy Section -->
 <section id="privacy" class="section section-with-bg">
 	<div class="container">
 		<div class="section-header">
-			<h2>Privacy Policy</h2>
+			<h1>Privacy Policy</h1>
 		</div>
 
 		<div class="row justify-content-center">

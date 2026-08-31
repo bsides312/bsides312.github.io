@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import SeoHead from '$lib/components/SeoHead.svelte';
 
 	interface SpeakerLink {
 		title: string;
@@ -174,18 +175,16 @@
 	}
 </script>
 
-<svelte:head>
-	<title>Speakers — BSides312 2026 | Chicago Security BSides Conference</title>
-	<meta
-		name="description"
-		content="Meet the expert speakers presenting at BSides312 2026, the Security BSides hacker & cybersecurity conference in Chicago. May 16, 2026 at the Irish American Heritage Center."
-	/>
-</svelte:head>
+<SeoHead
+	title="Speakers — BSides312 2026 | Chicago Security BSides Conference"
+	description="Meet the expert speakers presenting at BSides312 2026, the Security BSides hacker & cybersecurity conference in Chicago. May 16, 2026 at the Irish American Heritage Center."
+	path="/speakers"
+/>
 
 <section id="speakers" class="section section-with-bg">
 	<div class="container">
 		<div class="section-header">
-			<h2>Speakers</h2>
+			<h1>Speakers</h1>
 			<p>Meet the experts presenting at BSides312 2026!</p>
 		</div>
 

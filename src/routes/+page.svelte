@@ -4,6 +4,7 @@
 	import { onMount } from 'svelte';
 	import type { PageData } from './$types';
 	import WhenWhere from '$lib/components/WhenWhere.svelte';
+	import SeoHead from '$lib/components/SeoHead.svelte';
 
 	export let data: PageData;
 
@@ -129,19 +130,35 @@
 	function closeActivity() {
 		activeActivity = null;
 	}
+
+	const organizationSchema = {
+		'@context': 'https://schema.org',
+		'@type': 'Organization',
+		name: 'BSides312',
+		url: 'https://bsides312.org/',
+		logo: 'https://bsides312.org/assets/img/opengraph_logo.jpg',
+		sameAs: [
+			'https://twitter.com/bsides312',
+			'https://www.facebook.com/BSides312',
+			'https://www.instagram.com/bsides312',
+			'https://infosec.exchange/@bsides312',
+			'https://www.youtube.com/channel/UCrCPvWW8z-_O8uUM8-ySz7g'
+		]
+	};
 </script>
 
+<SeoHead
+	title="BSides312 2026 — Chicago's Security BSides Hacking Conference | May 16"
+	description="BSides312 is the Security BSides conference in Chicago — a non-profit, one-day hacker & cybersecurity event on May 16, 2026 at the Irish American Heritage Center. Talks, workshops, villages, CTFs, and networking with Chicago's infosec community."
+	path="/"
+/>
 <svelte:head>
-	<title>BSides312 2026 — Chicago's Security BSides Hacking Conference | May 16</title>
-	<meta
-		name="description"
-		content="BSides312 is the Security BSides conference in Chicago — a non-profit, one-day hacker & cybersecurity event on May 16, 2026 at the Irish American Heritage Center. Talks, workshops, villages, CTFs, and networking with Chicago's infosec community."
-	/>
 	<meta
 		name="keywords"
 		content="BSides312, Security BSides, hacker conference Chicago, cybersecurity conference Chicago, infosec Chicago, Chicago hacking conference, CTF Chicago"
 	/>
 	{@html `<script type="application/ld+json">${JSON.stringify(data.eventSchema)}</` + `script>`}
+	{@html `<script type="application/ld+json">${JSON.stringify(organizationSchema)}</` + `script>`}
 </svelte:head>
 
 <!-- Hero Section -->

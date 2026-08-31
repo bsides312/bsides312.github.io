@@ -1,20 +1,18 @@
 <script lang="ts">
-	// No special logic needed for this static page
+	import SeoHead from '$lib/components/SeoHead.svelte';
 </script>
 
-<svelte:head>
-	<title>Code of Conduct — BSides312 | Chicago Security BSides Conference</title>
-	<meta
-		name="description"
-		content="Code of Conduct for BSides312, the Security BSides hacker & cybersecurity conference in Chicago — ensuring a harassment-free, inclusive experience for all attendees."
-	/>
-</svelte:head>
+<SeoHead
+	title="Code of Conduct — BSides312 | Chicago Security BSides Conference"
+	description="Code of Conduct for BSides312, the Security BSides hacker & cybersecurity conference in Chicago — ensuring a harassment-free, inclusive experience for all attendees."
+	path="/code-of-conduct"
+/>
 
 <!-- Code of Conduct Section -->
 <section id="code-of-conduct" class="section section-with-bg">
 	<div class="container">
 		<div class="section-header">
-			<h2>Code of Conduct</h2>
+			<h1>Code of Conduct</h1>
 		</div>
 
 		<div class="row justify-content-center">

@@ -1,4 +1,6 @@
 <script lang="ts">
+	import SeoHead from '$lib/components/SeoHead.svelte';
+
 	// Access control — encoded credentials
 	const _u = atob('YnNpZGVzMzEy');
 	const _k = atob('bjB0LWEtZmxhZw==');
@@ -30,9 +32,12 @@
 	}
 </script>
 
-<svelte:head>
-	<title>BSides312 — Admin Portal</title>
-</svelte:head>
+<SeoHead
+	title="BSides312 — Admin Portal"
+	description="BSides312 admin portal."
+	path="/login"
+	noindex
+/>
 
 {#if !authenticated}
 	<div class="login-container">

@@ -468,10 +468,13 @@ div[id] {
 	margin-bottom: 60px;
 }
 
+.section-header h1,
 .section-header h2 {
 	position: relative;
 	display: inline-block;
 	padding-bottom: 20px;
+	font-size: 2.5rem;
+	color: var(--primary-color);
 }
 
 .section-header p {
@@ -491,6 +494,7 @@ div[id] {
 	box-shadow: 0 0 30px rgba(191, 64, 191, 0.55);
 }
 
+.section-header h1::after,
 .section-header h2::after {
 	content: '';
 	position: absolute;
@@ -1761,6 +1765,7 @@ button.activity-card:hover {
 		padding: 40px 0;
 	}
 
+	.section-header h1::after,
 	.section-header h2::after {
 		width: min(40px, 25vw);
 		height: 2px;
@@ -1840,6 +1845,7 @@ button.activity-card:hover {
 	}
 
 	/* Section headers */
+	.section-header h1::after,
 	.section-header h2::after {
 		width: min(30px, 30vw);
 	}

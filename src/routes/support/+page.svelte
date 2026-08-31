@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { base } from '$app/paths';
+	import SeoHead from '$lib/components/SeoHead.svelte';
 
 	interface SponsorshipTier {
 		name: string;
@@ -72,19 +73,17 @@
 	];
 </script>
 
-<svelte:head>
-	<title>Support BSides312 2026 — Sponsor Chicago's Security BSides Conference</title>
-	<meta
-		name="description"
-		content="Sponsor or donate to BSides312, the Security BSides hacker & cybersecurity conference in Chicago. Help make Chicago's non-profit infosec conference possible on May 16, 2026."
-	/>
-</svelte:head>
+<SeoHead
+	title="Support BSides312 2026 — Sponsor Chicago's Security BSides Conference"
+	description="Sponsor or donate to BSides312, the Security BSides hacker & cybersecurity conference in Chicago. Help make Chicago's non-profit infosec conference possible on May 16, 2026."
+	path="/support"
+/>
 
 <!-- Corporate Sponsorship Section -->
 <section id="support" class="section section-with-bg">
 	<div class="container">
 		<div class="section-header">
-			<h2>Support Us</h2>
+			<h1>Support Us</h1>
 			<div class="mt-3 d-flex flex-wrap gap-3 justify-content-center">
 				<a href="https://paypal.me/bsides312" target="_blank" rel="noopener" class="btn-primary"
 					>Make an Ad-Hoc Donation!</a

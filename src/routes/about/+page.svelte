@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { boardMembers } from '$lib/stores/boardMembers';
 	import { faqItems } from '$lib/stores/faq';
+	import SeoHead from '$lib/components/SeoHead.svelte';
 	import { base } from '$app/paths';
 	import type { PageData } from './$types';
 	import WhenWhere from '$lib/components/WhenWhere.svelte';
@@ -22,14 +23,35 @@
 	function closeLightbox() {
 		lightboxSrc = null;
 	}
+
+	function stripHtml(html: string): string {
+		return html
+			.replace(/<[^>]+>/g, '')
+			.replace(/\s+/g, ' ')
+			.trim();
+	}
+
+	const faqSchema = {
+		'@context': 'https://schema.org',
+		'@type': 'FAQPage',
+		mainEntity: faqItems.map((faq) => ({
+			'@type': 'Question',
+			name: faq.question,
+			acceptedAnswer: {
+				'@type': 'Answer',
+				text: stripHtml(faq.answer)
+			}
+		}))
+	};
 </script>
 
+<SeoHead
+	title="About BSides312 — Chicago's Security BSides Hacking Conference"
+	description="About BSides312 — the Security BSides conference in Chicago. A non-profit, one-day hacker & cybersecurity event on May 16, 2026 at the Irish American Heritage Center, run by and for Chicago's infosec community."
+	path="/about"
+/>
 <svelte:head>
-	<title>About BSides312 — Chicago's Security BSides Hacking Conference</title>
-	<meta
-		name="description"
-		content="About BSides312 — the Security BSides conference in Chicago. A non-profit, one-day hacker & cybersecurity event on May 16, 2026 at the Irish American Heritage Center, run by and for Chicago's infosec community."
-	/>
+	{@html `<script type="application/ld+json">${JSON.stringify(faqSchema)}</` + `script>`}
 </svelte:head>
 
 <!-- About Section -->
@@ -42,7 +64,7 @@
 		</div>
 		<div class="card">
 			<div class="card-body">
-				<h2><i class="bi bi-terminal me-2"></i>About BSides312</h2>
+				<h1><i class="bi bi-terminal me-2"></i>About BSides312</h1>
 				<p>
 					BSides312 is a nonprofit one-day conference run by longtime members of Chicago's hacking
 					and Cybersecurity community. In fact, many of them founded the original BSides Chicago!
