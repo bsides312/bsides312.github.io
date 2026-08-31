@@ -65,8 +65,7 @@
 				},
 				{
 					name: 'rand0h',
-					topic:
-						'Countdown To ZeroPay- When the fall is all that’s left, it matters a great deal.'
+					topic: 'Countdown To ZeroPay- When the fall is all that’s left, it matters a great deal.'
 				},
 				{
 					name: 'Tib3rius',

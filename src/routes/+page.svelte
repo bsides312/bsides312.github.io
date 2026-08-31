@@ -172,6 +172,14 @@
 					>
 						<i class="bi bi-discord me-2"></i>Join our Discord!
 					</a>
+					<a
+						href="https://www.youtube.com/channel/UCrCPvWW8z-_O8uUM8-ySz7g"
+						target="_blank"
+						rel="noopener"
+						class="btn-primary"
+					>
+						<i class="bi bi-youtube me-2"></i>Watch Past Talks!
+					</a>
 				</div>
 			</div>
 		</div>
