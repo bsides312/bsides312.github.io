@@ -185,20 +185,22 @@
 </script>
 
 <SeoHead
-	title="Schedule — BSides312 2026 | Chicago Security BSides Conference"
-	description="Full schedule for BSides312 2026, the Security BSides hacker & cybersecurity conference in Chicago — talks, workshops, villages, and CTFs on May 16, 2026 at the Irish American Heritage Center."
+	title="2026 Schedule Recap — BSides312 | Chicago Security BSides Conference"
+	description="See the full talks, workshops, villages, and CTF schedule from BSides312 2026 at the Irish American Heritage Center in Chicago. BSides312 returns Spring 2027."
 	path="/schedule"
 />
 <svelte:head>
-	{@html `<script type="application/ld+json">${JSON.stringify(data.eventSchema)}</` + `script>`}
+	{#if data.eventSchema}
+		{@html `<script type="application/ld+json">${JSON.stringify(data.eventSchema)}</` + `script>`}
+	{/if}
 </svelte:head>
 
 <section id="schedule" class="section section-with-bg">
 	<div class="container">
 		<div class="section-header">
-			<h1>Event Schedule</h1>
+			<h1>2026 Schedule Recap</h1>
 			<p>May 16th, 2026 &mdash; Irish American Heritage Center, Chicago</p>
-			<br />Presentations are added automatically as speakers confirm their attendance.
+			<br />BSides312 returns Spring 2027 &mdash; follow us for the next schedule as it's announced.
 		</div>
 
 		{#if loading}

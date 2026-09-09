@@ -176,16 +176,16 @@
 </script>
 
 <SeoHead
-	title="Speakers — BSides312 2026 | Chicago Security BSides Conference"
-	description="Meet the expert speakers presenting at BSides312 2026, the Security BSides hacker & cybersecurity conference in Chicago. May 16, 2026 at the Irish American Heritage Center."
+	title="2026 Speakers — BSides312 | Chicago Security BSides Conference"
+	description="Meet the expert speakers who presented at BSides312 2026, the Security BSides hacker & cybersecurity conference in Chicago. BSides312 returns Spring 2027."
 	path="/speakers"
 />
 
 <section id="speakers" class="section section-with-bg">
 	<div class="container">
 		<div class="section-header">
-			<h1>Speakers</h1>
-			<p>Meet the experts presenting at BSides312 2026!</p>
+			<h1>2026 Speakers</h1>
+			<p>Meet the experts who presented at BSides312 2026! BSides312 returns Spring 2027.</p>
 		</div>
 
 		{#if loading}

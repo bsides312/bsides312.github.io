@@ -74,8 +74,8 @@
 </script>
 
 <SeoHead
-	title="Support BSides312 2026 — Sponsor Chicago's Security BSides Conference"
-	description="Sponsor or donate to BSides312, the Security BSides hacker & cybersecurity conference in Chicago. Help make Chicago's non-profit infosec conference possible on May 16, 2026."
+	title="Support BSides312 — Sponsor Chicago's Security BSides Conference"
+	description="Sponsor or donate to BSides312, the Security BSides hacker & cybersecurity conference in Chicago. Help make Chicago's non-profit infosec conference possible for our Spring 2027 return."
 	path="/support"
 />
 

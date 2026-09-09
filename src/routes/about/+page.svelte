@@ -47,7 +47,7 @@
 
 <SeoHead
 	title="About BSides312 — Chicago's Security BSides Hacking Conference"
-	description="About BSides312 — the Security BSides conference in Chicago. A non-profit, one-day hacker & cybersecurity event on May 16, 2026 at the Irish American Heritage Center, run by and for Chicago's infosec community."
+	description="About BSides312 — the Security BSides conference in Chicago. A non-profit, one-day hacker & cybersecurity event at the Irish American Heritage Center, run by and for Chicago's infosec community. Returning Spring 2027."
 	path="/about"
 />
 <svelte:head>

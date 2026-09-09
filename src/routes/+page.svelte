@@ -148,8 +148,8 @@
 </script>
 
 <SeoHead
-	title="BSides312 2026 — Chicago's Security BSides Hacking Conference | May 16"
-	description="BSides312 is the Security BSides conference in Chicago — a non-profit, one-day hacker & cybersecurity event on May 16, 2026 at the Irish American Heritage Center. Talks, workshops, villages, CTFs, and networking with Chicago's infosec community."
+	title="BSides312 — Chicago's Security BSides Hacking Conference | Returning Spring 2027"
+	description="BSides312 is the Security BSides conference in Chicago — a non-profit, one-day hacker & cybersecurity event at the Irish American Heritage Center. Talks, workshops, villages, CTFs, and networking with Chicago's infosec community. Returning Spring 2027."
 	path="/"
 />
 <svelte:head>
@@ -157,7 +157,9 @@
 		name="keywords"
 		content="BSides312, Security BSides, hacker conference Chicago, cybersecurity conference Chicago, infosec Chicago, Chicago hacking conference, CTF Chicago"
 	/>
-	{@html `<script type="application/ld+json">${JSON.stringify(data.eventSchema)}</` + `script>`}
+	{#if data.eventSchema}
+		{@html `<script type="application/ld+json">${JSON.stringify(data.eventSchema)}</` + `script>`}
+	{/if}
 	{@html `<script type="application/ld+json">${JSON.stringify(organizationSchema)}</` + `script>`}
 </svelte:head>
 
