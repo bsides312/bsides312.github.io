@@ -24,6 +24,13 @@ Just as the original BSides (now "BSides Las Vegas") emerged from the overflow o
 We understand the passion and drive of countless individuals eager to share their insights, yet constrained by limited opportunities. It's important to note that our mission is not to compete or detract from other local initiatives, rather, we aim to complement and expand the landscape of opportunities available to the Chicago cybersecurity community. By creating a welcoming platform, we aim to uplift and amplify voices that might otherwise remain unheard, fostering a culture of generosity and reciprocity within the vibrant cybersecurity community that has enriched us all. See below for the continuation of this story!`
 	},
 	{
+		id: 'is-bsides-chicago-happening',
+		question: 'Are you also BSides Chicago, and is that event happening in 2026?',
+		answer: `We're a separate event — BSides312 is not BSides Chicago. As some of our FAQ above explains, several of our founders also helped found the original BSides Chicago, but the two are run independently today.
+
+As for BSides Chicago itself: they announced they're taking a break in 2026 and plan to return in 2027. If you're looking for a Chicago-area Security BSides event this year, that's us — BSides312 is happening Saturday, May 16, 2026 at the Irish American Heritage Center.`
+	},
+	{
 		id: 'two-bsides-allowed',
 		question: 'Two BSides in the same city? Is that allowed?',
 		answer:
