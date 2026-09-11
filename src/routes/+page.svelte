@@ -148,8 +148,8 @@
 </script>
 
 <SeoHead
-	title="BSides312 — Chicago's Security BSides Hacking Conference | Returning Spring 2027"
-	description="BSides312 is the Security BSides conference in Chicago — a non-profit, one-day hacker & cybersecurity event at the Irish American Heritage Center. Talks, workshops, villages, CTFs, and networking with Chicago's infosec community. Returning Spring 2027."
+	title="BSides312 — Chicago's Security BSides Hacking Conference | June 13, 2027"
+	description="BSides312 is the Security BSides conference in Chicago — a non-profit, one-day hacker & cybersecurity event at the Irish American Heritage Center. Talks, workshops, villages, CTFs, and networking with Chicago's infosec community. Returning June 13, 2027."
 	path="/"
 />
 <svelte:head>
@@ -175,7 +175,7 @@
 			unforgettable day of learning and networking.
 		</p>
 		<div class="text-center">
-			<p class="mb-3"><strong>Join us in 2027! Check back in November!</strong></p>
+			<p class="mb-3"><strong>Join us June 13, 2027!</strong></p>
 			<div class="hero-buttons">
 				<div class="hero-buttons-row">
 					<a
@@ -260,7 +260,7 @@
 	<div class="container">
 		<div class="section-header">
 			<h2>Here's what you missed in 2026!</h2>
-			<p>Stay Tuned for 2027 info - Coming in November!</p>
+			<p>BSides312 returns June 13, 2027 — same great venue!</p>
 		</div>
 
 		<!-- Keynote Speaker -->

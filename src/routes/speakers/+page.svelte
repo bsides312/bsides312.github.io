@@ -177,7 +177,7 @@
 
 <SeoHead
 	title="2026 Speakers — BSides312 | Chicago Security BSides Conference"
-	description="Meet the expert speakers who presented at BSides312 2026, the Security BSides hacker & cybersecurity conference in Chicago. BSides312 returns Spring 2027."
+	description="Meet the expert speakers who presented at BSides312 2026, the Security BSides hacker & cybersecurity conference in Chicago. BSides312 returns June 13, 2027."
 	path="/speakers"
 />
 
@@ -185,7 +185,7 @@
 	<div class="container">
 		<div class="section-header">
 			<h1>2026 Speakers</h1>
-			<p>Meet the experts who presented at BSides312 2026! BSides312 returns Spring 2027.</p>
+			<p>Meet the experts who presented at BSides312 2026! BSides312 returns June 13, 2027.</p>
 		</div>
 
 		{#if loading}

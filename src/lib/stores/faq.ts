@@ -25,10 +25,12 @@ We understand the passion and drive of countless individuals eager to share thei
 	},
 	{
 		id: 'is-bsides-chicago-happening',
-		question: 'Are you also BSides Chicago, and is that event happening in 2026?',
+		question: 'Are you also BSides Chicago, and when is the next BSides312?',
 		answer: `We're a separate event — BSides312 is not BSides Chicago. As some of our FAQ above explains, several of our founders also helped found the original BSides Chicago, but the two are run independently today.
 
-As for BSides Chicago itself: they announced they're taking a break in 2026 and plan to return in 2027. If you're looking for a Chicago-area Security BSides event this year, that's us — BSides312 is happening Saturday, May 16, 2026 at the Irish American Heritage Center.`
+As for BSides Chicago itself: they announced a break in 2026 with plans to return in 2027.
+
+BSides312 2026 already happened (Saturday, May 16, 2026 at the Irish American Heritage Center) — see our Schedule and Speakers pages for a recap. BSides312 2027 is confirmed for Sunday, June 13, 2027 at the same venue.`
 	},
 	{
 		id: 'two-bsides-allowed',
@@ -74,7 +76,7 @@ If you really love wearing a suit, please go for it. If you love being goth, que
 	{
 		id: 'cfp',
 		question: 'Can I still submit a talk?',
-		answer: `Our Call for Presentations (CFP) for BSides312 2026 is now closed and all talks have been selected. If you submitted a talk, please check your email for a message from <strong>bsides312@events.sessionize.com</strong> with your selection status. In the meantime, check out talks from previous events on our <a href="https://www.youtube.com/channel/UCrCPvWW8z-_O8uUM8-ySz7g" target="_blank" rel="noopener">YouTube channel</a>. For future events, follow us on social media or join our mailing list to be notified when submissions open.`
+		answer: `The Call for Presentations (CFP) for BSides312 2026 closed and all of that year's talks were selected. The CFP for BSides312 2027 (Sunday, June 13, 2027) hasn't opened yet. In the meantime, check out talks from previous events on our <a href="https://www.youtube.com/channel/UCrCPvWW8z-_O8uUM8-ySz7g" target="_blank" rel="noopener">YouTube channel</a>. Follow us on social media or join our mailing list to be notified when 2027 submissions open.`
 	},
 	{
 		id: 'roof-pool',

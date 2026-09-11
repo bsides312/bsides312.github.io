@@ -9,7 +9,7 @@
 		</h3>
 		<div class="when-where-top">
 			<div class="when-where-datetime">
-				<p class="mb-1"><strong>Date:</strong> Spring 2027 (exact date TBD)</p>
+				<p class="mb-1"><strong>Date:</strong> June 13, 2027</p>
 				<p class="mb-1"><strong>Doors:</strong> 8am</p>
 				<p class="mb-1"><strong>Talks:</strong> 9am&ndash;6PM</p>
 				<p class="mb-0"><strong>After-Party:</strong> 6PM&ndash;8PM</p>
