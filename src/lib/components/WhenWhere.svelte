@@ -12,7 +12,14 @@
 				<p class="mb-1"><strong>Date:</strong> June 13, 2027</p>
 				<p class="mb-1"><strong>Doors:</strong> 8am</p>
 				<p class="mb-1"><strong>Talks:</strong> 9am&ndash;6PM</p>
-				<p class="mb-0"><strong>After-Party:</strong> 6PM&ndash;8PM</p>
+				<p class="mb-1"><strong>After-Party:</strong> 6PM&ndash;8PM</p>
+				<p class="mb-0">
+					<small
+						>The day after <a href="https://www.thotcon.org" target="_blank" rel="noopener"
+							>THOTCON</a
+						> &mdash; make it a full hacker-con weekend!</small
+					>
+				</p>
 			</div>
 			<div class="when-where-address">
 				<p class="mb-1">Irish American Heritage Center</p>

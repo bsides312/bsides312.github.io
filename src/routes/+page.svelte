@@ -149,13 +149,13 @@
 
 <SeoHead
 	title="BSides312 — Chicago's Security BSides Hacking Conference | June 13, 2027"
-	description="BSides312 is the Security BSides conference in Chicago — a non-profit, one-day hacker & cybersecurity event at the Irish American Heritage Center. Talks, workshops, villages, CTFs, and networking with Chicago's infosec community. Returning June 13, 2027."
+	description="BSides312 is the Security BSides conference in Chicago — a non-profit, one-day hacker & cybersecurity event at the Irish American Heritage Center, held the day after THOTCON. Talks, workshops, villages, CTFs, and networking with Chicago's infosec community. Returning June 13, 2027."
 	path="/"
 />
 <svelte:head>
 	<meta
 		name="keywords"
-		content="BSides312, Security BSides, hacker conference Chicago, cybersecurity conference Chicago, infosec Chicago, Chicago hacking conference, CTF Chicago"
+		content="BSides312, Security BSides, hacker conference Chicago, cybersecurity conference Chicago, infosec Chicago, Chicago hacking conference, CTF Chicago, THOTCON"
 	/>
 	{#if data.eventSchema}
 		{@html `<script type="application/ld+json">${JSON.stringify(data.eventSchema)}</` + `script>`}
@@ -172,7 +172,8 @@
 		</h1>
 		<p class="lead text-center mb-4">
 			BSides312 brings together security professionals, researchers, and enthusiasts for an
-			unforgettable day of learning and networking.
+			unforgettable day of learning and networking — held the day after THOTCON, so it's easy to
+			make a full weekend of it.
 		</p>
 		<div class="text-center">
 			<p class="mb-3"><strong>Join us June 13, 2027!</strong></p>
