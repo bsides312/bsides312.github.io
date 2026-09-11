@@ -176,7 +176,13 @@
 			make a full weekend of it.
 		</p>
 		<div class="text-center">
-			<p class="mb-3"><strong>Join us June 13, 2027!</strong></p>
+			<p class="mb-3">
+				<strong
+					>Join us the day after <a href="https://www.thotcon.org" target="_blank" rel="noopener"
+						>THOTCON</a
+					> June 13, 2027!</strong
+				>
+			</p>
 			<div class="hero-buttons">
 				<div class="hero-buttons-row">
 					<a
