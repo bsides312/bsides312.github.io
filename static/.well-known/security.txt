@@ -1,5 +1,4 @@
 Contact: mailto:security@bsides312.org
-Expires: 2026-05-17T12:00:00.000Z
+Expires: 2027-09-01T12:00:00.000Z
 Preferred-Languages: en
-Canonical: https://bsides312.github.io/.well-known/security.txt
-Policy: https://bsides312.github.io/security-policy.html
+Canonical: https://bsides312.org/.well-known/security.txt
