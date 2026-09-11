@@ -17,7 +17,7 @@
 					<small
 						>The day after <a href="https://www.thotcon.org" target="_blank" rel="noopener"
 							>THOTCON</a
-						> &mdash; make it a full hacker-con weekend!</small
+						> &mdash; make it a full hacker con weekend!</small
 					>
 				</p>
 			</div>

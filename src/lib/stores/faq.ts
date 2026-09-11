@@ -26,7 +26,7 @@ We understand the passion and drive of countless individuals eager to share thei
 	{
 		id: 'thotcon-timing',
 		question: 'Are you affiliated with THOTCON?',
-		answer: `Not officially — BSides312 is entirely independent of THOTCON. That said, we're proud to hold BSides312 the day after THOTCON wraps up each year, so out-of-towners can turn a trip to Chicago into a full weekend of hacker-conference hopping. Check <a href="https://www.thotcon.org" target="_blank" rel="noopener">thotcon.org</a> for THOTCON's own dates and details.`
+		answer: `Not officially — BSides312 is entirely independent of THOTCON. That said, we're proud to hold BSides312 the day after THOTCON wraps up each year, so out-of-towners can turn a trip to Chicago into a full weekend of hacker conference hopping. Check <a href="https://www.thotcon.org" target="_blank" rel="noopener">thotcon.org</a> for THOTCON's own dates and details.`
 	},
 	{
 		id: 'is-bsides-chicago-happening',
