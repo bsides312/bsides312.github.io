@@ -179,7 +179,7 @@
 			<p class="mb-3">
 				<strong
 					>Join us the day after <a href="https://www.thotcon.org" target="_blank" rel="noopener"
-						>THOTCON</a
+						>THOTCON,</a
 					> June 13, 2027!</strong
 				>
 			</p>
