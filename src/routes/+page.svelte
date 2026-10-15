@@ -166,7 +166,7 @@
 <!-- Hero Section -->
 <section class="hero">
 	<div class="hero-content">
-		<img src="{base}/assets/img/about_logo.png" alt="BSides312 Logo" class="img-fluid hero-logo" />
+		<img src="{base}/assets/img/about_logo.webp" alt="BSides312 Logo" class="img-fluid hero-logo" />
 		<h1 class="text-center mb-4">
 			Chicago's Biggest Little <br />Non-Profit <br />Cybersecurity Conference
 		</h1>
@@ -369,7 +369,7 @@
 			<div class="col-lg-3 col-md-6">
 				<button class="card activity-card h-100" on:click={() => openActivity('gameshows')}>
 					<img
-						src="{base}/assets/img/activities/lintile.jpg"
+						src="{base}/assets/img/activities/lintile.webp"
 						alt="Game Shows with Lintile"
 						class="activity-card-img"
 						loading="lazy"
@@ -382,7 +382,7 @@
 			<div class="col-lg-3 col-md-6">
 				<button class="card activity-card h-100" on:click={() => openActivity('linux')}>
 					<img
-						src="{base}/assets/img/activities/linux.jpg"
+						src="{base}/assets/img/activities/linux.webp"
 						alt="Linux Village"
 						class="activity-card-img"
 						loading="lazy"

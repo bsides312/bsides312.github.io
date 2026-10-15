@@ -40,7 +40,7 @@ body {
 	font-family: 'Open Sans', sans-serif;
 	background-color: var(--dark-bg);
 	background-image:
-		linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/assets/img/cta_bg.jpg');
+		linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/assets/img/cta_bg.webp');
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
@@ -308,7 +308,7 @@ footer {
 	inset: 0;
 	background:
 		linear-gradient(rgba(6, 12, 34, 0.8), rgba(6, 12, 34, 0.8)),
-		url('/assets/img/hero-bg.jpg') center/cover no-repeat;
+		url('/assets/img/hero-bg.webp') center/cover no-repeat;
 	opacity: 0.75;
 	z-index: 0;
 }

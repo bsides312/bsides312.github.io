@@ -37,7 +37,7 @@
 		const sctx = sub.getContext('2d')!;
 
 		// ---- land mask (Chicago map) ----
-		// Sample the cta_bg.jpg map to keep pulses on land. Water/lake cells
+		// Sample the cta_bg.webp map to keep pulses on land. Water/lake cells
 		// stay dark and pulses can't enter them, which gives the animation
 		// its Chicago skyline silhouette.
 		const MASK_CELL = 12;
@@ -64,7 +64,7 @@
 			}
 			resize();
 		};
-		bgImg.src = `${base}/assets/img/cta_bg.jpg`;
+		bgImg.src = `${base}/assets/img/cta_bg.webp`;
 
 		function buildLandMask() {
 			if (!bgImgData) {
