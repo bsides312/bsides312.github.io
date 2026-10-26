@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onMount, onDestroy } from 'svelte';
-	import { base } from '$app/paths';
+	import { base } from '#lib/base';
 
 	let canvas: HTMLCanvasElement;
 	let cleanup: (() => void) | null = null;

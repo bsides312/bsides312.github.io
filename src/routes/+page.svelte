@@ -1,10 +1,10 @@
 <script lang="ts">
-	import { getSponsorsByTier, sponsorTierImages } from '$lib/stores/sponsors';
-	import { base } from '$app/paths';
+	import { getSponsorsByTier, sponsorTierImages } from '#lib/stores/sponsors';
+	import { base } from '#lib/base';
 	import { onMount } from 'svelte';
 	import type { PageData } from './$types';
-	import WhenWhere from '$lib/components/WhenWhere.svelte';
-	import SeoHead from '$lib/components/SeoHead.svelte';
+	import WhenWhere from '#lib/components/WhenWhere.svelte';
+	import SeoHead from '#lib/components/SeoHead.svelte';
 
 	export let data: PageData;
 

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { base } from '$app/paths';
+	import { base } from '#lib/base';
 </script>
 
 <div class="card mb-3">
