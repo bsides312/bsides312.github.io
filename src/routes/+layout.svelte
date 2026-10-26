@@ -1,10 +1,10 @@
 <script lang="ts">
 	import '../app.css';
-	import { base } from '$app/paths';
+	import { base } from '#lib/base';
 	import { onMount } from 'svelte';
 	import { afterNavigate } from '$app/navigation';
 	import { tick } from 'svelte';
-	import LaserGrid from '$lib/components/LaserGrid.svelte';
+	import LaserGrid from '#lib/components/LaserGrid.svelte';
 
 	afterNavigate(async ({ to }) => {
 		if (to?.url.hash) {

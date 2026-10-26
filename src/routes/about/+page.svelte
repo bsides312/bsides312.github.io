@@ -1,10 +1,10 @@
 <script lang="ts">
-	import { boardMembers } from '$lib/stores/boardMembers';
-	import { faqItems } from '$lib/stores/faq';
-	import SeoHead from '$lib/components/SeoHead.svelte';
-	import { base } from '$app/paths';
+	import { boardMembers } from '#lib/stores/boardMembers';
+	import { faqItems } from '#lib/stores/faq';
+	import SeoHead from '#lib/components/SeoHead.svelte';
+	import { base } from '#lib/base';
 	import type { PageData } from './$types';
-	import WhenWhere from '$lib/components/WhenWhere.svelte';
+	import WhenWhere from '#lib/components/WhenWhere.svelte';
 
 	export let data: PageData;
 

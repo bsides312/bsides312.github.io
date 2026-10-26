@@ -1,7 +1,7 @@
 import { readdirSync } from 'fs';
 import { resolve } from 'path';
 import type { PageServerLoad } from './$types';
-import { buildEventSchema } from '$lib/server/eventSchema';
+import { buildEventSchema } from '#lib/server/eventSchema';
 
 export const load: PageServerLoad = async () => {
 	const galleryDir = resolve('static/assets/img/gallery');

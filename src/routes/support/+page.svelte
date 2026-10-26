@@ -1,5 +1,5 @@
 <script lang="ts">
-	import SeoHead from '$lib/components/SeoHead.svelte';
+	import SeoHead from '#lib/components/SeoHead.svelte';
 
 	interface SponsorshipTier {
 		name: string;

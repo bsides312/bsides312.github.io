@@ -1,5 +1,5 @@
 <script lang="ts">
-	import SeoHead from '$lib/components/SeoHead.svelte';
+	import SeoHead from '#lib/components/SeoHead.svelte';
 
 	// Access control — encoded credentials
 	const _u = atob('YnNpZGVzMzEy');
