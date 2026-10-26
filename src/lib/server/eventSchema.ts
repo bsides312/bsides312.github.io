@@ -1,8 +1,8 @@
 // Builds the Schema.org Event JSON-LD object for BSides312.
 // Runs server-side only — do not import from client code.
 //
-// BSides312 2027 is confirmed for June 13, 2027 at the Irish American
-// Heritage Center. CFP/tickets/sessions don't exist yet, so this omits
+// BSides312 2027 is confirmed for June 13, 2027 in Chicago; the venue is
+// TBD. CFP/tickets/sessions don't exist yet, so this omits
 // subEvent and offers until those are announced — see git history (the
 // commit that introduced this comment) for the prior 2026 Event object
 // shape, including the Sessionize-backed subEvent/session logic and
@@ -27,13 +27,11 @@ export async function buildEventSchema(): Promise<object> {
 			'BSides, Security BSides, hacker conference, cybersecurity conference, Chicago, infosec',
 		location: {
 			'@type': 'Place',
-			name: 'Irish American Heritage Center',
+			name: 'TBD',
 			address: {
 				'@type': 'PostalAddress',
-				streetAddress: '4626 N Knox Ave',
 				addressLocality: 'Chicago',
 				addressRegion: 'IL',
-				postalCode: '60630',
 				addressCountry: 'US'
 			}
 		},

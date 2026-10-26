@@ -159,8 +159,7 @@
 							>
 						</li>
 						<li>
-							<a class="nav-link" href="{base}/#about" on:click={closeMobileMenu}>Venue & Parking</a
-							>
+							<a class="nav-link" href="{base}/#about" on:click={closeMobileMenu}>Venue</a>
 						</li>
 						<li>
 							<a

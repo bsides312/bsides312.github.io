@@ -35,7 +35,7 @@ We understand the passion and drive of countless individuals eager to share thei
 
 As for BSides Chicago itself: they announced a break in 2026 with plans to return in 2027.
 
-BSides312 2026 already happened (Saturday, May 16, 2026 at the Irish American Heritage Center) — see our Schedule and Speakers pages for a recap. BSides312 2027 is confirmed for Sunday, June 13, 2027 at the same venue.`
+BSides312 2026 already happened (Saturday, May 16, 2026 at the Irish American Heritage Center) — see our Schedule and Speakers pages for a recap. BSides312 2027 is confirmed for Sunday, June 13, 2027 in Chicago, IL. The venue is TBD.`
 	},
 	{
 		id: 'two-bsides-allowed',
@@ -59,13 +59,13 @@ If you really love wearing a suit, please go for it. If you love being goth, que
 		id: 'parking',
 		question: 'Is there parking at the venue?',
 		answer:
-			'YES! We have around 100 parking spaces available. This has proven to be more than enough in the past'
+			'The venue for BSides312 2027 is TBD. We will share parking details once the venue is announced.'
 	},
 	{
 		id: 'hotels',
 		question: 'Where can I find safe overnight lodging?',
 		answer:
-			'Chicago is surprisingly devoid of hotels outside of Downtown, and we do not recommend staying there as it is very far and expensive. AirBNB near the venue is a good bet. The venue is also on the CTA Blue Line, so staying anywhere along that line will work as well. Many choose to stay around the Rosemont stop, which has cheaper hotels. '
+			'Chicago is surprisingly devoid of hotels outside of Downtown, and we do not recommend staying there as it is very far and expensive. Since the venue is TBD, we will share location-specific lodging tips once it is announced. In the meantime, AirBNB is a good bet, and many choose to stay around the Rosemont stop on the CTA Blue Line, which has cheaper hotels.'
 	},
 	{
 		id: 'photography',
@@ -76,17 +76,11 @@ If you really love wearing a suit, please go for it. If you love being goth, que
 		id: 'accessibility',
 		question: 'Is the venue mobility accessible?',
 		answer:
-			'Yes! This venue has an ADA-compliant main entrance and restrooms, and all of our content is in accessible rooms.'
+			'The venue is TBD, so we will confirm accessibility details once it is announced. Our goal is for all of our content to be in accessible rooms.'
 	},
 	{
 		id: 'cfp',
 		question: 'Can I still submit a talk?',
 		answer: `The Call for Presentations (CFP) for BSides312 2026 closed and all of that year's talks were selected. The CFP for BSides312 2027 (Sunday, June 13, 2027) hasn't opened yet. In the meantime, check out talks from previous events on our <a href="https://www.youtube.com/channel/UCrCPvWW8z-_O8uUM8-ySz7g" target="_blank" rel="noopener">YouTube channel</a>. Follow us on social media or join our mailing list to be notified when 2027 submissions open.`
-	},
-	{
-		id: 'roof-pool',
-		question: 'Will the pool on the roof be open?',
-		answer:
-			'The pool is currently undergoing repairs due to a major leak, but may be ready in time for the conference. Please bring a swimsuit, as the venue took great exception to those who opted for a more "European" swimming experience last year.'
 	}
 ];
