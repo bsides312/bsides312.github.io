@@ -702,15 +702,6 @@ div[id] {
 	color: rgba(255, 255, 255, 0.7);
 }
 
-.prospectus-link {
-	color: #bf40bf !important;
-	text-decoration: none !important;
-}
-
-.prospectus-link:hover {
-	color: #d966ff !important;
-}
-
 /* ============================================================
    Alert Boxes — neon purple outline, neon green text
    ============================================================ */
