@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { base } from '#lib/base';
 	import SeoHead from '#lib/components/SeoHead.svelte';
 
 	interface SponsorshipTier {
@@ -87,13 +88,26 @@
 				<a href="https://paypal.me/bsides312" target="_blank" rel="noopener" class="btn-primary"
 					>Make an Ad-Hoc Donation!</a
 				>
+				<a
+					href="{base}/assets/docs/BSides312_2027_Sponsor_Prospectus.pdf"
+					target="_blank"
+					rel="noopener"
+					class="btn-primary">View Sponsorship Prospectus</a
+				>
 			</div>
 		</div>
 
 		<div class="alert alert-success container-fluid text-center fw-bold" role="alert">
-			Help make Chicago's biggest little hacker conference possible by becoming a Supporter!<br />
-			BSides312 is run by the Hak4Kidz nonprofit, making Supporter contributions and personal donations
-			tax-deductible.
+			<a
+				href="{base}/assets/docs/BSides312_2027_Sponsor_Prospectus.pdf"
+				target="_blank"
+				rel="noopener"
+				class="prospectus-link"
+			>
+				Help make Chicago's biggest little hacker conference possible by becoming a Supporter!<br />
+				BSides312 is run by the Hak4Kidz nonprofit, making Supporter contributions and personal donations
+				tax-deductible.
+			</a>
 		</div>
 		<div class="row justify-content-center">
 			<div class="section-header">
