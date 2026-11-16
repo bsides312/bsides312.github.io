@@ -423,7 +423,7 @@
 <section id="supporters" class="section section-with-bg">
 	<div class="container">
 		<div class="section-header">
-			<h2>2026 Supporters</h2>
+			<h2>Supporters</h2>
 		</div>
 		<div class="text-center mb-4">
 			<a href="{base}/support#support" class="btn-primary">

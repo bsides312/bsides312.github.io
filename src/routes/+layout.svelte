@@ -123,7 +123,7 @@
 					</div>
 					<ul class:mobile-show={activeDropdown === 'sponsor'}>
 						<li>
-							<a class="nav-link" href="{base}/support#supporters" on:click={closeMobileMenu}
+							<a class="nav-link" href="{base}/support#support" on:click={closeMobileMenu}
 								>Corporate Sponsorship</a
 							>
 						</li>
