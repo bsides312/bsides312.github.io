@@ -104,7 +104,7 @@
 							aria-haspopup="true"
 							on:click={closeMobileMenu}
 						>
-							<span>Support Us</span>
+							<span>Support Us!</span>
 							<i class="bi bi-chevron-down desktop-only"></i>
 						</a>
 						<button
@@ -124,7 +124,7 @@
 					<ul class:mobile-show={activeDropdown === 'sponsor'}>
 						<li>
 							<a class="nav-link" href="{base}/support#support" on:click={closeMobileMenu}
-								>Supporter</a
+								>Sponsorship</a
 							>
 						</li>
 						<li>
