@@ -17,7 +17,7 @@
 			price: '$10,000',
 			description: 'Ultimate partnership experience',
 			benefits: [
-				'All other tier perks',
+				'Platinum Level Plus',
 				'(10) Additional event passes',
 				'Gold Level for 1 consecutive year'
 			],
@@ -28,7 +28,7 @@
 			price: '$5,000',
 			description: 'Top-tier partnership',
 			benefits: [
-				'All Gold Level Perks',
+				'Gold Level Plus',
 				'(4) Additional event passes',
 				'Bronze Level for 1 consecutive year'
 			],
@@ -36,39 +36,39 @@
 		},
 		{
 			name: 'Gold',
-			price: '$3,000',
+			price: '$4,000',
 			description: 'Premium sponsorship experience',
 			benefits: [
-				'All Silver Level Perks',
-				'(2) Additional event passes',
+				'Silver Level Plus',
+				'(3) Additional event passes',
 				'Mention in the media coverage',
 				'Logo on T-shirts',
-				'Logo on YouTube Videos',
 				'Banner placement with maximum visibility',
+				'Logo on YouTube Videos',
 				'Event Booth'
 			],
-			donateUrl: 'https://paypal.me/bsides312/3000',
+			donateUrl: 'https://paypal.me/bsides312/4000',
 			highlighted: true
 		},
 		{
 			name: 'Silver',
-			price: '$2,000',
+			price: '$3,000',
 			description: 'Enhanced visibility package',
 			benefits: [
-				'All Bronze Level Plus',
-				'(2) Additional event passes',
+				'Bronze Level Plus',
+				'(3) Additional event passes',
 				'Logo on signage around the event',
 				'Announcements during the event',
 				'Logo on printed materials'
 			],
-			donateUrl: 'https://paypal.me/bsides312/2000'
+			donateUrl: 'https://paypal.me/bsides312/3000'
 		},
 		{
 			name: 'Bronze',
-			price: '$1,000',
+			price: '$1,500',
 			description: 'Essential sponsorship package',
-			benefits: ['Logo on website', '(2) Event passes', 'Social media mentions'],
-			donateUrl: 'https://paypal.me/bsides312/1000'
+			benefits: ['Logo on website', '(2) Event pass', 'Social media mentions'],
+			donateUrl: 'https://paypal.me/bsides312/1500'
 		}
 	];
 </script>
@@ -104,10 +104,8 @@
 				rel="noopener"
 				class="prospectus-link"
 			>
-				Help make Chicago's biggest little hacker conference possible through Supporter!<br
-				/>
-				BSides312 is run by the Hak4Kidz nonprofit, making Supporters and personal donations
-				tax-deductible.
+				Help make Chicago's biggest little hacker conference possible through Supporter!<br />
+				BSides312 is run by the Hak4Kidz nonprofit, making Supporters and personal donations tax-deductible.
 			</a>
 		</div>
 		<div class="row justify-content-center">
