@@ -185,6 +185,9 @@
 			</p>
 			<div class="hero-buttons">
 				<div class="hero-buttons-row">
+					<a href="{base}/support" class="btn-primary">
+						<i class="bi bi-heart-fill me-2"></i>Support Us!
+					</a>
 					<a
 						href="https://tinyurl.com/bsides312"
 						target="_blank"
@@ -421,6 +424,14 @@
 	<div class="container">
 		<div class="section-header">
 			<h2>2026 Supporters</h2>
+		</div>
+		<div class="text-center mb-4">
+			<a href="{base}/support#support" class="btn-primary">
+				<i class="bi bi-heart-fill me-2"></i>Click for Sponsorship info!
+			</a>
+		</div>
+		<div class="alert alert-warning container-fluid text-center fw-bold" role="alert">
+			Our Call for Supporters is still open! Supporter logos will be listed here as they sign!
 		</div>
 		{#each sponsorTiers as tier (tier.tierName)}
 			<div class="row no-gutters supporters-wrap clearfix gy-4 gx-4 mb-5">
