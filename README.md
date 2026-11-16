@@ -227,7 +227,7 @@ No code changes are required — the server load function in [`+page.server.ts`]
 
 - **Homepage**: Hero section, about info, sponsor showcase, FAQ
 - **Board Members**: Detailed profiles with photos and social links
-- **Support**: Corporate sponsorship tiers with donation links
+- **Support**: Supporter tiers with donation links
 - **Previous Speakers**: Historical speaker data from past years
 - **Code of Conduct & Privacy Policy**: Legal compliance pages
 - **Responsive Design**: Works perfectly on all devices

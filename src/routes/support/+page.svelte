@@ -79,7 +79,7 @@
 	path="/support"
 />
 
-<!-- Corporate Sponsorship Section -->
+<!-- Supporter Section -->
 <section id="support" class="section section-with-bg">
 	<div class="container">
 		<div class="section-header">
@@ -104,16 +104,16 @@
 				rel="noopener"
 				class="prospectus-link"
 			>
-				Help make Chicago's biggest little hacker conference possible through corporate sponsorship!<br
+				Help make Chicago's biggest little hacker conference possible through Supporter!<br
 				/>
-				BSides312 is run by the Hak4Kidz nonprofit, making corporate sponsorships and personal donations
+				BSides312 is run by the Hak4Kidz nonprofit, making Supporters and personal donations
 				tax-deductible.
 			</a>
 		</div>
 		<div class="row justify-content-center">
 			<div class="section-header">
 				<br />
-				<h3>Corporate Sponsorship Tiers</h3>
+				<h3>Supporter Tiers</h3>
 			</div>
 			{#each sponsorshipTiers as tier (tier.name)}
 				<div class="col-lg-4 col-md-6 col-sm-12 mb-4">

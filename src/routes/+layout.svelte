@@ -124,7 +124,7 @@
 					<ul class:mobile-show={activeDropdown === 'sponsor'}>
 						<li>
 							<a class="nav-link" href="{base}/support#support" on:click={closeMobileMenu}
-								>Corporate Sponsorship</a
+								>Supporter</a
 							>
 						</li>
 						<li>
