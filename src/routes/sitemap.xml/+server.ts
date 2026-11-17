@@ -7,8 +7,6 @@ const SITE_URL = 'https://bsides312.org';
 const routes = [
 	{ path: '/', priority: '1.0', changefreq: 'weekly' },
 	{ path: '/about', priority: '0.8', changefreq: 'monthly' },
-	{ path: '/schedule', priority: '0.9', changefreq: 'weekly' },
-	{ path: '/speakers', priority: '0.9', changefreq: 'weekly' },
 	{ path: '/previous-speakers', priority: '0.6', changefreq: 'monthly' },
 	{ path: '/support', priority: '0.7', changefreq: 'monthly' },
 	{ path: '/privacy', priority: '0.3', changefreq: 'yearly' },

@@ -275,9 +275,6 @@
 				class="text-center mt-5"
 				style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;"
 			>
-				<a href="/schedule#schedule" class="btn-primary">
-					<i class="bi bi-calendar3 me-2"></i>View Full Schedule
-				</a>
 				<a href="/previous-speakers#previous-speakers" class="btn-primary">
 					<i class="bi bi-clock-history me-2"></i>Previous Speakers
 				</a>

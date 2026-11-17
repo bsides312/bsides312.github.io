@@ -311,7 +311,7 @@
 						<div class="ribbon-track">
 							{#each [0, 1, 2] as copy (copy)}
 								{#each speakerPhotos as speaker (speaker.fullName)}
-									<a href="{base}/speakers#speakers" class="ribbon-speaker-card">
+									<div class="ribbon-speaker-card">
 										<img
 											src={speaker.profilePicture}
 											alt={speaker.fullName}
@@ -319,17 +319,12 @@
 											loading="lazy"
 										/>
 										<div class="ribbon-speaker-name">{speaker.fullName}</div>
-									</a>
+									</div>
 								{/each}
 							{/each}
 						</div>
 					</div>
 				{/if}
-				<div class="text-center mt-3">
-					<a href="{base}/speakers#speakers" class="btn-primary">
-						<i class="bi bi-people-fill me-2"></i>Meet All the Speakers!
-					</a>
-				</div>
 			</div>
 		</div>
 

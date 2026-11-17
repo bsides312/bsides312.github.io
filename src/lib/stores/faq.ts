@@ -35,7 +35,7 @@ We understand the passion and drive of countless individuals eager to share thei
 
 As for BSides Chicago itself: they announced a break in 2026 with plans to return in 2027.
 
-BSides312 2026 already happened (Saturday, May 16, 2026 at the Irish American Heritage Center) — see our Schedule and Speakers pages for a recap. BSides312 2027 is confirmed for June 2027 in Chicago, IL. The venue is TBD.`
+BSides312 2026 already happened (Saturday, May 16, 2026 at the Irish American Heritage Center). BSides312 2027 is confirmed for June 2027 in Chicago, IL. The venue is TBD.`
 	},
 	{
 		id: 'two-bsides-allowed',
