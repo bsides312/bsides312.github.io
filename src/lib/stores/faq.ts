@@ -35,7 +35,7 @@ We understand the passion and drive of countless individuals eager to share thei
 
 As for BSides Chicago itself: they announced a break in 2026 with plans to return in 2027.
 
-BSides312 2026 already happened (Saturday, May 16, 2026 at the Irish American Heritage Center) — see our Schedule and Speakers pages for a recap. BSides312 2027 is confirmed for Sunday, June 13, 2027 in Chicago, IL. The venue is TBD.`
+BSides312 2026 already happened (Saturday, May 16, 2026 at the Irish American Heritage Center) — see our Schedule and Speakers pages for a recap. BSides312 2027 is confirmed for June 2027 in Chicago, IL. The venue is TBD.`
 	},
 	{
 		id: 'two-bsides-allowed',
@@ -81,6 +81,6 @@ If you really love wearing a suit, please go for it. If you love being goth, que
 	{
 		id: 'cfp',
 		question: 'Can I still submit a talk?',
-		answer: `The Call for Presentations (CFP) for BSides312 2026 closed and all of that year's talks were selected. The CFP for BSides312 2027 (Sunday, June 13, 2027) hasn't opened yet. In the meantime, check out talks from previous events on our <a href="https://www.youtube.com/channel/UCrCPvWW8z-_O8uUM8-ySz7g" target="_blank" rel="noopener">YouTube channel</a>. Follow us on social media or join our mailing list to be notified when 2027 submissions open.`
+		answer: `The Call for Presentations (CFP) for BSides312 2026 closed and all of that year's talks were selected. The CFP for BSides312 2027 (June 2027) hasn't opened yet. In the meantime, check out talks from previous events on our <a href="https://www.youtube.com/channel/UCrCPvWW8z-_O8uUM8-ySz7g" target="_blank" rel="noopener">YouTube channel</a>. Follow us on social media or join our mailing list to be notified when 2027 submissions open.`
 	}
 ];

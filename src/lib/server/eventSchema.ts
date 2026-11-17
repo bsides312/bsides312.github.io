@@ -1,15 +1,12 @@
 // Builds the Schema.org Event JSON-LD object for BSides312.
 // Runs server-side only — do not import from client code.
 //
-// BSides312 2027 is confirmed for June 13, 2027 in Chicago; the venue is
-// TBD. CFP/tickets/sessions don't exist yet, so this omits
+// BSides312 2027 is planned for June 2027 in Chicago; the exact date and
+// venue are TBD. CFP/tickets/sessions don't exist yet, so this omits
 // subEvent and offers until those are announced — see git history (the
 // commit that introduced this comment) for the prior 2026 Event object
 // shape, including the Sessionize-backed subEvent/session logic and
 // ticket Offers, to restore once sessions and ticket links exist.
-
-// Chicago is UTC-5 (CDT) in June
-const TZ_OFFSET = '-05:00';
 
 export async function buildEventSchema(): Promise<object> {
 	return {
@@ -19,8 +16,8 @@ export async function buildEventSchema(): Promise<object> {
 		alternateName: 'Security BSides 312',
 		description:
 			'BSides312 is Chicago’s Security BSides event — a non-profit hacker and cybersecurity conference featuring talks, workshops, villages, and CTFs.',
-		startDate: `2027-06-13T08:00:00${TZ_OFFSET}`,
-		endDate: `2027-06-13T20:00:00${TZ_OFFSET}`,
+		// Exact date not yet announced; restore full start/end timestamps once it is.
+		startDate: '2027-06',
 		eventStatus: 'https://schema.org/EventScheduled',
 		eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
 		keywords:

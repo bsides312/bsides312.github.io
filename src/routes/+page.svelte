@@ -148,8 +148,8 @@
 </script>
 
 <SeoHead
-	title="BSides312 — Chicago's Security BSides Hacking Conference | June 13, 2027"
-	description="BSides312 is the Security BSides conference in Chicago — a non-profit, one-day hacker & cybersecurity event in Chicago, IL (venue TBD), held the day after THOTCON. Talks, workshops, villages, CTFs, and networking with Chicago's infosec community. Returning June 13, 2027."
+	title="BSides312 — Chicago's Security BSides Hacking Conference | June 2027"
+	description="BSides312 is the Security BSides conference in Chicago — a non-profit, one-day hacker & cybersecurity event in Chicago, IL (venue TBD), held the day after THOTCON. Talks, workshops, villages, CTFs, and networking with Chicago's infosec community. Returning June 2027."
 	path="/"
 />
 <svelte:head>
@@ -180,7 +180,7 @@
 				<strong
 					>Join us the day after <a href="https://www.thotcon.org" target="_blank" rel="noopener"
 						>THOTCON,</a
-					> June 13, 2027!</strong
+					> June 2027!</strong
 				>
 			</p>
 			<div class="hero-buttons">
@@ -270,7 +270,7 @@
 	<div class="container">
 		<div class="section-header">
 			<h2>Here's what you missed in 2026!</h2>
-			<p>BSides312 returns June 13, 2027 — venue TBD, Chicago, IL</p>
+			<p>BSides312 returns June 2027 — venue TBD, Chicago, IL</p>
 		</div>
 
 		<!-- Keynote Speaker -->

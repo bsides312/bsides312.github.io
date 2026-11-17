@@ -73,7 +73,7 @@
 	];
 
 	const quickFacts = [
-		{ value: 'June 13', label: '2027 event · Chicago, IL' },
+		{ value: 'June 2027', label: 'Next event · Chicago, IL (venue TBD)' },
 		{ value: '299+', label: 'Attendees in 2026' },
 		{ value: '117', label: 'Organizers, volunteers, sponsors & speakers' },
 		{ value: '3', label: 'Events since 2024' }
@@ -120,7 +120,7 @@
 
 <SeoHead
 	title="Support BSides312 — Sponsor Chicago's Security BSides Conference"
-	description="Sponsor or donate to BSides312, the Security BSides hacker & cybersecurity conference in Chicago. Help make Chicago's non-profit infosec conference possible for our June 13, 2027 return."
+	description="Sponsor or donate to BSides312, the Security BSides hacker & cybersecurity conference in Chicago. Help make Chicago's non-profit infosec conference possible for our June 2027 return."
 	path="/support"
 />
 
