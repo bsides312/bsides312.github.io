@@ -9,10 +9,7 @@
 		</h3>
 		<div class="when-where-top">
 			<div class="when-where-datetime">
-				<p class="mb-1"><strong>Date:</strong> June 2027</p>
-				<p class="mb-1"><strong>Doors:</strong> 8am</p>
-				<p class="mb-1"><strong>Talks:</strong> 9am&ndash;6PM</p>
-				<p class="mb-1"><strong>After-Party:</strong> 6PM&ndash;8PM</p>
+				<p class="mb-2"><strong>Date:</strong> June 2027</p>
 				<p class="mb-0">
 					<small
 						>The day after <a href="https://www.thotcon.org" target="_blank" rel="noopener"
