@@ -841,6 +841,104 @@ div[id] {
 }
 
 /* ============================================================
+   Sponsor Info Blocks
+   ============================================================ */
+.stat-tile {
+	height: 100%;
+	padding: 22px 16px;
+	text-align: center;
+	border: 2px solid #5dbdfc;
+	border-radius: 15px;
+	box-shadow: 0 0 16px rgba(93, 189, 252, 0.25);
+}
+
+.stat-tile .stat-value {
+	font-size: 2rem;
+	font-weight: 800;
+	line-height: 1.1;
+	color: #ffffff;
+}
+
+.stat-tile .stat-label {
+	margin-top: 8px;
+	font-size: 0.85rem;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	color: rgba(255, 255, 255, 0.85);
+}
+
+.info-card {
+	padding: 28px;
+	color: rgba(255, 255, 255, 0.9);
+	border: 2px solid rgba(93, 189, 252, 0.6);
+	border-radius: 15px;
+	line-height: 1.7;
+}
+
+#sponsor-about .section-header {
+	margin-top: 40px;
+}
+
+#sponsor-about .section-header:first-child {
+	margin-top: 0;
+}
+
+.info-card h3,
+.info-card h4 {
+	color: #5dbdfc;
+	margin-bottom: 12px;
+}
+
+.info-card .btn-primary {
+	margin-top: 4px;
+}
+
+.quote-block {
+	margin: 0;
+	padding: 28px;
+	text-align: center;
+	border-left: 4px solid #5dbdfc;
+	background: rgba(93, 189, 252, 0.08);
+	border-radius: 0 15px 15px 0;
+}
+
+.quote-block blockquote {
+	margin: 0 0 12px;
+	font-size: 1.1rem;
+	font-style: italic;
+	color: #ffffff;
+}
+
+.quote-block figcaption {
+	color: #5dbdfc;
+	font-weight: 700;
+}
+
+.timeline-list,
+.check-list {
+	list-style: none;
+	padding: 0;
+	margin: 0 0 18px;
+}
+
+.timeline-list li,
+.check-list li {
+	padding: 6px 0;
+}
+
+.timeline-list li strong {
+	color: #5dbdfc;
+	margin-right: 8px;
+}
+
+.check-list li::before {
+	content: '\2713';
+	color: #5dbdfc;
+	margin-right: 10px;
+	font-weight: 700;
+}
+
+/* ============================================================
    Ribbon Image Gallery
    ============================================================ */
 .ribbon-gallery {
