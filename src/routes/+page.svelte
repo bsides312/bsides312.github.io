@@ -75,10 +75,9 @@
 		}
 	});
 
-	// Group sponsors by tier for display
-	const sponsorTiers = (
-		['platinum', 'gold', 'silver', 'bronze', 'founding', 'community'] as SponsorTier[]
-	)
+	// Group sponsors by tier for display. Only Founding Sponsors are shown for now; add the other
+	// tiers back ('platinum', 'gold', 'silver', 'bronze', 'community') as 2027 sponsors sign.
+	const sponsorTiers = (['founding'] as SponsorTier[])
 		.map((tier) => ({
 			tierName: tier.charAt(0).toUpperCase() + tier.slice(1),
 			tierSponsors: getSponsorsByTier(tier),
